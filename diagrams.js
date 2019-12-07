@@ -196,8 +196,8 @@ function getNetwork (FDCategory) {
 
      var NetworkAutonomousInternal = {        
 
-                                "solid1":    [   { "x": 60,  "y": 55}, 
-                                                { "x": 80,  "y": 55} ],
+                                "solid1":    [   { "x": 55,  "y": 55}, 
+                                                { "x": 85,  "y": 55} ],
 
                                 "dottedLeft":    [   { "x": 25,  "y": 35}, 
                                                 { "x": 70,  "y": 10} ],
@@ -207,16 +207,48 @@ function getNetwork (FDCategory) {
                                                 ],
 
                                 'textToAdd' : [
-                                        { "x": 40,  "y": 5, "text": "yolk and white"},
+                                        { "x": 35,  "y": 5, "text": "yolk and white"},
                                         { "x": -10,  "y": 60, "text": "MovedEntity"},  
                                         { "x": 90,  "y": 60, "text": "Ground"},
-                                        { "x": 60,  "y": -5, "text": "INTL"},
+                                        { "x": 55,  "y": -5, "text": "INTL"},
                                         { "x": 10,  "y": 50, "text": "INTL"},
                                         { "x": 95,  "y": 50, "text": "-MER"},
-                                        { "x": 60,  "y": 64, "text": "Path"}
+                                        { "x": 60,  "y": 65, "text": "Path"}
                                     ],
 
                                 "name" : "NetAutoIntl" 
+                            };
+
+
+     var NetworkVolitionalInternal = {        
+
+                                "solid1":    [   { "x": 55,  "y": 55}, 
+                                                { "x": 85,  "y": 55} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 35}, 
+                                                { "x": 70,  "y": 10} ],
+
+                                "dottedRight":    [   { "x": 115,  "y": 35},
+                                                      { "x": 70,  "y": 10}
+                                                ],
+
+                                "arrow":    [   { "x": -10,  "y": 0}, 
+                                                { "x": 30,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": -20,  "y": 5, "text": "I"},
+                                        { "x": 40,  "y": 5, "text": "yolk and white"},
+                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
+                                        { "x": 90,  "y": 60, "text": "Ground"},
+                                        { "x": -30,  "y": -5, "text": "VOL"},
+                                        { "x": 60,  "y": -5, "text": "INTL"},
+                                        { "x": 10,  "y": 50, "text": "INTL"},
+                                        { "x": 95,  "y": 50, "text": "-MER"},
+                                        { "x": 60,  "y": 65, "text": "Path"},
+                                        { "x": 0,  "y": 15, "text": "force"},
+                                    ],
+
+                                "name" : "NetVolIntl" 
                             };
 
 
@@ -230,6 +262,10 @@ function getNetwork (FDCategory) {
 
     else if (FDCategory === 'Autonomous Internal') {
         return NetworkAutonomousInternal;
+    }
+
+    else if (FDCategory === 'Volitional Internal') {
+        return NetworkVolitionalInternal;
     }
 
 }

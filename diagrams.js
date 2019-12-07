@@ -213,7 +213,7 @@ function getNetwork (FDCategory) {
                                         { "x": 60,  "y": -5, "text": "INTL"},
                                         { "x": 10,  "y": 50, "text": "INTL"},
                                         { "x": 95,  "y": 50, "text": "-MER"},
-                                        { "x": 60,  "y": 65, "text": "Path"}
+                                        { "x": 60,  "y": 64, "text": "Path"}
                                     ],
 
                                 "name" : "NetAutoIntl" 

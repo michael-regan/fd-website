@@ -1,0 +1,131 @@
+body {
+    padding: 50;
+    text-align: center;
+    max-width: 900px;
+    min-width: 380px;
+    margin: 0 auto;
+    font-family: 'Crimson Text', sans-serif;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+img {
+    max-width: 100px;
+}
+
+
+svg {
+    max-width: 150px;
+    width: 100%;
+    overflow: visible !important; 
+    margin: 0px 60px;
+}
+
+div {
+    float: center;
+    position: relative;
+}
+
+
+text  {
+	font-size: 12px;
+    padding: 30px;
+
+}
+
+vn_element {
+
+    color: brown;
+}
+
+.annotation {
+    max-width: 850px;
+    font-size: 16px;
+    position: right;
+    text-align: left;
+    padding-bottom: 50px;
+    padding-right: 60px;
+}
+
+.container{
+    display: flex;
+    padding-left: 80px;
+}
+
+.flex-item{
+    flex-grow: 10;
+}
+
+.nav {
+    font-size: 18px;
+} 
+
+.page-header, .nav, main, img {
+    display: block; 
+} 
+
+.page-header h1 {
+    font-size: 50px;
+    text-align: center;
+    display: block;
+}
+
+
+.row {
+    display: flex;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+.textbox {
+    flex: 50%;
+    max-width: 575px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container{
+        display: flex;
+    }
+
+    svg {
+        margin: 0px 180px;
+    }
+  }
+
+
+@media screen and (max-width: 480px) {
+    .page-header h1, h1 {
+        font-size: 40px;
+        text-align: left;
+        padding-right: 20px;
+    }
+    svg {
+        margin: 0px 60px;
+    }
+    div {
+        margin-right: 0em;
+    }
+    img {
+        max-width: 60px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .row {
+        max-width: 300px;
+    }
+    .container{
+        padding-left: 50px;
+    }
+    .row {
+        padding-top: 5px;
+        flex-wrap: wrap;
+    }
+  }
+
+

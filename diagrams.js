@@ -251,6 +251,33 @@ function getNetwork (FDCategory) {
                                 "name" : "NetVolIntl" 
                             };
 
+     var NetworkVolitionalAttend = {        
+
+                                "solid2":    [   { "x": 55,  "y": 60}, 
+                                                { "x": 95,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": 55,  "y": 0}, 
+                                                { "x": 95,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": 20,  "y": 5, "text": "Brian"},
+                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
+                                        { "x": 100,  "y": 5, "text": "counter"},
+                                        { "x": 100,  "y": 60, "text": "counter"},
+                                        { "x": 20,  "y": -5, "text": "VOL"},
+                                        { "x": 0,  "y": 50, "text": "-MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 50,  "y": 15, "text": "Attend"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetVolAtt" 
+                            };
+
 
     if (FDCategory === 'Volitional Remove') {
         return NetworkVolitionalRemove;
@@ -266,6 +293,10 @@ function getNetwork (FDCategory) {
 
     else if (FDCategory === 'Volitional Internal') {
         return NetworkVolitionalInternal;
+    }
+
+    else if (FDCategory === 'Volitional Attend') {
+        return NetworkVolitionalAttend;
     }
 
 }
@@ -1133,11 +1164,13 @@ function createNetworkDiagram(svgContainer, currentNetwork) {
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    var lineGraph1 = svgContainer.append("path")
-                                .attr("d", lineFunction(solidLine1))
-                                .attr("stroke", "black")
-                                .attr("stroke-width", 2)
-                                .attr("fill", "none");
+    if (solidLine1) {
+        var lineGraph1 = svgContainer.append("path")
+                                    .attr("d", lineFunction(solidLine1))
+                                    .attr("stroke", "black")
+                                    .attr("stroke-width", 2)
+                                    .attr("fill", "none");
+    }
 
     if (solidLine2) {
         var lineGraph2 = svgContainer.append("path")
@@ -1148,11 +1181,13 @@ function createNetworkDiagram(svgContainer, currentNetwork) {
     }
 
 
-    var dLinesLeft = svgContainer.append("path")
-                                .attr("d", lineFunction(dottedLeft))
-                                .attr("stroke", "black")
-                                .style("stroke-dasharray", ("2, 2"))
-                                .attr("fill", "none");
+    if (dottedLeft) {
+        var dLinesLeft = svgContainer.append("path")
+                                    .attr("d", lineFunction(dottedLeft))
+                                    .attr("stroke", "black")
+                                    .style("stroke-dasharray", ("2, 2"))
+                                    .attr("fill", "none");
+    }
 
     var dLinesRight = svgContainer.append("path")
                                 .attr("d", lineFunction(dottedRight))

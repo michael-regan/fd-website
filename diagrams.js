@@ -95,6 +95,15 @@ var events = {
         "UndirectedActivity",
         "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
     ],
+    "755": [
+        "The strong winds cleared the sky.",
+        "clear-10.3",
+        "Sbj V Obj",
+        "NP V NP",
+        "Physical Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
     "965": [
         "The yolk and the white separated",
         "separate-23.1",
@@ -151,7 +160,7 @@ function getNetwork (FDCategory) {
                                         { "x": 100,  "y": 5, "text": "counter"},
                                         { "x": 100,  "y": 60, "text": "counter"},
                                         { "x": -80,  "y": -5, "text": "VOL"},
-                                        { "x": -45,  "y": 15, "text": "force"},
+                                        { "x": -45,  "y": 15, "text": "Force"},
                                         { "x": -15,  "y": -5, "text": "EXIST | -MER"},
                                         { "x": 0,  "y": 50, "text": "-MER"},
                                         { "x": 105,  "y": -5, "text": "EXIST"},
@@ -219,6 +228,64 @@ function getNetwork (FDCategory) {
                                 "name" : "NetAutoIntl" 
                             };
 
+     var NetworkAutonomousUncover = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                'textToAdd' : [
+                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
+                                        { "x": -15,  "y": 60, "text": "MovedEntity"},  
+                                        { "x": 110,  "y": 5, "text": "sky"},
+                                        { "x": 110,  "y": 60, "text": "sky"},
+                                        { "x": 5,  "y": -5, "text": "INTL"},
+                                        { "x": 5,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "-MER"},
+                                        { "x": 105,  "y": 50, "text": "-MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetAutoUnc" 
+                            };
+
+
+     var NetworkVolitionalAttend = {        
+
+                                "solid2":    [   { "x": 55,  "y": 60}, 
+                                                { "x": 95,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": 55,  "y": 0}, 
+                                                { "x": 95,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": 20,  "y": 5, "text": "Brian"},
+                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
+                                        { "x": 100,  "y": 5, "text": "counter"},
+                                        { "x": 100,  "y": 60, "text": "counter"},
+                                        { "x": 20,  "y": -5, "text": "VOL"},
+                                        { "x": 0,  "y": 50, "text": "-MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 50,  "y": 15, "text": "Attend"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetVolAtt" 
+                            };
+
 
      var NetworkVolitionalInternal = {        
 
@@ -251,33 +318,77 @@ function getNetwork (FDCategory) {
                                 "name" : "NetVolIntl" 
                             };
 
-     var NetworkVolitionalAttend = {        
+     var NetworkVolitionalUncover = {        
 
-                                "solid2":    [   { "x": 55,  "y": 60}, 
-                                                { "x": 95,  "y": 60} ],
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
 
                                 "dottedRight":    [   { "x": 125,  "y": 10}, 
                                                 { "x": 125,  "y": 40} ],
 
-                                "arrow":    [   { "x": 55,  "y": 0}, 
-                                                { "x": 95,  "y": 0} ],
+                                "arrow":    [   { "x": -50,  "y": 0}, 
+                                                { "x": -20,  "y": 0} ],
 
                                 'textToAdd' : [
-                                        { "x": 20,  "y": 5, "text": "Brian"},
-                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
-                                        { "x": 100,  "y": 5, "text": "counter"},
-                                        { "x": 100,  "y": 60, "text": "counter"},
-                                        { "x": 20,  "y": -5, "text": "VOL"},
-                                        { "x": 0,  "y": 50, "text": "-MER"},
-                                        { "x": 105,  "y": -5, "text": "EXIST"},
-                                        { "x": 105,  "y": 50, "text": "EXIST"},
-                                        { "x": 50,  "y": 15, "text": "Attend"},
+                                        { "x": -80,  "y": 5, "text": "Carla"},
+                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
+                                        { "x": -15,  "y": 60, "text": "MovedEntity"}, 
+                                        { "x": -80,  "y": -5, "text": "VOL"},
+                                        { "x": -45,  "y": 15, "text": "Force"}, 
+                                        { "x": 110,  "y": 5, "text": "Ground"},
+                                        { "x": 110,  "y": 60, "text": "Ground"},
+                                        { "x": -10,  "y": -5, "text": "EXIST|INTL"},
+                                        { "x": 0,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "-MER"},
+                                        { "x": 105,  "y": 50, "text": "-MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
                                         { "x": 65,  "y": 75, "text": "Path"}
                                     ],
 
-                                "name" : "NetVolAtt" 
+                                "name" : "NetAutoUnc" 
                             };
 
+     var NetworkPhysicalUncover = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": -50,  "y": 0}, 
+                                                { "x": -20,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": -80,  "y": 5, "text": "winds"},
+                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
+                                        { "x": -15,  "y": 60, "text": "MovedEntity"},
+                                        { "x": -80,  "y": -5, "text": "INTL"}, 
+                                        { "x": -45,  "y": 15, "text": "Force"}, 
+                                        { "x": 110,  "y": 5, "text": "sky"},
+                                        { "x": 110,  "y": 60, "text": "sky"},
+                                        { "x": -10,  "y": -5, "text": "EXIST|INTL"},
+                                        { "x": 0,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "-MER"},
+                                        { "x": 105,  "y": 50, "text": "-MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetAutoUnc" 
+                            };
 
     if (FDCategory === 'Volitional Remove') {
         return NetworkVolitionalRemove;
@@ -291,13 +402,26 @@ function getNetwork (FDCategory) {
         return NetworkAutonomousInternal;
     }
 
-    else if (FDCategory === 'Volitional Internal') {
-        return NetworkVolitionalInternal;
+    else if (FDCategory === 'Autonomous Uncover') {
+        return NetworkAutonomousUncover;
     }
 
     else if (FDCategory === 'Volitional Attend') {
         return NetworkVolitionalAttend;
     }
+
+    else if (FDCategory === 'Volitional Internal') {
+        return NetworkVolitionalInternal;
+    }
+
+    else if (FDCategory === 'Volitional Uncover') {
+        return NetworkVolitionalUncover;
+    }
+
+    else if (FDCategory === 'Physical Uncover') {
+        return NetworkPhysicalUncover;
+    }
+
 
 }
 

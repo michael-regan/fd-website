@@ -131,6 +131,96 @@ var events = {
         "DirectedAchievement",
         "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,counter) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)"
     ],
+    "682": [
+        "Cora coiled the rope around the post",
+        "coil-9.6",
+        "Sbj V Obj PathP",
+        "NP V NP PP.location",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "679": [
+        "The child clung to her mother",
+        "cling-22.5",
+        "Sbj V PathP",
+        "NP V PP.co-theme",
+        "Self-Volitional Place",
+        "TransitoryState",
+        "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "845": [
+        "Lora buttered the toast with unsalted butter",
+        "butter-9.9",
+        "Sbj V Obj in/with Obl",
+        "NP V NP PP.theme",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "835": [
+        "The employees staffed the store",
+        "fill-9.8",
+        "Sbj V Obj",
+        "NP V NP",
+        "Self-volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,employees) & Component-of(b,store) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/INTL(q1) & +MER(q2) & PTH(a,b)"
+    ],
+     "834": [
+        "The eggs mixed with the cream",
+        "mix-22.1-1",
+        "Sbj V with Obl",
+        "NP V PP.co-patient",
+        "Autonomous Cover",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)"
+    ],
+    "953": [
+        "The eggs mixed well",
+        "mix-22.1-1",
+        "Sbj V",
+        "NP V ADVP-Middle",
+        "Autonomous Internal",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,eggs) & IncrAcc(a,i,j,q1) & INTL(q1)"
+    ],
+    "954": [
+        "The eggs and cream mixed well together",
+        "mix-22.1-1",
+        "Sbj V",
+        "NP NP V ADVP-Middle together",
+        "Autonomous Internal",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,eggs and cream) & IncrAcc(a,i,j,q1) & INTL(q1)"
+    ],
+    "992": [
+        "Herman mixed the eggs",
+        "mix-22.1-1",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Internal",
+        "DirectedAchievement",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
+    ],
+    "993": [
+        "Herman mixed the eggs and the cream together",
+        "mix-22.1-1",
+        "Sbj V Obj",
+        "NP V NP NP together",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs and the cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
+    ],
+    "978": [
+        "The child and her mother clung together",
+        "cling-22.5",
+        "Sbj V",
+        "NP V together",
+        "Self-volitional Internal",
+        "TransitoryState",
+        "Theme-of(x,e) & Component-of(a,child and mother) & TranStPh(a,i,j,q1) & VOL/INTL(q1)"
+    ],      
 }
 
 
@@ -169,7 +259,43 @@ function getNetwork (FDCategory) {
                                         { "x": 65,  "y": 75, "text": "Path"}
                                     ],
 
-                                "name" : "NetVolMot" 
+                                "name" : "NetVolRem" 
+                            };
+
+     var NetworkVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": -50,  "y": 0}, 
+                                                { "x": -20,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": -80,  "y": 5, "text": "Cora"},
+                                        { "x": 10,  "y": 5, "text": "rope"},
+                                        { "x": 10,  "y": 60, "text": "rope"},  
+                                        { "x": 105,  "y": 5, "text": "post"},
+                                        { "x": 105,  "y": 60, "text": "post"},
+                                        { "x": -80,  "y": -5, "text": "VOL"},
+                                        { "x": -45,  "y": 15, "text": "Force"},
+                                        { "x": -15,  "y": -5, "text": "EXIST | +MER"},
+                                        { "x": 0,  "y": 50, "text": "+MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetVolPlace" 
                             };
 
      var NetworkAutonomousRemove = {        
@@ -202,6 +328,35 @@ function getNetwork (FDCategory) {
                                 "name" : "NetAutoRem" 
                             };
 
+     var NetworkSelfVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 5, "text": "child"},
+                                        { "x": -10,  "y": 60, "text": "child"},  
+                                        { "x": 100,  "y": 5, "text": "mother"},
+                                        { "x": 100,  "y": 60, "text": "mother"},
+                                        { "x": -15,  "y": -5, "text": "VOL/+MER"},
+                                        { "x": 0,  "y": 50, "text": "VOL/+MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetSelfVolPlace" 
+                            };
 
      var NetworkAutonomousInternal = {        
 
@@ -394,8 +549,16 @@ function getNetwork (FDCategory) {
         return NetworkVolitionalRemove;
     }
 
+    else if (FDCategory === 'Volitional Place') {
+        return NetworkVolitionalPlace;
+    }
+
     else if (FDCategory === 'Autonomous Remove') {
         return NetworkAutonomousRemove;
+    }
+
+    else if (FDCategory === 'Self-Volitional Place') {
+        return NetworkSelfVolitionalPlace;
     }
 
     else if (FDCategory === 'Autonomous Internal') {

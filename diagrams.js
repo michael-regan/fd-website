@@ -458,14 +458,14 @@ function getNetwork (FDCategory) {
                                                 { "x": 30,  "y": 0} ],
 
                                 'textToAdd' : [
-                                        { "x": -20,  "y": 5, "text": "I"},
-                                        { "x": 40,  "y": 5, "text": "yolk and white"},
+                                        { "x": -20,  "y": 5, "text": "A0"},
+                                        { "x": 40,  "y": 5, "text": "A1"},
                                         { "x": -10,  "y": 60, "text": "MovedEntity"},  
                                         { "x": 90,  "y": 60, "text": "Ground"},
-                                        { "x": -30,  "y": -5, "text": "VOL"},
+                                        { "x": -40,  "y": -5, "text": "VOL"},
                                         { "x": 60,  "y": -5, "text": "INTL"},
-                                        { "x": 10,  "y": 50, "text": "INTL"},
-                                        { "x": 95,  "y": 50, "text": "-MER"},
+                                        { "x": 10,  "y": 50, "text": "INTL/+MER"},
+                                        { "x": 95,  "y": 50, "text": "EXIST/+MER"},
                                         { "x": 60,  "y": 65, "text": "Path"},
                                         { "x": 0,  "y": 15, "text": "force"},
                                     ],
@@ -1423,7 +1423,7 @@ function parsePredCalc (myPredCalc) {
 
 
 
-function createNetworkDiagram(svgContainer, currentNetwork) {
+function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
 
     function addNetworkText (obj){
 
@@ -1493,7 +1493,23 @@ function createNetworkDiagram(svgContainer, currentNetwork) {
 
 
     for (obj in currentNetwork['textToAdd']){
-        addNetworkText(currentNetwork['textToAdd'][obj]); 
+
+        var newObj = { "x": currentNetwork['textToAdd'][obj]['x'],  
+                   "y": currentNetwork['textToAdd'][obj]['y'], 
+                   "text": currentNetwork['textToAdd'][obj]['text']};
+
+        if (newObj['text'] === "A0") {
+            var participant = argTextToAdd[0];
+            var strLen = participant.length*2;
+            newObj['text'] = participant;
+            newObj['x'] -= strLen*3;
+        } else if (newObj['text'] === "A1"){
+            var participant = argTextToAdd[1];
+            var strLen = participant.length*2;
+            newObj['text'] = participant;
+            newObj['x'] -= strLen - 30 ;
+        }
+        addNetworkText(newObj); 
     }
        
 }
@@ -1619,9 +1635,19 @@ function draw () {
 
     var currentNetwork = getNetwork(FDCategory);
 
+    console.log(eventComponents);
+
+    var argTextToAdd = [];
+
+    for (n=0; n<4; n++) {
+        if (eventComponents[n].constructor === Array) {
+            argTextToAdd.push(eventComponents[n][0]);
+        }
+    }
+
     //var NetworkVolitionalMotion = getNetworkObjects();
 
-    var drawNetwork = createNetworkDiagram(svgNetworkContainer, currentNetwork);
+    var drawNetwork = createNetworkDiagram(svgNetworkContainer, currentNetwork, argTextToAdd);
 
 
 

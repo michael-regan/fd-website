@@ -59,15 +59,6 @@ function addSecondDivText (myText, bold=true, n) {
 
 
 var events = {
-    "1148": [
-        "Brian wiped the fingerprints from the counter",
-        "wipe_manner-10.4.1",
-        "Sbj V Obj PathP",
-        "NP V NP PP.source",
-        "Volitional Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,fingerprints) & Component-of(c,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
     "1130": [
         "Clouds cleared from the sky.",
         "clear-10.3-1",
@@ -103,24 +94,6 @@ var events = {
         "Physical Uncover",
         "IncrementalAccomplishment",
         "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "965": [
-        "The yolk and the white separated",
-        "separate-23.1",
-        "Sbj V",
-        "NP V",
-        "Autonomous Internal",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)"
-    ],
-    "997": [
-        "I separated the yolk and the white",
-        "separate-23.1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Internal",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
     ],
     "181": [
         "Brian wiped at the counter",
@@ -176,6 +149,15 @@ var events = {
         "IncrementalAccomplishment",
         "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)"
     ],
+    "978": [
+        "The child and her mother clung together",
+        "cling-22.5",
+        "Sbj V",
+        "NP V together",
+        "Self-volitional Internal",
+        "TransitoryState",
+        "Theme-of(x,e) & Component-of(a,child and mother) & TranStPh(a,i,j,q1) & VOL/INTL(q1)"
+    ],
     "953": [
         "The eggs mixed well",
         "mix-22.1-1",
@@ -193,6 +175,15 @@ var events = {
         "Autonomous Internal",
         "IncrementalAccomplishment",
         "Theme-of(x,e) & Component-of(a,eggs and cream) & IncrAcc(a,i,j,q1) & INTL(q1)"
+    ],
+    "965": [
+        "The yolk and the white separated",
+        "separate-23.1",
+        "Sbj V",
+        "NP V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)"
     ],
     "992": [
         "Herman mixed the eggs",
@@ -212,15 +203,51 @@ var events = {
         "IncrementalAccomplishment",
         "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs and the cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
     ],
-    "978": [
-        "The child and her mother clung together",
-        "cling-22.5",
-        "Sbj V",
-        "NP V together",
-        "Self-volitional Internal",
-        "TransitoryState",
-        "Theme-of(x,e) & Component-of(a,child and mother) & TranStPh(a,i,j,q1) & VOL/INTL(q1)"
-    ],      
+    "997": [
+        "I separated the yolk and the white",
+        "separate-23.1",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Internal",
+        "DirectedAchievement",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
+    ],
+    "1136": [
+        "Doug cleaned the dishes from the table",
+        "clear-10.3",
+        "Sbj V Obj PathP",
+        "NP V NP PP.location",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Doug) & Component-of(b,dishes) & Component-of(c,table) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1137": [
+        "Sympathetic fans clipped copies of Ms. Shere's recipes from magazines",
+        "cut-21.1",
+        "Sbj V Obj PathP",
+        "NP V NP PP.source",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,fans) & Component-of(b,copies) & Component-of(c,magazines) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1138": [
+        "I unscrewed the handle",
+        "disassemble-23.3",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1148": [
+        "Brian wiped the fingerprints from the counter",
+        "wipe_manner-10.4.1",
+        "Sbj V Obj PathP",
+        "NP V NP PP.source",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,fingerprints) & Component-of(c,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],    
 }
 
 
@@ -244,11 +271,11 @@ function getNetwork (FDCategory) {
                                                 { "x": -20,  "y": 0} ],
 
                                 'textToAdd' : [
-                                        { "x": -80,  "y": 5, "text": "Brian"},
-                                        { "x": -10,  "y": 5, "text": "fingerprints"},
-                                        { "x": -10,  "y": 60, "text": "fingerprints"},  
-                                        { "x": 100,  "y": 5, "text": "counter"},
-                                        { "x": 100,  "y": 60, "text": "counter"},
+                                        { "x": -40,  "y": 5, "text": "A0"},
+                                        { "x": -10,  "y": 5, "text": "A1"},
+                                        { "x": -10,  "y": 60, "text": "A2"},  
+                                        { "x": 100,  "y": 5, "text": "A3"},
+                                        { "x": 100,  "y": 60, "text": "A4"},
                                         { "x": -80,  "y": -5, "text": "VOL"},
                                         { "x": -45,  "y": 15, "text": "Force"},
                                         { "x": -15,  "y": -5, "text": "EXIST | -MER"},
@@ -371,7 +398,7 @@ function getNetwork (FDCategory) {
                                                 ],
 
                                 'textToAdd' : [
-                                        { "x": 35,  "y": 5, "text": "yolk and white"},
+                                        { "x": 100,  "y": 5, "text": "A0"},
                                         { "x": -10,  "y": 60, "text": "MovedEntity"},  
                                         { "x": 90,  "y": 60, "text": "Ground"},
                                         { "x": 55,  "y": -5, "text": "INTL"},
@@ -464,8 +491,8 @@ function getNetwork (FDCategory) {
                                         { "x": 90,  "y": 60, "text": "Ground"},
                                         { "x": -40,  "y": -5, "text": "VOL"},
                                         { "x": 60,  "y": -5, "text": "INTL"},
-                                        { "x": 10,  "y": 50, "text": "INTL/+MER"},
-                                        { "x": 95,  "y": 50, "text": "EXIST/+MER"},
+                                        { "x": -10,  "y": 50, "text": "INTL/+MER"},
+                                        { "x": 80,  "y": 50, "text": "EXIST/+MER"},
                                         { "x": 60,  "y": 65, "text": "Path"},
                                         { "x": 0,  "y": 15, "text": "force"},
                                     ],
@@ -1502,13 +1529,29 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
             var participant = argTextToAdd[0];
             var strLen = participant.length*2;
             newObj['text'] = participant;
-            newObj['x'] -= strLen*3;
+            newObj['x'] -= strLen+30;
         } else if (newObj['text'] === "A1"){
             var participant = argTextToAdd[1];
             var strLen = participant.length*2;
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;
+        } else if (newObj['text'] === "A2"){
+            var participant = argTextToAdd[1];
+            var strLen = participant.length*2;
+            newObj['text'] = participant;
+            newObj['x'] -= strLen - 30 ;
+        } else if (newObj['text'] === "A3"){
+            var participant = argTextToAdd[2];
+            var strLen = participant.length*2;
+            newObj['text'] = participant;
+            newObj['x'] -= strLen - 30 ;
+        } else if (newObj['text'] === "A4"){
+            var participant = argTextToAdd[2];
+            var strLen = participant.length*2;
+            newObj['text'] = participant;
+            newObj['x'] -= strLen - 30 ;
         }
+
         addNetworkText(newObj); 
     }
        

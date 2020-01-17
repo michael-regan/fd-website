@@ -59,42 +59,6 @@ function addSecondDivText (myText, bold=true, n) {
 
 
 var events = {
-    "1130": [
-        "Clouds cleared from the sky.",
-        "clear-10.3-1",
-        "Sbj V PathP",
-        "NP V PP.location",
-        "Autonomous Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,Clouds) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "1157": [
-        "The sky cleared",
-        "clear-10.3-1",
-        "Sbj V",
-        "NP.location V",
-        "Autonomous Uncover",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,NI) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & -MER(q2) & PTH(a,b)"
-    ],
-    "1158": [
-        "Carla was vacuuming",
-        "wipe_instr-10.4.2",
-        "Sbj V",
-        "NP V",
-        "Volitional Uncover",
-        "UndirectedActivity",
-        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "755": [
-        "The strong winds cleared the sky.",
-        "clear-10.3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Physical Uncover",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
     "181": [
         "Brian wiped at the counter",
         "wipe_manner-10.4.1",
@@ -104,33 +68,15 @@ var events = {
         "DirectedAchievement",
         "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,counter) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)"
     ],
-    "682": [
-        "Cora coiled the rope around the post",
-        "coil-9.6",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "679": [
-        "The child clung to her mother",
-        "cling-22.5",
-        "Sbj V PathP",
-        "NP V PP.co-theme",
-        "Self-Volitional Place",
-        "TransitoryState",
-        "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "845": [
-        "Lora buttered the toast with unsalted butter",
-        "butter-9.9",
-        "Sbj V Obj in/with Obl",
-        "NP V NP PP.theme",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
+    "1183": [
+        "The dog barked at the cat.",
+        "animal_sounds-38",
+        "Sbj V at/on/about/of/over Obl",
+        "NP V PP.recipient",
+        "Volitional Attend",
+        "UndirectedActivity",
+        "Theme-of(y,e) & Component-of(a,dog) & Component-of(b,cat) & UndAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)"
+    ], 
     "835": [
         "The employees staffed the store",
         "fill-9.8",
@@ -212,6 +158,33 @@ var events = {
         "DirectedAchievement",
         "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
     ],
+    "1130": [
+        "Clouds cleared from the sky.",
+        "clear-10.3-1",
+        "Sbj V PathP",
+        "NP V PP.location",
+        "Autonomous Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,Clouds) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "1133": [
+        "The twig broke off the branch",
+        "split-23.2",
+        "Sbj V PathP",
+        "NP V PP.co-patient",
+        "Autonomous Remove",
+        "DirectedAchievement",
+        "Theme-of(x,e) & Component-of(a,twig) & Component-of(b,branch) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "1134": [
+        "The twigs broke off of those branches easily",
+        "split-23.2",
+        "Sbj V PathP",
+        "NP V PP ADV-Middle",
+        "Autonomous Remove",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,twigs) & Component-of(b,branches) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
     "1136": [
         "Doug cleaned the dishes from the table",
         "clear-10.3",
@@ -247,11 +220,205 @@ var events = {
         "Volitional Remove",
         "IncrementalAccomplishment",
         "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,fingerprints) & Component-of(c,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],    
+    ],
+    "1157": [
+        "The sky cleared",
+        "clear-10.3-1",
+        "Sbj V",
+        "NP.location V",
+        "Autonomous Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,NI) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & -MER(q2) & PTH(a,b)"
+    ],
+    "1158": [
+        "Carla was vacuuming",
+        "wipe_instr-10.4.2",
+        "Sbj V",
+        "NP V",
+        "Volitional Uncover",
+        "UndirectedActivity",
+        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1161": [
+        "The cook boned the fish",
+        "pit-10.7",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,NI) & Component-of(c,fish) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1162": [
+        "I bled him",
+        "substance_emission-43.4-1-1",
+        "Sbj V Obj",
+        "NP V NP.source",
+        "Volitional Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(z,e) & Component-of(a,I) & Component-of(b,NI) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "1163": [
+        "Carla shoveled the walk",
+        "wipe_instr-10.4.2",
+        "Sbj V Obj",
+        "NP V NP.initial_location",
+        "Volitional Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,walk) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "755": [
+        "The strong winds cleared the sky.",
+        "clear-10.3",
+        "Sbj V Obj",
+        "NP V NP",
+        "Physical Uncover",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
+    ], 
+    "682": [
+        "Cora coiled the rope around the post",
+        "coil-9.6",
+        "Sbj V Obj PathP",
+        "NP V NP PP.location",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "187": [
+        "Jessica squirted water at me",
+        "spray-9.7",
+        "Sbj V Obj PathP",
+        "NP V NP PP.destination-conative",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "247": [
+        "Frances hid the presents behind the books in the drawer",
+        "concealment-16",
+        "Sbj V Obj PathP",
+        "NP V NP PP.location",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "683": [
+        "I spooned the sauce there",
+        "funnel-9.3",
+        "Sbj V Obj PathP",
+        "NP V NP ADVP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "679": [
+        "The child clung to her mother",
+        "cling-22.5",
+        "Sbj V PathP",
+        "NP V PP.co-theme",
+        "Self-Volitional Place",
+        "TransitoryState",
+        "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "132": [
+        "The children hid",
+        "concealment-16",
+        "Sbj V",
+        "NP V",
+        "Self-Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "248": [
+        "The children hid in the chimney",
+        "concealment-16",
+        "Sbj V PathP",
+        "NP V PP.location",
+        "Self-Volitional Place",
+        "IncrementalAccomplishment",
+        "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
+    ],
+    "845": [
+        "Lora buttered the toast with unsalted butter",
+        "butter-9.9",
+        "Sbj V Obj in/with Obl",
+        "NP V NP PP.theme",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "839": [
+        "Lora buttered the toast",
+        "butter-9.9",
+        "Sbj V Obj",
+        "NP V NP.destination",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,NI) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "840": [
+        "Marlene dressed the baby",
+        "dress-41.1.1",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Marlene) & Component-of(b,NI) & Component-of(c,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "841": [
+        "Leslie covered the bed.",
+        "fill-9.8",
+        "Sbj V Obj",
+        "NP V NP.destination",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,NI) & Component-of(c,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+    "842": [
+        "The jeweler decorated the ring",
+        "illustrate-25.3",
+        "Sbj V Obj",
+        "NP V NP",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,NI) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
+    ],
+
 }
 
 
 function getNetwork (FDCategory) {
+
+
+     var NetworkAutonomousRemove = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 5, "text": "A0"},
+                                        { "x": 25,  "y": 60, "text": "A0"},  
+                                        { "x": 90,  "y": 5, "text": "A1"},
+                                        { "x": 90,  "y": 60, "text": "A1"},
+                                        { "x": -15,  "y": -5, "text": "-MER"},
+                                        { "x": 0,  "y": 50, "text": "-MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetAutoRem" 
+                            };
 
      var NetworkVolitionalRemove = {        
 
@@ -273,9 +440,9 @@ function getNetwork (FDCategory) {
                                 'textToAdd' : [
                                         { "x": -40,  "y": 5, "text": "A0"},
                                         { "x": -10,  "y": 5, "text": "A1"},
-                                        { "x": -10,  "y": 60, "text": "A2"},  
-                                        { "x": 100,  "y": 5, "text": "A3"},
-                                        { "x": 100,  "y": 60, "text": "A4"},
+                                        { "x": -10,  "y": 60, "text": "A1"},  
+                                        { "x": 100,  "y": 5, "text": "A2"},
+                                        { "x": 100,  "y": 60, "text": "A2"},
                                         { "x": -80,  "y": -5, "text": "VOL"},
                                         { "x": -45,  "y": 15, "text": "Force"},
                                         { "x": -15,  "y": -5, "text": "EXIST | -MER"},
@@ -307,11 +474,11 @@ function getNetwork (FDCategory) {
                                                 { "x": -20,  "y": 0} ],
 
                                 'textToAdd' : [
-                                        { "x": -80,  "y": 5, "text": "Cora"},
-                                        { "x": 10,  "y": 5, "text": "rope"},
-                                        { "x": 10,  "y": 60, "text": "rope"},  
-                                        { "x": 105,  "y": 5, "text": "post"},
-                                        { "x": 105,  "y": 60, "text": "post"},
+                                        { "x": -40,  "y": 5, "text": "A0"},
+                                        { "x": -10,  "y": 5, "text": "A1"},
+                                        { "x": -10,  "y": 60, "text": "A1"},  
+                                        { "x": 90,  "y": 5, "text": "A2"},
+                                        { "x": 90,  "y": 60, "text": "A2"},
                                         { "x": -80,  "y": -5, "text": "VOL"},
                                         { "x": -45,  "y": 15, "text": "Force"},
                                         { "x": -15,  "y": -5, "text": "EXIST | +MER"},
@@ -325,35 +492,6 @@ function getNetwork (FDCategory) {
                                 "name" : "NetVolPlace" 
                             };
 
-     var NetworkAutonomousRemove = {        
-
-                                "solid1":    [   { "x": 50,  "y": 0}, 
-                                                { "x": 100,  "y": 0} ],
-
-                                "solid2":    [   { "x": 50,  "y": 60}, 
-                                                { "x": 100,  "y": 60} ],
-
-                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
-                                                { "x": 25,  "y": 40} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 10}, 
-                                                { "x": 125,  "y": 40} ],
-
-                                'textToAdd' : [
-                                        { "x": -10,  "y": 5, "text": "Clouds"},
-                                        { "x": -10,  "y": 60, "text": "Clouds"},  
-                                        { "x": 100,  "y": 5, "text": "sky"},
-                                        { "x": 100,  "y": 60, "text": "sky"},
-                                        { "x": -15,  "y": -5, "text": "-MER"},
-                                        { "x": 0,  "y": 50, "text": "-MER"},
-                                        { "x": 105,  "y": -5, "text": "EXIST"},
-                                        { "x": 105,  "y": 50, "text": "EXIST"},
-                                        { "x": 65,  "y": 15, "text": "Path"},
-                                        { "x": 65,  "y": 75, "text": "Path"}
-                                    ],
-
-                                "name" : "NetAutoRem" 
-                            };
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -370,12 +508,12 @@ function getNetwork (FDCategory) {
                                                 { "x": 125,  "y": 40} ],
 
                                 'textToAdd' : [
-                                        { "x": -10,  "y": 5, "text": "child"},
-                                        { "x": -10,  "y": 60, "text": "child"},  
-                                        { "x": 100,  "y": 5, "text": "mother"},
-                                        { "x": 100,  "y": 60, "text": "mother"},
-                                        { "x": -15,  "y": -5, "text": "VOL/+MER"},
-                                        { "x": 0,  "y": 50, "text": "VOL/+MER"},
+                                        { "x": 50,  "y": 5, "text": "A0"},
+                                        { "x": 50,  "y": 60, "text": "A0"},  
+                                        { "x": 90,  "y": 5, "text": "A1"},
+                                        { "x": 90,  "y": 60, "text": "A1"},
+                                        { "x": -15,  "y": -5, "text": "VOL | +MER"},
+                                        { "x": -15,  "y": 50, "text": "VOL | +MER"},
                                         { "x": 105,  "y": -5, "text": "EXIST"},
                                         { "x": 105,  "y": 50, "text": "EXIST"},
                                         { "x": 65,  "y": 15, "text": "Path"},
@@ -384,6 +522,35 @@ function getNetwork (FDCategory) {
 
                                 "name" : "NetSelfVolPlace" 
                             };
+
+
+     var NetworkVolitionalAttend = {        
+
+                                "solid2":    [   { "x": 55,  "y": 60}, 
+                                                { "x": 95,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": 55,  "y": 0}, 
+                                                { "x": 95,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": 55,  "y": 5, "text": "A0"},
+                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
+                                        { "x": 90,  "y": 5, "text": "A1"},
+                                        { "x": 90,  "y": 60, "text": "A1"},
+                                        { "x": 20,  "y": -5, "text": "VOL"},
+                                        { "x": 0,  "y": 50, "text": "-MER"},
+                                        { "x": 105,  "y": -5, "text": "EXIST"},
+                                        { "x": 105,  "y": 50, "text": "EXIST"},
+                                        { "x": 50,  "y": 15, "text": "Attend"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetVolAtt" 
+                            };
+
 
      var NetworkAutonomousInternal = {        
 
@@ -410,65 +577,6 @@ function getNetwork (FDCategory) {
                                 "name" : "NetAutoIntl" 
                             };
 
-     var NetworkAutonomousUncover = {        
-
-                                "solid1":    [   { "x": 50,  "y": 0}, 
-                                                { "x": 100,  "y": 0} ],
-
-                                "solid2":    [   { "x": 50,  "y": 60}, 
-                                                { "x": 100,  "y": 60} ],
-
-                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
-                                                { "x": 25,  "y": 40} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 10}, 
-                                                { "x": 125,  "y": 40} ],
-
-                                'textToAdd' : [
-                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
-                                        { "x": -15,  "y": 60, "text": "MovedEntity"},  
-                                        { "x": 110,  "y": 5, "text": "sky"},
-                                        { "x": 110,  "y": 60, "text": "sky"},
-                                        { "x": 5,  "y": -5, "text": "INTL"},
-                                        { "x": 5,  "y": 50, "text": "INTL"},
-                                        { "x": 105,  "y": -5, "text": "-MER"},
-                                        { "x": 105,  "y": 50, "text": "-MER"},
-                                        { "x": 65,  "y": 15, "text": "Path"},
-                                        { "x": 65,  "y": 75, "text": "Path"}
-                                    ],
-
-                                "name" : "NetAutoUnc" 
-                            };
-
-
-     var NetworkVolitionalAttend = {        
-
-                                "solid2":    [   { "x": 55,  "y": 60}, 
-                                                { "x": 95,  "y": 60} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 10}, 
-                                                { "x": 125,  "y": 40} ],
-
-                                "arrow":    [   { "x": 55,  "y": 0}, 
-                                                { "x": 95,  "y": 0} ],
-
-                                'textToAdd' : [
-                                        { "x": 20,  "y": 5, "text": "Brian"},
-                                        { "x": -10,  "y": 60, "text": "MovedEntity"},  
-                                        { "x": 100,  "y": 5, "text": "counter"},
-                                        { "x": 100,  "y": 60, "text": "counter"},
-                                        { "x": 20,  "y": -5, "text": "VOL"},
-                                        { "x": 0,  "y": 50, "text": "-MER"},
-                                        { "x": 105,  "y": -5, "text": "EXIST"},
-                                        { "x": 105,  "y": 50, "text": "EXIST"},
-                                        { "x": 50,  "y": 15, "text": "Attend"},
-                                        { "x": 65,  "y": 75, "text": "Path"}
-                                    ],
-
-                                "name" : "NetVolAtt" 
-                            };
-
-
      var NetworkVolitionalInternal = {        
 
                                 "solid1":    [   { "x": 55,  "y": 55}, 
@@ -491,14 +599,46 @@ function getNetwork (FDCategory) {
                                         { "x": 90,  "y": 60, "text": "Ground"},
                                         { "x": -40,  "y": -5, "text": "VOL"},
                                         { "x": 60,  "y": -5, "text": "INTL"},
-                                        { "x": -10,  "y": 50, "text": "INTL/+MER"},
-                                        { "x": 80,  "y": 50, "text": "EXIST/+MER"},
+                                        { "x": -10,  "y": 50, "text": "INTL | +MER"},
+                                        { "x": 80,  "y": 50, "text": "EXIST | +MER"},
                                         { "x": 60,  "y": 65, "text": "Path"},
                                         { "x": 0,  "y": 15, "text": "force"},
                                     ],
 
                                 "name" : "NetVolIntl" 
                             };
+
+
+     var NetworkAutonomousUncover = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                'textToAdd' : [
+                                        { "x": 40,  "y": 5, "text": "A0"},
+                                        { "x": 40,  "y": 60, "text": "A0"},  
+                                        { "x": 90,  "y": 5, "text": "A1"},
+                                        { "x": 90,  "y": 60, "text": "A1"},
+                                        { "x": 5,  "y": -5, "text": "INTL"},
+                                        { "x": 5,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "-MER"},
+                                        { "x": 105,  "y": 50, "text": "-MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetAutoUnc" 
+                            };
+
 
      var NetworkVolitionalUncover = {        
 
@@ -518,13 +658,13 @@ function getNetwork (FDCategory) {
                                                 { "x": -20,  "y": 0} ],
 
                                 'textToAdd' : [
-                                        { "x": -80,  "y": 5, "text": "Carla"},
-                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
-                                        { "x": -15,  "y": 60, "text": "MovedEntity"}, 
+                                        { "x": -50,  "y": 5, "text": "A0"},
+                                        { "x": -15,  "y": 5, "text": "A1"},
+                                        { "x": -15,  "y": 60, "text": "A1"}, 
                                         { "x": -80,  "y": -5, "text": "VOL"},
                                         { "x": -45,  "y": 15, "text": "Force"}, 
-                                        { "x": 110,  "y": 5, "text": "Ground"},
-                                        { "x": 110,  "y": 60, "text": "Ground"},
+                                        { "x": 100,  "y": 5, "text": "A2"},
+                                        { "x": 100,  "y": 60, "text": "A2"},
                                         { "x": -10,  "y": -5, "text": "EXIST|INTL"},
                                         { "x": 0,  "y": 50, "text": "INTL"},
                                         { "x": 105,  "y": -5, "text": "-MER"},
@@ -555,8 +695,8 @@ function getNetwork (FDCategory) {
 
                                 'textToAdd' : [
                                         { "x": -80,  "y": 5, "text": "winds"},
-                                        { "x": -15,  "y": 5, "text": "MovedEntity"},
-                                        { "x": -15,  "y": 60, "text": "MovedEntity"},
+                                        { "x": -10,  "y": 5, "text": "A1"},
+                                        { "x": -10,  "y": 60, "text": "A1"},
                                         { "x": -80,  "y": -5, "text": "INTL"}, 
                                         { "x": -45,  "y": 15, "text": "Force"}, 
                                         { "x": 110,  "y": 5, "text": "sky"},
@@ -572,7 +712,80 @@ function getNetwork (FDCategory) {
                                 "name" : "NetAutoUnc" 
                             };
 
-    if (FDCategory === 'Volitional Remove') {
+
+     var NetworkAutonomousCover = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                'textToAdd' : [
+                                        { "x": 40,  "y": 5, "text": "A0"},
+                                        { "x": 40,  "y": 60, "text": "A0"},  
+                                        { "x": 90,  "y": 5, "text": "A1"},
+                                        { "x": 90,  "y": 60, "text": "A1"},
+                                        { "x": 5,  "y": -5, "text": "INTL"},
+                                        { "x": 5,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "+MER"},
+                                        { "x": 105,  "y": 50, "text": "+MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetAutoUnc" 
+                            };
+
+
+     var NetworkVolitionalProvide = {        
+
+                                "solid1":    [   { "x": 50,  "y": 0}, 
+                                                { "x": 100,  "y": 0} ],
+
+                                "solid2":    [   { "x": 50,  "y": 60}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 10}, 
+                                                { "x": 25,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 10}, 
+                                                { "x": 125,  "y": 40} ],
+
+                                "arrow":    [   { "x": -50,  "y": 0}, 
+                                                { "x": -20,  "y": 0} ],
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 5, "text": "A0"},
+                                        { "x": -10,  "y": 5, "text": "A1"},
+                                        { "x": -10,  "y": 60, "text": "A1"},  
+                                        { "x": 90,  "y": 5, "text": "A2"},
+                                        { "x": 90,  "y": 60, "text": "A2"},
+                                        { "x": -80,  "y": -5, "text": "VOL"},
+                                        { "x": -45,  "y": 15, "text": "Force"},
+                                        { "x": -15,  "y": -5, "text": "EXIST | INTL"},
+                                        { "x": 10,  "y": 50, "text": "INTL"},
+                                        { "x": 105,  "y": -5, "text": "+MER"},
+                                        { "x": 105,  "y": 50, "text": "+MER"},
+                                        { "x": 65,  "y": 15, "text": "Path"},
+                                        { "x": 65,  "y": 75, "text": "Path"}
+                                    ],
+
+                                "name" : "NetVolProvide" 
+                            };
+
+
+    if (FDCategory === 'Autonomous Remove') {
+        return NetworkAutonomousRemove;
+    }
+
+    else if (FDCategory === 'Volitional Remove') {
         return NetworkVolitionalRemove;
     }
 
@@ -580,28 +793,24 @@ function getNetwork (FDCategory) {
         return NetworkVolitionalPlace;
     }
 
-    else if (FDCategory === 'Autonomous Remove') {
-        return NetworkAutonomousRemove;
-    }
-
     else if (FDCategory === 'Self-Volitional Place') {
         return NetworkSelfVolitionalPlace;
-    }
-
-    else if (FDCategory === 'Autonomous Internal') {
-        return NetworkAutonomousInternal;
-    }
-
-    else if (FDCategory === 'Autonomous Uncover') {
-        return NetworkAutonomousUncover;
     }
 
     else if (FDCategory === 'Volitional Attend') {
         return NetworkVolitionalAttend;
     }
 
+    else if (FDCategory === 'Autonomous Internal') {
+        return NetworkAutonomousInternal;
+    }
+
     else if (FDCategory === 'Volitional Internal') {
         return NetworkVolitionalInternal;
+    }
+
+    else if (FDCategory === 'Autonomous Uncover') {
+        return NetworkAutonomousUncover;
     }
 
     else if (FDCategory === 'Volitional Uncover') {
@@ -612,6 +821,13 @@ function getNetwork (FDCategory) {
         return NetworkPhysicalUncover;
     }
 
+    else if (FDCategory === 'Autonomous Cover') {
+        return NetworkAutonomousCover;
+    }
+
+    else if (FDCategory === 'Volitional Provide') {
+        return NetworkVolitionalProvide;
+    }
 
 }
 
@@ -1536,7 +1752,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;
         } else if (newObj['text'] === "A2"){
-            var participant = argTextToAdd[1];
+            var participant = argTextToAdd[2];
             var strLen = participant.length*2;
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;

@@ -37,8 +37,18 @@ text  {
 
 }
 
-vn_element {
+table {
+   margin: auto;
+}
 
+
+td, th {
+  padding: 1px 8px;
+  text-align: left;
+  font-size: 16px;
+}
+
+vn_element {
     color: brown;
 }
 
@@ -54,6 +64,7 @@ vn_element {
 .container{
     display: flex;
     padding-left: 80px;
+    margin-top: 10px;
 }
 
 .flex-item{
@@ -74,6 +85,9 @@ vn_element {
     display: block;
 }
 
+rect {
+  opacity: 0.1;
+}
 
 .row {
     display: flex;
@@ -81,10 +95,48 @@ vn_element {
     margin: 0 auto;
 }
 
+
 .textbox {
     flex: 50%;
     max-width: 575px;
 }
+
+
+.col-3 {
+  width: 200px;
+}
+
+.col-md-6 {
+  margin: auto;
+/*  border: 1px solid #dfdfdf;
+*/}
+
+.col-md-4 {
+   margin: auto;
+/*   border: 1px solid #dfdfdf;
+*/}
+
+#network-title {
+    display: block;
+    margin: auto;
+}
+
+#svg-network-examples {
+    margin-bottom: 10px;
+}
+
+
+div.tooltip {
+  position: absolute;   
+  text-align: center;   
+  width: 300px;  
+  height: 100px;     
+  padding: 2px; 
+  font: 12px sans-serif;    
+  background: lightsteelblue;   
+  border: 0px;                  
+  border-radius: 8px;
+ /*  pointer-events: none;  This line needs to be removed */
 
 
 @media screen and (max-width: 1000px) {
@@ -100,7 +152,7 @@ vn_element {
 
 @media screen and (max-width: 480px) {
     .page-header h1, h1 {
-        font-size: 40px;
+        font-size: 28px;
         text-align: left;
         padding-right: 20px;
     }
@@ -120,12 +172,15 @@ vn_element {
         max-width: 300px;
     }
     .container{
-        padding-left: 50px;
+        padding-left: 30px;
     }
     .row {
         padding-top: 5px;
         flex-wrap: wrap;
     }
   }
+
+
+
 
 

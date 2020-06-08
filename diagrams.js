@@ -1978,7 +1978,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "dotted1":    [   { "x": -10,  "y": 70}, 
                                                 { "x": 20,  "y": 70} ],
 
-                                "solid3":    [   { "x": -10,  "y": 30}, 
+                                "solid0":    [   { "x": -10,  "y": 30}, 
                                                 { "x": 20,  "y": 30} ],
 
                                 "solid4":    [   { "x": -10,  "y": 75}, 
@@ -2031,7 +2031,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "dotted1":    [   { "x": -10,  "y": 70}, 
                                                 { "x": 20,  "y": 70} ],
 
-                                "solid3":    [   { "x": -10,  "y": 30}, 
+                                "solid0":    [   { "x": -10,  "y": 30}, 
                                                 { "x": 20,  "y": 30} ],
 
                                 "solid4":    [   { "x": -10,  "y": 75}, 
@@ -3406,6 +3406,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
                                     .text(obj["text"]);
     }
 
+    var solidLine0 = currentNetwork["solid0"];
     var solidLine1 = currentNetwork["solid1"];
     var solidLine2 = currentNetwork["solid2"];
     var solidLine3 = currentNetwork["solid3"];
@@ -3431,13 +3432,21 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
         .attr("d", "M 0 0 12 6 0 12 3 6")
         .style("fill", "black");
 
-    if (solidLine1) {
-        var lineGraph1 = svgContainer.append("path")
-                                    .attr("d", lineFunction(solidLine1))
-                                    .attr("stroke", "red")
-                                    .attr("stroke-width", 1)
-                                    .attr("fill", "none");
+    var solidLinesForRed = [solidLine0, solidLine1];
+
+    for (i=0; i<2; i++) {
+
+        var sLineRed = solidLinesForRed[i];
+
+        if (sLineRed) {
+            var lineGraph1 = svgContainer.append("path")
+                                        .attr("d", lineFunction(sLineRed))
+                                        .attr("stroke", "red")
+                                        .attr("stroke-width", 1)
+                                        .attr("fill", "none");
+        }
     }
+
 
     var solidLines = [solidLine2, solidLine3, solidLine4];
 

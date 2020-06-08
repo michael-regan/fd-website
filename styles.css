@@ -7,11 +7,24 @@ body {
     font-family: 'Crimson Text', sans-serif;
 }
 
+button {
+  background-color: #BEBEBE; /* greyish */
+  border: 1px solid grey;
+  border-radius: 25px;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  
+}
+
+
 h2{
     font-weight: bold;
     font-size: 20px;
 }
-
 
 img {
     max-width: 100px;
@@ -67,6 +80,7 @@ vn_element {
     margin-top: 10px;
 }
 
+
 .flex-item{
     flex-grow: 10;
 }
@@ -74,6 +88,11 @@ vn_element {
 .nav {
     font-size: 18px;
 } 
+
+.navbar-brand {
+    margin-top: -1em;
+} 
+
 
 .page-header, .nav, main, img {
     display: block; 
@@ -102,8 +121,8 @@ rect {
 }
 
 
-.col-3 {
-  width: 200px;
+.col-md-2 {
+  margin-top:-0.25em;
 }
 
 .col-md-6 {
@@ -116,15 +135,38 @@ rect {
 /*   border: 1px solid #dfdfdf;
 */}
 
+
+#network-container {
+    margin-top: 3em;
+}
+
+#network-label {
+    margin-top: 3em;
+}
+
 #network-title {
+    margin-top: 1em;
     display: block;
     margin: auto;
 }
 
-#svg-network-examples {
-    margin-bottom: 10px;
+#svg-container {
+    margin-top: 2em;
 }
 
+#svg-network-examples {
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+#svg-network-table {
+    margin-top: 0px;
+}
+
+
+div:empty {
+   display: none;
+}
 
 div.tooltip {
   position: absolute;   

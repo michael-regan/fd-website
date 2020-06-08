@@ -20,7 +20,7 @@ function resetScreen() {
 
 }
 
-function addSecondDivText (myText, bold=true, n) {
+function addSecondDivText (myText, linkToConstructionPage, linkToGeneralNetwork, linkToNetworkTablePage, bold=true, n) {
 
     if (n%2!==0) {element = "textbox_right"}
         else {element = "textbox_left"}
@@ -29,6 +29,7 @@ function addSecondDivText (myText, bold=true, n) {
     var h2 = document.createElement("H2");
     var vn_element = document.createElement("vn_element")
     var content = document.createTextNode(myText);
+    var currentLocation = window.location.href;
 
     if (n===6) {
         var cell = document.getElementById("textbox");
@@ -40,9 +41,87 @@ function addSecondDivText (myText, bold=true, n) {
         h2.appendChild(content);
     } else {
 
-        if (n === 0 || n === 1 || n === 3){
+        if (n === 0 || n === 1){
             theDiv.appendChild(vn_element);
             vn_element.appendChild(content);
+        }
+
+        else if (n === 3) {
+
+            var btn = document.createElement("button");
+            btn.innerHTML = myText;
+  
+            var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToConstructionPage;
+
+            btn.addEventListener("mouseover", function(){
+                btn.style.backgroundColor = "#FF00CC";
+            });
+
+            btn.addEventListener("mouseout", function(){
+                btn.style.backgroundColor = "#BEBEBE";
+            });
+
+            btn.addEventListener("click", function(){
+                location = nextLocation; // Navigate to new page
+            });
+
+            theDiv.appendChild(btn);
+
+        }
+
+        else if (n === 5) {
+
+            var btn = document.createElement("button");
+
+            var generalNetworkName = myText.replace(/([A-Z])/g, ' $1').trim();
+
+            btn.innerHTML = generalNetworkName;
+  
+            var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToGeneralNetwork;
+
+            btn.addEventListener("mouseover", function(){
+                btn.style.backgroundColor = "#FF00CC";
+            });
+
+            btn.addEventListener("mouseout", function(){
+                btn.style.backgroundColor = "#BEBEBE";
+            });
+
+            btn.addEventListener("click", function(){
+                location = nextLocation; // Navigate to new page
+            });
+
+            theDiv.appendChild(btn);
+
+        }
+
+        else if (n === 7) {
+
+            var btn = document.createElement("button");
+
+            // var parentNetworkTitle = myText.replace(/([A-Z])/g, ' $1').trim();
+
+            // btn.innerHTML = parentNetworkTitle;
+
+            btn.innerHTML = "Construction to verb"
+  
+            var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToNetworkTablePage;
+
+            btn.addEventListener("mouseover", function(){
+                btn.style.backgroundColor = "#FF00CC";
+            });
+
+            btn.addEventListener("mouseout", function(){
+                btn.style.backgroundColor = "#BEBEBE";
+            });
+
+
+            btn.addEventListener("click", function(){
+                location = nextLocation; // Navigate to new page
+            });
+
+            theDiv.appendChild(btn);
+
         }
 
         else {
@@ -55,1023 +134,1151 @@ function addSecondDivText (myText, bold=true, n) {
 
 }
 
+
+function addTableWithLinksToMappingPage (data, n) {
+
+    if (n===0) {element = "text_left_top"}
+        else if (n===1) {element = "button_right_top"}
+        else if (n===2) {element = "text_left_bottom"}
+        else {element = "button_right_bottom"}
+
+    var theDiv = document.getElementById(element);
+    var h4 = document.createElement("H4");
+    var currentLocation = window.location.href;
+
+
+    if (n%2!=0) {
+
+            var btn = document.createElement("button");
+            btn.innerHTML = data["text"];
+
+            var nextLocation = currentLocation.split("id=")[0] + "id="+ data["id"];
+
+            btn.addEventListener("mouseover", function(){
+                btn.style.backgroundColor = "#FF00CC";
+            });
+
+            btn.addEventListener("mouseout", function(){
+                btn.style.backgroundColor = "#BEBEBE";
+            });
+
+            btn.addEventListener("click", function(){
+                location = nextLocation; // Navigate to new page
+            });
+
+            theDiv.appendChild(btn);
+
+        } else {
+
+            var content = document.createTextNode(data);
+
+            theDiv.appendChild(h4);
+            h4.appendChild(content);
+
+        }
+
+    }
+
 // the event representations
 
 
 var events = {
-    "181": [
-        "Brian wiped at the counter",
-        "wipe_manner-10.4.1",
-        "Sbj V at/on/about/of/over Obl",
-        "NP V PP-Conative",
-        "Volitional Attend",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,counter) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)"
-    ],
-    "726": [
-        "The drawer rolled to an open position",
-        "roll-51.3.1",
-        "Sbj V ResultP",
-        "NP V PP.result",
-        "Autonomous COS",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "727": [
-        "The drawer rolled open",
-        "roll-51.3.1",
-        "Sbj V ResultP",
-        "NP V ADJ",
-        "Autonomous COS",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1183": [
-        "The dog barked at the cat.",
-        "animal_sounds-38",
-        "Sbj V at/on/about/of/over Obl",
-        "NP V PP.recipient",
-        "Volitional Attend",
-        "UndirectedActivity",
-        "Theme-of(y,e) & Component-of(a,dog) & Component-of(b,cat) & UndAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)"
-    ], 
-    "835": [
-        "The employees staffed the store",
-        "fill-9.8",
+  "181": [
+    "Brian wiped at the counter",
+    "wipe_manner-10.4.1",
+    "Sbj V at/on/about/of/over Obl",
+    "Volitional Attend",
+    "DirectedAchievement",
+    "",
+    "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,counter) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+    ""
+  ],
+  "228": [
+        "Jackie chased the thief",
+        "chase-51.6",
         "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,employees) & Component-of(b,store) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/INTL(q1) & +MER(q2) & PTH(a,b)"
-    ],
-     "834": [
-        "The eggs mixed with the cream",
-        "mix-22.1-1",
-        "Sbj V with Obl",
-        "NP V PP.co-patient",
-        "Autonomous Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)"
-    ],
-    "978": [
-        "The child and her mother clung together",
-        "cling-22.5",
-        "Sbj V",
-        "NP V together",
-        "Self-volitional Internal",
-        "TransitoryState",
-        "Theme-of(x,e) & Component-of(a,child and mother) & TranStPh(a,i,j,q1) & VOL/INTL(q1)"
-    ],
-    "953": [
-        "The eggs mixed well",
-        "mix-22.1-1",
-        "Sbj V",
-        "NP V ADVP-Middle",
-        "Autonomous Internal",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,eggs) & IncrAcc(a,i,j,q1) & INTL(q1)"
-    ],
-    "954": [
-        "The eggs and cream mixed well together",
-        "mix-22.1-1",
-        "Sbj V",
-        "NP NP V ADVP-Middle together",
-        "Autonomous Internal",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,eggs and cream) & IncrAcc(a,i,j,q1) & INTL(q1)"
-    ],
-    "965": [
-        "The yolk and the white separated",
-        "separate-23.1",
-        "Sbj V",
-        "NP V",
-        "Autonomous Internal",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)"
-    ],
-    "992": [
-        "Herman mixed the eggs",
-        "mix-22.1-1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Internal",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
-    ],
-    "993": [
-        "Herman mixed the eggs and the cream together",
-        "mix-22.1-1",
-        "Sbj V Obj",
-        "NP V NP NP together",
-        "Volitional Internal",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs and the cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
-    ],
-    "997": [
-        "I separated the yolk and the white",
-        "separate-23.1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Internal",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)"
-    ],
-    "1130": [
-        "Clouds cleared from the sky.",
-        "clear-10.3-1",
+        "Mutual",
+        "DirectedActivity",
+        "PursuitMotionNetwork",
+        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10003"
+  ],
+  "238": [
+        "Jackie chased after the thief",
+        "chase-51.6",
         "Sbj V PathP",
-        "NP V PP.location",
-        "Autonomous Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,Clouds) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "1133": [
-        "The twig broke off the branch",
-        "split-23.2",
-        "Sbj V PathP",
-        "NP V PP.co-patient",
-        "Autonomous Remove",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,twig) & Component-of(b,branch) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "1134": [
-        "The twigs broke off of those branches easily",
-        "split-23.2",
-        "Sbj V PathP",
-        "NP V PP ADV-Middle",
-        "Autonomous Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,twigs) & Component-of(b,branches) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "1136": [
-        "Doug cleaned the dishes from the table",
-        "clear-10.3",
+        "Mutual",
+        "DirectedActivity",
+        "PursuitMotionNetwork",
+        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10003"
+  ],
+  "633": [
+        "Jackie accompanied Rose",
+        "accompany-51.7",
         "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Remove",
+        "Mutual",
         "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Doug) & Component-of(b,dishes) & Component-of(c,table) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1137": [
-        "Sympathetic fans clipped copies of Ms. Shere's recipes from magazines",
-        "cut-21.1",
-        "Sbj V Obj PathP",
-        "NP V NP PP.source",
-        "Volitional Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,fans) & Component-of(b,copies) & Component-of(c,magazines) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1138": [
-        "I unscrewed the handle",
-        "disassemble-23.3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1148": [
-        "Brian wiped the fingerprints from the counter",
-        "wipe_manner-10.4.1",
-        "Sbj V Obj PathP",
-        "NP V NP PP.source",
-        "Volitional Remove",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,fingerprints) & Component-of(c,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1157": [
-        "The sky cleared",
-        "clear-10.3-1",
-        "Sbj V",
-        "NP.location V",
-        "Autonomous Deprive",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,NI) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & -MER(q2) & PTH(a,b)"
-    ],
-    "1158": [
-        "Carla was vacuuming",
-        "wipe_instr-10.4.2",
-        "Sbj V",
-        "NP V",
-        "Volitional Deprive",
-        "UndirectedActivity",
-        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1161": [
-        "The cook boned the fish",
-        "pit-10.7",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Deprive",
-        "IncrementalAccomplishment",
-        "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,NI) & Component-of(c,fish) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1162": [
-        "I bled him",
-        "substance_emission-43.4-1-1",
-        "Sbj V Obj",
-        "NP V NP.source",
-        "Volitional Deprive",
-        "IncrementalAccomplishment",
-        "Theme-of(z,e) & Component-of(a,I) & Component-of(b,NI) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1163": [
-        "Carla shoveled the walk",
-        "wipe_instr-10.4.2",
-        "Sbj V Obj",
-        "NP V NP.initial_location",
-        "Volitional Deprive",
-        "IncrementalAccomplishment",
-        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,walk) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "755": [
-        "The strong winds cleared the sky.",
-        "clear-10.3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Physical Deprive",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)"
-    ], 
-    "682": [
-        "Cora coiled the rope around the post",
-        "coil-9.6",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "187": [
-        "Jessica squirted water at me",
-        "spray-9.7",
-        "Sbj V Obj PathP",
-        "NP V NP PP.destination-conative",
-        "Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "247": [
-        "Frances hid the presents behind the books in the drawer",
-        "concealment-16",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "683": [
-        "I spooned the sauce there",
-        "funnel-9.3",
-        "Sbj V Obj PathP",
-        "NP V NP ADVP",
-        "Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "679": [
-        "The child clung to her mother",
-        "cling-22.5",
-        "Sbj V PathP",
-        "NP V PP.co-theme",
-        "Self-Volitional Place",
-        "TransitoryState",
-        "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "132": [
-        "The children hid",
-        "concealment-16",
-        "Sbj V",
-        "NP V",
-        "Self-Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "248": [
-        "The children hid in the chimney",
-        "concealment-16",
-        "Sbj V PathP",
-        "NP V PP.location",
-        "Self-Volitional Place",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)"
-    ],
-    "814": [
-        "Bill rolled the drawer open",
-        "roll-51.3.1",
-        "Sbj V Obj ResultP",
-        "NP V NP ADJ",
-        "Volitional COS",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "815": [
-        "Bill rolled the drawer to an open position",
-        "roll-51.3.1",
-        "Sbj V Obj ResultP",
-        "NP V NP PP.result",
-        "Volitional COS",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "816": [
-        "Tom walked the dog to exhaustion",
-        "run-51.3.2-2",
-        "Sbj V Obj ResultP",
-        "NP V NP PP.result",
-        "Volitional COS",
-        "NonincrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,dog) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "832": [
-        "He waltzed her to exhaustion",
-        "waltz-51.5",
-        "Sbj V Obj ResultP",
-        "NP V NP PP.goal",
-        "Volitional COS",
-        "NonincrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "833": [
-        "He waltzed her dizzy",
-        "waltz-51.5",
-        "Sbj V Obj ResultP",
-        "NP V NP ADJP",
-        "Volitional COS",
-        "NonincrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "845": [
-        "Lora buttered the toast with unsalted butter",
-        "butter-9.9",
-        "Sbj V Obj in/with Obl",
-        "NP V NP PP.theme",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "839": [
-        "Lora buttered the toast",
-        "butter-9.9",
-        "Sbj V Obj",
-        "NP V NP.destination",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,NI) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "840": [
-        "Marlene dressed the baby",
-        "dress-41.1.1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Marlene) & Component-of(b,NI) & Component-of(c,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "841": [
-        "Leslie covered the bed.",
-        "fill-9.8",
-        "Sbj V Obj",
-        "NP V NP.destination",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,NI) & Component-of(c,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "842": [
-        "The jeweler decorated the ring",
-        "illustrate-25.3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Provide",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,NI) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)"
-    ],
-    "1035": [
-        "The ball rolled",
-        "roll-51.3.1",
-        "Sbj V",
-        "NP.theme V",
-        "Autonomous Motion",
-        "UndirectedActivity",
-        "Theme-of(x,e) & Component-of(a,ball) & Component-of(b,NI) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1036": [
-        "The book slid",
-        "slide-11.2",
-        "Sbj V",
-        "NP V",
-        "Autonomous Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,book) & Component-of(b,NI) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1039": [
-        "The ball rolled down the hill",
-        "roll-51.3.1",
-        "Sbj V PathP",
-        "NP V PP.location",
-        "Autonomous Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,ball) & Component-of(b,hill) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1040": [
-        "The book slid from the table",
-        "slide-11.2",
-        "Sbj V PathP",
-        "NP V PP.initial_location",
-        "Autonomous Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,book) & Component-of(b,table) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1041": [
-        "The book slid from the table to the floor",
-        "slide-11.2",
-        "Sbj V PathP",
-        "NP V PP.initial_location PP.destination",
-        "Autonomous Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table-floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1042": [
-        "The books slid to the floor",
-        "slide-11.2",
-        "Sbj V PathP",
-        "NP V PP.destination",
-        "Autonomous Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,books) & Component-of(b,floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1053": [
-        "He came from France to Colorado",
-        "escape-51.1",
-        "Sbj V PathP",
-        "NP V PP.initial_loc PP.destination",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1054": [
-        "He came through the door",
-        "escape-51.1",
-        "Sbj V PathP",
-        "NP V PP.trajectory",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,door) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1055": [
-        "He came to Colorado",
-        "escape-51.1",
-        "Sbj V PathP",
-        "NP V PP.destination",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1056": [
-        "The prisoners advanced",
-        "escape-51.1-1",
-        "Sbj V",
-        "NP V",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,prisoners) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1057": [
-        "He came from France",
-        "escape-51.1-1",
-        "Sbj V PathP",
-        "NP V PP.initial_loc",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,France) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1058": [
-        "The convict escaped the prison",
-        "escape-51.1-1-1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,convict) & Component-of(b,prison) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1059": [
-        "He entered the room",
-        "escape-51.1-1-2",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,room) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1060": [
-        "He climbed the mountain",
-        "escape-51.1-1-3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,He) & Component-of(b,mountain) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1062": [
-        "The crowd left",
-        "leave-51.2-1",
-        "Sbj V",
-        "NP V",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,crowd) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1063": [
-        "They rowed the canals of Venice",
-        "nonvehicle-51.4.2",
-        "Sbj V Obj",
-        "NP V NP.location",
-        "Self-volitional Motion",
-        "UndirectedActivity",
-        "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1064": [
-        "They rowed along the canal",
-        "nonvehicle-51.4.2",
-        "Sbj V PathP",
-        "NP V PP.location",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canal) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1065": [
-        "I landed there",
-        "pocket-9.10-1",
-        "Sbj V PathP",
-        "NP V ADVP",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,I) & Component-of(b,there) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1066": [
-        "I landed in Russia",
-        "pocket-9.10-1",
-        "Sbj V PathP",
-        "NP V PP.destination",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,I) & Component-of(b,Russia) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1067": [
-        "They reached the hill",
-        "reach-51.8",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(x,e) & Component-of(a,They) & Component-of(b,hill) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1068": [
-        "There jumped out of the box a little white rabbit",
-        "run-51.3.2",
-        "Sbj V PathP",
-        "There V PP NP",
-        "Self-volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1069": [
-        "Out of the box jumped a little white rabbit",
-        "run-51.3.2",
-        "Sbj V PathP",
-        "PP.location V NP",
-        "Self-volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1070": [
-        "The horse jumped over the fence",
-        "run-51.3.2",
-        "Sbj V PathP",
-        "NP V PP.location",
-        "Self-volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,fence) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1071": [
-        "There jumped a little white rabbit out of the box",
-        "run-51.3.2",
-        "Sbj V PathP",
-        "There V NP PP",
-        "Self-volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1072": [
-        "The horse traveled the stream",
-        "run-51.3.2-1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,stream) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1073": [
-        "The horse jumped the stream",
-        "run-51.3.2-2-1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,stream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1074": [
-        "Gordo took an unknown route from Topeka",
-        "vehicle_path-51.4.3",
-        "Sbj V PathP",
-        "NP V NP PP.initial_location",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,Gordo) & Component-of(b,Topeka) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1075": [
-        "Martha took the back way to Nederland",
-        "vehicle_path-51.4.3",
-        "Sbj V PathP",
-        "NP V NP PP.destination",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,Martha) & Component-of(b,Nederland) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1076": [
-        "Kevin took the freeway",
-        "vehicle_path-51.4.3",
-        "Sbj V PathP",
-        "NP V NP",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,Kevin) & Component-of(b,freeway) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1077": [
-        "Claire skated along the canal",
-        "vehicle-51.4.1",
-        "Sbj V PathP",
-        "NP.theme V PP.location",
-        "Self-volitional Motion",
-        "DirectedActivity",
-        "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canal) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1078": [
-        "Claire skated the canals",
-        "vehicle-51.4.1-1",
-        "Sbj V Obj",
-        "NP V NP",
-        "Self-volitional Motion",
-        "UndirectedActivity",
-        "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1080": [
-        "Bill rolled the ball",
-        "roll-51.3.1",
-        "Sbj V Obj",
-        "NP V NP.theme",
-        "Volitional Motion",
-        "UndirectedActivity",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1083": [
-        "Nora brought the book",
-        "bring-11.3",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-
-    "1084": [
-        "Nora brought the book from home to the meeting",
+        "PursuitMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & MOT(q2) & FRC(a,b)",
+        "10003"
+  ],
+  "726": [
+    "The drawer rolled to an open position",
+    "roll-51.3.1",
+    "Sbj V ResultP",
+    "Autonomous COS",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
+    "10003"
+  ],
+  "727": [
+    "The drawer rolled open",
+    "roll-51.3.1",
+    "Sbj V ResultP",
+    "Autonomous COS",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
+    "10003"
+  ],
+  "743": [
+    "Bill broke the window with a ball",
+    "hit-18.1",
+    "Sbj V Obj ResultP with Obl",
+    "Instrument COS",
+    "DirectedAchievement",
+    "",
+    "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & MNP(a,b) & FRC(b,c)",
+    ""
+  ],
+  "1183": [
+    "The dog barked at the cat.",
+    "animal_sounds-38",
+    "Sbj V at/on/about/of/over Obl",
+    "Volitional Attend",
+    "UndirectedActivity",
+    "",
+    "Theme-of(y,e) & Component-of(a,dog) & Component-of(b,cat) & UndAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+    ""
+  ],
+  "835": [
+    "The employees staffed the store",
+    "fill-9.8",
+    "Sbj V Obj",
+    "Self-volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,employees) & Component-of(b,store) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/INTL(q1) & +MER(q2) & PTH(a,b)",
+    ""
+  ],
+  "834": [
+    "The eggs mixed with the cream",
+    "mix-22.1-1",
+    "Sbj V with Obl",
+    "Autonomous Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)",
+    ""
+  ],
+  "978": [
+    "The child and her mother clung together",
+    "cling-22.5",
+    "Sbj V",
+    "Self-volitional Internal",
+    "TransitoryState",
+    "",
+    "Theme-of(x,e) & Component-of(a,child and mother) & TranStPh(a,i,j,q1) & VOL/INTL(q1)",
+    ""
+  ],
+  "953": [
+    "The eggs mixed well",
+    "mix-22.1-1",
+    "Sbj V",
+    "Autonomous Internal",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,eggs) & IncrAcc(a,i,j,q1) & INTL(q1)",
+    ""
+  ],
+  "954": [
+    "The eggs and cream mixed well together",
+    "mix-22.1-1",
+    "Sbj V",
+    "Autonomous Internal",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,eggs and cream) & IncrAcc(a,i,j,q1) & INTL(q1)",
+    ""
+  ],
+  "965": [
+    "The yolk and the white separated",
+    "separate-23.1",
+    "Sbj V",
+    "Autonomous Internal",
+    "DirectedAchievement",
+    "",
+    "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)",
+    ""
+  ],
+  "992": [
+    "Herman mixed the eggs",
+    "mix-22.1-1",
+    "Sbj V Obj",
+    "Volitional Internal",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+    "10005"
+  ],
+  "993": [
+    "Herman mixed the eggs and the cream together",
+    "mix-22.1-1",
+    "Sbj V Obj",
+    "Volitional Internal",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs and the cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+    "10005"
+  ],
+  "997": [
+    "I separated the yolk and the white",
+    "separate-23.1",
+    "Sbj V Obj",
+    "Volitional Internal",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+    "10005"
+  ],
+  "1130": [
+    "Clouds cleared from the sky.",
+    "clear-10.3-1",
+    "Sbj V PathP",
+    "Autonomous Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,Clouds) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "1133": [
+    "The twig broke off the branch",
+    "split-23.2",
+    "Sbj V PathP",
+    "Autonomous Remove",
+    "DirectedAchievement",
+    "",
+    "Theme-of(x,e) & Component-of(a,twig) & Component-of(b,branch) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "1134": [
+    "The twigs broke off of those branches easily",
+    "split-23.2",
+    "Sbj V PathP",
+    "Autonomous Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,twigs) & Component-of(b,branches) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "1136": [
+    "Doug cleaned the dishes from the table",
+    "clear-10.3",
+    "Sbj V Obj PathP",
+    "Volitional Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Doug) & Component-of(b,dishes) & Component-of(c,table) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1137": [
+    "Sympathetic fans clipped copies of Ms. Shere's recipes from magazines",
+    "cut-21.1",
+    "Sbj V Obj PathP",
+    "Volitional Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,fans) & Component-of(b,copies) & Component-of(c,magazines) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1138": [
+    "I unscrewed the handle",
+    "disassemble-23.3",
+    "Sbj V Obj",
+    "Volitional Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1148": [
+    "Brian wiped the fingerprints from the counter",
+    "wipe_manner-10.4.1",
+    "Sbj V Obj PathP",
+    "Volitional Remove",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,fingerprints) & Component-of(c,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1157": [
+    "The sky cleared",
+    "clear-10.3-1",
+    "Sbj V",
+    "Autonomous Deprive",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,NI) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & -MER(q2) & PTH(a,b)",
+    ""
+  ],
+  "1158": [
+    "Carla was vacuuming",
+    "wipe_instr-10.4.2",
+    "Sbj V",
+    "Volitional Deprive",
+    "UndirectedActivity",
+    "",
+    "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1161": [
+    "The cook boned the fish",
+    "pit-10.7",
+    "Sbj V Obj",
+    "Volitional Deprive",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,NI) & Component-of(c,fish) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1162": [
+    "I bled him",
+    "substance_emission-43.4-1-1",
+    "Sbj V Obj",
+    "Volitional Deprive",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(z,e) & Component-of(a,I) & Component-of(b,NI) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1163": [
+    "Carla shoveled the walk",
+    "wipe_instr-10.4.2",
+    "Sbj V Obj",
+    "Volitional Deprive",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,walk) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "755": [
+    "The strong winds cleared the sky.",
+    "clear-10.3",
+    "Sbj V Obj",
+    "Physical Deprive",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,NI) & Component-of(c,sky) & UndAct(a,i,j,q1) & UndAct(b,i,j,q2) & IncrAcc(c,i,k,q3) & INTL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "682": [
+    "Cora coiled the rope around the post",
+    "coil-9.6",
+    "Sbj V Obj PathP",
+    "Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "187": [
+    "Jessica squirted water at me",
+    "spray-9.7",
+    "Sbj V Obj PathP",
+    "Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "247": [
+    "Frances hid the presents behind the books in the drawer",
+    "concealment-16",
+    "Sbj V Obj PathP",
+    "Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "683": [
+    "I spooned the sauce there",
+    "funnel-9.3",
+    "Sbj V Obj PathP",
+    "Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "679": [
+    "The child clung to her mother",
+    "cling-22.5",
+    "Sbj V PathP",
+    "Self-Volitional Place",
+    "TransitoryState",
+    "",
+    "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "132": [
+    "The children hid",
+    "concealment-16",
+    "Sbj V",
+    "Self-Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "248": [
+    "The children hid in the chimney",
+    "concealment-16",
+    "Sbj V PathP",
+    "Self-Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
+  "814": [
+    "Bill rolled the drawer open",
+    "roll-51.3.1",
+    "Sbj V Obj ResultP",
+    "Volitional COS",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "10003"
+  ],
+  "815": [
+    "Bill rolled the drawer to an open position",
+    "roll-51.3.1",
+    "Sbj V Obj ResultP",
+    "Volitional COS",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "10003"
+  ],
+  "816": [
+    "Tom walked the dog to exhaustion",
+    "run-51.3.2-2",
+    "Sbj V Obj ResultP",
+    "Volitional COS",
+    "NonincrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,dog) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "10003"
+  ],
+  "832": [
+    "He waltzed her to exhaustion",
+    "waltz-51.5",
+    "Sbj V Obj ResultP",
+    "Volitional COS",
+    "NonincrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "10003"
+  ],
+  "833": [
+    "He waltzed her dizzy",
+    "waltz-51.5",
+    "Sbj V Obj ResultP",
+    "Volitional COS",
+    "NonincrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "10003"
+  ],
+  "845": [
+    "Lora buttered the toast with unsalted butter",
+    "butter-9.9",
+    "Sbj V Obj in/with Obl",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "839": [
+    "Lora buttered the toast",
+    "butter-9.9",
+    "Sbj V Obj",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,NI) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "840": [
+    "Marlene dressed the baby",
+    "dress-41.1.1",
+    "Sbj V Obj",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Marlene) & Component-of(b,NI) & Component-of(c,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "841": [
+    "Leslie covered the bed.",
+    "fill-9.8",
+    "Sbj V Obj",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,NI) & Component-of(c,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "842": [
+    "The jeweler decorated the ring",
+    "illustrate-25.3",
+    "Sbj V Obj",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,NI) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "1035": [
+    "The ball rolled",
+    "roll-51.3.1",
+    "Sbj V",
+    "Autonomous Motion",
+    "UndirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,ball) & Component-of(b,NI) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1036": [
+    "The book slid",
+    "slide-11.2",
+    "Sbj V",
+    "Autonomous Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,book) & Component-of(b,NI) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1039": [
+    "The ball rolled down the hill",
+    "roll-51.3.1",
+    "Sbj V PathP",
+    "Autonomous Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,ball) & Component-of(b,hill) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1040": [
+    "The book slid from the table",
+    "slide-11.2",
+    "Sbj V PathP",
+    "Autonomous Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,book) & Component-of(b,table) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1041": [
+    "The book slid from the table to the floor",
+    "slide-11.2",
+    "Sbj V PathP",
+    "Autonomous Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table-floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1042": [
+    "The books slid to the floor",
+    "slide-11.2",
+    "Sbj V PathP",
+    "Autonomous Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1048": [
+        "The train brought us here",
         "bring-11.3",
         "Sbj V Obj PathP",
-        "NP V NP PP.initial_location PP.destination",
-        "Volitional Motion",
+        "Physical Motion",
         "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "CarryMotionNetwork",
-         "10003"
-    ],
-    "1085": [
-        "Nora brought the book to the meeting",
-        "bring-11.3",
+        "Theme-of(y,e) & Component-of(a,train) & Component-of(b,us) & Component-of(c,here) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & INTL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+  ],
+  "1053": [
+    "He came from France to Colorado",
+    "escape-51.1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1054": [
+    "He came through the door",
+    "escape-51.1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,door) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1055": [
+    "He came to Colorado",
+    "escape-51.1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1056": [
+    "The prisoners advanced",
+    "escape-51.1-1",
+    "Sbj V",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,prisoners) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1057": [
+    "He came from France",
+    "escape-51.1-1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,France) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1058": [
+    "The convict escaped the prison",
+    "escape-51.1-1-1",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,convict) & Component-of(b,prison) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1059": [
+    "He entered the room",
+    "escape-51.1-1-2",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,room) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1060": [
+    "He climbed the mountain",
+    "escape-51.1-1-3",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,mountain) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1062": [
+    "The crowd left",
+    "leave-51.2-1",
+    "Sbj V",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,crowd) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1063": [
+    "They rowed the canals of Venice",
+    "nonvehicle-51.4.2",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "UndirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1064": [
+    "They rowed along the canal",
+    "nonvehicle-51.4.2",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canal) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1065": [
+    "I landed there",
+    "pocket-9.10-1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,I) & Component-of(b,there) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1066": [
+    "I landed in Russia",
+    "pocket-9.10-1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,I) & Component-of(b,Russia) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1067": [
+    "They reached the hill",
+    "reach-51.8",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "DirectedAchievement",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,hill) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1068": [
+    "There jumped out of the box a little white rabbit",
+    "run-51.3.2",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1069": [
+    "Out of the box jumped a little white rabbit",
+    "run-51.3.2",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1070": [
+    "The horse jumped over the fence",
+    "run-51.3.2",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,fence) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1071": [
+    "There jumped a little white rabbit out of the box",
+    "run-51.3.2",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,rabbit) & Component-of(b,box) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1072": [
+    "The horse traveled the stream",
+    "run-51.3.2-1",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,stream) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1073": [
+    "The horse jumped the stream",
+    "run-51.3.2-2-1",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,horse) & Component-of(b,stream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1074": [
+    "Gordo took an unknown route from Topeka",
+    "vehicle_path-51.4.3",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Gordo) & Component-of(b,Topeka) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1075": [
+    "Martha took the back way to Nederland",
+    "vehicle_path-51.4.3",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Martha) & Component-of(b,Nederland) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1076": [
+    "Kevin took the freeway",
+    "vehicle_path-51.4.3",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Kevin) & Component-of(b,freeway) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1077": [
+    "Claire skated along the canal",
+    "vehicle-51.4.1",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canal) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1078": [
+    "Claire skated the canals",
+    "vehicle-51.4.1-1",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "UndirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+  ],
+  "1080": [
+    "Bill rolled the ball",
+    "roll-51.3.1",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "UndirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1083": [
+    "Nora brought the book",
+    "bring-11.3",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1084": [
+    "Nora brought the book from home to the meeting",
+    "bring-11.3",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1085": [
+    "Nora brought the book to the meeting",
+    "bring-11.3",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1086": [
+    "Nora brought the book from home",
+    "bring-11.3",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,home) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1087": [
+    "Nora brought to lunch the book",
+    "bring-11.3",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,lunch) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1088": [
+    "Amanda carried the package",
+    "carry-11.4",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "UndirectedActivity",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1089": [
+    "Amanda carried the package from home",
+    "carry-11.4",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1090": [
+    "Amanda carried the package to New York",
+    "carry-11.4",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1091": [
+    "Amanda carried the package from home to New York",
+    "carry-11.4",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1092": [
+    "Amanda carried the package to New York from home",
+    "carry-11.4",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1093": [
+    "Amanda shoved the box",
+    "carry-11.4-1",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,box) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1094": [
+    "Amanda shoved the box from the corner",
+    "carry-11.4-1",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,box) & Component-of(c,corner) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1095": [
+        "Jackie chased the thief down the street",
+        "chase-51.6",
         "Sbj V Obj PathP",
-        "NP V NP PP.destination",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1086": [
-        "Nora brought the book from home",
-        "bring-11.3",
+        "Mutual Motion",
+        "IncrementalAccomplishment",
+        "PursuitMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,thief) & Component-of(c,street) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+  ],
+  "1081": [
+        "Jackie accompanied Rose to the store",
+        "accompany-51.7",
         "Sbj V Obj PathP",
-        "NP V NP PP.initial_location",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,home) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1087": [
-        "Nora brought to lunch the book",
-        "bring-11.3",
-        "Sbj V Obj PathP",
-        "NP V PP.destination NP",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,lunch) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1088": [
-        "Amanda carried the package",
-        "carry-11.4",
+        "Mutual Motion",
+        "IncrementalAccomplishment",
+        "PursuitMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & Component-of(c,store) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+  ],
+  "1108": [
+    "Bill rolled the ball down the hill",
+    "roll-51.3.1",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedActivity",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,hill) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1110": [
+    "Tom jumped the horse over the fence",
+    "run-51.3.2-2",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,horse) & Component-of(c,fence) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1111": [
+    "The lion tamer jumped the lions",
+    "run-51.3.2-2",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,lion tamer) & Component-of(b,lions) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1112": [
+    "The lion tamer jumped the lions through the loop",
+    "run-51.3.2-2",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,lion tamer) & Component-of(b,lions) & Component-of(c,loop) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1113": [
+    "Nora sent the book",
+    "send-11.1",
+    "Sbj V Obj",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "SendMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1114": [
+    "Nora sent the book from Paris",
+    "send-11.1",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "SendMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,Paris) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1115": [
+    "Nora sent the book to London",
+    "send-11.1",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "SendMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+  "1116": [
+    "Nora sent the book from Paris to London",
+    "send-11.1",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "DirectedAchievement",
+    "SendMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+  ],
+    "1122": [
+        "Steve tossed the ball",
+        "throw-17.1",
         "Sbj V Obj",
-        "NP V NP",
         "Volitional Motion",
-        "UndirectedActivity",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
+        "DirectedAchievement",
+        "ThrowMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
     ],
-    "1089": [
-        "Amanda carried the package from home",
-        "carry-11.4",
-        "Sbj V Obj PathP",
-        "NP V NP PP.initial_location",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1090": [
-        "Amanda carried the package to New York",
-        "carry-11.4",
-        "Sbj V Obj PathP",
-        "NP V NP PP.destination",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1091": [
-        "Amanda carried the package from home to New York",
-        "carry-11.4",
-        "Sbj V Obj PathP",
-        "NP V NP PP.initial_location PP.destination",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1092": [
-        "Amanda carried the package to New York from home",
-        "carry-11.4",
-        "Sbj V Obj PathP",
-        "NP V NP PP.destination PP.initial_location",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1093": [
-        "Amanda shoved the box",
-        "carry-11.4-1",
+    "1123": [
+        "I threw the package away",
+        "throw-17.1",
         "Sbj V Obj",
-        "NP V NP",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,box) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1094": [
-        "Amanda shoved the box from the corner",
-        "carry-11.4-1",
-        "Sbj V Obj PathP",
-        "NP V NP PP.initial_location",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,box) & Component-of(c,corner) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "CarryMotionNetwork",
-         "10003"
-    ],
-    "1108": [
-        "Bill rolled the ball down the hill",
-        "roll-51.3.1",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Motion",
-        "DirectedActivity",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,hill) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1110": [
-        "Tom jumped the horse over the fence",
-        "run-51.3.2-2",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,horse) & Component-of(c,fence) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1111": [
-        "The lion tamer jumped the lions",
-        "run-51.3.2-2",
-        "Sbj V Obj",
-        "NP V NP",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,lion tamer) & Component-of(b,lions) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "GeneralMotionNetwork",
-         "10003"
-    ],
-    "1112": [
-        "The lion tamer jumped the lions through the loop",
-        "run-51.3.2-2",
-        "Sbj V Obj PathP",
-        "NP V NP PP.location",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "Theme-of(y,e) & Component-of(a,lion tamer) & Component-of(b,lions) & Component-of(c,loop) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "GeneralMotionNetwork",
-        "10003"
-    ],
-    "1113": [
-        "Nora sent the book",
-        "send-11.1",
-        "Sbj V Obj",
-        "NP V NP",
         "Volitional Motion",
         "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "SendMotionNetwork",
+        "ThrowMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,package) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "1114": [
-        "Nora sent the book from Paris",
-        "send-11.1",
+    "1124": [
+        "Steve tossed the ball from the corner to the garden",
+        "throw-17.1",
         "Sbj V Obj PathP",
-        "NP V NP PP.initial_location",
         "Volitional Motion",
         "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,Paris) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "SendMotionNetwork",
+        "ThrowMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "1115": [
-        "Nora sent the book to London",
-        "send-11.1",
+    "1125": [
+        "Steve tossed the ball to the garden",
+        "throw-17.1",
         "Sbj V Obj PathP",
-        "NP V NP PP.destination",
         "Volitional Motion",
         "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "SendMotionNetwork",
+        "ThrowMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "1116": [
-        "Nora sent the book from Paris to London",
-        "send-11.1",
+    "1126": [
+        "Steve tossed the ball from the corner",
+        "throw-17.1",
         "Sbj V Obj PathP",
-        "NP V NP PP.initial_location PP.destination",
         "Volitional Motion",
         "DirectedAchievement",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "SendMotionNetwork",
+        "ThrowMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "10001":[
-        "RemoveDepriveNetwork"
-        ],
-    "10002":[
-        "ProvidePlaceNetwork"
-        ],
-    "10003":[
-        "GeneralMotionNetwork",
-        "SendMotionNetwork",
-        "CarryMotionNetwork",
-        "ThrowMotionNetwork"
-        ],
-    "11001": [
-        "Autonomous Motion",
-        "GeneralMotionNetwork"],
-    "11002": [
-        "Self-volitional Motion",
-        "GeneralMotionNetwork"],
-    "11003": [
-        "Volitional Motion",
-        "GeneralMotionNetwork"],
-    "11004": [
-        "Autonomous COS",
-        "GeneralMotionNetwork"],
-    "11005": [
-        "Volitional COS",
-        "GeneralMotionNetwork"],
-    "11006": [
-        "Volitional Motion",
-        "SendMotionNetwork"],
-    "11007": [
-        "Volitional Motion",
-        "CarryMotionNetwork"],
-    "11008": [
-        "Volitional Internal",
-        "CarryMotionNetwork"],
-    "11009": [
-        "Volitional Motion",
-        "ThrowMotionNetwork"]
+    "10001": ["RemoveDepriveNetwork"],
+    "10002": ["ProvidePlaceNetwork"],
+    "10003": ["GeneralMotionNetwork", "ThrowMotionNetwork", "SendMotionNetwork", "CarryMotionNetwork", "PursuitMotionNetwork"],
+    "10004": ["GeneralMotionNetwork"],
+    "10005": ["CarryMotionNetwork"],
+    "10006": ["PursuitMotionNetwork"],
+    "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
+    "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
+    "11003": ["Volitional Motion", "GeneralMotionNetwork"],
+    //"11005": ["Volitional COS", "GeneralMotionNetwork"],
+    "11006": ["Volitional Motion", "SendMotionNetwork"],
+    "11007": ["Volitional Motion", "CarryMotionNetwork"],
+    "11008": ["Volitional Internal", "CarryMotionNetwork"],
+    "11009": ["Volitional Motion", "ThrowMotionNetwork"],
+    "11010": ["Physical Motion", "CarryMotionNetwork"],
+    "11011": ["Mutual Motion", "PursuitMotionNetwork"],
+    "11012": ["Mutual", "PursuitMotionNetwork"],
+    "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
+    "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
+    "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
+    "12006": { "child": "Physical Motion", "parentNetwork": "10005", "generalNetwork": "10003"},
+    "12007": { "child": "Mutual Motion", "parentNetwork": "10006", "generalNetwork": "10003"},
+    "12008": { "child": "Mutual", "parentNetwork": "10006", "generalNetwork": "10003"},
+    //"12006": { "child": "Autonomous COS", "parent": "10004"},
+    //"12007": { "child": "Volitional COS", "parent": "10004"},
+    //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
 }
 
 
@@ -1293,6 +1500,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 0,  "y": 45, "text": "FRC"},
                                     ],
 
+                                "argTextToAdd": ["Agent", "Theme"],
+
                                 "name" : "NetVolIntl" 
                             };
 
@@ -1471,11 +1680,11 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkAutonomousMotion = {        
 
-                                "solid1":    [   { "x": 40,  "y": 30}, 
-                                                { "x": 90,  "y": 30} ],
+                                "solid1":    [   { "x": 45,  "y": 30}, 
+                                                { "x": 75,  "y": 30} ],
 
-                                "solid2":    [   { "x": 40,  "y": 90}, 
-                                                { "x": 90,  "y": 90} ],
+                                "solid2":    [   { "x": 45,  "y": 85}, 
+                                                { "x": 75,  "y": 85} ],
 
                                 "dottedLeft":    [   { "x": 15,  "y": 40}, 
                                                 { "x": 15,  "y": 70} ],
@@ -1492,8 +1701,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -5,  "y": 80, "text": "MOT"},
                                         { "x": 95,  "y": 25, "text": "EXIST"},
                                         { "x": 95,  "y": 80, "text": "EXIST"},
-                                        { "x": 55,  "y": 45, "text": "PTH"},
-                                        { "x": 55,  "y": 105, "text": "PTH"}
+                                        { "x": 50,  "y": 45, "text": "PTH"},
+                                        { "x": 50,  "y": 100, "text": "PTH"}
                                     ],
 
                                 "argTextToAdd": ["Theme", "Ground"],
@@ -1501,13 +1710,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetAutoMot" 
                             };
 
+
      var NetworkSelfVolitionalMotion = {        
 
-                                "solid1":    [   { "x": 40,  "y": 30}, 
-                                                { "x": 90,  "y": 30} ],
+                                "solid1":    [   { "x": 45,  "y": 30}, 
+                                                { "x": 75,  "y": 30} ],
 
-                                "solid2":    [   { "x": 40,  "y": 90}, 
-                                                { "x": 90,  "y": 90} ],
+                                "solid2":    [   { "x": 45,  "y": 85}, 
+                                                { "x": 75,  "y": 85} ],
 
                                 "dottedLeft":    [   { "x": 15,  "y": 40}, 
                                                 { "x": 15,  "y": 70} ],
@@ -1516,16 +1726,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                                 { "x": 115,  "y": 70} ],
 
                                 'textToAdd' : [
-                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": 30,  "y": 35, "text": "A0"},
                                         { "x": -10,  "y": 90, "text": "Theme"},  
-                                        { "x": 80,  "y": 35, "text": "A1"},
+                                        { "x": 75,  "y": 35, "text": "A1"},
                                         { "x": 95,  "y": 90, "text": "Ground"},
-                                        { "x": -10,  "y": 25, "text": "VOL|MOT"},
+                                        { "x": -15,  "y": 25, "text": "VOL/MOT"},
                                         { "x": -10,  "y": 80, "text": "MOT"},
-                                        { "x": 95,  "y": 25, "text": "EXIST"},
+                                        // { "x": 95,  "y": 25, "text": "EXIST"},
                                         { "x": 95,  "y": 80, "text": "EXIST"},
-                                        { "x": 55,  "y": 45, "text": "PTH"},
-                                        { "x": 55,  "y": 105, "text": "PTH"}
+                                        { "x": 50,  "y": 45, "text": "PTH"},
+                                        { "x": 50,  "y": 100, "text": "PTH"}
                                     ],
 
                                 "argTextToAdd": ["Theme", "Ground"],
@@ -1536,35 +1746,35 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkGeneralVolitionalMotion = {        
 
-                                "solid1":    [   { "x": 40,  "y": 30}, 
+                                "solid1":    [   { "x": 60,  "y": 30}, 
                                                 { "x": 90,  "y": 30} ],
 
-                                "solid2":    [   { "x": 40,  "y": 90}, 
-                                                { "x": 90,  "y": 90} ],
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
 
-                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
-                                                { "x": 15,  "y": 70} ],
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
 
-                                "dottedRight":    [   { "x": 115,  "y": 40}, 
-                                                { "x": 115,  "y": 70} ],
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
 
-                                "arrow":    [   { "x": -50,  "y": 30}, 
-                                                { "x": -20,  "y": 30} ],
+                                "arrow":    [   { "x": -30,  "y": 30}, 
+                                                { "x": 0,  "y": 30} ],
 
                                 'textToAdd' : [
-                                        { "x": -40,  "y": 35, "text": "A0"},
-                                        { "x": -15,  "y": 35, "text": "A1"},
-                                        { "x": -80,  "y": 25, "text": "VOL"},
-                                        { "x": -45,  "y": 45, "text": "FRC"}, 
-                                        { "x": -10,  "y": 90, "text": "Theme"},  
-                                        { "x": 80,  "y": 35, "text": "A2"},
-                                        { "x": 95,  "y": 90, "text": "Ground"},
-                                        { "x": -15,  "y": 25, "text": "EXIST|MOT"},
-                                        { "x": -5,  "y": 80, "text": "MOT"},
-                                        { "x": 95,  "y": 25, "text": "EXIST"},
-                                        { "x": 95,  "y": 80, "text": "EXIST"},
-                                        { "x": 55,  "y": 45, "text": "PTH"},
-                                        { "x": 55,  "y": 105, "text": "PTH"}
+                                        { "x": -30,  "y": 35, "text": "A0"},
+                                        { "x": -5,  "y": 35, "text": "A1"},
+                                        { "x": -70,  "y": 25, "text": "VOL"},
+                                        { "x": -30,  "y": 45, "text": "FRC"}, 
+                                        { "x": 15,  "y": 90, "text": "Theme"},  
+                                        { "x": 90,  "y": 35, "text": "A2"},
+                                        { "x": 110,  "y": 90, "text": "Ground"},
+                                        { "x": 15,  "y": 25, "text": "MOT"},
+                                        { "x": 15,  "y": 80, "text": "MOT"},
+                                        // { "x": 95,  "y": 25, "text": "EXIST"},
+                                        { "x": 115,  "y": 80, "text": "EXIST"},
+                                        { "x": 60,  "y": 45, "text": "PTH"},
+                                        { "x": 60,  "y": 100, "text": "PTH"}
                                     ],
 
                                 "argTextToAdd": ["Agent", "Theme", "Ground"],
@@ -1577,17 +1787,17 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "arrow1":    [   { "x": -115,  "y": 75}, 
                                                 { "x": -85,  "y": 75} ],
 
-                                "dotted1":    [   { "x": 10,  "y": 75}, 
-                                                { "x": 40,  "y": 75} ],
+                                "arrow2":    [   { "x": 15,  "y": 75}, 
+                                                { "x": 45,  "y": 75} ],
 
-                                "arrow2":    [   { "x": 10,  "y": 70}, 
-                                                { "x": 40,  "y": 70} ],
+                                "dotted1":    [   { "x": 15,  "y": 70}, 
+                                                { "x": 45,  "y": 70} ],
 
-                                "solid1":    [   { "x": 120,  "y": 30}, 
-                                                { "x": 150,  "y": 30} ],
+                                "solid1":    [   { "x": 110,  "y": 30}, 
+                                                { "x": 140,  "y": 30} ],
 
-                                "solid2":    [   { "x": 120,  "y": 75}, 
-                                                { "x": 150,  "y": 75} ],
+                                "solid2":    [   { "x": 110,  "y": 75}, 
+                                                { "x": 140,  "y": 75} ],
 
                                 "solid3":    [   { "x": 210,  "y": 75}, 
                                                 { "x": 240,  "y": 75} ],
@@ -1601,40 +1811,41 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "dottedRight":    [   { "x": 175,  "y": 40}, 
                                                 { "x": 175,  "y": 60} ],
 
-                                "arrow":    [   { "x": 10,  "y": 30}, 
-                                                { "x": 40,  "y": 30} ],
+                                "arrow":    [   { "x": 20,  "y": 30}, 
+                                                { "x": 50,  "y": 30} ],
 
-                                "rectangle": {
-                                              "x":-80, 
-                                              "y":50,
-                                              "width": 195,
-                                              "height": 50
-                                },
+                                // "rectangle": {
+                                //               "x":-80, 
+                                //               "y":50,
+                                //               "width": 195,
+                                //               "height": 50
+                                // },
 
 
                                 'textToAdd' : [
                                         { "x": 20,  "y": 35, "text": "A0"},
                                         { "x": 40,  "y": 35, "text": "A1"},
                                         { "x": -20,  "y": 25, "text": "VOL"},
-                                        { "x": 15,  "y": 45, "text": "FRC"}, 
+                                        { "x": 20,  "y": 45, "text": "FRC"}, 
                                         { "x": 140,  "y": 35, "text": "A2"},
-                                        { "x": 50,  "y": 25, "text": "EXIST|MOT"},
-                                        { "x": 160,  "y": 25, "text": "EXIST"},
+                                        { "x": 60,  "y": 25, "text": "MOT"},
+                                        { "x": 115,  "y": 45, "text": "PTH"},
+                                        // { "x": 160,  "y": 25, "text": "EXIST"},
                                         { "x": -150,  "y": 80, "text": "Agent"},
                                         { "x": -150,  "y": 70, "text": "VOL"},
-                                        { "x": -115,  "y": 90, "text": "MNP"}, 
-                                        { "x": -80,  "y": 80, "text": "Transport_means"},
-                                        { "x": -70,  "y": 70, "text": "EXIST | INTL"},
-                                        { "x": 0,  "y": 90, "text": "Co-location"},
-                                        { "x": 10,  "y": 65, "text": "FRC"},
+                                        { "x": -115,  "y": 90, "text": "FRC"}, 
+                                        { "x": -75,  "y": 80, "text": "Transport_means"},
+                                        { "x": -75,  "y": 70, "text": "INTL"},
+                                        { "x": 0,  "y": 65, "text": "Co-location"},
+                                        { "x": 15,  "y": 90, "text": "FRC"},
                                         { "x": 60,  "y": 80, "text": "Theme"},
-                                        { "x": 45,  "y": 70, "text": "EXIST | MOT"},
-                                        { "x": 125,  "y": 90, "text": "PTH"},
+                                        { "x": 60,  "y": 70, "text": "MOT"},
+                                        { "x": 115,  "y": 90, "text": "PTH"},
                                         { "x": 160,  "y": 80, "text": "Ground"}, 
-                                        { "x": 145,  "y": 70, "text": "EXIST | EXIST"},
+                                        { "x": 160,  "y": 70, "text": "EXIST"},
                                         { "x": 215,  "y": 90, "text": "AFF"},
                                         { "x": 250,  "y": 80, "text": "Recipient"},
-                                        { "x": 250,  "y": 70, "text": "MPROP"},
+                                        { "x": 250,  "y": 70, "text": "PROP"},
                                         
                                     ],
 
@@ -1646,50 +1857,205 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     var NetworkCarryVolitionalMotion = {        
 
-                                "arrow2":    [   { "x": -20,  "y": 70}, 
-                                                { "x": 10,  "y": 70} ],
+                                "dotted1":    [   { "x": -15,  "y": 70}, 
+                                                { "x": 15,  "y": 70} ],
 
-                                "solid1":    [   { "x": 90,  "y": 30}, 
-                                                { "x": 120,  "y": 30} ],
+                                "arrow2":    [   { "x": -15,  "y": 75}, 
+                                                { "x": 15,  "y": 75} ],
 
-                                "solid2":    [   { "x": 90,  "y": 75}, 
-                                                { "x": 120,  "y": 75} ],
+                                "solid1":    [   { "x": 80,  "y": 30}, 
+                                                { "x": 110,  "y": 30} ],
+
+                                "solid2":    [   { "x": 80,  "y": 75}, 
+                                                { "x": 110,  "y": 75} ],
 
                                 "dottedFarLeft":    [   { "x": -35,  "y": 40}, 
                                                 { "x": -35,  "y": 60} ],
 
-                                "dottedLeft":    [   { "x": 45,  "y": 40}, 
-                                                { "x": 45,  "y": 60} ],
+                                "dottedLeft":    [   { "x": 50,  "y": 40}, 
+                                                { "x": 50,  "y": 60} ],
 
                                 "dottedRight":    [   { "x": 145,  "y": 40}, 
                                                 { "x": 145,  "y": 60} ],
 
-                                "arrow":    [   { "x": -20,  "y": 30}, 
-                                                { "x": 10,  "y": 30} ],
+                                "arrow":    [   { "x": -15,  "y": 30}, 
+                                                { "x": 15,  "y": 30} ],
 
-                                "rectangle": {
-                                              "x":-65, 
-                                              "y":50,
-                                              "width": 155,
-                                              "height": 50
-                                },
+                                // "rectangle": {
+                                //               "x":-65, 
+                                //               "y":50,
+                                //               "width": 155,
+                                //               "height": 50
+                                // },
 
 
                                 'textToAdd' : [
-                                        { "x": -10,  "y": 35, "text": "A0"},
-                                        { "x": 10,  "y": 35, "text": "A1"},
+                                        { "x": -30,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
                                         { "x": -50,  "y": 25, "text": "VOL"},
-                                        { "x": -15,  "y": 45, "text": "FRC"}, 
+                                        { "x": -10,  "y": 45, "text": "FRC"}, 
                                         { "x": 110,  "y": 35, "text": "A2"},
-                                        { "x": 20,  "y": 25, "text": "EXIST|MOT"},
-                                        { "x": 130,  "y": 25, "text": "EXIST"},
-                                        { "x": 95,  "y": 45, "text": "PTH"},
-                                        { "x": -50,  "y": 80, "text": "Agent"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
+                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": -90,  "y": 80, "text": "Physical_entity"},
                                         { "x": -50,  "y": 70, "text": "VOL"},
-                                        { "x": -15,  "y": 85, "text": "FRC"},
-                                        { "x": 30,  "y": 80, "text": "Theme"},
-                                        { "x": 15,  "y": 70, "text": "EXIST | MOT"},
-                                        { "x": 95,  "y": 90, "text": "PTH"},
+                                        { "x": -10,  "y": 90, "text": "FRC"},
+                                        { "x": -25,  "y": 65, "text": "Co-location"}, 
+                                        { "x": 35,  "y": 80, "text": "Theme"},
+                                        { "x": 35,  "y": 70, "text": "MOT"},
+                                        { "x": 85,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Ground"}, 
+                                        { "x": 130,  "y": 70, "text": "EXIST"}
+                                        
+                                    ],
+
+                            "argTextToAdd": ["Physical_entity", "Theme", "Ground"],
+
+                            "name" : "NetCarryVolMotion" 
+                        };
+
+
+
+    var NetworkCarryPhysicalMotion = {        
+
+                                "dotted1":    [   { "x": -15,  "y": 70}, 
+                                                { "x": 15,  "y": 70} ],
+
+                                "arrow":    [   { "x": -15,  "y": 30}, 
+                                                { "x": 15,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -15,  "y": 75}, 
+                                                { "x": 15,  "y": 75} ],
+
+                                "solid1":    [   { "x": 80,  "y": 30}, 
+                                                { "x": 110,  "y": 30} ],
+
+                                "solid2":    [   { "x": 80,  "y": 75}, 
+                                                { "x": 110,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -35,  "y": 40}, 
+                                                { "x": -35,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 50,  "y": 40}, 
+                                                { "x": 50,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 145,  "y": 40}, 
+                                                { "x": 145,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": -10,  "y": 45, "text": "FRC"}, 
+                                        { "x": 110,  "y": 35, "text": "A2"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
+                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": -100,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -50,  "y": 70, "text": "VOL"},
+                                        { "x": -10,  "y": 90, "text": "FRC"},
+                                        { "x": -25,  "y": 65, "text": "Co-location"}, 
+                                        { "x": 35,  "y": 80, "text": "Theme"},
+                                        { "x": 35,  "y": 70, "text": "MOT"},
+                                        { "x": 85,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Ground"}, 
+                                        { "x": 130,  "y": 70, "text": "EXIST"}
+                                        
+                                    ],
+
+                            "argTextToAdd": ["Physical_entity", "Theme", "Ground"],
+
+                            "name" : "NetCarryPhysMotion" 
+                        };
+
+
+    var NetworkMutualMotion = {        
+
+                                "dotted1":    [   { "x": -10,  "y": 70}, 
+                                                { "x": 20,  "y": 70} ],
+
+                                "solid3":    [   { "x": -10,  "y": 30}, 
+                                                { "x": 20,  "y": 30} ],
+
+                                "solid4":    [   { "x": -10,  "y": 75}, 
+                                                { "x": 20,  "y": 75} ],
+
+                                "solid1":    [   { "x": 85,  "y": 30}, 
+                                                { "x": 115,  "y": 30} ],
+
+                                "solid2":    [   { "x": 85,  "y": 75}, 
+                                                { "x": 115,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -35,  "y": 40}, 
+                                                { "x": -35,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 50,  "y": 40}, 
+                                                { "x": 50,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 145,  "y": 40}, 
+                                                { "x": 145,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 35, "text": "A1"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": -10,  "y": 45, "text": "Mutual"}, 
+                                        { "x": 110,  "y": 35, "text": "A2"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -50,  "y": 80, "text": "Theme"},
+                                        { "x": -50,  "y": 70, "text": "VOL"},
+                                        { "x": -10,  "y": 90, "text": "Mutual"},
+                                        { "x": -25,  "y": 65, "text": "Co-location"}, 
+                                        { "x": 35,  "y": 80, "text": "Co-theme"},
+                                        { "x": 35,  "y": 70, "text": "MOT"},
+                                        { "x": 90,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Ground"}, 
+                                        { "x": 130,  "y": 70, "text": "EXIST"}
+                                        
+                                    ],
+
+                            "argTextToAdd": ["Theme", "Co-theme", "Ground"],
+
+                            "name" : "NetMutMotion" 
+                        };
+
+
+    var NetworkMutual = {        
+
+                                "dotted1":    [   { "x": -10,  "y": 70}, 
+                                                { "x": 20,  "y": 70} ],
+
+                                "solid3":    [   { "x": -10,  "y": 30}, 
+                                                { "x": 20,  "y": 30} ],
+
+                                "solid4":    [   { "x": -10,  "y": 75}, 
+                                                { "x": 20,  "y": 75} ],
+
+                                "solid2":    [   { "x": 85,  "y": 75}, 
+                                                { "x": 115,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -35,  "y": 40}, 
+                                                { "x": -35,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 50,  "y": 40}, 
+                                                { "x": 50,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": -10,  "y": 45, "text": "Mutual"}, 
+                                        //{ "x": 35,  "y": 25, "text": "MOT"},
+                                        { "x": -50,  "y": 80, "text": "Theme"},
+                                        { "x": -50,  "y": 70, "text": "VOL"},
+                                        { "x": -10,  "y": 90, "text": "Mutual"},
+                                        { "x": -25,  "y": 65, "text": "Co-location"}, 
+                                        { "x": 35,  "y": 80, "text": "Co-theme"},
+                                        { "x": 35,  "y": 70, "text": "MOT"},
+                                        { "x": 90,  "y": 90, "text": "PTH"},
                                         { "x": 130,  "y": 80, "text": "Ground"}, 
                                         { "x": 130,  "y": 70, "text": "EXIST"}
                                         
@@ -1697,14 +2063,75 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                             "argTextToAdd": ["Agent", "Theme", "Ground"],
 
-                            "name" : "NetCarryVolMotion" 
+                            "name" : "NetMutual" 
+                        };
+
+
+    var NetworkThrowVolitionalMotion = {        
+
+                                // "dotted1":    [   { "x": -15,  "y": 70}, 
+                                //                 { "x": 15,  "y": 70} ],
+
+                                "arrow2":    [   { "x": -15,  "y": 75}, 
+                                                { "x": 15,  "y": 75} ],
+
+                                "solid1":    [   { "x": 80,  "y": 30}, 
+                                                { "x": 110,  "y": 30} ],
+
+                                "solid2":    [   { "x": 80,  "y": 75}, 
+                                                { "x": 110,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -35,  "y": 40}, 
+                                                { "x": -35,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 50,  "y": 40}, 
+                                                { "x": 50,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 145,  "y": 40}, 
+                                                { "x": 145,  "y": 60} ],
+
+                                "arrow":    [   { "x": -15,  "y": 30}, 
+                                                { "x": 15,  "y": 30} ],
+
+                                // "rectangle": {
+                                //               "x":-65, 
+                                //               "y":50,
+                                //               "width": 155,
+                                //               "height": 50
+                                // },
+
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": -10,  "y": 45, "text": "FRC"}, 
+                                        { "x": 110,  "y": 35, "text": "A2"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
+                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": -50,  "y": 80, "text": "Agent"},
+                                        { "x": -50,  "y": 70, "text": "VOL"},
+                                        { "x": -10,  "y": 90, "text": "FRC"},
+                                        //{ "x": -25,  "y": 65, "text": "Co-location"}, 
+                                        { "x": 35,  "y": 80, "text": "Theme"},
+                                        { "x": 35,  "y": 70, "text": "MOT"},
+                                        { "x": 85,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Ground"}, 
+                                        { "x": 130,  "y": 70, "text": "EXIST"}
+                                        
+                                    ],
+
+                            "argTextToAdd": ["Agent", "Theme", "Ground"],
+
+                            "name" : "NetThrowVolMotion" 
                         };
 
 
      var NetworkAutonomousCOS = {        
 
-                                "solid2":    [   { "x": 40,  "y": 90}, 
-                                                { "x": 90,  "y": 90} ],
+                                "solid2":    [   { "x": 45,  "y": 85}, 
+                                                { "x": 75,  "y": 85} ],
 
                                 "dottedLeft":    [   { "x": 15,  "y": 40}, 
                                                 { "x": 15,  "y": 70} ],
@@ -1713,13 +2140,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 40,  "y": 35, "text": "A0"},
                                         { "x": 0,  "y": 90, "text": "Theme"},  
                                         { "x": 95,  "y": 90, "text": "Ground"},
-                                        { "x": 0,  "y": 25, "text": "COS"},
+                                        { "x": 0,  "y": 25, "text": "PROP"},
                                         { "x": 0,  "y": 80, "text": "MOT"},
                                         { "x": 95,  "y": 80, "text": "EXIST"},
-                                        { "x": 55,  "y": 105, "text": "PTH"}
+                                        { "x": 50,  "y": 100, "text": "PTH"}
                                     ],
 
-                                "argTextToAdd": ["Agent", "Theme", "Ground"],
+                                "argTextToAdd": ["Theme", "Theme", "Ground"],
 
                                 "name" : "NetAutoCOS" 
                             };
@@ -1727,8 +2154,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkVolitionalCOS = {        
 
-                                "solid2":    [   { "x": 40,  "y": 90}, 
-                                                { "x": 90,  "y": 90} ],
+                                "solid2":    [   { "x": 45,  "y": 85}, 
+                                                { "x": 75,  "y": 85} ],
 
                                 "dottedLeft":    [   { "x": 15,  "y": 40}, 
                                                 { "x": 15,  "y": 70} ],
@@ -1743,10 +2170,10 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -40,  "y": 45, "text": "FRC"}, 
                                         { "x": 0,  "y": 90, "text": "Theme"},  
                                         { "x": 95,  "y": 90, "text": "Ground"},
-                                        { "x": 0,  "y": 25, "text": "EXIST | COS"},
+                                        { "x": 0,  "y": 25, "text": "PROP"},
                                         { "x": 0,  "y": 80, "text": "MOT"},
                                         { "x": 95,  "y": 80, "text": "EXIST"},
-                                        { "x": 55,  "y": 105, "text": "PTH"}
+                                        { "x": 50,  "y": 100, "text": "PTH"}
                                     ],
 
                                 "argTextToAdd": ["Agent", "Theme", "Ground"],
@@ -1795,7 +2222,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         else if (nameGeneralNetwork === 'CarryMotionNetwork') {
             return NetworkCarryVolitionalMotion;
         }
+        else if (nameGeneralNetwork === 'ThrowMotionNetwork') {
+            return NetworkThrowVolitionalMotion;
+        }
     }
+
+    else if (FDCategory === 'Physical Motion') { return NetworkCarryPhysicalMotion; }
+
+    else if (FDCategory === 'Mutual Motion') { return NetworkMutualMotion; }
+
+    else if (FDCategory === 'Mutual') { return NetworkMutual; }
 
     else if (FDCategory === 'Autonomous COS') { return NetworkAutonomousCOS; }
 
@@ -1869,15 +2305,15 @@ function getMultipleNetworkPage (NetworkType) {
 
     var GeneralMotionNetwork = {        
 
-                                "solid2":    [   { "x": 40,  "y": 70}, 
-                                                { "x": 90,  "y": 70} ],
+                                "solid2":    [   { "x": 50,  "y": 65}, 
+                                                { "x": 80,  "y": 65} ],
 
                                 'textToAdd' : [
                                         { "x": -5,  "y": 70, "text": "Theme"}, 
                                         { "x": 100,  "y": 70, "text": "Ground"},
                                         { "x": 0,  "y": 55, "text": "MOT"},
                                         { "x": 105,  "y": 55, "text": "EXIST"},
-                                        { "x": 55,  "y": 85, "text": "PTH"}
+                                        { "x": 55,  "y": 80, "text": "PTH"}
                                     ],
 
                             "caption": "ASC causal chains used with general motion network",
@@ -1886,8 +2322,8 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Autonomous Motion", "parent": "GeneralMotionNetwork"},
                                        {"network": "Self-volitional Motion", "parent": "GeneralMotionNetwork"},
                                        {"network": "Volitional Motion", "parent": "GeneralMotionNetwork"},
-                                       {"network": "Autonomous COS", "parent": "GeneralMotionNetwork"},
-                                       {"network": "Volitional COS", "parent": "GeneralMotionNetwork"},
+                                       //{"network": "Autonomous COS", "parent": "GeneralMotionNetwork"},
+                                       //{"network": "Volitional COS", "parent": "GeneralMotionNetwork"},
                                     ],
 
                             "name" : "General motion network" 
@@ -1895,20 +2331,21 @@ function getMultipleNetworkPage (NetworkType) {
 
     var ThrowMotionNetwork = {        
 
-                                "solid2":    [   { "x": 70,  "y": 70}, 
-                                                { "x": 120,  "y": 70} ],
+                                "solid2":    [   { "x": 80,  "y": 65}, 
+                                                { "x": 110,  "y": 65} ],
 
-                                "arrow":    [   { "x": -20,  "y": 70}, 
-                                                { "x": 10,  "y": 70} ],
+                                "arrow":    [   { "x": -20,  "y": 65}, 
+                                                { "x": 10,  "y": 65} ],
 
                                 'textToAdd' : [
                                         { "x": -55,  "y": 70, "text": "Agent"},
-                                        { "x": -50,  "y": 55, "text": "VOL"},
+                                        { "x": -55,  "y": 55, "text": "VOL"},
+                                        { "x": -15,  "y": 80, "text": "FRC"}, 
                                         { "x": 25,  "y": 70, "text": "Theme"}, 
                                         { "x": 125,  "y": 70, "text": "Ground"},
-                                        { "x": 10,  "y": 55, "text": "EXIST | MOT"},
-                                        { "x": 130,  "y": 55, "text": "EXIST"},
-                                        { "x": 85,  "y": 85, "text": "PTH"}
+                                        { "x": 25,  "y": 55, "text": "MOT"},
+                                        { "x": 125,  "y": 55, "text": "EXIST"},
+                                        { "x": 85,  "y": 80, "text": "PTH"}
                                     ],
 
                             "caption": "ASC causal chains used with throw network",
@@ -1926,11 +2363,11 @@ function getMultipleNetworkPage (NetworkType) {
                                 "arrow1":    [   { "x": -115,  "y": 75}, 
                                                 { "x": -85,  "y": 75} ],
 
-                                "dotted1":    [   { "x": 10,  "y": 75}, 
-                                                { "x": 40,  "y": 75} ],
+                                "arrow2":    [   { "x": 20,  "y": 75}, 
+                                                { "x": 50,  "y": 75} ],
 
-                                "arrow2":    [   { "x": 10,  "y": 70}, 
-                                                { "x": 40,  "y": 70} ],
+                                "dotted1":    [   { "x": 20,  "y": 70}, 
+                                                { "x": 50,  "y": 70} ],
 
                                 "solid2":    [   { "x": 120,  "y": 75}, 
                                                 { "x": 150,  "y": 75} ],
@@ -1938,30 +2375,30 @@ function getMultipleNetworkPage (NetworkType) {
                                 "solid3":    [   { "x": 210,  "y": 75}, 
                                                 { "x": 240,  "y": 75} ],
 
-                                "rectangle": {
-                                              "x":-80, 
-                                              "y":50,
-                                              "width": 195,
-                                              "height": 50
-                                },
+                                // "rectangle": {
+                                //               "x":-80, 
+                                //               "y":50,
+                                //               "width": 195,
+                                //               "height": 50
+                                // },
 
 
                                 'textToAdd' : [
                                         { "x": -150,  "y": 80, "text": "Agent"},
-                                        { "x": -150,  "y": 70, "text": "VOL"},
-                                        { "x": -115,  "y": 90, "text": "MNP"}, 
-                                        { "x": -80,  "y": 80, "text": "Transport_means"},
-                                        { "x": -70,  "y": 70, "text": "EXIST | INTL"},
-                                        { "x": 0,  "y": 90, "text": "Co-location"},
-                                        { "x": 10,  "y": 65, "text": "FRC"},
-                                        { "x": 60,  "y": 80, "text": "Theme"},
-                                        { "x": 45,  "y": 70, "text": "EXIST | MOT"},
+                                        { "x": -150,  "y": 65, "text": "VOL"},
+                                        { "x": -115,  "y": 90, "text": "FRC"}, 
+                                        { "x": -75,  "y": 80, "text": "Transport_means"},
+                                        { "x": -75,  "y": 65, "text": "INTL"},
+                                        { "x": 10,  "y": 65, "text": "Co-location"},
+                                        { "x": 20,  "y": 90, "text": "FRC"},
+                                        { "x": 70,  "y": 80, "text": "Theme"},
+                                        { "x": 70,  "y": 65, "text": "MOT"},
                                         { "x": 125,  "y": 90, "text": "PTH"},
                                         { "x": 160,  "y": 80, "text": "Ground"}, 
-                                        { "x": 145,  "y": 70, "text": "EXIST | EXIST"},
+                                        { "x": 160,  "y": 65, "text": "EXIST"},
                                         { "x": 215,  "y": 90, "text": "AFF"},
                                         { "x": 250,  "y": 80, "text": "Recipient"},
-                                        { "x": 250,  "y": 70, "text": "MPROP"},
+                                        { "x": 250,  "y": 65, "text": "PROP"},
                                         
                                     ],
 
@@ -1977,44 +2414,73 @@ function getMultipleNetworkPage (NetworkType) {
 
     var CarryMotionNetwork = {        
 
-                                "dotted1":    [   { "x": 10,  "y": 70}, 
-                                                { "x": 40,  "y": 70} ],
+                                "arrow2":    [   { "x": -10,  "y": 70}, 
+                                                { "x": 20,  "y": 70} ],
 
-                                "arrow2":    [   { "x": 10,  "y": 65}, 
-                                                { "x": 40,  "y": 65} ],
+                                "dotted1":    [   { "x": -10,  "y": 65}, 
+                                                { "x": 20,  "y": 65} ],
 
-                                "solid2":    [   { "x": 120,  "y": 70}, 
-                                                { "x": 150,  "y": 70} ],
-
-                                "rectangle": {
-                                              "x":-50, 
-                                              "y":45,
-                                              "width": 170,
-                                              "height": 50
-                                },
+                                "solid2":    [   { "x": 95,  "y": 70}, 
+                                                { "x": 125,  "y": 70} ],
 
 
                                 'textToAdd' : [
-                                        { "x": -40,  "y": 75, "text": "Agent"},
-                                        { "x": -35,  "y": 65, "text": "VOL"},
-                                        { "x": 0,  "y": 85, "text": "Co-location"},
-                                        { "x": 10,  "y": 60, "text": "FRC"},
-                                        { "x": 60,  "y": 75, "text": "Theme"},
-                                        { "x": 45,  "y": 65, "text": "EXIST | MOT"},
-                                        { "x": 125,  "y": 85, "text": "PTH"},
-                                        { "x": 160,  "y": 75, "text": "Ground"}, 
-                                        { "x": 160,  "y": 65, "text": "EXIST"}
+                                        { "x": -90,  "y": 75, "text": "Physical_entity"},
+                                        { "x": -55,  "y": 60, "text": "VOL"},
+                                        { "x": -20,  "y": 60, "text": "Co-location"},
+                                        { "x": -10,  "y": 85, "text": "FRC"},
+                                        { "x": 45,  "y": 75, "text": "Theme"},
+                                        { "x": 45,  "y": 60, "text": "MOT"},
+                                        { "x": 100,  "y": 85, "text": "PTH"},
+                                        { "x": 140,  "y": 75, "text": "Ground"}, 
+                                        { "x": 140,  "y": 60, "text": "EXIST"}
                                     ],
 
                             "caption": "ASC causal chains used with carry motion network",
 
                             "chains": [
                                        {"network": "Volitional Motion", "parent": "CarryMotionNetwork"},
-                                       {"network": "Volitional Internal", "parent": "CarryMotionNetwork"}
+                                       {"network": "Physical Motion", "parent": "CarryMotionNetwork"}
                                     ],
 
                             "name" : "Carry network" 
                         };
+
+
+    var PursuitMotionNetwork = {        
+
+                                "solid1":    [   { "x": -10,  "y": 70}, 
+                                                { "x": 20,  "y": 70} ],
+
+                                "dotted1":    [   { "x": -10,  "y": 65}, 
+                                                { "x": 20,  "y": 65} ],
+
+                                "solid2":    [   { "x": 95,  "y": 70}, 
+                                                { "x": 125,  "y": 70} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -60,  "y": 75, "text": "Theme"},
+                                        { "x": -55,  "y": 60, "text": "VOL"},
+                                        { "x": -20,  "y": 60, "text": "Co-location"},
+                                        { "x": -10,  "y": 85, "text": "Mutual"},
+                                        { "x": 45,  "y": 75, "text": "Co-theme"},
+                                        { "x": 45,  "y": 60, "text": "MOT"},
+                                        { "x": 100,  "y": 85, "text": "PTH"},
+                                        { "x": 140,  "y": 75, "text": "Ground"}, 
+                                        { "x": 140,  "y": 60, "text": "EXIST"}
+                                    ],
+
+                            "caption": "ASC causal chains used with pursuit motion network",
+
+                            "chains": [
+                                       {"network": "Mutual Motion", "parent": "PursuitMotionNetwork"},
+                                       {"network": "Mutual", "parent": "PursuitMotionNetwork"}
+                                    ],
+
+                            "name" : "Pursuit network" 
+                        };
+
 
     if (NetworkType === "RemoveDepriveNetwork") {
         return RemoveDepriveNetwork;
@@ -2038,6 +2504,10 @@ function getMultipleNetworkPage (NetworkType) {
 
     if (NetworkType === "CarryMotionNetwork") {
         return CarryMotionNetwork;
+    }
+
+    if (NetworkType === "PursuitMotionNetwork") {
+        return PursuitMotionNetwork;
     }
 
 }
@@ -2878,14 +3348,56 @@ function parsePredCalc (myPredCalc) {
 
 
 
-function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
+function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, examplePage=false) {
+
+
+    // function to not include certain elements of diagram for example page
+    function makeCurrentNetworkForExamplePage (currentNetwork) {
+
+        var newCurrentNetwork = {};
+
+        Object.keys(currentNetwork).forEach(function(key) {
+
+            var value = currentNetwork[key];
+
+            if (key === "textToAdd") {
+
+                var newTextToAdd = [];
+
+                for (i=0; i<value.length; i++) {
+
+                    if (value[i]["y"] < 55) {
+                        var newText = value[i];
+                        newTextToAdd.push(newText);
+                    }
+
+                newCurrentNetwork["textToAdd"] = newTextToAdd;
+      
+                }
+            } else if (key === "name") {
+                newCurrentNetwork["name"] = value;
+            } else if (value[0]["y"] < 35) {
+                newCurrentNetwork[key] = value;
+            }
+        });
+
+        return newCurrentNetwork
+
+    }
+
+    if (examplePage === true) {
+
+        var currentNetwork = makeCurrentNetworkForExamplePage(currentNetwork);
+
+    }
+
 
     function addNetworkText (obj){
 
         var addThisText = svgContainer.append("text")
                                     .attr("x", obj["x"])
                                     .attr("y", obj["y"])
-                                    .attr("fill", function (d) { if (obj["text"] === 'PTH' && obj["y"] < 46) {return "red"} 
+                                    .attr("fill", function (d) { if (['PTH', 'FRC', 'Mutual'].includes(obj["text"]) && obj["y"] < 46) {return "red"} 
                                                                 else if (obj["y"] < 46) {return "black"} 
                                                                 else {return "green"}; })
                                     .text(obj["text"]);
@@ -2894,6 +3406,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
     var solidLine1 = currentNetwork["solid1"];
     var solidLine2 = currentNetwork["solid2"];
     var solidLine3 = currentNetwork["solid3"];
+    var solidLine4 = currentNetwork["solid4"];
     var dottedLeft = currentNetwork["dottedLeft"];
     var dottedFarLeft = currentNetwork["dottedFarLeft"];
     var dottedRight = currentNetwork["dottedRight"];
@@ -2923,9 +3436,9 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) {
                                     .attr("fill", "none");
     }
 
-    var solidLines = [solidLine2, solidLine3];
+    var solidLines = [solidLine2, solidLine3, solidLine4];
 
-    for (i=0; i<2; i++) {
+    for (i=0; i<3; i++) {
 
         var sLine = solidLines[i];
 
@@ -3086,11 +3599,11 @@ function draw() {
 
     svgContainer.append("text")
                 .attr("x", 55)             
-                .attr("y", 10)
+                .attr("y", 0)
                 .attr("text-anchor", "middle")  
                 .style("font-size", "16px") 
                 .style("text-decoration", "underline")  
-                .text("Constructional event structure");
+                .text("Example sentence event structure");
 
 
     // recordObjects keeps a history of the objects for drawing of FD lines
@@ -3173,24 +3686,24 @@ function draw() {
     // generateDiagram.addEventListener('click', resetScreen);
     // generateDiagram.removeEventListener('click', draw);
 
-    var sentence = events[currentEvent][0];
-    var themeType = events[currentEvent][3];
-    var FDCategory = events[currentEvent][4];
-    var syntax = events[currentEvent][5];
-    var predicate = events[currentEvent][6];
-    var nameGeneralNetwork = events[currentEvent][7];
-    var linkToGeneralNetwork = events[currentEvent][8]
+    // var sentence = events[currentEvent][0];
+    // var themeType = events[currentEvent][3];
+    var FDCategory = events[currentEvent][3];
+    // var syntax = events[currentEvent][2];
+    // var predicate = events[currentEvent][6];
+    var nameGeneralNetwork = events[currentEvent][5];
+    var linkToGeneralNetwork = events[currentEvent][7]
     
     //The fd-network SVG Container (added 2019.12)
     var svgNetworkContainer = d3.select("#svg-network").append("svg")
                                         .attr("width", 200)
-                                        .attr("height", 120);
+                                        .attr("height", 30);
 
     var currentNetwork = getNetwork(FDCategory, nameGeneralNetwork);
 
-    console.log(currentNetwork);
+    // console.log(currentNetwork);
 
-    console.log(FDCategory, currentEvent, linkToGeneralNetwork)
+    // console.log(FDCategory, currentEvent, linkToGeneralNetwork)
 
     //console.log(eventComponents);
 
@@ -3206,30 +3719,38 @@ function draw() {
 
     svgNetworkContainer.append("text")
                 .attr("x", 60)             
-                .attr("y", -30)
+                .attr("y", -20)
                 .attr("text-anchor", "middle")  
                 .style("font-size", "16px") 
                 .style("text-decoration", "underline")  
-                .text("Mapping to verbal event structure");
+                .text("Example sentence force dynamics");
 
-    var linkToNetworkTablePage = getSpecificNetworkTableIdentifierForURL(FDCategory, nameGeneralNetwork);
+    var linkToNetworkTablePage = getSpecificNetworkTableIdentifierForURL(FDCategory, nameGeneralNetwork)[0];
 
-    addSpecificNetworkTitleAbove(svgNetworkContainer, FDCategory, linkToNetworkTablePage)
+    // console.log(linkToNetworkTablePage);
 
-    var parentNetworkTitle = nameGeneralNetwork.replace(/([A-Z])/g, ' $1').trim();
+    var linkToConstructionPage = getSpecificNetworkTableIdentifierForURL(FDCategory, nameGeneralNetwork)[1];
 
-    addGeneralNetworkTitleBelow(svgNetworkContainer, parentNetworkTitle, linkToGeneralNetwork);
+    // addSpecificNetworkTitleAbove(svgNetworkContainer, FDCategory, linkToNetworkTablePage)
 
-    var drawNetwork = createNetworkDiagram(svgNetworkContainer, currentNetwork, argTextToAdd);
+    // var parentNetworkTitle = nameGeneralNetwork.replace(/([A-Z])/g, ' $1').trim();
+
+    // addGeneralNetworkTitleBelow(svgNetworkContainer, parentNetworkTitle, linkToGeneralNetwork);
+
+    var drawNetwork = createNetworkDiagram(svgNetworkContainer, currentNetwork, argTextToAdd, examplePage=true);
 
 
 
-    for (n=0; n<7; n++) {
+    for (n=0; n<8; n++) {
 
-        var labels = ['Example: ', 'VerbNet class: ', 'Argument Structure: ', 'VerbNet case frame: ', 'Force dynamics: ', 'Aspect: ', 'Predicate calculus:'];
+        // var labels = ['Example: ', 'VerbNet class: ', 'Argument Structure: ', 'VerbNet case frame: ', 'Construction force dynamics: ', 'Verb force dynamics: ', 'Predicate calculus:', 'Aspect: '];
 
-        var addedHeader = addSecondDivText(labels[n], true, n);
-        var addedSentence = addSecondDivText(events[currentEvent][n], false, n);
+        var labels = ['Example: ', 'VerbNet class: ', 'Argument Structure: ', 'Construction force dynamics: ', 'Aspect: ', 'Verb force dynamics: ', 'Predicate calculus:', 'Force-dynamic mapping: '];
+
+        console.log(linkToGeneralNetwork);
+
+        var addedHeader = addSecondDivText(labels[n], linkToConstructionPage, linkToGeneralNetwork, linkToNetworkTablePage, true, n);
+        var addedSentence = addSecondDivText(events[currentEvent][n], linkToConstructionPage, linkToGeneralNetwork, linkToNetworkTablePage, false, n);
         // var addedBlank = addSecondDivText('', false, n);
 
     }
@@ -3246,20 +3767,8 @@ function removeElement(elementId) {
 
 function makeTable (data) {
 
-    removeElement("network-container");
-    removeElement("network-label");
-    removeElement("network-title");
-
-
-    // var table = d3.select('#network-container').append('table'),
-    //     .attr("style", "margin-left: 250px"),
-    //     thead = table.append("thead"),
-    //     tbody = table.append("tbody");
-
-
     var currentLocation = window.location.href;
-
-    
+   
     function tabulate(data, columns) {
         var table = d3.select('#svg-network-table').append('table')
         var thead = table.append('thead')
@@ -3278,7 +3787,7 @@ function makeTable (data) {
           .enter()
           .append('tr')
           .on("mouseover", function(){
-             d3.select(this).style("background-color", "yellow");})
+             d3.select(this).style("background-color", "lightblue");})
           .on("mouseout", function(){
              d3.select(this).style("background-color", function(d) {
                 return "#fff";
@@ -3305,34 +3814,56 @@ function makeTable (data) {
     // render the table(s)
     tabulate(data, ['ASC', 'VNClass', 'Sentence']); // 2 column table
 
+}
 
 
-    // append the header row
-    // thead.append("tr")
-    //     .selectAll("th")
-    //     .data(columns)
-    //     .enter()
-    //     .append("th")
-    //         .text(function(column) { return column; });
+function makeTableForMappingPage (data) {
 
-    // var tr = table.selectAll('tr')
-    //     .data(elements).enter()
-    //     .append('tr');
+    var currentLocation = window.location.href;
+   
+    function tabulate(data, columns) {
+        var table = d3.select('#svg-container').append('table');
+        var thead = table.append('thead');
+        var tbody = table.append('tbody');
 
-    // tr.append('td')
-    //     .attr('class', 'asc')
-    //     .html(function(m) { return m.asc; });
+        // create a row for each object in the data
+        var rows = tbody.selectAll('tr')
+          .data(data)
+          .enter()
+          .append('tr')
+          .on("mouseover", function(){
+             d3.select(this).style("background-color", "lightblue");})
+          .on("mouseout", function(){
+             d3.select(this).style("background-color", function(d) {
+                return "#fff";
+            })})
+          .on("click", function(d) { 
+            var nextLocation = currentLocation.split("id=")[0] + "id="+ d["id"];
+            window.open(nextLocation, "_self"); 
+        });
 
-    // tr.append('td')
-    //     .attr('class', 'vnclass')
-    //     .html(function(m) { return m.vnclass; });
+        // create a cell in each row for each column
+        var cells = rows.selectAll('td')
+          .data(function (row) {
+            return columns.map(function (column) {
+              return {column: column, value: row[column]};
+            });
+          })
+          .enter()
+          .append('td')
+            .style("font-size", "20px")
+            .style("font-weight", function(d,i){ if(i === 0) return (1000);})
+            .style("font-style", function(d, i) { if(i === 0) return "italic";})
+            .text(function (d) { return d.value; });
 
-    // tr.append('td')
-    //     .attr('class', 'sentence')
-    //     .html(function(m) { return m.sentence; });
+      return table;
+    }
 
+    // render the table(s)
+    tabulate(data, ['col1', 'col2']); // 2 column table
 
 }
+
 
 
 function addTitleToTop(svgContainer, thisText) {
@@ -3350,40 +3881,47 @@ function addTitleToTop(svgContainer, thisText) {
 
 function addSpecificNetworkTitleAbove(svgContainer, thisText, linkToSpecificNetwork) {
 
-    var currentLocation = window.location.href;
+    if (linkToSpecificNetwork === 'None') {
 
-    svgContainer.append("rect")
+        svgContainer.append("text")
+                .attr("x", 60)             
+                .attr("y", -0)
+                .attr("text-anchor", "middle")  
+                .style("font-size", "14px") 
+                .style("text-decoration", "underline")
+                .text("Constructional semantics: " + thisText);
+
+    } else {
+
+        svgContainer.append("rect")
             .attr("x", -15)
             .attr("y", -15)
             .attr("height", 20)
             .attr("width", 150)
             .attr("stroke", "blue")
             .attr("stroke-width", 2)
-            .style("fill", "green")
+            .style("fill", "grey")
             .attr("rx", 10)
             .attr("ry", 10);
 
-    svgContainer.append("text")
-            .attr("x", 60)             
-            .attr("y", -0)
-            .attr("text-anchor", "middle")  
-            .style("font-size", "14px") 
-            .text(thisText)
-            .on("mouseover", function(){
-                 d3.select(this).style("fill", "yellow");})
-            .on("mouseout", function(){
-                 d3.select(this).style("fill", "black");})
-            .on("click", function(d) { 
+        svgContainer.append("text")
+                .attr("x", 60)             
+                .attr("y", -0)
+                .attr("text-anchor", "middle")  
+                .style("font-size", "14px") 
+                .text(thisText)
+                .on("mouseover", function(){
+                     d3.select(this).style("fill", "orange");})
+                .on("mouseout", function(){
+                     d3.select(this).style("fill", "black");})
+                .on("click", function(d) { 
 
-                let currentLocation = window.location.href;
+                    let currentLocation = window.location.href;
 
-                // var nextLocation = currentLocation.split("id=")[0] + "id="+ newLink;
-                // // let nextLocation = new URL(currentLocation);
-                // //     nextLocation = new URL('specificNetwork', nextLocation); 
-                // // console.log(currentLocation);
-                var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToSpecificNetwork;
-                window.open(nextLocation, "_self"); 
-            });
+                    var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToSpecificNetwork;
+                    window.open(nextLocation, "_self"); 
+                });
+        }
 
 }
 
@@ -3392,25 +3930,33 @@ function addGeneralNetworkTitleBelow(svgContainer, thisText, linkToGeneralNetwor
 
     var currentLocation = window.location.href;
 
+    svgContainer.append("text")
+            .attr("x", -20)             
+            .attr("y", 135)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "14px") 
+            .style("text-decoration", "underline")
+            .text("Verbal semantics: ")
+
     svgContainer.append("rect")
-            .attr("x", -15)
+            .attr("x", 35)
             .attr("y", 120)
             .attr("height", 20)
             .attr("width", 150)
             .attr("stroke", "blue")
             .attr("stroke-width", 2)
-            .style("fill", "green")
+            .style("fill", "grey")
             .attr("rx", 10)
             .attr("ry", 10);
 
     svgContainer.append("text")
-            .attr("x", 60)             
+            .attr("x", 110)             
             .attr("y", 135)
             .attr("text-anchor", "middle")  
             .style("font-size", "14px") 
             .text(thisText)
             .on("mouseover", function(){
-                 d3.select(this).style("fill", "yellow");})
+                 d3.select(this).style("fill", "orange");})
             .on("mouseout", function(){
                  d3.select(this).style("fill", "black");})
             .on("click", function(d) { 
@@ -3423,25 +3969,40 @@ function addGeneralNetworkTitleBelow(svgContainer, thisText, linkToGeneralNetwor
 
 function createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements) {
 
-    var currentLocation = window.location.href;
 
-    console.log(currentLocation);
+    var currentLocation = window.location.href;
 
     var thisSpecificNetwork = getNetwork(d["network"], d["parent"]);
 
-    console.log(thisSpecificNetwork);
+    //console.log(thisSpecificNetwork);
+
+    // console.log(d["network"]); // e.g., Volitional Motion
 
     var linkToGeneralNetwork = arrayNetworkElements[0]["link"]; // e.g., 10003
 
-    // var linkToNetworkTablePage = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"]);
-
-    addSpecificNetworkTitleAbove(svgContainer, d["network"], linkToGeneralNetwork);
-
-    // console.log(d["parent"]);
-
     var parentNetworkTitle = d["parent"].replace(/([A-Z])/g, ' $1').trim();
 
-    // console.log(parentNetworkTitle);
+    var linkToConstructionPage = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[1];
+
+    //addSpecificNetworkTitleAbove(svgContainer, d["network"], linkToGeneralNetwork);
+
+    // Previous version including buttons on the mapping page (05/2020)
+
+    // var data = ["Mapping from", 
+    //             {"text": "Construction page", "id": linkToConstructionPage},
+    //            "to", 
+    //            {"text": parentNetworkTitle, "id": linkToGeneralNetwork}]
+
+    // for (n=0; n<data.length; n++) {
+    //     addTableWithLinksToMappingPage(data[n], n);
+    // }
+
+    var data = [{"col1": "Mapping from", "col2": d["network"], "id": linkToConstructionPage},
+                {"col1": "to", "col2": parentNetworkTitle, "id": linkToGeneralNetwork}]
+
+    makeTableForMappingPage(data);
+
+    // console.log(d["parent"]);
 
     // addTitleToTop(svgContainer, parentNetworkTitle);
 
@@ -3449,9 +4010,21 @@ function createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements)
 
     createNetworkDiagram(svgContainer, thisSpecificNetwork, networkTextToAdd); 
 
+    // addGeneralNetworkTitleBelow(svgContainer, parentNetworkTitle, linkToGeneralNetwork);
+
     makeTable(arrayNetworkElements);
 
-    //window.open("https://en.wikipedia.org/wiki/"+d["network"]); 
+}
+
+
+
+function getArrayForMappingPage(linkToConstructionPage, linkToGeneralNetwork) {
+
+    var arrayMappingValues = [];
+
+
+
+
 
 }
 
@@ -3461,18 +4034,20 @@ function getArrayNetworkElementsForTablePage (d) {
 
     var arrayNetworkElements = [];
 
+    //console.log(d);
+
     for (var identifier in events) {
 
         if ( events[identifier].length>6 ) {
 
-            if ( events[identifier][7] === d["parent"] && events[identifier][4] === d["network"] ) {
+            if ( events[identifier][5] === d["parent"] && events[identifier][3] === d["network"] ) {
 
                 var sentence = events[identifier][0];
                 var vnclass = events[identifier][1];
                 var asc = events[identifier][2];
-                var generalNetworkLink = events[identifier][8];
+                var generalNetworkLink = events[identifier][7];
 
-                // var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"]);
+                // var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[0];
 
                 var thisElement = {"ASC":asc, 
                                     "VNClass":vnclass, 
@@ -3495,26 +4070,44 @@ function getArrayNetworkElementsForTablePage (d) {
 function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName) {
 
     if (FDCategory === "Autonomous Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierForURL = "11001";
+        var identifierToMappingURL = "11001";
+        var identifierToConstructionURL = "12004";
     } else if (FDCategory === "Self-volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierForURL = "11002";
+        var identifierToMappingURL = "11002";
+        var identifierToConstructionURL = "12005";
     } else if (FDCategory === "Volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierForURL = "11003";
+        var identifierToMappingURL = "11003";
+        var identifierToConstructionURL = "12003";
     } else if (FDCategory === "Autonomous COS" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierForURL = "11004";
+        var identifierToMappingURL = "11004";
+        var identifierToConstructionURL = "12006";
     } else if (FDCategory === "Volitional COS" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierForURL = "11005";
+        var identifierToMappingURL = "11005";
+        var identifierToConstructionURL = "12007";
     } else if (FDCategory === "Volitional Motion" && generalNetworkName == "SendMotionNetwork") {
-        var identifierForURL = "11006";
+        var identifierToMappingURL = "11006";
+        var identifierToConstructionURL = "12003";
     } else if (FDCategory === "Volitional Motion" && generalNetworkName == "CarryMotionNetwork") {
-        var identifierForURL = "11007";
+        var identifierToMappingURL = "11007";
+        var identifierToConstructionURL = "12003";
     } else if (FDCategory === "Volitional Internal" && generalNetworkName == "CarryMotionNetwork") {
-        var identifierForURL = "11008";
+        var identifierToMappingURL = "11008";
+        var identifierToConstructionURL = "12008";
     } else if (FDCategory === "Volitional Motion" && generalNetworkName == "ThrowMotionNetwork") {
-        var identifierForURL = "11009";
+        var identifierToMappingURL = "11009";
+        var identifierToConstructionURL = "12003";
+    } else if (FDCategory === "Physical Motion" && generalNetworkName == "CarryMotionNetwork") {
+        var identifierToMappingURL = "11010";
+        var identifierToConstructionURL = "12006";
+    } else if (FDCategory === "Mutual Motion" && generalNetworkName == "PursuitMotionNetwork") {
+        var identifierToMappingURL = "11011";
+        var identifierToConstructionURL = "12007";
+    } else if (FDCategory === "Mutual" && generalNetworkName == "PursuitMotionNetwork") {
+        var identifierToMappingURL = "11012";
+        var identifierToConstructionURL = "12008";
     } 
 
-    return identifierForURL;
+    return [identifierToMappingURL, identifierToConstructionURL]
 
 }
 
@@ -3524,6 +4117,15 @@ function renderTablePage (id) {
     var svgContainer = d3.select('#svg-network-examples').append("svg")
                       .attr("width", 100)
                       .attr("height", 100);
+
+
+    svgContainer.append("text")
+        .attr("x", 70)             
+        .attr("y", -110)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "24px") 
+        .style("text-decoration", "underline")
+        .text("Force-dynamic mapping from construction to verb")
 
     var d = {"network": events[id][0], "parent": events[id][1]};
 
@@ -3542,11 +4144,44 @@ function makeNetworkPage () {
                                                   .attr("height", 10);
 
     svgContainer.append("text")
-            .attr("x", 60)             
-            .attr("y", 10)
+            .attr("x", -120)             
+            .attr("y", 25)
             .attr("text-anchor", "middle")  
-            .style("font-size", "20px") 
-            .text("Motion networks")
+            .style("font-size", "24px") 
+            .text("Verbal force dynamics:")
+
+
+    svgContainer.append("text")
+            .attr("x", -120)             
+            .attr("y", 50)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "24px") 
+            .text("Motion" + " network")
+
+    svgContainer.append("text")
+            .attr("x", 350)             
+            .attr("y", 25)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "24px") 
+            .text("Construction force-dynamic")
+
+    svgContainer.append("text")
+            .attr("x", 350)             
+            .attr("y", 50)
+            .attr("text-anchor", "middle")  
+            .style("font-size", "24px") 
+            .text("mappings to the network")
+
+    // svgContainer.append("text")
+    //         .attr("x", 60)             
+    //         .attr("y", 20)
+    //         .attr("text-anchor", "middle")  
+    //         .style("font-size", "20px") 
+    //         .text()
+
+
+    var myColor = d3.scaleLinear().domain([1,4])
+        .range(["orange", "blue"])
 
     for (j=0; j<events[currentEvent].length; j++){
 
@@ -3563,11 +4198,6 @@ function makeNetworkPage () {
             } else {
                 var height = 250;
             }
-
-            //The SVG Container
-            // var svgContainer = d3.select("#svg-container").append("svg")
-            //                                               .attr("width", 200)
-            //                                               .attr("height", 600);
 
 
             var svgContainer = d3.select("#network-container").append("svg")
@@ -3614,6 +4244,7 @@ function makeNetworkPage () {
 
             var chains = currentNetwork["chains"];
 
+
             for (i=0; i < chains.length; i++) {
 
                 function tabulate(data, columns) {
@@ -3649,26 +4280,10 @@ function makeNetworkPage () {
                   return table;
               }
 
-
-                // svgContainer.append("text")
-                //     .attr("x", 70)             
-                //     .attr("y", (130+i*20))
-                //     .attr("text-anchor", "middle")  
-                //     .style("font-size", "14px") 
-                //     .text(chains[i]["network"])
-                //     .on("click", function() { window.open("http://google.com"); });
-
-                // Define 'div' for tooltips
-                // var div = d3.select("#svgLabel")
-                //     .append("div")  // declare the tooltip div 
-                //     .attr("class", "tooltip")              // apply the 'tooltip' class
-                //     .style("opacity", 0);                  // set the opacity to nil
-
-
-
                 var ascs = chains[i];
 
-                // var network = chains[i]["network"];
+                // console.log(j);
+                // console.log(myColor(j));
 
                 svgLabel.append("rect")
                     .attr("x", 15)
@@ -3677,7 +4292,8 @@ function makeNetworkPage () {
                     .attr("width", 150)
                     .attr("stroke", "blue")
                     .attr("stroke-width", 2)
-                    .style("fill", "green")
+                    //.style("fill", "grey")
+                    .style("fill", myColor(j))
                     .attr("rx", 10)
                     .attr("ry", 10);
 
@@ -3690,7 +4306,7 @@ function makeNetworkPage () {
                     .text(chains[i]["network"])
                     .datum(chains[i])
                     .on("mouseover", function(){
-                         d3.select(this).style("fill", "yellow");})
+                         d3.select(this).style("fill", "orange");})
                     .on("mouseout", function(){
                          d3.select(this).style("fill", "black");})
                     .on("click", function(d) { 
@@ -3699,26 +4315,10 @@ function makeNetworkPage () {
 
                         var currentLocation = window.location.href;
 
-                        var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"]);
+                        var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[0];
 
                         var nextLocation = currentLocation.split("id=")[0] + "id="+ specificNetworkTableLink;
                         window.open(nextLocation, "_self"); 
-
-                        // renderTablePage(specificNetworkTableLink);
-
-                        // var arrayNetworkElements = getArrayNetworkElementsForTablePage(events, d);
-
-                        // console.log(arrayNetworkElements); // this is the collection of table rows
-
-                        // console.log(currentLocation);
-
-                        // var svgContainer = d3.select('#svg-network-examples').append("svg")
-                        //                       .attr("width", 100)
-                        //                       .attr("height", 100);
-
-                        // console.log(d["network"]); // this is for example "Autonomous Motion"
-
-                        // createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements)
 
                     });
                     //.on("click", function(d) { window.open("https://en.wikipedia.org/wiki/"+d["network"]); });
@@ -3731,6 +4331,124 @@ function makeNetworkPage () {
     }
 
 
+function makeConstructionFDPage () {
+
+    // added 05/2020 after discussion to add fourth page: Construction FD page
+
+    var FDCategory = events[id]["child"];
+    var parentNetworksLink = events[id]["parentNetwork"];
+    var generalNetworkLink = events[id]["generalNetwork"];
+    var parentNetworks = events[parentNetworksLink];
+
+    var currentNetwork = getNetwork(FDCategory, parentNetworks[0]);
+
+    var argTextToAdd = currentNetwork["argTextToAdd"];
+
+    //The SVG Container
+    var svgContainer = d3.select("#svg-container").append("svg")
+                                        .attr("width", 200)
+                                        .attr("height", 20);
+
+
+    svgContainer.append("text")
+                .attr("x", 40)             
+                .attr("y", "0em")
+                .attr("text-anchor", "middle")  
+                .style("font-size", "24px") 
+                .text("Construction Force Dynamics:");
+
+    svgContainer.append("text")
+                .attr("x", 40)             
+                .attr("y", "1.5em")
+                .attr("text-anchor", "middle")  
+                .style("font-size", "24px") 
+                .text(FDCategory);
+
+
+    var svgNetworkContainer = d3.select("#svg-network-examples").append("svg")
+                                        .attr("width", 200)
+                                        .attr("height", 300);
+
+    var drawNetwork = createNetworkDiagram(svgNetworkContainer, currentNetwork, argTextToAdd, examplePage=true);
+
+
+    svgNetworkContainer.append("text")
+                .attr("x", -70)             
+                .attr("y", "6em")
+                .attr("text-anchor", "middle")  
+                .style("font-size", "16px") 
+                .text(FDCategory + " maps onto:");
+
+    for (j=0; j<parentNetworks.length; j++) {
+
+        var parentNetworkTitle = parentNetworks[j].replace(/([A-Z])/g, ' $1').trim();
+        var currentLocation = window.location.href;
+
+        
+        svgNetworkContainer.append("rect")
+                .attr("x", -155)
+                .attr("y", 125+40*j)
+                .attr("height", 20)
+                .attr("width", 170)
+                .attr("stroke", "blue")
+                .attr("stroke-width", 2)
+                .style("fill", "grey")
+                .attr("rx", 10)
+                .attr("ry", 10);
+
+        svgNetworkContainer.append("text")
+                    .attr("x", -70)             
+                    .attr("y", 140+40*j)
+                    .attr("text-anchor", "middle")  
+                    .style("font-size", "16px") 
+                    .text(parentNetworkTitle)
+                    .on("mouseover", function(){
+                         d3.select(this).style("fill", "orange");})
+                    .on("mouseout", function(){
+                         d3.select(this).style("fill", "black");})
+                    .on("click", function(d) { 
+                        var nextLocation = currentLocation.split("id=")[0] + "id="+ generalNetworkLink;
+                        window.open(nextLocation, "_self"); 
+                    });
+
+        svgNetworkContainer.append("rect")
+                .attr("x", 90)
+                .attr("y", 125+40*j)
+                .attr("height", 20)
+                .attr("width", 170)
+                .attr("stroke", "blue")
+                .attr("stroke-width", 2)
+                .style("fill", "steelblue")
+                .attr("rx", 10)
+                .attr("ry", 10);
+
+        svgNetworkContainer.append("text")
+                    .attr("x", 175)             
+                    .attr("y", 140+40*j)
+                    .attr("text-anchor", "middle")  
+                    .style("font-size", "16px") 
+                    .text("Mapping and examples")
+                    .datum(parentNetworks[j])
+                    .on("mouseover", function(){
+                         d3.select(this).style("fill", "orange");})
+                    .on("mouseout", function(){
+                         d3.select(this).style("fill", "black");})
+                    .on("click", function(d) { 
+                        var linkToNetworkTablePage = getSpecificNetworkTableIdentifierForURL(FDCategory, d)[0];
+                        var nextLocation = currentLocation.split("id=")[0] + "id="+ linkToNetworkTablePage;
+                        window.open(nextLocation, "_self");
+                    }); 
+
+
+    }
+
+
+
+
+}
+
+
+
 
 if (typeof events[currentEvent] === 'undefined') {
     // does not exist
@@ -3738,6 +4456,10 @@ if (typeof events[currentEvent] === 'undefined') {
     var div = document.getElementById('textbox');
 
     div.innerHTML += '<h2>Representations for mental and social events coming soon!</h2>';   
+
+} else if (id > 12000) {
+
+    makeConstructionFDPage()
 
 } else if (id > 11000) {
 

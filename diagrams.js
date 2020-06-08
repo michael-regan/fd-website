@@ -1,5 +1,5 @@
 var generateDiagram = document.querySelector('.btn');
-var currentEvent = 10003;
+var currentEvent = id;
 
 // generateDiagram.addEventListener('click', draw);
 
@@ -4448,6 +4448,7 @@ function makeConstructionFDPage () {
 }
 
 
+var id = 10003;
 
 
 if (typeof events[currentEvent] === 'undefined') {

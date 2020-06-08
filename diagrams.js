@@ -1,3 +1,6 @@
+let params = (new URL(document.location)).searchParams;
+let id = Number(params.get("id"));
+
 var generateDiagram = document.querySelector('.btn');
 var currentEvent = id;
 
@@ -4447,8 +4450,6 @@ function makeConstructionFDPage () {
 
 }
 
-
-var id = 10003;
 
 
 if (typeof events[currentEvent] === 'undefined') {

@@ -1,5 +1,5 @@
 var generateDiagram = document.querySelector('.btn');
-var currentEvent = id;
+var currentEvent = 10003;
 
 // generateDiagram.addEventListener('click', draw);
 

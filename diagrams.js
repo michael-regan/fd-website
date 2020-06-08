@@ -2031,7 +2031,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "dotted1":    [   { "x": -10,  "y": 70}, 
                                                 { "x": 20,  "y": 70} ],
 
-                                "solid0":    [   { "x": -10,  "y": 30}, 
+                                "solid1":    [   { "x": -10,  "y": 30}, 
                                                 { "x": 20,  "y": 30} ],
 
                                 "solid4":    [   { "x": -10,  "y": 75}, 
@@ -2452,7 +2452,7 @@ function getMultipleNetworkPage (NetworkType) {
 
     var PursuitMotionNetwork = {        
 
-                                "solid1":    [   { "x": -10,  "y": 70}, 
+                                "solid3":    [   { "x": -10,  "y": 70}, 
                                                 { "x": 20,  "y": 70} ],
 
                                 "dotted1":    [   { "x": -10,  "y": 65}, 

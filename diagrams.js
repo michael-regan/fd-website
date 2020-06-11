@@ -1233,7 +1233,7 @@ var events = {
         "Volitional Motion",
         "DirectedAchievement",
         "ThrowMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner-garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
     "1125": [
@@ -3174,7 +3174,23 @@ function addText (svgContainer, myAspectObject, subeventArray) {
     var r = myAspectObject["bcr-labels"]["r"];
 
 
-    if (c[0]!='None') {
+    if (participant.indexOf('-') !== -1) {
+
+        var part_split = participant.split('-');
+        var added = 0;
+
+        for (i=0;i<part_split.length;i++) {
+
+            console.log(part_split[i]);
+
+            var addParticipantText = svgContainer.append("text")
+                            .attr("x", c[1]["x"]-35-strLen)
+                            .attr("y", (1/2)*(c[0]["y"]+c[1]["y"])-10+added)
+                            .text(part_split[i]);
+            added = added + 25;
+
+        }
+    } else if (c[0]!='None') {
 
         var addParticipantText = svgContainer.append("text")
                                     .attr("x", c[1]["x"]-55-strLen)

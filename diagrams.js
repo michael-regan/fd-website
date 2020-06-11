@@ -703,7 +703,7 @@ var events = {
     "Autonomous Motion",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table-floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table+floor) & IncrAcc(a,i,j,q1) & DirAch(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
   "1042": [
@@ -1233,7 +1233,7 @@ var events = {
         "Volitional Motion",
         "DirectedAchievement",
         "ThrowMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner-garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner+garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
     "1125": [
@@ -3174,9 +3174,9 @@ function addText (svgContainer, myAspectObject, subeventArray) {
     var r = myAspectObject["bcr-labels"]["r"];
 
 
-    if (participant.indexOf('-') !== -1) {
+    if (participant.indexOf('+') !== -1) {
 
-        var part_split = participant.split('-');
+        var part_split = participant.split('+');
         var added = 15;
 
         for (i=0;i<part_split.length;i++) {

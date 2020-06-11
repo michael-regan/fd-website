@@ -3177,7 +3177,7 @@ function addText (svgContainer, myAspectObject, subeventArray) {
     if (participant.indexOf('-') !== -1) {
 
         var part_split = participant.split('-');
-        var added = 0;
+        var added = 15;
 
         for (i=0;i<part_split.length;i++) {
 
@@ -3185,9 +3185,9 @@ function addText (svgContainer, myAspectObject, subeventArray) {
 
             var addParticipantText = svgContainer.append("text")
                             .attr("x", c[1]["x"]-35-strLen)
-                            .attr("y", (1/2)*(c[0]["y"]+c[1]["y"])-10+added)
+                            .attr("y", (1/2)*(c[0]["y"]+c[1]["y"])+added)
                             .text(part_split[i]);
-            added = added + 25;
+            added = added - 25;
 
         }
     } else if (c[0]!='None') {

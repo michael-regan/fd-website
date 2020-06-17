@@ -703,7 +703,7 @@ var events = {
     "Autonomous Motion",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table+floor) & IncrAcc(a,i,j,q1) & DirAch(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "Theme-of(x,e) & Component-of(a,books) & Component-of(b,table+floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
   "1042": [
@@ -3174,23 +3174,24 @@ function addText (svgContainer, myAspectObject, subeventArray) {
     var r = myAspectObject["bcr-labels"]["r"];
 
 
-    if (participant.indexOf('+') !== -1) {
+    // if (participant.indexOf('+') !== -1) {
 
-        var part_split = participant.split('+');
-        var added = 15;
+    //     var part_split = participant.split('+');
+    //     var added = 15;
 
-        for (i=0;i<part_split.length;i++) {
+    //     for (i=0;i<part_split.length;i++) {
 
-            console.log(part_split[i]);
+    //         console.log(part_split[i]);
 
-            var addParticipantText = svgContainer.append("text")
-                            .attr("x", c[1]["x"]-35-strLen)
-                            .attr("y", (1/2)*(c[0]["y"]+c[1]["y"])+added)
-                            .text(part_split[i]);
-            added = added - 25;
+    //         var addParticipantText = svgContainer.append("text")
+    //                         .attr("x", c[1]["x"]-35-strLen)
+    //                         .attr("y", (1/2)*(c[0]["y"]+c[1]["y"])+added)
+    //                         .text(part_split[i]);
+    //         added = added - 25;
 
-        }
-    } else if (c[0]!='None') {
+    //     }
+    // } 
+    if (c[0]!='None') {
 
         var addParticipantText = svgContainer.append("text")
                                     .attr("x", c[1]["x"]-55-strLen)

@@ -203,7 +203,7 @@ var events = {
         "Mutual",
         "DirectedActivity",
         "PursuitMotionNetwork",
-        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & MOT(q2) & PTH(a,b)",
         "10003"
   ],
   "238": [
@@ -213,7 +213,7 @@ var events = {
         "Mutual",
         "DirectedActivity",
         "PursuitMotionNetwork",
-        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & MOT(q2) & PTH(a,b)",
         "10003"
   ],
   "633": [
@@ -2151,7 +2151,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 15,  "y": 35, "text": "A1"},
                                         { "x": -50,  "y": 25, "text": "VOL"},
                                         { "x": -10,  "y": 45, "text": "Mutual"}, 
-                                        //{ "x": 35,  "y": 25, "text": "MOT"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
                                         { "x": -50,  "y": 80, "text": "Theme"},
                                         { "x": -50,  "y": 70, "text": "VOL"},
                                         { "x": -10,  "y": 90, "text": "Mutual"},

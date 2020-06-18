@@ -733,7 +733,7 @@ var events = {
     "Self-volitional Motion",
     "DirectedAchievement",
     "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "Theme-of(x,e) & Component-of(a,He) & Component-of(b,France+Colorado) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
   "1054": [
@@ -976,6 +976,16 @@ var events = {
     "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
+  "1079": [
+    "They waltzed across the room and into the hallway",
+    "waltz-51.5",
+    "Sbj V PathP",
+    "Self-volitional Motion",
+    "IncrementalAccomplishment",
+    "GeneralMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,room+hallway) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10003"
+   ],
   "1080": [
     "Bill rolled the ball",
     "roll-51.3.1",
@@ -1003,7 +1013,7 @@ var events = {
     "Volitional Motion",
     "DirectedAchievement",
     "CarryMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,home+meeting) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPhPunct(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10003"
   ],
   "1085": [
@@ -1073,7 +1083,7 @@ var events = {
     "Volitional Motion",
     "IncrementalAccomplishment",
     "CarryMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10003"
   ],
   "1092": [
@@ -1083,7 +1093,7 @@ var events = {
     "Volitional Motion",
     "IncrementalAccomplishment",
     "CarryMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10003"
   ],
   "1093": [
@@ -1126,6 +1136,46 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & Component-of(c,store) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
   ],
+  "1099": [
+    "Amanda drove Penny to New York from home",
+    "drive-11.5",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,Penny) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+   ],
+  "1100": [
+    "Amanda drove the package from home to New York",
+    "drive-11.5",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "CarryMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10003"
+   ],
+   "1104": [
+        "Amanda trucked the package from Philadelphia to her mother's house",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "CarryMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+   ],
+   "1105": [
+        "Amanda trucked the package to her mother's house from Philadelphia",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "CarryMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+   ],
   "1108": [
     "Bill rolled the ball down the hill",
     "roll-51.3.1",
@@ -1203,10 +1253,50 @@ var events = {
     "Volitional Motion",
     "DirectedAchievement",
     "SendMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,book) & Component-of(c,Paris+London) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPhPunct(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10003"
   ],
-    "1122": [
+  "1117": [
+        "Carla slid the books",
+        "slide-11.2",
+        "Sbj V Obj",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "GeneralMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Carla) & Component-of(b,books) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+  ],
+  "1118": [
+        "Carla slid the books across the table",
+        "slide-11.2",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "GeneralMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Carla) & Component-of(b,books) & Component-of(c,table) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+   ],
+  "1119": [
+        "Carla slid the books from one end of the table to the other",
+        "slide-11.2",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "GeneralMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Carla) & Component-of(b,books) & Component-of(c,end+other) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+   ],
+  "1120": [
+        "Carla slid the books to the floor",
+        "slide-11.2",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "GeneralMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Carla) & Component-of(b,books) & Component-of(c,floor) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+  ],
+  "1122": [
         "Steve tossed the ball",
         "throw-17.1",
         "Sbj V Obj",
@@ -1216,16 +1306,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "1123": [
-        "I threw the package away",
-        "throw-17.1",
-        "Sbj V Obj",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "ThrowMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,package) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "10003"
-    ],
+    // "1123": [
+    //     "I threw the package away",
+    //     "throw-17.1",
+    //     "Sbj V Obj",
+    //     "Volitional Motion",
+    //     "DirectedAchievement",
+    //     "ThrowMotionNetwork",
+    //     "Theme-of(y,e) & Component-of(a,I) & Component-of(b,package) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    //     "10003"
+    // ],
     "1124": [
         "Steve tossed the ball from the corner to the garden",
         "throw-17.1",
@@ -1233,7 +1323,7 @@ var events = {
         "Volitional Motion",
         "DirectedAchievement",
         "ThrowMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner+garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner+garden) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPhPunct(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
     "1125": [
@@ -1254,6 +1344,16 @@ var events = {
         "DirectedAchievement",
         "ThrowMotionNetwork",
         "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,ball) & Component-of(c,corner) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10003"
+    ],
+    "1129": [
+        "He waltzed her across the floor",
+        "waltz-51.5",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "GeneralMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & Component-of(c,floor) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
     "10001": ["RemoveDepriveNetwork"],
@@ -1735,7 +1835,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 95,  "y": 90, "text": "Ground"},
                                         { "x": -15,  "y": 25, "text": "VOL/MOT"},
                                         { "x": -10,  "y": 80, "text": "MOT"},
-                                        // { "x": 95,  "y": 25, "text": "EXIST"},
+                                        { "x": 95,  "y": 25, "text": "EXIST"},
                                         { "x": 95,  "y": 80, "text": "EXIST"},
                                         { "x": 50,  "y": 45, "text": "PTH"},
                                         { "x": 50,  "y": 100, "text": "PTH"}
@@ -1774,7 +1874,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 110,  "y": 90, "text": "Ground"},
                                         { "x": 15,  "y": 25, "text": "MOT"},
                                         { "x": 15,  "y": 80, "text": "MOT"},
-                                        // { "x": 95,  "y": 25, "text": "EXIST"},
+                                        { "x": 115,  "y": 25, "text": "EXIST"},
                                         { "x": 115,  "y": 80, "text": "EXIST"},
                                         { "x": 60,  "y": 45, "text": "PTH"},
                                         { "x": 60,  "y": 100, "text": "PTH"}
@@ -1833,7 +1933,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 140,  "y": 35, "text": "A2"},
                                         { "x": 60,  "y": 25, "text": "MOT"},
                                         { "x": 115,  "y": 45, "text": "PTH"},
-                                        // { "x": 160,  "y": 25, "text": "EXIST"},
+                                        { "x": 160,  "y": 25, "text": "EXIST"},
                                         { "x": -150,  "y": 80, "text": "Agent"},
                                         { "x": -150,  "y": 70, "text": "VOL"},
                                         { "x": -115,  "y": 90, "text": "FRC"}, 
@@ -1899,7 +1999,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -10,  "y": 45, "text": "FRC"}, 
                                         { "x": 110,  "y": 35, "text": "A2"},
                                         { "x": 35,  "y": 25, "text": "MOT"},
-                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
                                         { "x": 85,  "y": 45, "text": "PTH"},
                                         { "x": -90,  "y": 80, "text": "Physical_entity"},
                                         { "x": -50,  "y": 70, "text": "VOL"},
@@ -1953,7 +2053,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -10,  "y": 45, "text": "FRC"}, 
                                         { "x": 110,  "y": 35, "text": "A2"},
                                         { "x": 35,  "y": 25, "text": "MOT"},
-                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
                                         { "x": 85,  "y": 45, "text": "PTH"},
                                         { "x": -100,  "y": 80, "text": "Physical_entity"},
                                         { "x": -50,  "y": 70, "text": "VOL"},
@@ -2111,7 +2211,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -10,  "y": 45, "text": "FRC"}, 
                                         { "x": 110,  "y": 35, "text": "A2"},
                                         { "x": 35,  "y": 25, "text": "MOT"},
-                                        // { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
                                         { "x": 85,  "y": 45, "text": "PTH"},
                                         { "x": -50,  "y": 80, "text": "Agent"},
                                         { "x": -50,  "y": 70, "text": "VOL"},
@@ -2443,7 +2543,7 @@ function getMultipleNetworkPage (NetworkType) {
 
                             "chains": [
                                        {"network": "Volitional Motion", "parent": "CarryMotionNetwork"},
-                                       {"network": "Physical Motion", "parent": "CarryMotionNetwork"}
+                                       //{"network": "Physical Motion", "parent": "CarryMotionNetwork"}
                                     ],
 
                             "name" : "Carry network" 
@@ -3201,7 +3301,7 @@ function addText (svgContainer, myAspectObject, subeventArray) {
     } else if (r[0]!="None") {
 
         var addParticipantText = svgContainer.append("text")
-                                    .attr("x", r[1]["x"]-50-strLen)
+                                    .attr("x", r[1]["x"]-50-strLen*1.5)
                                     .attr("y", r[1]["y"]+3)
                                     .text(participant);
     }

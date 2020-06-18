@@ -1136,46 +1136,46 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & Component-of(c,store) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
   ],
-  "1099": [
-    "Amanda drove Penny to New York from home",
-    "drive-11.5",
-    "Sbj V Obj PathP",
-    "Volitional Motion",
-    "IncrementalAccomplishment",
-    "CarryMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,Penny) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    "10003"
-   ],
-  "1100": [
-    "Amanda drove the package from home to New York",
-    "drive-11.5",
-    "Sbj V Obj PathP",
-    "Volitional Motion",
-    "IncrementalAccomplishment",
-    "CarryMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    "10003"
-   ],
-   "1104": [
-        "Amanda trucked the package from Philadelphia to her mother's house",
-        "drive-11.5-1",
-        "Sbj V Obj PathP",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "CarryMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "10003"
-   ],
-   "1105": [
-        "Amanda trucked the package to her mother's house from Philadelphia",
-        "drive-11.5-1",
-        "Sbj V Obj PathP",
-        "Volitional Motion",
-        "IncrementalAccomplishment",
-        "CarryMotionNetwork",
-        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "10003"
-   ],
+  // "1099": [
+  //   "Amanda drove Penny to New York from home",
+  //   "drive-11.5",
+  //   "Sbj V Obj PathP",
+  //   "Volitional Motion",
+  //   "IncrementalAccomplishment",
+  //   "VehicularMotionNetwork",
+  //   "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,Penny) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+  //   "10003"
+  //  ],
+  // "1100": [
+  //   "Amanda drove the package from home to New York",
+  //   "drive-11.5",
+  //   "Sbj V Obj PathP",
+  //   "Volitional Motion",
+  //   "IncrementalAccomplishment",
+  //   "VehicularMotionNetwork",
+  //   "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+  //   "10003"
+  //  ],
+  //  "1104": [
+  //       "Amanda trucked the package from Philadelphia to her mother's house",
+  //       "drive-11.5-1",
+  //       "Sbj V Obj PathP",
+  //       "Volitional Motion",
+  //       "IncrementalAccomplishment",
+  //       "VehicularMotionNetwork",
+  //       "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+  //       "10003"
+  //  ],
+  //  "1105": [
+  //       "Amanda trucked the package to her mother's house from Philadelphia",
+  //       "drive-11.5-1",
+  //       "Sbj V Obj PathP",
+  //       "Volitional Motion",
+  //       "IncrementalAccomplishment",
+  //       "VehicularMotionNetwork",
+  //       "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+  //       "10003"
+  //  ],
   "1108": [
     "Bill rolled the ball down the hill",
     "roll-51.3.1",

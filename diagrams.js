@@ -186,6 +186,16 @@ function addTableWithLinksToMappingPage (data, n) {
 
 
 var events = {
+  "132": [
+    "The children hid",
+    "concealment-16",
+    "Sbj V",
+    "Self-Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
+  ],
   "181": [
     "Brian wiped at the counter",
     "wipe_manner-10.4.1",
@@ -215,6 +225,16 @@ var events = {
         "PursuitMotionNetwork",
         "Theme-of(x,e) & Component-of(a,Jackie) & Component-of(b,thief) & DirAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/MOT(q1) & MOT(q2) & PTH(a,b)",
         "10003"
+  ],
+  "248": [
+    "The children hid in the chimney",
+    "concealment-16",
+    "Sbj V PathP",
+    "Self-Volitional Place",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    ""
   ],
   "633": [
         "Jackie accompanied Rose",
@@ -492,7 +512,7 @@ var events = {
     "Sbj V Obj PathP",
     "Volitional Place",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     ""
   ],
@@ -516,16 +536,6 @@ var events = {
     "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     ""
   ],
-  "683": [
-    "I spooned the sauce there",
-    "funnel-9.3",
-    "Sbj V Obj PathP",
-    "Volitional Place",
-    "IncrementalAccomplishment",
-    "",
-    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
-  ],
   "679": [
     "The child clung to her mother",
     "cling-22.5",
@@ -536,26 +546,46 @@ var events = {
     "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
     ""
   ],
-  "132": [
-    "The children hid",
-    "concealment-16",
-    "Sbj V",
-    "Self-Volitional Place",
+  "683": [
+    "I spooned the sauce there",
+    "funnel-9.3",
+    "Sbj V Obj PathP",
+    "Volitional Place",
     "IncrementalAccomplishment",
-    "",
-    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
+    "MereologicalNetwork",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     ""
   ],
-  "248": [
-    "The children hid in the chimney",
-    "concealment-16",
-    "Sbj V PathP",
-    "Self-Volitional Place",
-    "IncrementalAccomplishment",
-    "",
-    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
-  ],
+    "687": [
+        "Smith inscribed his name on the ring",
+        "image_impression-25.1",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "IllustrationNetwork",
+        "Theme-of(y,e) & Component-of(a,Smith) & Component-of(b,name) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10007"
+    ],
+    "701": [
+        "Saul jotted down readings on a notepad",
+        "scribble-25.2",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedActivity",
+        "IllustrationNetwork",
+        "Theme-of(y,e) & Component-of(a,Saul) & Component-of(b,readings) & Component-of(c,notepad) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10007"
+    ],
+    "705": [
+        "The secretary transcribed the speech into the record",
+        "transcribe-25.4",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "IllustrationNetwork",
+        "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & Component-of(c,record) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10007"
+    ],
   "814": [
     "Bill rolled the drawer open",
     "roll-51.3.1",
@@ -606,16 +636,6 @@ var events = {
     "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
     "10003"
   ],
-  "845": [
-    "Lora buttered the toast with unsalted butter",
-    "butter-9.9",
-    "Sbj V Obj in/with Obl",
-    "Volitional Provide",
-    "IncrementalAccomplishment",
-    "",
-    "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
-    ""
-  ],
   "839": [
     "Lora buttered the toast",
     "butter-9.9",
@@ -655,6 +675,266 @@ var events = {
     "",
     "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,NI) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
     ""
+  ],
+  "843": [
+    "Smith was inscribing the rings",
+    "image_impression-25.1",
+    "Sbj V Obj",
+    "Volitional Provide",
+    "DirectedActivity",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,Smith) & Component-of(b,NI) & Component-of(c,rings) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    "10007"
+  ],
+  "849": [
+    "Smith inscribed the ring with his name",
+    "image_impression-25.1",
+    "Sbj V Obj in/with Obl",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,Smith) & Component-of(b,name) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    "10007"
+  ],
+  "845": [
+    "Lora buttered the toast with unsalted butter",
+    "butter-9.9",
+    "Sbj V Obj in/with Obl",
+    "Volitional Provide",
+    "IncrementalAccomplishment",
+    "",
+    "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+    ""
+  ],
+  "857": [
+        "David dug a hole for me",
+        "create-26.4",
+        "Sbj V Obj for Obl",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,David) & Component-of(b,hole) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+    ],
+  "858": [
+        "David dug me a hole",
+        "create-26.4-1",
+        "Sbj V Obj Obj",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,David) & Component-of(b,hole) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+    ],
+  "859": [
+        "Claire drew a picture for me",
+        "performance-26.7-1",
+        "Sbj V Obj for Obl",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,picture) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+    ],
+  "860": [
+        "Claire drew me a picture",
+        "performance-26.7-1",
+        "Sbj V Obj Obj",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,picture) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+   ],
+   "1149": [
+        "Sandy sang a song for me",
+        "performance-26.7-1",
+        "Sbj V Obj for Obl",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Sandy) & Component-of(b,song) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+    ],
+   "1150": [
+        "Sandy sang me a song",
+        "performance-26.7-1",
+        "Sbj V Obj Obj",
+        "Volitional Create Affect",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Sandy) & Component-of(b,song) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10007"
+  ],
+  "866": [
+    "Smith was inscribing",
+    "image_impression-25.1",
+    "Sbj V",
+    "Volitional Create",
+    "UndirectedActivity",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,Smith) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
+    ],
+  "867": [
+    "Claire drew",
+    "create-26.4-1",
+    "Sbj V",
+    "Volitional Create",
+    "UndirectedActivity",
+    "CreationNetwork",
+    "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
+    ],
+  "868": [
+    "Smith was scribbling",
+    "scribble-25.2-1",
+    "Sbj V",
+    "Volitional Create",
+    "UndirectedActivity",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,Smith) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
+    ],
+  "869": [
+        "My wife had twins",
+        "birth-28.2-1",
+        "Sbj V Obj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,wife) & Component-of(b,twins) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007",
+  ],
+  "872": [
+        "David constructed a house",
+        "create-26.4",
+        "Sbj V Obj",
+        "Volitional Create",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,David) & Component-of(b,house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+  ],
+  "873": [
+        "Paul exhaled a breath",
+        "exhale-40.1.3-1",
+        "Sbj V Obj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,breath) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+  ],
+  "875": [
+        "Claire drew a picture",
+        "performance-26.7-1",
+        "Sbj V Obj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,picture) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+  ],
+    "1151": [
+        "Sandy sang",
+        "performance-26.7-1",
+        "Sbj V",
+        "Volitional Create",
+        "UndirectedActivity",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Sandy) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "1152": [
+        "He rehearsed",
+        "rehearse-26.8-1",
+        "Sbj V",
+        "Volitional Create",
+        "UndirectedActivity",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "1153": [
+        "Sandy sang a song",
+        "performance-26.7-1",
+        "Sbj V Obj",
+        "Volitional Create",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,Sandy) & Component-of(b,song) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "1154": [
+        "He rehearsed the song",
+        "rehearse-26.8",
+        "Sbj V Obj",
+        "Volitional Create",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,song) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "1155": [
+        "He rehearsed singing the song",
+        "rehearse-26.8",
+        "Sbj V Obj",
+        "Volitional Create",
+        "IncrementalAccomplishment",
+        "CreationNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,song) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+  "879": [
+    "Roberto took notes",
+    "scribble-25.2",
+    "Sbj V Obj",
+    "Volitional Create",
+    "DirectedActivity",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,Roberto) & Component-of(b,notes) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
+    ],
+  "1156": [
+    "The secretary transcribed the speech",
+    "transcribe-25.4",
+    "Sbj V Obj",
+    "Volitional Create",
+    "IncrementalAccomplishment",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
+    ],
+  "936": [
+        "The cat kittened",
+        "calve-28.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "CreationNetwork",
+        "Theme-of(x,e) & Component-of(a,cat) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10007"
+  ],
+  "947": [
+        "Paul exhaled",
+        "exhale-40.1.3-1",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "CreationNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10007"
+  ],
+  "976": [
+        "They multiplied",
+        "birth-28.2",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedActivity",
+        "CreationNetwork",
+        "Theme-of(x,e) & Component-of(a,They) & DirAct(a,i,j,q1) & VOL/INTL(q1)",
+        "10007"
   ],
   "1035": [
     "The ball rolled",
@@ -1356,12 +1636,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & Component-of(c,floor) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
-    "10001": ["RemoveDepriveNetwork"],
-    "10002": ["ProvidePlaceNetwork"],
-    "10003": ["GeneralMotionNetwork", "ThrowMotionNetwork", "SendMotionNetwork", "CarryMotionNetwork", "PursuitMotionNetwork"],
-    "10004": ["GeneralMotionNetwork"],
-    "10005": ["CarryMotionNetwork"],
-    "10006": ["PursuitMotionNetwork"],
+    "10001": {"networks": ["RemoveDepriveNetwork"], "name": "Remove/Deprive"},
+    "10002": {"networks": ["ProvidePlaceNetwork"], "name": "Provide/Place"},
+    "10003": {"networks": ["GeneralMotionNetwork", "ThrowMotionNetwork", "SendMotionNetwork", "CarryMotionNetwork", "PursuitMotionNetwork"], "name": "Motion"},
+    "10004": {"networks": ["GeneralMotionNetwork"], "name": "Motion"},
+    "10005": {"networks": ["CarryMotionNetwork"], "name": "Carry motion"},
+    "10006": {"networks": ["PursuitMotionNetwork"], "name": "Pursuit motion"},
+    "10007": {"networks": ["IllustrationNetwork", "CreationNetwork", "EmissionNetwork", "FormNetwork"], "name": "Illustration"},
+    "10008": {"networks": ["IllustrationNetwork", "CreationNetwork"], "name": "Illustration+Creation"},
+    "10009": {"networks": ["CreationNetwork"], "name": "Creation"},
+    "10010": {"networks": ["CreationNetwork", "Emission Network"], "name": "Creation+Emission"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -1373,15 +1657,108 @@ var events = {
     "11010": ["Physical Motion", "CarryMotionNetwork"],
     "11011": ["Mutual Motion", "PursuitMotionNetwork"],
     "11012": ["Mutual", "PursuitMotionNetwork"],
+    "11013": ["Volitional Place", "IllustrationNetwork"],
+    "11014": ["Volitional Create", "IllustrationNetwork"],
+    "11015": ["Volitional Provide", "IllustrationNetwork"],
+    "11016": ["Volitional Create", "CreationNetwork"],
+    "11017": ["Volitional Create Affect", "CreationNetwork"],
+    "11018": ["Autonomous Internal", "CreationNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12006": { "child": "Physical Motion", "parentNetwork": "10005", "generalNetwork": "10003"},
     "12007": { "child": "Mutual Motion", "parentNetwork": "10006", "generalNetwork": "10003"},
     "12008": { "child": "Mutual", "parentNetwork": "10006", "generalNetwork": "10003"},
+    "12009": { "child": "Volitional Place", "parentNetwork": "10007", "generalNetwork": "10007"},
+    "12010": { "child": "Volitional Create", "parentNetwork": "10008", "generalNetwork": "10007"},
+    "12011": { "child": "Volitional Provide", "parentNetwork": "10007", "generalNetwork": "10007"},
+    "12012": { "child": "Volitional Create Affect", "parentNetwork": "10009", "generalNetwork": "10007"},
+    "12013": { "child": "Autonomous Internal", "parentNetwork": "10010", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
+}
+
+/*
+
+Steps to add diagrams
+(1) Add sentences to events data structure
+(2) Modify features of sentences (last feature is id of parent network graph)
+(3) Create parent network graph in list at end of events (10000s) (if not already present)
+(3.5) If a FD schema has multiple parents (e.g. Volitional Motion, Volitional Create), the parent network graph includes only those (like 10008)
+(4) Add child-parent relation to events (11000s)
+(5) Add mapping to events (12000s)
+(6) Add mapping to getSpecificNetworkTableIdentifierForURL
+(7) Add diagram to function getNetwork
+(8) Add argument to diagram in getNetwork: argTextToAdd
+(9) Add call to return diagram at end of getNetwork
+(10) If general network is not created, add abbreviated diagrams to getMultipleNetworkPage
+(11) Add parents to networks in getMultipleNetworkPage
+(12) Check
+
+*/
+
+function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName) {
+
+    if (FDCategory === "Autonomous Motion" && generalNetworkName == "GeneralMotionNetwork") {
+        var identifierToMappingURL = "11001";
+        var identifierToConstructionURL = "12004";
+    } else if (FDCategory === "Self-volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
+        var identifierToMappingURL = "11002";
+        var identifierToConstructionURL = "12005";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
+        var identifierToMappingURL = "11003";
+        var identifierToConstructionURL = "12003";
+    } else if (FDCategory === "Autonomous COS" && generalNetworkName == "GeneralMotionNetwork") {
+        var identifierToMappingURL = "11004";
+        var identifierToConstructionURL = "12006";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "GeneralMotionNetwork") {
+        var identifierToMappingURL = "11005";
+        var identifierToConstructionURL = "12007";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "SendMotionNetwork") {
+        var identifierToMappingURL = "11006";
+        var identifierToConstructionURL = "12003";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "CarryMotionNetwork") {
+        var identifierToMappingURL = "11007";
+        var identifierToConstructionURL = "12003";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "CarryMotionNetwork") {
+        var identifierToMappingURL = "11008";
+        var identifierToConstructionURL = "12008";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "ThrowMotionNetwork") {
+        var identifierToMappingURL = "11009";
+        var identifierToConstructionURL = "12003";
+    } else if (FDCategory === "Physical Motion" && generalNetworkName == "CarryMotionNetwork") {
+        var identifierToMappingURL = "11010";
+        var identifierToConstructionURL = "12006";
+    } else if (FDCategory === "Mutual Motion" && generalNetworkName == "PursuitMotionNetwork") {
+        var identifierToMappingURL = "11011";
+        var identifierToConstructionURL = "12007";
+    } else if (FDCategory === "Mutual" && generalNetworkName == "PursuitMotionNetwork") {
+        var identifierToMappingURL = "11012";
+        var identifierToConstructionURL = "12008";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "IllustrationNetwork") {
+        var identifierToMappingURL = "11013";
+        var identifierToConstructionURL = "12009";
+    } else if (FDCategory === "Volitional Create" && generalNetworkName == "IllustrationNetwork") {
+        var identifierToMappingURL = "11014";
+        var identifierToConstructionURL = "12010";
+    } else if (FDCategory === "Volitional Provide" && generalNetworkName == "IllustrationNetwork") {
+        var identifierToMappingURL = "11015";
+        var identifierToConstructionURL = "12011";
+    } else if (FDCategory === "Volitional Create" && generalNetworkName == "CreationNetwork") {
+        var identifierToMappingURL = "11016";
+        var identifierToConstructionURL = "12010";
+    } else if (FDCategory === "Volitional Create Affect" && generalNetworkName == "CreationNetwork") {
+        var identifierToMappingURL = "11017";
+        var identifierToConstructionURL = "12012";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "CreationNetwork") {
+        var identifierToMappingURL = "11018";
+        var identifierToConstructionURL = "12013";
+    }
+
+
+    return [identifierToMappingURL, identifierToConstructionURL]
+
 }
 
 
@@ -1454,7 +1831,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetVolRem" 
                             };
 
-     var NetworkVolitionalPlace = {        
+     var NetworkMereologicalVolitionalPlace = {        
 
                                 "solid1":    [   { "x": 50,  "y": 30}, 
                                                 { "x": 100,  "y": 30} ],
@@ -1487,9 +1864,243 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 65,  "y": 105, "text": "PTH"}
                                     ],
 
-                                "name" : "NetVolPlace" 
+                                "name" : "NetMerVolPlace" 
                             };
 
+
+     var NetworkIllustrationVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -65,  "y": 40}, 
+                                                { "x": -65,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 40}, 
+                                                { "x": 125,  "y": 70} ],
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": 85,  "y": 35, "text": "A2"},
+                                        { "x": -120,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 5,  "y": 90, "text": "Creation"}, 
+                                        { "x": 105,  "y": 90, "text": "Medium"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -40,  "y": 45, "text": "FRC"},
+                                        { "x": -40,  "y": 100, "text": "FRC"},
+                                        { "x": 5,  "y": 25, "text": "+MER"},
+                                        { "x": 5,  "y": 80, "text": "DES|MER"},
+                                        { "x": 105,  "y": 25, "text": "EXIST"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 65,  "y": 45, "text": "PTH"},
+                                        { "x": 65,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation", "Medium"],
+
+                                "name" : "NetIllVolPlace" 
+                            };
+
+     var NetworkIllustrationVolitionalCreate = {        
+
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -65,  "y": 40}, 
+                                                { "x": -65,  "y": 70} ],
+
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": -120,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 5,  "y": 90, "text": "Creation"}, 
+                                        { "x": 105,  "y": 90, "text": "Medium"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -40,  "y": 45, "text": "FRC"},
+                                        { "x": -40,  "y": 100, "text": "FRC"},
+                                        { "x": 5,  "y": 25, "text": "DES"},
+                                        { "x": 5,  "y": 80, "text": "DES|MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 65,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation", "Medium"],
+
+                                "name" : "NetIllVolCreate" 
+                            };
+
+     var NetworkIllustrationVolitionalProvide = {        
+
+                                "solid1":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -65,  "y": 40}, 
+                                                { "x": -65,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 40}, 
+                                                { "x": 125,  "y": 70} ],
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": 85,  "y": 35, "text": "A2"},
+                                        { "x": -120,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 5,  "y": 90, "text": "Creation"}, 
+                                        { "x": 105,  "y": 90, "text": "Medium"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -40,  "y": 45, "text": "FRC"},
+                                        { "x": -40,  "y": 100, "text": "FRC"},
+                                        { "x": 5,  "y": 25, "text": "INTL"},
+                                        { "x": 5,  "y": 80, "text": "DES|MER"},
+                                        { "x": 105,  "y": 25, "text": "+MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 65,  "y": 45, "text": "PTH"},
+                                        { "x": 65,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation", "Medium"],
+
+                                "name" : "NetIllVolProvide" 
+                            };
+
+     var NetworkCreationVolitionalCreate = {        
+
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
+                                                { "x": -25,  "y": 70} ],
+
+
+                                "arrow":    [   { "x": 0,  "y": 30}, 
+                                                { "x": 30,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 0,  "y": 85}, 
+                                                { "x": 30,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 35, "text": "A0"},
+                                        { "x": 30,  "y": 35, "text": "A1"},  
+                                        { "x": -80,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 45,  "y": 90, "text": "Creation"}, 
+                                        { "x": -40,  "y": 25, "text": "VOL"},
+                                        { "x": 0,  "y": 45, "text": "FRC"},
+                                        { "x": 0,  "y": 100, "text": "FRC"},
+                                        { "x": 45,  "y": 25, "text": "DES"},
+                                        { "x": 45,  "y": 80, "text": "DES"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation"],
+
+                                "name" : "NetCreationVolCreate" 
+                            };
+
+
+     var NetworkCreationVolitionalCreateAffect = {   
+
+
+     							"solid1":    [   { "x": 100,  "y": 30}, 
+                                                 { "x": 130,  "y": 30} ],     
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
+                                                { "x": -25,  "y": 70} ],
+
+
+                                "arrow":    [   { "x": 0,  "y": 30}, 
+                                                { "x": 30,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 0,  "y": 85}, 
+                                                { "x": 30,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 35, "text": "A0"},
+                                        { "x": 30,  "y": 35, "text": "A1"},  
+                                        { "x": 130,  "y": 35, "text": "A2"},
+                                        { "x": -80,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 45,  "y": 90, "text": "Creation"}, 
+                                        { "x": -40,  "y": 25, "text": "VOL"},
+                                        { "x": 0,  "y": 45, "text": "FRC"},
+                                        { "x": 0,  "y": 100, "text": "FRC"},
+                                        { "x": 45,  "y": 25, "text": "DES"},
+                                        { "x": 45,  "y": 80, "text": "DES"},
+                                        { "x": 140,  "y": 25, "text": "MPROP"},
+                                        { "x": 100,  "y": 45, "text": "AFF"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation", "Beneficiary"],
+
+                                "name" : "NetCreationVolCreateAff" 
+                            };
+
+     var NetworkCreationAutonomousInternal = {        
+
+
+
+                                "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
+                                                { "x": -25,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": 0,  "y": 85}, 
+                                                { "x": 30,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 35, "text": "A0"},
+                                        { "x": -80,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 45,  "y": 90, "text": "Creation"}, 
+                                        { "x": -40,  "y": 25, "text": "INTL"},
+                                        { "x": 0,  "y": 100, "text": "FRC"},
+                                        { "x": 45,  "y": 80, "text": "DES"},
+                                    ],
+
+                                "argTextToAdd": ["Agent"],
+
+                                "name" : "NetCreationAutoIntl" 
+                            };
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -2290,13 +2901,47 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Volitional Remove') { return NetworkVolitionalRemove; }
 
-    else if (FDCategory === 'Volitional Place') { return NetworkVolitionalPlace; }
+    else if (FDCategory === 'Volitional Place') { 
+
+        if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalVolitionalPlace; ; 
+        }
+        else if (nameGeneralNetwork === 'IllustrationNetwork') {
+            return NetworkIllustrationVolitionalPlace;
+        }
+
+    }
 
     else if (FDCategory === 'Self-Volitional Place') { return NetworkSelfVolitionalPlace; }
 
+    else if (FDCategory === 'Volitional Provide') { 
+
+        if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
+            return NetworkVolitionalProvide; 
+        }
+        else if (nameGeneralNetwork === 'IllustrationNetwork') {
+            return NetworkIllustrationVolitionalProvide;
+        }
+    }
+
     else if (FDCategory === 'Volitional Attend') { return NetworkVolitionalAttend; }
 
-    else if (FDCategory === 'Autonomous Internal') { return NetworkAutonomousInternal; }
+
+    else if (FDCategory === 'Autonomous Internal') { 
+
+        if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
+            return NetworkAutonomousInternal; 
+        }
+        // TODO: check return
+        else if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
+            return NetworkAutonomousInternal;
+        }
+
+        else if (nameGeneralNetwork === 'CreationNetwork') {
+            return NetworkCreationAutonomousInternal;
+        }
+    }
+
 
     else if (FDCategory === 'Volitional Internal') { return NetworkVolitionalInternal; }
 
@@ -2307,8 +2952,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Physical Deprive') { return NetworkPhysicalDeprive; }
 
     else if (FDCategory === 'Autonomous Provide') { return NetworkAutonomousProvide; }
-
-    else if (FDCategory === 'Volitional Provide') { return NetworkVolitionalProvide; }
 
     else if (FDCategory === 'Autonomous Motion') { return NetworkAutonomousMotion; }
 
@@ -2339,6 +2982,18 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Autonomous COS') { return NetworkAutonomousCOS; }
 
     else if (FDCategory === 'Volitional COS') { return NetworkVolitionalCOS; }
+
+    else if (FDCategory === 'Volitional Create') { 
+
+        if (nameGeneralNetwork === 'IllustrationNetwork') {
+            return NetworkIllustrationVolitionalCreate; 
+        }
+        else if (nameGeneralNetwork === 'CreationNetwork') {
+            return NetworkCreationVolitionalCreate;
+        }
+    }
+
+    else if (FDCategory === 'Volitional Create Affect') { return NetworkCreationVolitionalCreateAffect; }
 
 }
 
@@ -2405,6 +3060,111 @@ function getMultipleNetworkPage (NetworkType) {
                             "name" : "Provide/Place network" 
                         };
 
+
+    var IllustrationNetwork = {        
+
+                                "solid2":    [   { "x": 100,  "y": 65}, 
+                                                { "x": 140,  "y": 65} ],
+
+                                "arrow":    [   { "x": 10,  "y": 65}, 
+                                                { "x": 40,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -70,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 50,  "y": 70, "text": "Creation"}, 
+                                        { "x": 150,  "y": 70, "text": "Medium"},
+                                        { "x": 45,  "y": 55, "text": "DES | MER"},
+                                        { "x": 150,  "y": 55, "text": "MER"},
+                                        { "x": 10,  "y": 80, "text": "FRC"},
+                                        { "x": 110,  "y": 80, "text": "PTH"}
+                                    ],
+
+                            "caption": "ASC causal chains used with illustration network",
+
+                            "chains": [{"network": "Volitional Place", "parent": "IllustrationNetwork"},
+                                       {"network": "Volitional Create", "parent": "IllustrationNetwork"},
+                                       {"network": "Volitional Provide", "parent": "IllustrationNetwork"}
+                                    ],
+
+                            "name" : "Illustration network" 
+                        };
+
+    var CreationNetwork = {        
+
+
+                                "arrow":    [   { "x": 50,  "y": 65}, 
+                                                { "x": 80,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -30,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 90,  "y": 70, "text": "Creation"}, 
+                                        { "x": 85,  "y": 55, "text": "DES | MER"},
+                                        { "x": 50,  "y": 80, "text": "FRC"}
+                                    ],
+
+                            "caption": "ASC causal chains used with creation network",
+
+                            "chains": [{"network": "Volitional Create", "parent": "CreationNetwork"},
+                                       {"network": "Volitional Create Affect", "parent": "CreationNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "CreationNetwork"}
+                                    ],
+
+                            "name" : "Creation network" 
+                        };
+
+    var EmissionNetwork = {        
+
+                                "solid2":    [   { "x": 40,  "y": 58}, 
+                                                { "x": 70,  "y": 58} ],
+
+                                "arrow":    [   { "x": 40,  "y": 65}, 
+                                                { "x": 70,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 70, "text": "Source"}, 
+                                        { "x": 80,  "y": 70, "text": "Creation"}, 
+                                        { "x": 40,  "y": 55, "text": "PTH"},
+                                        { "x": 40,  "y": 80, "text": "FRC"}
+                                    ],
+
+                            "caption": "ASC causal chains used with emission network",
+
+                            "chains": [{"network": "Physical Create", "parent": ""},
+                                       {"network": "Autonomous Dynamic Texture", "parent": ""},
+                                       {"network": "Autonomous Motion", "parent": ""},
+                                       {"network": "Autonomous Internal", "parent": ""},
+                                       {"network": "Autonomous Location", "parent": ""},
+                                       {"network": "Volitional Deprive", "parent": ""},
+                                       {"network": "Physical Place", "parent": ""},
+                                       {"network": "Volitional Place", "parent": ""},
+                                    ],
+
+                            "name" : "Emission network" 
+                        };
+
+
+    var FormNetwork = {        
+
+                                "solid2":    [   { "x": 60,  "y": 65}, 
+                                                { "x": 90,  "y": 65} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 70, "text": "Material"}, 
+                                        { "x": 100,  "y": 70, "text": "Creation"}, 
+                                        { "x": 10,  "y": 55, "text": "COS"},
+                                        { "x": 100,  "y": 55, "text": "DES"},
+                                        { "x": 60,  "y": 80, "text": "TBD"}
+                                    ],
+
+                            "caption": "ASC causal chains used with form network",
+
+                            "chains": [{"network": "Autonomous Form", "parent": ""},
+                                       {"network": "Volitional Form", "parent": ""},
+                                    ],
+
+                            "name" : "Form network" 
+                        };
 
     var GeneralMotionNetwork = {        
 
@@ -2584,35 +3344,51 @@ function getMultipleNetworkPage (NetworkType) {
                             "name" : "Pursuit network" 
                         };
 
+    return eval(NetworkType);
 
-    if (NetworkType === "RemoveDepriveNetwork") {
-        return RemoveDepriveNetwork;
-    }
+    // if (NetworkType === "RemoveDepriveNetwork") {
+    //     return RemoveDepriveNetwork;
+    // }
 
-    if (NetworkType === "ProvidePlaceNetwork") {
-        return ProvidePlaceNetwork;
-    }
+    // if (NetworkType === "ProvidePlaceNetwork") {
+    //     return ProvidePlaceNetwork;
+    // }
 
-    if (NetworkType === "GeneralMotionNetwork") {
-        return GeneralMotionNetwork;
-    }
+    // if (NetworkType === "GeneralMotionNetwork") {
+    //     return GeneralMotionNetwork;
+    // }
 
-    if (NetworkType === "ThrowMotionNetwork") {
-        return ThrowMotionNetwork;
-    }
+    // if (NetworkType === "ThrowMotionNetwork") {
+    //     return ThrowMotionNetwork;
+    // }
 
-    if (NetworkType === "SendMotionNetwork") {
-        return SendMotionNetwork;
-    }
+    // if (NetworkType === "SendMotionNetwork") {
+    //     return SendMotionNetwork;
+    // }
 
-    if (NetworkType === "CarryMotionNetwork") {
-        return CarryMotionNetwork;
-    }
+    // if (NetworkType === "CarryMotionNetwork") {
+    //     return CarryMotionNetwork;
+    // }
 
-    if (NetworkType === "PursuitMotionNetwork") {
-        return PursuitMotionNetwork;
-    }
+    // if (NetworkType === "PursuitMotionNetwork") {
+    //     return PursuitMotionNetwork;
+    // }
 
+    // if (NetworkType === "IllustrationNetwork") {
+    //     return IllustrationNetwork;
+    // }
+
+    // if (NetworkType === "CreationNetwork") {
+    //     return CreationNetwork;
+    // }
+
+    // if (NetworkType === "EmissionNetwork") {
+    //     return EmissionNetwork;
+    // }
+
+    // if (NetworkType === "FormNetwork") {
+    //     return FormNetwork;
+    // }
 }
 
 
@@ -3517,7 +4293,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
         var addThisText = svgContainer.append("text")
                                     .attr("x", obj["x"])
                                     .attr("y", obj["y"])
-                                    .attr("fill", function (d) { if (['PTH', 'FRC', 'Mutual'].includes(obj["text"]) && obj["y"] < 46) {return "red"} 
+                                    .attr("fill", function (d) { if (['PTH', 'FRC', 'AFF', 'Mutual'].includes(obj["text"]) && obj["y"] < 46) {return "red"} 
                                                                 else if (obj["y"] < 46) {return "black"} 
                                                                 else {return "green"}; })
                                     .text(obj["text"]);
@@ -3856,7 +4632,7 @@ function draw() {
 
     var linkToNetworkTablePage = getSpecificNetworkTableIdentifierForURL(FDCategory, nameGeneralNetwork)[0];
 
-    // console.log(linkToNetworkTablePage);
+    //console.log(nameGeneralNetwork);
 
     var linkToConstructionPage = getSpecificNetworkTableIdentifierForURL(FDCategory, nameGeneralNetwork)[1];
 
@@ -3876,7 +4652,7 @@ function draw() {
 
         var labels = ['Example: ', 'VerbNet class: ', 'Argument Structure: ', 'Construction force dynamics: ', 'Aspect: ', 'Verb force dynamics: ', 'Predicate calculus:', 'Force-dynamic mapping: '];
 
-        console.log(linkToGeneralNetwork);
+        //console.log(linkToGeneralNetwork);
 
         var addedHeader = addSecondDivText(labels[n], linkToConstructionPage, linkToGeneralNetwork, linkToNetworkTablePage, true, n);
         var addedSentence = addSecondDivText(events[currentEvent][n], linkToConstructionPage, linkToGeneralNetwork, linkToNetworkTablePage, false, n);
@@ -4103,7 +4879,7 @@ function createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements)
 
     var thisSpecificNetwork = getNetwork(d["network"], d["parent"]);
 
-    //console.log(thisSpecificNetwork);
+    console.log(thisSpecificNetwork);
 
     // console.log(d["network"]); // e.g., Volitional Motion
 
@@ -4196,50 +4972,6 @@ function getArrayNetworkElementsForTablePage (d) {
 }
 
 
-function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName) {
-
-    if (FDCategory === "Autonomous Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierToMappingURL = "11001";
-        var identifierToConstructionURL = "12004";
-    } else if (FDCategory === "Self-volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierToMappingURL = "11002";
-        var identifierToConstructionURL = "12005";
-    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierToMappingURL = "11003";
-        var identifierToConstructionURL = "12003";
-    } else if (FDCategory === "Autonomous COS" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierToMappingURL = "11004";
-        var identifierToConstructionURL = "12006";
-    } else if (FDCategory === "Volitional COS" && generalNetworkName == "GeneralMotionNetwork") {
-        var identifierToMappingURL = "11005";
-        var identifierToConstructionURL = "12007";
-    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "SendMotionNetwork") {
-        var identifierToMappingURL = "11006";
-        var identifierToConstructionURL = "12003";
-    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "CarryMotionNetwork") {
-        var identifierToMappingURL = "11007";
-        var identifierToConstructionURL = "12003";
-    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "CarryMotionNetwork") {
-        var identifierToMappingURL = "11008";
-        var identifierToConstructionURL = "12008";
-    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "ThrowMotionNetwork") {
-        var identifierToMappingURL = "11009";
-        var identifierToConstructionURL = "12003";
-    } else if (FDCategory === "Physical Motion" && generalNetworkName == "CarryMotionNetwork") {
-        var identifierToMappingURL = "11010";
-        var identifierToConstructionURL = "12006";
-    } else if (FDCategory === "Mutual Motion" && generalNetworkName == "PursuitMotionNetwork") {
-        var identifierToMappingURL = "11011";
-        var identifierToConstructionURL = "12007";
-    } else if (FDCategory === "Mutual" && generalNetworkName == "PursuitMotionNetwork") {
-        var identifierToMappingURL = "11012";
-        var identifierToConstructionURL = "12008";
-    } 
-
-    return [identifierToMappingURL, identifierToConstructionURL]
-
-}
-
 
 function renderTablePage (id) {
 
@@ -4272,6 +5004,8 @@ function makeNetworkPage () {
                                                   .attr("width", 200)
                                                   .attr("height", 10);
 
+    var networkName = events[currentEvent]["name"];
+
     svgContainer.append("text")
             .attr("x", -120)             
             .attr("y", 25)
@@ -4285,7 +5019,7 @@ function makeNetworkPage () {
             .attr("y", 50)
             .attr("text-anchor", "middle")  
             .style("font-size", "24px") 
-            .text("Motion" + " network")
+            .text(networkName + " network")
 
     svgContainer.append("text")
             .attr("x", 350)             
@@ -4312,13 +5046,15 @@ function makeNetworkPage () {
     var myColor = d3.scaleLinear().domain([1,4])
         .range(["orange", "blue"])
 
-    for (j=0; j<events[currentEvent].length; j++){
+    for (j=0; j<events[currentEvent]["networks"].length; j++){
 
-            var thisNetwork = events[currentEvent][j];
+            var thisNetwork = events[currentEvent]["networks"][j];
 
-            //console.log(thisNetwork);
+            console.log(thisNetwork);
 
             var currentNetwork = getMultipleNetworkPage(thisNetwork);
+
+            //console.log(currentNetwork);
 
             var heightMultiplier = currentNetwork["chains"].length;
 
@@ -4359,7 +5095,7 @@ function makeNetworkPage () {
             //         .attr("y2", 0); 
 
 
-            // console.log(currentNetwork)
+            console.log(currentNetwork)
 
             createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) 
 
@@ -4440,11 +5176,13 @@ function makeNetworkPage () {
                          d3.select(this).style("fill", "black");})
                     .on("click", function(d) { 
 
-                        // console.log(d);
+                        //console.log(d);
 
                         var currentLocation = window.location.href;
 
                         var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[0];
+
+                        //console.log(specificNetworkTableLink);
 
                         var nextLocation = currentLocation.split("id=")[0] + "id="+ specificNetworkTableLink;
                         window.open(nextLocation, "_self"); 
@@ -4467,11 +5205,15 @@ function makeConstructionFDPage () {
     var FDCategory = events[id]["child"];
     var parentNetworksLink = events[id]["parentNetwork"];
     var generalNetworkLink = events[id]["generalNetwork"];
-    var parentNetworks = events[parentNetworksLink];
+    var parentNetworks = events[parentNetworksLink]["networks"];
 
     var currentNetwork = getNetwork(FDCategory, parentNetworks[0]);
 
+    console.log(currentNetwork);
+
     var argTextToAdd = currentNetwork["argTextToAdd"];
+
+    console.log(argTextToAdd);
 
     //The SVG Container
     var svgContainer = d3.select("#svg-container").append("svg")

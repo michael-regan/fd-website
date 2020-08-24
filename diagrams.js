@@ -786,6 +786,46 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Sandy) & Component-of(b,song) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & DES(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
         "10007"
   ],
+    "884": [
+        "The crown sparkled with jewels",
+        "light_emission-43.1",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,jewels) & Component-of(b,crown) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "885": [
+        "The room reeked of onions",
+        "smell_emission-43.3",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,onions) & Component-of(b,room) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "886": [
+        "The street sang with horns",
+        "sound_emission-43.2",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,horns) & Component-of(b,street) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1185": [
+        "The tree sang with birds.",
+        "animal_sounds-38",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,birds) & Component-of(b,tree) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10007"
+    ],
   "866": [
     "Smith was inscribing",
     "image_impression-25.1",
@@ -826,6 +866,46 @@ var events = {
         "Theme-of(y,e) & Component-of(a,wife) & Component-of(b,twins) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
         "10007",
   ],
+    "870": [
+        "The dragon breathed fire",
+        "breathe-40.1.2",
+        "Sbj V Obj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "EmissionNetwork",
+        "Theme-of(y,e) & Component-of(a,dragon) & Component-of(b,fire) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "873": [
+        "Paul exhaled a breath",
+        "exhale-40.1.3-1",
+        "Sbj V Obj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "EmissionNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,breath) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "932": [
+        "Paul breathed",
+        "breathe-40.1.2",
+        "Sbj V",
+        "Volitional Create",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
+    "933": [
+        "Paul breathed a deep breath",
+        "breathe-40.1.2-1",
+        "Sbj V CogObj",
+        "Volitional Create",
+        "DirectedAchievement",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
   "872": [
         "David constructed a house",
         "create-26.4",
@@ -836,16 +916,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,David) & Component-of(b,house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
         "10007"
   ],
-  "873": [
-        "Paul exhaled a breath",
-        "exhale-40.1.3-1",
-        "Sbj V Obj",
-        "Volitional Create",
-        "DirectedAchievement",
-        "CreationNetwork",
-        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,breath) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
-        "10007"
-  ],
+  // "873": [
+  //       "Paul exhaled a breath",
+  //       "exhale-40.1.3-1",
+  //       "Sbj V Obj",
+  //       "Volitional Create",
+  //       "DirectedAchievement",
+  //       "CreationNetwork",
+  //       "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,breath) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+  //       "10007"
+  // ],
   "875": [
         "Claire drew a picture",
         "performance-26.7-1",
@@ -1663,7 +1743,7 @@ var events = {
     "10005": {"networks": ["CarryMotionNetwork"], "name": "Carry motion"},
     "10006": {"networks": ["PursuitMotionNetwork"], "name": "Pursuit motion"},
     "10007": {"networks": ["IllustrationNetwork", "CreationNetwork", "EmissionNetwork", "FormNetwork"], "name": "Illustration"},
-    "10008": {"networks": ["IllustrationNetwork", "CreationNetwork"], "name": "Illustration+Creation"},
+    "10008": {"networks": ["IllustrationNetwork", "CreationNetwork", "EmissionNetwork"], "name": "Illustration+Creation+Emission"},
     "10009": {"networks": ["CreationNetwork"], "name": "Creation"},
     "10010": {"networks": ["CreationNetwork", "Emission Network"], "name": "Creation+Emission"},
     "10011": {"networks": ["EmissionNetwork"], "name": "Emission"},
@@ -1685,6 +1765,8 @@ var events = {
     "11017": ["Volitional Create Affect", "CreationNetwork"],
     "11018": ["Autonomous Internal", "CreationNetwork"],
     "11019": ["Physical Create", "EmissionNetwork"],
+    "11020": ["Volitional Create", "EmissionNetwork"],
+    "11021": ["Autonomous Dynamic Texture", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1697,6 +1779,7 @@ var events = {
     "12012": { "child": "Volitional Create Affect", "parentNetwork": "10009", "generalNetwork": "10007"},
     "12013": { "child": "Autonomous Internal", "parentNetwork": "10010", "generalNetwork": "10007"},
     "12014": { "child": "Physical Create", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12015": { "child": "Autonomous Dynamic Texture", "parentNetwork": "10011", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -1780,7 +1863,13 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Physical Create" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11019";
         var identifierToConstructionURL = "12014";
-    }
+    } else if (FDCategory === "Volitional Create" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11020";
+        var identifierToConstructionURL = "12010";
+    } else if (FDCategory === "Autonomous Dynamic Texture" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11021";
+        var identifierToConstructionURL = "12015";
+    } 
 
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -2102,8 +2191,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCreationVolCreateAff" 
                             };
 
-     var NetworkCreationAutonomousInternal = {        
 
+     var NetworkCreationAutonomousInternal = {        
 
 
                                 "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
@@ -2168,6 +2257,86 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 "name" : "NetEmissionPhysCreate" 
                             };
+
+
+     var NetworkEmissionVolitionalCreate = {        
+
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -65,  "y": 40}, 
+                                                { "x": -65,  "y": 70} ],
+
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": -80,  "y": 90, "text": "Source"}, 
+                                        { "x": 5,  "y": 90, "text": "Creation"}, 
+                                        { "x": 105,  "y": 90, "text": "Source"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -40,  "y": 45, "text": "FRC"},
+                                        { "x": -40,  "y": 100, "text": "FRC"},
+                                        { "x": 5,  "y": 25, "text": "DES"},
+                                        { "x": 5,  "y": 80, "text": "DES|MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 65,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Source", "Creation"],
+
+                                "name" : "NetEmissionVolCreate" 
+                            };
+
+
+     var NetworkEmissionAutonomousDynamicTexture = { 
+
+
+                                "solid1":    [   { "x": -35,  "y": 30}, 
+                                                { "x": -5,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 150,  "y": 85}, 
+                                                { "x": 180,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": 50,  "y": 85}, 
+                                                { "x": 80,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": 10,  "y": 90, "text": "Source"}, 
+                                        { "x": 95,  "y": 90, "text": "Creation"}, 
+                                        { "x": 195,  "y": 90, "text": "Source"},
+                                        { "x": -85,  "y": 25, "text": "INTL"},
+                                        { "x": -35,  "y": 45, "text": "PTH"},
+                                        { "x": 50,  "y": 100, "text": "FRC"},
+                                        { "x": 10,  "y": 25, "text": "INTL"},
+                                        { "x": 95,  "y": 80, "text": "DES|MER"},
+                                        { "x": 195,  "y": 80, "text": "MER"},
+                                        { "x": 155,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Location", "Source"],
+
+                                "name" : "NetEmissionAutoDynamicTexture" 
+                            };
+
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -2252,6 +2421,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 "name" : "NetAutoIntl" 
                             };
+
 
      var NetworkVolitionalInternal = {        
 
@@ -3058,11 +3228,18 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         else if (nameGeneralNetwork === 'CreationNetwork') {
             return NetworkCreationVolitionalCreate;
         }
+
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionVolitionalCreate;
+        }
+
     }
 
     else if (FDCategory === 'Volitional Create Affect') { return NetworkCreationVolitionalCreateAffect; }
 
     else if (FDCategory === 'Physical Create') { return NetworkEmissionPhysicalCreate; }
+
+    else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
     
 
 }
@@ -3200,6 +3377,7 @@ function getMultipleNetworkPage (NetworkType) {
                             "caption": "ASC causal chains used with emission network",
 
                             "chains": [{"network": "Physical Create", "parent": "EmissionNetwork"},
+                                        {"network": "Volitional Create", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Dynamic Texture", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Motion", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Internal", "parent": "EmissionNetwork"},

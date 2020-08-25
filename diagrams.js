@@ -1006,6 +1006,56 @@ var events = {
     "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
     "10007"
     ],
+    "924": [
+        "The jewel sparkled",
+        "light_emission-43.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,jewel) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
+    "925": [
+        "The onions reeked",
+        "smell_emission-43.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,onions) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
+    "926": [
+        "The room reeked",
+        "smell_emission-43.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,room) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
+    "927": [
+        "The door hinges squeaked",
+        "sound_emission-43.2",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,door hinges) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
+    "1184": [
+        "The dog barked",
+        "animal_sounds-38",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,dog) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10007"
+    ],
   "936": [
         "The cat kittened",
         "calve-28.1",
@@ -1745,7 +1795,7 @@ var events = {
     "10007": {"networks": ["IllustrationNetwork", "CreationNetwork", "EmissionNetwork", "FormNetwork"], "name": "Illustration"},
     "10008": {"networks": ["IllustrationNetwork", "CreationNetwork", "EmissionNetwork"], "name": "Illustration+Creation+Emission"},
     "10009": {"networks": ["CreationNetwork"], "name": "Creation"},
-    "10010": {"networks": ["CreationNetwork", "Emission Network"], "name": "Creation+Emission"},
+    "10010": {"networks": ["CreationNetwork", "EmissionNetwork"], "name": "Creation+Emission"},
     "10011": {"networks": ["EmissionNetwork"], "name": "Emission"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
@@ -1767,6 +1817,7 @@ var events = {
     "11019": ["Physical Create", "EmissionNetwork"],
     "11020": ["Volitional Create", "EmissionNetwork"],
     "11021": ["Autonomous Dynamic Texture", "EmissionNetwork"],
+    "11022": ["Autonomous Internal", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1869,6 +1920,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Dynamic Texture" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11021";
         var identifierToConstructionURL = "12015";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11022";
+        var identifierToConstructionURL = "12013";
     } 
 
 
@@ -2337,6 +2391,39 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetEmissionAutoDynamicTexture" 
                             };
 
+
+     var NetworkEmissionAutonomousInternal = { 
+    
+
+                                "solid2":    [   { "x": 110,  "y": 85}, 
+                                                { "x": 140,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   
+                                                { "x": -15,  "y": 40}, 
+                                                { "x": -15,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": 10,  "y": 85}, 
+                                                { "x": 40,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},  
+                                        { "x": -30,  "y": 90, "text": "Source"}, 
+                                        { "x": 55,  "y": 90, "text": "Creation"}, 
+                                        { "x": 155,  "y": 90, "text": "Source"},
+                                        { "x": 10,  "y": 100, "text": "FRC"},
+                                        { "x": -30,  "y": 25, "text": "INTL"},
+                                        { "x": 55,  "y": 80, "text": "DES|MER"},
+                                        { "x": 155,  "y": 80, "text": "MER"},
+                                        { "x": 115,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Source"],
+
+                                "name" : "NetEmissionAutoInternal" 
+                            };
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -3173,12 +3260,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         else if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
             return NetworkAutonomousInternal;
         }
-
         else if (nameGeneralNetwork === 'CreationNetwork') {
             return NetworkCreationAutonomousInternal;
         }
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionAutonomousInternal;
+        }
     }
-
 
     else if (FDCategory === 'Volitional Internal') { return NetworkVolitionalInternal; }
 
@@ -3379,9 +3467,9 @@ function getMultipleNetworkPage (NetworkType) {
                             "chains": [{"network": "Physical Create", "parent": "EmissionNetwork"},
                                         {"network": "Volitional Create", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Dynamic Texture", "parent": "EmissionNetwork"},
-                                       {"network": "Autonomous Motion", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Internal", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Location", "parent": "EmissionNetwork"},
+                                       {"network": "Autonomous Motion", "parent": "EmissionNetwork"}, 
                                        {"network": "Volitional Deprive", "parent": "EmissionNetwork"},
                                        {"network": "Physical Place", "parent": "EmissionNetwork"},
                                        {"network": "Volitional Place", "parent": "EmissionNetwork"},

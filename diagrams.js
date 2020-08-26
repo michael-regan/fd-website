@@ -1086,6 +1086,96 @@ var events = {
         "Theme-of(x,e) & Component-of(a,They) & DirAct(a,i,j,q1) & VOL/INTL(q1)",
         "10007"
   ],
+    "1007": [
+        "There sparkled a magnificent diamond on his finger",
+        "light_emission-43.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,diamond) & Component-of(b,finger) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1008": [
+        "Jewels sparkled on the crown",
+        "light_emission-43.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Jewels) & Component-of(b,crown) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1009": [
+        "On his finger there sparkled a magnificent diamond",
+        "light_emission-43.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,diamond) & Component-of(b,finger) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1016": [
+        "In the hallway ticked a grandfather clock",
+        "sound_emission-43.2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "CyclicAchievement",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,clock) & Component-of(b,hallway) & CycAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1017": [
+        "There ticked a grandfather clock in the hallway",
+        "sound_emission-43.2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "CyclicAchievement",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,clock) & Component-of(b,hallway) & CycAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1018": [
+        "Horns beeped in the street",
+        "sound_emission-43.2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Horns) & Component-of(b,street) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1025": [
+        "There bubbled a fragrant stew over the fire",
+        "substance_emission-43.4-1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,stew) & Component-of(b,fire) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1026": [
+        "Over the fire bubbled a fragrant stew",
+        "substance_emission-43.4-1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,stew) & Component-of(b,fire) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1181": [
+        "Birds sang in the trees",
+        "animal_sounds-38",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,birds) & Component-of(b,trees) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
   "1035": [
     "The ball rolled",
     "roll-51.3.1",
@@ -1818,6 +1908,7 @@ var events = {
     "11020": ["Volitional Create", "EmissionNetwork"],
     "11021": ["Autonomous Dynamic Texture", "EmissionNetwork"],
     "11022": ["Autonomous Internal", "EmissionNetwork"],
+    "11023": ["Autonomous Location", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1831,6 +1922,7 @@ var events = {
     "12013": { "child": "Autonomous Internal", "parentNetwork": "10010", "generalNetwork": "10007"},
     "12014": { "child": "Physical Create", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12015": { "child": "Autonomous Dynamic Texture", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12016": { "child": "Autonomous Location", "parentNetwork": "10011", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -1923,7 +2015,10 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11022";
         var identifierToConstructionURL = "12013";
-    } 
+    } else if (FDCategory === "Autonomous Location" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11023";
+        var identifierToConstructionURL = "12016";
+    }
 
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -2424,6 +2519,46 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 "name" : "NetEmissionAutoInternal" 
                             };
+
+
+     var NetworkEmissionAutonomousLocation = { 
+
+                                "solid1":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],   
+
+                                "solid2":    [   { "x": 110,  "y": 85}, 
+                                                { "x": 140,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   
+                                                { "x": -15,  "y": 40}, 
+                                                { "x": -15,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": 10,  "y": 85}, 
+                                                { "x": 40,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},  
+                                        { "x": 35,  "y": 35, "text": "A1"},
+                                        { "x": -30,  "y": 90, "text": "Source"}, 
+                                        { "x": 55,  "y": 90, "text": "Creation"}, 
+                                        { "x": 155,  "y": 90, "text": "Source"},
+                                        { "x": -30,  "y": 25, "text": "INTL"},
+                                        { "x": 55,  "y": 25, "text": "EXIST"},
+                                        { "x": 10,  "y": 45, "text": "PTH"},
+                                        { "x": 10,  "y": 100, "text": "FRC"},
+                                        { "x": 55,  "y": 80, "text": "DES|MER"},
+                                        { "x": 155,  "y": 80, "text": "MER"},
+                                        { "x": 115,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Source", "Ground"],
+
+                                "name" : "NetEmissionAutoLocation" 
+                            };
+
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -3329,6 +3464,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
     
+    else if (FDCategory === 'Autonomous Location') { return NetworkEmissionAutonomousLocation; }
 
 }
 
@@ -3469,6 +3605,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Autonomous Dynamic Texture", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Internal", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Location", "parent": "EmissionNetwork"},
+                                       {"network": "Volitional Internal", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Motion", "parent": "EmissionNetwork"}, 
                                        {"network": "Volitional Deprive", "parent": "EmissionNetwork"},
                                        {"network": "Physical Place", "parent": "EmissionNetwork"},

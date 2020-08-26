@@ -996,6 +996,26 @@ var events = {
     "Theme-of(y,e) & Component-of(a,Roberto) & Component-of(b,notes) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
     "10007"
     ],
+    "880": [
+        "The stagehand flashed the lights",
+        "light_emission-43.1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "CyclicAchievement",
+        "EmissionNetwork",
+        "Theme-of(y,e) & Component-of(a,stagehand) & Component-of(b,lights) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10007"
+    ],
+    "881": [
+        "I buzzed the bell",
+        "sound_emission-43.2",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "CyclicAchievement",
+        "EmissionNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,bell) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10007"
+    ],
   "1156": [
     "The secretary transcribed the speech",
     "transcribe-25.4",
@@ -1909,6 +1929,7 @@ var events = {
     "11021": ["Autonomous Dynamic Texture", "EmissionNetwork"],
     "11022": ["Autonomous Internal", "EmissionNetwork"],
     "11023": ["Autonomous Location", "EmissionNetwork"],
+    "11024": ["Volitional Internal", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1923,6 +1944,7 @@ var events = {
     "12014": { "child": "Physical Create", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12015": { "child": "Autonomous Dynamic Texture", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12016": { "child": "Autonomous Location", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12017": { "child": "Volitional Internal", "parentNetwork": "10011", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2018,6 +2040,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Location" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11023";
         var identifierToConstructionURL = "12016";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11024";
+        var identifierToConstructionURL = "12017";
     }
 
 
@@ -2343,7 +2368,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkCreationAutonomousInternal = {        
 
-
                                 "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
                                                 { "x": -25,  "y": 70} ],
 
@@ -2368,7 +2392,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
 
      var NetworkEmissionPhysicalCreate = {   
-
 
                                 "solid1":    [   { "x": 100,  "y": 85}, 
                                                  { "x": 130,  "y": 85} ],     
@@ -2557,6 +2580,45 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Source", "Ground"],
 
                                 "name" : "NetEmissionAutoLocation" 
+                            };
+
+     var NetworkEmissionVolitionalInternal = { 
+
+
+                                "solid2":    [   { "x": 130,  "y": 85}, 
+                                                { "x": 160,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   
+                                                { "x": -5,  "y": 40}, 
+                                                { "x": -5,  "y": 70} ],
+
+                                "arrow":    [   { "x": -55,  "y": 30}, 
+                                                { "x": -25,  "y": 30} ],
+
+
+                                "arrow2":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -50,  "y": 35, "text": "A0"},  
+                                        { "x": -30,  "y": 35, "text": "A1"},
+                                        { "x": -10,  "y": 90, "text": "Source"}, 
+                                        { "x": 75,  "y": 90, "text": "Creation"}, 
+                                        { "x": 175,  "y": 90, "text": "Source"},
+                                        { "x": -90,  "y": 25, "text": "VOL"},
+                                        { "x": -10,  "y": 25, "text": "INTL"},
+                                        { "x": -45,  "y": 45, "text": "FRC"},
+                                        { "x": 40,  "y": 100, "text": "FRC"},
+                                        { "x": 75,  "y": 80, "text": "DES|MER"},
+                                        { "x": 175,  "y": 80, "text": "MER"},
+                                        { "x": 135,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Source"],
+
+                                "name" : "NetEmissionVolInternal" 
                             };
 
 
@@ -3388,22 +3450,28 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Internal') { 
 
+        // TODO: check return
+
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
             return NetworkAutonomousInternal; 
-        }
-        // TODO: check return
-        else if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
+        } else if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
             return NetworkAutonomousInternal;
-        }
-        else if (nameGeneralNetwork === 'CreationNetwork') {
+        } else if (nameGeneralNetwork === 'CreationNetwork') {
             return NetworkCreationAutonomousInternal;
-        }
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousInternal;
         }
     }
 
-    else if (FDCategory === 'Volitional Internal') { return NetworkVolitionalInternal; }
+    else if (FDCategory === 'Volitional Internal') {
+
+        if (nameGeneralNetwork === 'CarryMotionNetwork') {
+            return NetworkVolitionalInternal;
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionVolitionalInternal;
+        }
+
+    }
 
     else if (FDCategory === 'Autonomous Deprive') { return NetworkAutonomousDeprive; }
 

@@ -1256,6 +1256,36 @@ var events = {
     "Theme-of(x,e) & Component-of(a,books) & Component-of(b,floor) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
+    "1043": [
+        "Water gushed through the streets",
+        "substance_emission-43.4-1",
+        "Sbj V PathP",
+        "Autonomous Motion",
+        "UndirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Water) & Component-of(b,streets) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1044": [
+        "The water seeped out",
+        "substance_emission-43.4-1",
+        "Sbj V PathP",
+        "Autonomous Remove",
+        "DirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,water) & Component-of(b,out) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
+    "1045": [
+        "Oil gushed from the well",
+        "substance_emission-43.4-1",
+        "Sbj V PathP",
+        "Autonomous Remove",
+        "DirectedActivity",
+        "EmissionNetwork",
+        "Theme-of(x,e) & Component-of(a,Oil) & Component-of(b,well) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10007"
+    ],
   "1048": [
         "The train brought us here",
         "bring-11.3",
@@ -1930,6 +1960,8 @@ var events = {
     "11022": ["Autonomous Internal", "EmissionNetwork"],
     "11023": ["Autonomous Location", "EmissionNetwork"],
     "11024": ["Volitional Internal", "EmissionNetwork"],
+    "11025": ["Autonomous Motion", "EmissionNetwork"],
+    "11026": ["Autonomous Remove", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1945,6 +1977,8 @@ var events = {
     "12015": { "child": "Autonomous Dynamic Texture", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12016": { "child": "Autonomous Location", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12017": { "child": "Volitional Internal", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12018": { "child": "Autonomous Motion", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12019": { "child": "Autonomous Remove", "parentNetwork": "10011", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2043,6 +2077,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Internal" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11024";
         var identifierToConstructionURL = "12017";
+    } else if (FDCategory === "Autonomous Motion" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11025";
+        var identifierToConstructionURL = "12018";
+    } else if (FDCategory === "Autonomous Remove" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11026";
+        var identifierToConstructionURL = "12019";
     }
 
 
@@ -2619,6 +2659,88 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Agent", "Source"],
 
                                 "name" : "NetEmissionVolInternal" 
+                            };
+
+
+     var NetworkEmissionAutonomousMotion = { 
+
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": 60,  "y": 40}, 
+                                                { "x": 60,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": -10,  "y": 85}, 
+                                                { "x": 20,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 80,  "y": 35, "text": "A0"},
+                                        { "x": 115,  "y": 35, "text": "A1"},  
+                                        { "x": -50,  "y": 90, "text": "Source"}, 
+                                        { "x": 35,  "y": 90, "text": "Creation"}, 
+                                        { "x": 135,  "y": 90, "text": "Source"},
+                                        { "x": 35,  "y": 25, "text": "MOT"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -10,  "y": 100, "text": "FRC"},
+                                        { "x": 135,  "y": 25, "text": "EXIST"},
+                                        { "x": 35,  "y": 80, "text": "DES|MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Creation", "Ground"],
+
+                                "name" : "NetEmissionAutoMotion" 
+                            };
+
+
+     var NetworkEmissionAutonomousRemove = { 
+
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": 60,  "y": 40}, 
+                                                { "x": 60,  "y": 70} ],
+
+
+                                "dottedLeft":    [   { "x": 150,  "y": 40}, 
+                                                { "x": 150,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": -10,  "y": 85}, 
+                                                { "x": 20,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 80,  "y": 35, "text": "A0"},
+                                        { "x": 115,  "y": 35, "text": "A1"},  
+                                        { "x": -50,  "y": 90, "text": "Source"}, 
+                                        { "x": 35,  "y": 90, "text": "Creation"}, 
+                                        { "x": 135,  "y": 90, "text": "Source"},
+                                        { "x": 35,  "y": 25, "text": "-MER"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -10,  "y": 100, "text": "FRC"},
+                                        { "x": 135,  "y": 25, "text": "EXIST"},
+                                        { "x": 35,  "y": 80, "text": "DES|MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Creation", "Source"],
+
+                                "name" : "NetEmissionAutoRemove" 
                             };
 
 
@@ -3418,7 +3540,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
 
 
-    if (FDCategory === 'Autonomous Remove') { return NetworkAutonomousRemove; }
+    if (FDCategory === 'Autonomous Remove') { 
+
+        if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
+            return NetworkAutonomousRemove;
+        }
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionAutonomousRemove;
+        }
+
+    }
 
     else if (FDCategory === 'Volitional Remove') { return NetworkVolitionalRemove; }
 
@@ -3481,7 +3612,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Provide') { return NetworkAutonomousProvide; }
 
-    else if (FDCategory === 'Autonomous Motion') { return NetworkAutonomousMotion; }
+
+    else if (FDCategory === 'Autonomous Motion') { 
+
+        if (nameGeneralNetwork === 'GeneralMotionNetwork') {
+            return NetworkAutonomousMotion; 
+        }
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionAutonomousMotion;
+        }
+    }
 
     else if (FDCategory === 'Self-volitional Motion') { return NetworkSelfVolitionalMotion; }
 
@@ -3675,6 +3815,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Autonomous Location", "parent": "EmissionNetwork"},
                                        {"network": "Volitional Internal", "parent": "EmissionNetwork"},
                                        {"network": "Autonomous Motion", "parent": "EmissionNetwork"}, 
+                                       {"network": "Autonomous Remove", "parent": "EmissionNetwork"}, 
                                        {"network": "Volitional Deprive", "parent": "EmissionNetwork"},
                                        {"network": "Physical Place", "parent": "EmissionNetwork"},
                                        {"network": "Volitional Place", "parent": "EmissionNetwork"},

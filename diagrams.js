@@ -196,6 +196,16 @@ var events = {
     "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
     ""
   ],
+  "161": [
+    "Paul breathed on Mary",
+    "breathe-40.1.2",
+    "Sbj V at/on/about/of/over Obl",
+    "Volitional Place",
+    "DirectedAchievement",
+    "EmissionNetwork",
+    "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,NI) & Component-of(c,Mary) & DirAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10007"
+],
   "181": [
     "Brian wiped at the counter",
     "wipe_manner-10.4.1",
@@ -206,6 +216,16 @@ var events = {
     "Theme-of(y,e) & Component-of(a,Brian) & Component-of(b,counter) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
     ""
   ],
+"199": [
+    "The dragon breathed fire on Mary",
+    "breathe-40.1.2",
+    "Sbj V Obj PathP",
+    "Physical Place",
+    "IncrementalAccomplishment",
+    "EmissionNetwork",
+    "Theme-of(y,e) & Component-of(a,dragon) & Component-of(b,fire) & Component-of(c,Mary) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10007"
+],
   "228": [
         "Jackie chased the thief",
         "chase-51.6",
@@ -482,9 +502,9 @@ var events = {
     "Sbj V Obj",
     "Volitional Deprive",
     "IncrementalAccomplishment",
-    "",
+    "EmissionNetwork",
     "Theme-of(z,e) & Component-of(a,I) & Component-of(b,NI) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10007"
   ],
   "1163": [
     "Carla shoveled the walk",
@@ -1962,6 +1982,9 @@ var events = {
     "11024": ["Volitional Internal", "EmissionNetwork"],
     "11025": ["Autonomous Motion", "EmissionNetwork"],
     "11026": ["Autonomous Remove", "EmissionNetwork"],
+    "11027": ["Volitional Deprive", "EmissionNetwork"],
+    "11028": ["Volitional Place", "EmissionNetwork"],
+    "11029": ["Physical Place", "EmissionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -1979,6 +2002,9 @@ var events = {
     "12017": { "child": "Volitional Internal", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12018": { "child": "Autonomous Motion", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12019": { "child": "Autonomous Remove", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12020": { "child": "Volitional Deprive", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12021": { "child": "Volitional Place", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12022": { "child": "Physical Place", "parentNetwork": "10011", "generalNetwork": "10007"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2083,8 +2109,16 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Remove" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11026";
         var identifierToConstructionURL = "12019";
+    } else if (FDCategory === "Volitional Deprive" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11027";
+        var identifierToConstructionURL = "12020";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11028";
+        var identifierToConstructionURL = "12021";
+    } else if (FDCategory === "Physical Place" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11029";
+        var identifierToConstructionURL = "12022";
     }
-
 
     return [identifierToMappingURL, identifierToConstructionURL]
 
@@ -2743,6 +2777,152 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetEmissionAutoRemove" 
                             };
 
+
+     var NetworkEmissionVolitionalDeprive = { 
+
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": 60,  "y": 40}, 
+                                                { "x": 60,  "y": 70} ],
+
+
+                                "dottedLeft":    [   { "x": 150,  "y": 40}, 
+                                                { "x": 150,  "y": 70} ],
+
+                                "arrow1":    [   { "x": -10,  "y": 30}, 
+                                                { "x": 20,  "y": 30} ],
+
+
+                                "arrow2":    [   { "x": -10,  "y": 85}, 
+                                                { "x": 20,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 35, "text": "A1"},  
+                                        { "x": 115,  "y": 35, "text": "A2"},  
+                                        { "x": -50,  "y": 90, "text": "Source"}, 
+                                        { "x": 35,  "y": 90, "text": "Creation"}, 
+                                        { "x": 135,  "y": 90, "text": "Source"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": 35,  "y": 25, "text": "-MER"},
+                                        { "x": -10,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -10,  "y": 100, "text": "FRC"},
+                                        { "x": 135,  "y": 25, "text": "EXIST"},
+                                        { "x": 35,  "y": 80, "text": "DES|MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation (NI)", "Source"],
+
+                                "name" : "NetEmissionVolDeprive" 
+                            };
+
+
+     var NetworkEmissionVolitionalPlace = { 
+
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": -30,  "y": 40}, 
+                                                { "x": -30,  "y": 70} ],
+
+
+                                "dottedLeft":    [   { "x": 60,  "y": 40}, 
+                                                { "x": 60,  "y": 70} ],
+
+                                "arrow1":    [   { "x": -10,  "y": 30}, 
+                                                { "x": 20,  "y": 30} ],
+
+
+                                "arrow2":    [   { "x": -10,  "y": 85}, 
+                                                { "x": 20,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 35, "text": "A1"},  
+                                        { "x": 115,  "y": 35, "text": "A2"},  
+                                        { "x": -50,  "y": 90, "text": "Source"}, 
+                                        { "x": 35,  "y": 90, "text": "Creation"}, 
+                                        { "x": 135,  "y": 90, "text": "Source"},
+                                        { "x": -50,  "y": 25, "text": "VOL"},
+                                        { "x": 35,  "y": 25, "text": "+MER"},
+                                        { "x": -10,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -10,  "y": 100, "text": "FRC"},
+                                        { "x": 135,  "y": 25, "text": "EXIST"},
+                                        { "x": 35,  "y": 80, "text": "DES|MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Creation (NI)", "Ground"],
+
+                                "name" : "NetEmissionVolPlace" 
+                            };
+
+
+     var NetworkEmissionPhysicalPlace = { 
+
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],       
+
+                                "solid2":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+
+                                "dottedFarLeft":    [   { "x": -30,  "y": 40}, 
+                                                { "x": -30,  "y": 70} ],
+
+
+                                "dottedLeft":    [   { "x": 60,  "y": 40}, 
+                                                { "x": 60,  "y": 70} ],
+
+                                "arrow1":    [   { "x": -10,  "y": 30}, 
+                                                { "x": 20,  "y": 30} ],
+
+
+                                "arrow2":    [   { "x": -10,  "y": 85}, 
+                                                { "x": 20,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 35, "text": "A1"},  
+                                        { "x": 115,  "y": 35, "text": "A2"},  
+                                        { "x": -50,  "y": 90, "text": "Source"}, 
+                                        { "x": 35,  "y": 90, "text": "Creation"}, 
+                                        { "x": 135,  "y": 90, "text": "Source"},
+                                        { "x": -50,  "y": 25, "text": "INTL"},
+                                        { "x": 35,  "y": 25, "text": "+MER"},
+                                        { "x": -10,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -10,  "y": 100, "text": "FRC"},
+                                        { "x": 135,  "y": 25, "text": "EXIST"},
+                                        { "x": 35,  "y": 80, "text": "DES|MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Source", "Creation", "Ground"],
+
+                                "name" : "NetEmissionPhysPlace" 
+                            };
 
      var NetworkSelfVolitionalPlace = {        
 
@@ -3561,6 +3741,9 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         else if (nameGeneralNetwork === 'IllustrationNetwork') {
             return NetworkIllustrationVolitionalPlace;
         }
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionVolitionalPlace;
+        }
 
     }
 
@@ -3606,7 +3789,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Deprive') { return NetworkAutonomousDeprive; }
 
-    else if (FDCategory === 'Volitional Deprive') { return NetworkVolitionalDeprive; }
+    else if (FDCategory === 'Volitional Deprive') { 
+
+        if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
+            return NetworkVolitionalDeprive; 
+        }
+        else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionVolitionalDeprive;
+        }
+    }
 
     else if (FDCategory === 'Physical Deprive') { return NetworkPhysicalDeprive; }
 
@@ -3673,6 +3864,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
     
     else if (FDCategory === 'Autonomous Location') { return NetworkEmissionAutonomousLocation; }
+
+    else if (FDCategory === 'Physical Place') { return NetworkEmissionPhysicalPlace; }
 
 }
 
@@ -5743,7 +5936,7 @@ function makeNetworkPage () {
             if (heightMultiplier < 8) {
                 var height = 150;
             } else {
-                var height = 250;
+                var height = 270;
             }
 
 

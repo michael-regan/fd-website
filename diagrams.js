@@ -302,9 +302,9 @@ var events = {
     "Sbj V at/on/about/of/over Obl",
     "Volitional Attend",
     "UndirectedActivity",
-    "",
+    "EmissionNetwork",
     "Theme-of(y,e) & Component-of(a,dog) & Component-of(b,cat) & UndAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
-    ""
+    "10007"
   ],
   "835": [
     "The employees staffed the store",
@@ -1046,6 +1046,36 @@ var events = {
     "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
     "10007"
     ],
+    "906": [
+        "Carol crushed the ice",
+        "carve-21.2-1",
+        "Sbj V Obj",
+        "Volitional Force",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,ice) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "907": [
+        "Carol carved the stone",
+        "carve-21.2-2",
+        "Sbj V Obj",
+        "Volitional Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,stone) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "908": [
+        "Paula hit the ball",
+        "hit-18.1",
+        "Sbj V Obj",
+        "Volitional Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,ball) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
     "924": [
         "The jewel sparkled",
         "light_emission-43.1",
@@ -1053,6 +1083,7 @@ var events = {
         "Autonomous Internal",
         "UndirectedActivity",
         "EmissionNetwork",
+        "ForceNetwork",
         "Theme-of(x,e) & Component-of(a,jewel) & UndAct(a,i,j,q1) & INTL(q1)",
         "10007"
     ],
@@ -1957,6 +1988,7 @@ var events = {
     "10009": {"networks": ["CreationNetwork"], "name": "Creation"},
     "10010": {"networks": ["CreationNetwork", "EmissionNetwork"], "name": "Creation+Emission"},
     "10011": {"networks": ["EmissionNetwork"], "name": "Emission"},
+    "10012": {"networks": ["ForceNetwork", "ConstrainNetwork"], "name": "Force"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -1985,6 +2017,8 @@ var events = {
     "11027": ["Volitional Deprive", "EmissionNetwork"],
     "11028": ["Volitional Place", "EmissionNetwork"],
     "11029": ["Physical Place", "EmissionNetwork"],
+    "11030": ["Volitional Attend", "EmissionNetwork"],
+    "11031": ["Volitional Force", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2005,6 +2039,8 @@ var events = {
     "12020": { "child": "Volitional Deprive", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12021": { "child": "Volitional Place", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12022": { "child": "Physical Place", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12023": { "child": "Volitional Attend", "parentNetwork": "10011", "generalNetwork": "10007"},
+    "12024": { "child": "Volitional Force", "parentNetwork": "10012", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2118,7 +2154,14 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Physical Place" && generalNetworkName == "EmissionNetwork") {
         var identifierToMappingURL = "11029";
         var identifierToConstructionURL = "12022";
+    } else if (FDCategory === "Volitional Attend" && generalNetworkName == "EmissionNetwork") {
+        var identifierToMappingURL = "11030";
+        var identifierToConstructionURL = "12023";
+    } else if (FDCategory === "Volitional Force" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11031";
+        var identifierToConstructionURL = "12024";
     }
+
 
     return [identifierToMappingURL, identifierToConstructionURL]
 
@@ -2955,6 +2998,46 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkEmissionVolitionalAttend = {        
+
+                                "solid2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -65,  "y": 40}, 
+                                                { "x": -65,  "y": 70} ],
+
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},  
+                                        { "x": -80,  "y": 90, "text": "Source"}, 
+                                        { "x": 5,  "y": 90, "text": "Creation"}, 
+                                        { "x": 105,  "y": 90, "text": "Source"},
+                                        { "x": -80,  "y": 25, "text": "INTL"},
+                                        { "x": -40,  "y": 45, "text": "ATT"},
+                                        { "x": -40,  "y": 100, "text": "FRC"},
+                                        { "x": 5,  "y": 80, "text": "DES|MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 65,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Source", "Target"],
+
+                                "name" : "NetEmissionVolAttend" 
+                            };
+
+
+
      var NetworkVolitionalAttend = {        
 
                                 "solid2":    [   { "x": 55,  "y": 90}, 
@@ -3719,6 +3802,35 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalForce = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 55,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": 15,  "y": 25, "text": "VOL"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Causer", "Theme"],
+
+                                "name" : "NetForceVolForce" 
+                            };
+
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -3759,8 +3871,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         }
     }
 
-    else if (FDCategory === 'Volitional Attend') { return NetworkVolitionalAttend; }
+   else if (FDCategory === 'Volitional Attend') {
 
+        if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
+            return NetworkVolitionalAttend;
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionVolitionalAttend;
+        }
+
+    }
 
     else if (FDCategory === 'Autonomous Internal') { 
 
@@ -3866,6 +3985,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Autonomous Location') { return NetworkEmissionAutonomousLocation; }
 
     else if (FDCategory === 'Physical Place') { return NetworkEmissionPhysicalPlace; }
+
+    else if (FDCategory === 'Volitional Force') { 
+
+        if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalForce; 
+        }
+        else if (nameGeneralNetwork === 'ConstrainNetwork') {
+            return NetworkConstrainVolForce;
+        }
+    }
 
 }
 
@@ -4012,6 +4141,59 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Volitional Deprive", "parent": "EmissionNetwork"},
                                        {"network": "Physical Place", "parent": "EmissionNetwork"},
                                        {"network": "Volitional Place", "parent": "EmissionNetwork"},
+                                       {"network": "Volitional Attend", "parent": "EmissionNetwork"},
+                                    ],
+
+                            "name" : "Emission network" 
+                        };
+
+
+    var ForceNetwork = {        
+
+                                "arrow":    [   { "x": 50,  "y": 65}, 
+                                                { "x": 80,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -30,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 100,  "y": 70, "text": "Theme"}, 
+                                        { "x": 50,  "y": 80, "text": "FRC"}
+                                    ],
+
+                            "caption": "ASC causal chains used with force network",
+
+                            "chains": [{"network": "Volitional Force", "parent": "ForceNetwork"},
+                                        {"network": "Instrument Force", "parent": "ForceNetwork"},
+                                       {"network": "Physical Force", "parent": "ForceNetwork"},
+                                       {"network": "Volitional COS", "parent": "ForceNetwork"},
+                                       {"network": "Instrument COS", "parent": "ForceNetwork"},
+                                       {"network": "Physical COS", "parent": "ForceNetwork"},
+                                       {"network": "Volitional Place", "parent": "ForceNetwork"}, 
+                                       {"network": "Volitional Attend", "parent": "ForceNetwork"}, 
+                                       {"network": "Instrument Attend", "parent": "ForceNetwork"},
+                                       {"network": "Volitional Internal", "parent": "ForceNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "ForceNetwork"},
+                                       {"network": "Volitional Motion", "parent": "ForceNetwork"},
+                                    ],
+
+                            "name" : "Emission network" 
+                        };
+
+
+    var ConstrainNetwork = {        
+
+                                "arrow":    [   { "x": 50,  "y": 65}, 
+                                                { "x": 80,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -30,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 100,  "y": 70, "text": "Theme"}, 
+                                        { "x": 50,  "y": 80, "text": "FRC"},
+                                        { "x": 100,  "y": 55, "text": "EXIST"},
+                                    ],
+
+                            "caption": "ASC causal chains used with constrain network",
+
+                            "chains": [{"network": "Volitional Force", "parent": "ConstrainNetwork"},
                                     ],
 
                             "name" : "Emission network" 
@@ -4040,6 +4222,7 @@ function getMultipleNetworkPage (NetworkType) {
 
                             "name" : "Form network" 
                         };
+
 
     var GeneralMotionNetwork = {        
 
@@ -5936,7 +6119,7 @@ function makeNetworkPage () {
             if (heightMultiplier < 8) {
                 var height = 150;
             } else {
-                var height = 270;
+                var height = 290;
             }
 
 

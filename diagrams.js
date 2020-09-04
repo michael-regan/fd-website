@@ -326,6 +326,96 @@ var events = {
     "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)",
     ""
   ],
+    "892": [
+        "Carol crushed the ice with a hammer",
+        "carve-21.2-1",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,hammer) & Component-of(c,ice) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "893": [
+        "Carol carved the stone with a chisel",
+        "carve-21.2-2",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,chisel) & Component-of(c,stone) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "894": [
+        "Paula hit the ball with a stick",
+        "hit-18.1",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,stick) & Component-of(c,ball) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "895": [
+        "Steve pelted Anna with acorns",
+        "pelt-17.2",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Steve) & Component-of(b,acorns) & Component-of(c,Anna) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "896": [
+        "Allison poked the cloth with the needle",
+        "poke-19",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Allison) & Component-of(b,needle) & Component-of(c,cloth) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "897": [
+        "Paula spanked the child with her right hand",
+        "spank-18.3",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,hand) & Component-of(c,child) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "898": [
+        "Paula swatted the fly with a dishcloth",
+        "swat-18.2",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "899": [
+        "Carrie touched the cat with the stick",
+        "touch-20",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,cat) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "900": [
+        "Carrie touched his shoulder with the stick",
+        "touch-20-1",
+        "Sbj V Obj with Obl",
+        "Instrument Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,shoulder) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "10012"
+    ],
   "978": [
     "The child and her mother clung together",
     "cling-22.5",
@@ -1046,6 +1136,26 @@ var events = {
     "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
     "10007"
     ],
+    "904": [
+        "Paula spanked the naughty child on the back",
+        "spank-18.3",
+        "Sbj V Obj LocP",
+        "Volitional Force XPR",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,child) & Component-of(c,back) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & EXIST(q2) & EXIST(q3) & FRC(a,b) & XPR(c,d)",
+        "10012"
+    ],
+    "905": [
+        "Paula swatted Deirdre on the back",
+        "swat-18.2",
+        "Sbj V Obj LocP",
+        "Volitional Force XPR",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,Deirdre) & Component-of(c,back) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & EXIST(q2) & EXIST(q3) & FRC(a,b) & XPR(c,d)",
+        "10012"
+    ],
     "906": [
         "Carol crushed the ice",
         "carve-21.2-1",
@@ -1074,6 +1184,66 @@ var events = {
         "CyclicAchievement",
         "ForceNetwork",
         "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,ball) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "911": [
+        "Steve pelted Anna",
+        "pelt-17.2",
+        "Sbj V Obj",
+        "Volitional Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Steve) & Component-of(b,Anna) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "912": [
+        "Allison poked the cloth",
+        "poke-19",
+        "Sbj V Obj",
+        "Volitional Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Allison) & Component-of(b,cloth) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "913": [
+        "Paula spanked the child",
+        "spank-18.3",
+        "Sbj V Obj",
+        "Volitional Force",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,child) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "915": [
+        "Paula swatted the fly",
+        "swat-18.2",
+        "Sbj V Obj",
+        "Volitional Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,fly) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "916": [
+        "Carrie touched the cat",
+        "touch-20",
+        "Sbj V Obj",
+        "Volitional Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Carrie) & Component-of(b,cat) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10012"
+    ],
+    "917": [
+        "Carrie touched his shoulder",
+        "touch-20-1",
+        "Sbj V Obj",
+        "Volitional Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Carrie) & Component-of(b,shoulder) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
         "10012"
     ],
     "924": [
@@ -1988,7 +2158,8 @@ var events = {
     "10009": {"networks": ["CreationNetwork"], "name": "Creation"},
     "10010": {"networks": ["CreationNetwork", "EmissionNetwork"], "name": "Creation+Emission"},
     "10011": {"networks": ["EmissionNetwork"], "name": "Emission"},
-    "10012": {"networks": ["ForceNetwork", "ConstrainNetwork"], "name": "Force"},
+    "10012": {"networks": ["ForceNetwork", "ConstrainNetwork"], "name": "Force+Constrain"},
+    "10013": {"networks": ["ForceNetwork"], "name": "Force"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -2019,6 +2190,8 @@ var events = {
     "11029": ["Physical Place", "EmissionNetwork"],
     "11030": ["Volitional Attend", "EmissionNetwork"],
     "11031": ["Volitional Force", "ForceNetwork"],
+    "11032": ["Volitional Force XPR", "ForceNetwork"],
+    "11033": ["Instrument Force", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2041,6 +2214,8 @@ var events = {
     "12022": { "child": "Physical Place", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12023": { "child": "Volitional Attend", "parentNetwork": "10011", "generalNetwork": "10007"},
     "12024": { "child": "Volitional Force", "parentNetwork": "10012", "generalNetwork": "10012"},
+    "12025": { "child": "Volitional Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12026": { "child": "Instrument Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2160,6 +2335,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Force" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11031";
         var identifierToConstructionURL = "12024";
+    } else if (FDCategory === "Volitional Force XPR" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11032";
+        var identifierToConstructionURL = "12025";
+    } else if (FDCategory === "Instrument Force" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11033";
+        var identifierToConstructionURL = "12026";
     }
 
 
@@ -3832,6 +4013,76 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalForceXPR = {        
+
+                                "arrow":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 10,  "y": 85}, 
+                                                { "x": 40,  "y": 85} ],
+
+                                "solid2":    [   { "x": 110,  "y": 30}, 
+                                                { "x": 140,  "y": 30} ],
+
+                                "dottedLeft":    [   { "x": -15,  "y": 40}, 
+                                                { "x": -15,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                { "x": 85,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 5,  "y": 35, "text": "A0"},
+                                        { "x": 45,  "y": 35, "text": "A1"},
+                                        { "x": 135,  "y": 35, "text": "A2"},
+                                        { "x": -65,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 70,  "y": 90, "text": "Theme"},
+                                        { "x": -35,  "y": 25, "text": "VOL"},
+                                        { "x": 10,  "y": 45, "text": "FRC"},
+                                        { "x": 10,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Causer", "Theme", "Location"],
+
+                                "name" : "NetForceVolForceXPR" 
+                            };
+
+     var NetworkForceInstrumentForce = {        
+
+                                "arrow":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 115,  "y": 30}, 
+                                                { "x": 145,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 10,  "y": 85}, 
+                                                { "x": 40,  "y": 85} ],
+
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                { "x": -15,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 165,  "y": 40}, 
+                                                { "x": 95,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 5,  "y": 35, "text": "A0"},
+                                        { "x": 45,  "y": 35, "text": "A1"},
+                                        { "x": 135,  "y": 35, "text": "A2"},
+                                        { "x": -65,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 70,  "y": 90, "text": "Theme"},
+                                        { "x": -35,  "y": 25, "text": "VOL"},
+                                        { "x": 55,  "y": 25, "text": "INTL"},
+                                        { "x": 10,  "y": 45, "text": "FRC"},
+                                        { "x": 115,  "y": 45, "text": "FRC"},
+                                        { "x": 10,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Causer", "Instrument", "Theme"],
+
+                                "name" : "NetForceInstForce" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -3995,6 +4246,10 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkConstrainVolForce;
         }
     }
+
+    else if (FDCategory === 'Volitional Force XPR') { return NetworkForceVolitionalForceXPR; }
+
+    else if (FDCategory === 'Instrument Force') { return NetworkForceInstrumentForce; }
 
 }
 
@@ -4162,6 +4417,7 @@ function getMultipleNetworkPage (NetworkType) {
                             "caption": "ASC causal chains used with force network",
 
                             "chains": [{"network": "Volitional Force", "parent": "ForceNetwork"},
+                                        {"network": "Volitional Force XPR", "parent": "ForceNetwork"},
                                         {"network": "Instrument Force", "parent": "ForceNetwork"},
                                        {"network": "Physical Force", "parent": "ForceNetwork"},
                                        {"network": "Volitional COS", "parent": "ForceNetwork"},
@@ -4196,7 +4452,7 @@ function getMultipleNetworkPage (NetworkType) {
                             "chains": [{"network": "Volitional Force", "parent": "ConstrainNetwork"},
                                     ],
 
-                            "name" : "Emission network" 
+                            "name" : "Constrain network" 
                         };
 
 
@@ -6108,7 +6364,7 @@ function makeNetworkPage () {
 
             var thisNetwork = events[currentEvent]["networks"][j];
 
-            console.log(thisNetwork);
+            // console.log(thisNetwork);
 
             var currentNetwork = getMultipleNetworkPage(thisNetwork);
 
@@ -6118,8 +6374,10 @@ function makeNetworkPage () {
 
             if (heightMultiplier < 8) {
                 var height = 150;
-            } else {
+            } else if (heightMultiplier < 10) {
                 var height = 290;
+            } else {
+                var height = 320;
             }
 
 
@@ -6153,7 +6411,7 @@ function makeNetworkPage () {
             //         .attr("y2", 0); 
 
 
-            console.log(currentNetwork)
+            //console.log(currentNetwork)
 
             createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd) 
 

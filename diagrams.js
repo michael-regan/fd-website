@@ -1126,15 +1126,15 @@ var events = {
         "Theme-of(y,e) & Component-of(a,I) & Component-of(b,bell) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
         "10007"
     ],
-  "1156": [
-    "The secretary transcribed the speech",
-    "transcribe-25.4",
-    "Sbj V Obj",
-    "Volitional Create",
-    "IncrementalAccomplishment",
-    "IllustrationNetwork",
-    "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
-    "10007"
+    "891": [
+        "Paula spanked the naughty child on the back with a paddle",
+        "spank-18.3",
+        "Sbj V Obj LocP with Obl",
+        "Instrument Force XPR",
+        "UndirectedActivity",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,paddle) & Component-of(c,child) & Component-of(d,back) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & UndAct(d,i,m,q4) & VOL(q1) & INTL(q2) & EXIST(q3) & EXIST(q4) & MNP(a,b) & FRC(b,c) & XPR(c,d)",
+        "10012"
     ],
     "904": [
         "Paula spanked the naughty child on the back",
@@ -1406,6 +1406,16 @@ var events = {
         "EmissionNetwork",
         "Theme-of(x,e) & Component-of(a,stew) & Component-of(b,fire) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
         "10007"
+    ],
+  "1156": [
+    "The secretary transcribed the speech",
+    "transcribe-25.4",
+    "Sbj V Obj",
+    "Volitional Create",
+    "IncrementalAccomplishment",
+    "IllustrationNetwork",
+    "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
+    "10007"
     ],
     "1181": [
         "Birds sang in the trees",
@@ -2192,6 +2202,7 @@ var events = {
     "11031": ["Volitional Force", "ForceNetwork"],
     "11032": ["Volitional Force XPR", "ForceNetwork"],
     "11033": ["Instrument Force", "ForceNetwork"],
+    "11034": ["Instrument Force XPR", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2216,6 +2227,7 @@ var events = {
     "12024": { "child": "Volitional Force", "parentNetwork": "10012", "generalNetwork": "10012"},
     "12025": { "child": "Volitional Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12026": { "child": "Instrument Force", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12027": { "child": "Instrument Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2341,6 +2353,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument Force" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11033";
         var identifierToConstructionURL = "12026";
+    } else if (FDCategory === "Instrument Force XPR" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11034";
+        var identifierToConstructionURL = "12027";
     }
 
 
@@ -4057,6 +4072,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "arrow2":    [   { "x": 10,  "y": 85}, 
                                                 { "x": 40,  "y": 85} ],
 
+                                "dottedFarLeft":    [   { "x": -25,  "y": 40}, 
+                                                { "x": -25,  "y": 75} ],
 
                                 "dottedLeft":    [   { "x": 65,  "y": 40}, 
                                                 { "x": -15,  "y": 75} ],
@@ -4082,6 +4099,49 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetForceInstForce" 
                             };
 
+
+     var NetworkForceInstrumentForceXPR = {        
+
+                                "arrow":    [   { "x": -40,  "y": 30}, 
+                                                { "x": -10,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 65,  "y": 30}, 
+                                                { "x": 95,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -40,  "y": 85}, 
+                                                { "x": -10,  "y": 85} ],
+
+                                "solid2":    [   { "x": 150,  "y": 30}, 
+                                                { "x": 180,  "y": 30} ],
+
+                                "dottedFarLeft":    [   { "x": -75,  "y": 40}, 
+                                                { "x": -75,  "y": 75} ],
+
+                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
+                                                { "x": -65,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 115,  "y": 40}, 
+                                                { "x": 45,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -45,  "y": 35, "text": "A0"},
+                                        { "x": -5,  "y": 35, "text": "A1"},
+                                        { "x": 85,  "y": 35, "text": "A2"},
+                                        { "x": 170,  "y": 35, "text": "A3"},
+                                        { "x": -115,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 20,  "y": 90, "text": "Theme"},
+                                        { "x": -85,  "y": 25, "text": "VOL"},
+                                        { "x": 5,  "y": 25, "text": "INTL"},
+                                        { "x": -40,  "y": 45, "text": "FRC"},
+                                        { "x": 65,  "y": 45, "text": "FRC"},
+                                        { "x": 150,  "y": 45, "text": "XPR"},
+                                        { "x": -40,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Causer", "Instrument", "Theme", "Location"],
+
+                                "name" : "NetForceInstForceXPR" 
+                            };
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -4251,6 +4311,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Instrument Force') { return NetworkForceInstrumentForce; }
 
+    else if (FDCategory === 'Instrument Force XPR') { return NetworkForceInstrumentForceXPR; }
+
 }
 
 
@@ -4419,6 +4481,7 @@ function getMultipleNetworkPage (NetworkType) {
                             "chains": [{"network": "Volitional Force", "parent": "ForceNetwork"},
                                         {"network": "Volitional Force XPR", "parent": "ForceNetwork"},
                                         {"network": "Instrument Force", "parent": "ForceNetwork"},
+                                        {"network": "Instrument Force XPR", "parent": "ForceNetwork"},
                                        {"network": "Physical Force", "parent": "ForceNetwork"},
                                        {"network": "Volitional COS", "parent": "ForceNetwork"},
                                        {"network": "Instrument COS", "parent": "ForceNetwork"},
@@ -5773,12 +5836,12 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;
         } else if (newObj['text'] === "A3"){
-            var participant = argTextToAdd[2];
+            var participant = argTextToAdd[3];
             var strLen = participant.length*2;
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;
         } else if (newObj['text'] === "A4"){
-            var participant = argTextToAdd[2];
+            var participant = argTextToAdd[4];
             var strLen = participant.length*2;
             newObj['text'] = participant;
             newObj['x'] -= strLen - 30 ;
@@ -6377,7 +6440,7 @@ function makeNetworkPage () {
             } else if (heightMultiplier < 10) {
                 var height = 290;
             } else {
-                var height = 320;
+                var height = 340;
             }
 
 

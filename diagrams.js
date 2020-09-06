@@ -996,6 +996,44 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,breath) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & DES(q2) & FRC(a,b)",
         "10007"
     ],
+    // "664": [
+    //     "The grocery cart hit against the wall",
+    //     "bump-18.4",
+    //     "Sbj V PathP",
+    //     "Autonomous Place",
+    //     "CyclicAchievement",
+    //     "Theme-of(x,e) & Component-of(a,cart) & Component-of(b,wall) & CycAch(a,i,j,q1) & InhStPh(b,i,k,q2) & +MER(q1) & EXIST(q2) & PTH(a,b)"
+    // ],
+    "901": [
+        "The hammer crushed the marble",
+        "carve-21.2-1",
+        "Sbj V Obj",
+        "Physical Force",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,marble) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & INTL(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "902": [
+        "The stick hit the fence",
+        "hit-18.1",
+        "Sbj V Obj",
+        "Physical Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,stick) & Component-of(b,fence) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & INTL(q1) & EXIST(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "903": [
+        "The needle poked the cloth",
+        "poke-19",
+        "Sbj V Obj",
+        "Physical Force",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,needle) & Component-of(b,cloth) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & INTL(q1) & EXIST(q2) & FRC(a,b)",
+        "10012"
+    ],
     "932": [
         "Paul breathed",
         "breathe-40.1.2",
@@ -2203,6 +2241,7 @@ var events = {
     "11032": ["Volitional Force XPR", "ForceNetwork"],
     "11033": ["Instrument Force", "ForceNetwork"],
     "11034": ["Instrument Force XPR", "ForceNetwork"],
+    "11035": ["Physical Force", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2228,6 +2267,7 @@ var events = {
     "12025": { "child": "Volitional Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12026": { "child": "Instrument Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12027": { "child": "Instrument Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12028": { "child": "Physical Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2356,8 +2396,10 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument Force XPR" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11034";
         var identifierToConstructionURL = "12027";
+    } else if (FDCategory === "Physical Force" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11035";
+        var identifierToConstructionURL = "12028";
     }
-
 
     return [identifierToMappingURL, identifierToConstructionURL]
 
@@ -4143,6 +4185,37 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetForceInstForceXPR" 
                             };
 
+
+     var NetworkForcePhysicalForce = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": 0,  "y": 25, "text": "INTL"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity", "Theme"],
+
+                                "name" : "NetForceVolForce" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4312,6 +4385,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Instrument Force') { return NetworkForceInstrumentForce; }
 
     else if (FDCategory === 'Instrument Force XPR') { return NetworkForceInstrumentForceXPR; }
+
+    else if (FDCategory === 'Physical Force') { return NetworkForcePhysicalForce; }
 
 }
 

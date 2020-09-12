@@ -2374,6 +2374,7 @@ var events = {
     "11035": ["Physical Force", "ForceNetwork"],
     "11036": ["Manipulate Force", "ForceNetwork"],
     "11037": ["Volitional COS", "ForceNetwork"],
+    "11038": ["Instrument COS", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2402,6 +2403,7 @@ var events = {
     "12028": { "child": "Physical Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12029": { "child": "Manipulate Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12030": { "child": "Volitional COS", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12031": { "child": "Instrument COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2539,6 +2541,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional COS" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11037";
         var identifierToConstructionURL = "12030";
+    } else if (FDCategory === "Instrument COS" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11038";
+        var identifierToConstructionURL = "12031";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4425,6 +4430,44 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetForceVolCOS" 
                             };
 
+     var NetworkForceInstrumentCOS = {        
+
+                                "arrow":    [   { "x": -20,  "y": 30}, 
+                                                { "x": 10,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 85,  "y": 30}, 
+                                                { "x": 115,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -20,  "y": 85}, 
+                                                { "x": 10,  "y": 85} ],
+
+                                "dottedFarLeft":    [   { "x": -55,  "y": 40}, 
+                                                { "x": -55,  "y": 75} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": 105,  "y": 35, "text": "A2"},
+                                        { "x": -95,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 40,  "y": 90, "text": "Theme"},
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 25,  "y": 25, "text": "INTL"},
+                                        { "x": -20,  "y": 45, "text": "FRC"},
+                                        { "x": 85,  "y": 45, "text": "FRC"},
+                                        { "x": -20,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Instrument", "Theme"],
+
+                                "name" : "NetForceInstCOS" 
+                            };
+
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -4607,6 +4650,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Physical Force') { return NetworkForcePhysicalForce; }
 
     else if (FDCategory === 'Manipulate Force') { return NetworkForceManipulateForce; }
+
+    else if (FDCategory === 'Instrument COS') { return NetworkForceInstrumentCOS; }
 
 }
 

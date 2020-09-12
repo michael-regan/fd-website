@@ -756,6 +756,26 @@ var events = {
         "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
+    "760": [
+        "The stick hit the door open",
+        "hit-18.1",
+        "Sbj V Obj ResultP",
+        "Physical COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,stick) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "761": [
+        "The hammer hit the window to pieces",
+        "hit-18.1",
+        "Sbj V Obj ResultP",
+        "Physical COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
     "805": [
         "Paul kicked the door open",
         "hit-18.1",
@@ -2375,6 +2395,7 @@ var events = {
     "11036": ["Manipulate Force", "ForceNetwork"],
     "11037": ["Volitional COS", "ForceNetwork"],
     "11038": ["Instrument COS", "ForceNetwork"],
+    "11039": ["Physical COS", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2404,6 +2425,7 @@ var events = {
     "12029": { "child": "Manipulate Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12030": { "child": "Volitional COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12031": { "child": "Instrument COS", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12032": { "child": "Physical COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2544,6 +2566,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument COS" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11038";
         var identifierToConstructionURL = "12031";
+    } else if (FDCategory === "Physical COS" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11039";
+        var identifierToConstructionURL = "12032";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4468,6 +4493,36 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetForceInstCOS" 
                             };
 
+     var NetworkForcePhysicalCOS = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": -15,  "y": 25, "text": "INTL"},
+                                        { "x": 115,  "y": 25, "text": "COS"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity", "Theme"],
+
+                                "name" : "NetForcePhysCOS" 
+                            };
+
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -4652,6 +4707,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Manipulate Force') { return NetworkForceManipulateForce; }
 
     else if (FDCategory === 'Instrument COS') { return NetworkForceInstrumentCOS; }
+
+    else if (FDCategory === 'Physical COS') { return NetworkForcePhysicalCOS; }
 
 }
 

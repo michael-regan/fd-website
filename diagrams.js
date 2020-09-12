@@ -706,6 +706,76 @@ var events = {
         "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & Component-of(c,record) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10007"
     ],
+    "805": [
+        "Paul kicked the door open",
+        "hit-18.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "806": [
+        "Paul hit the window to pieces",
+        "hit-18.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "819": [
+        "They spanked him dead",
+        "spank-18.3",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "820": [
+        "They spanked him to death",
+        "spank-18.3",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "824": [
+        "Paula sliced the bag open",
+        "swat-18.2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,bag) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "825": [
+        "The cat clawed the couch to pieces",
+        "swat-18.2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,cat) & Component-of(b,couch) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
+    "1504": [
+        "Nora yanked the button loose",
+        "push-12-1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,button) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10012"
+    ],
   "814": [
     "Bill rolled the drawer open",
     "roll-51.3.1",
@@ -2253,6 +2323,7 @@ var events = {
     "11034": ["Instrument Force XPR", "ForceNetwork"],
     "11035": ["Physical Force", "ForceNetwork"],
     "11036": ["Manipulate Force", "ForceNetwork"],
+    "11037": ["Volitional COS", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2280,6 +2351,7 @@ var events = {
     "12027": { "child": "Instrument Force XPR", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12028": { "child": "Physical Force", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12029": { "child": "Manipulate Force", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12030": { "child": "Volitional COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2414,6 +2486,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Manipulate Force" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11036";
         var identifierToConstructionURL = "12029";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11037";
+        var identifierToConstructionURL = "12030";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4270,6 +4345,37 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalCOS = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": 5,  "y": 25, "text": "VOL"},
+                                        { "x": 115,  "y": 25, "text": "COS"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Theme"],
+
+                                "name" : "NetForceVolCOS" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4397,7 +4503,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous COS') { return NetworkAutonomousCOS; }
 
-    else if (FDCategory === 'Volitional COS') { return NetworkVolitionalCOS; }
+    else if (FDCategory === 'Volitional COS') { 
+
+        if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalCOS; 
+        }
+        else if (nameGeneralNetwork === 'GeneralMotionNetwork') {
+            return NetworkVolitionalCOS;
+        }
+    }
 
     else if (FDCategory === 'Volitional Create') { 
 

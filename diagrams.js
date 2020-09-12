@@ -303,7 +303,7 @@ var events = {
     "Instrument COS",
     "DirectedAchievement",
     "",
-    "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & MNP(a,b) & FRC(b,c)",
+    "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
     ""
   ],
   "1183": [
@@ -343,7 +343,7 @@ var events = {
         "Instrument Force",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,hammer) & Component-of(c,ice) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,hammer) & Component-of(c,ice) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "893": [
@@ -353,7 +353,7 @@ var events = {
         "Instrument Force",
         "UndirectedActivity",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,chisel) & Component-of(c,stone) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,chisel) & Component-of(c,stone) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "894": [
@@ -363,7 +363,7 @@ var events = {
         "Instrument Force",
         "CyclicAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,stick) & Component-of(c,ball) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,stick) & Component-of(c,ball) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "895": [
@@ -373,7 +373,7 @@ var events = {
         "Instrument Force",
         "UndirectedActivity",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Steve) & Component-of(b,acorns) & Component-of(c,Anna) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Steve) & Component-of(b,acorns) & Component-of(c,Anna) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "896": [
@@ -383,7 +383,7 @@ var events = {
         "Instrument Force",
         "CyclicAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Allison) & Component-of(b,needle) & Component-of(c,cloth) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Allison) & Component-of(b,needle) & Component-of(c,cloth) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "897": [
@@ -393,7 +393,7 @@ var events = {
         "Instrument Force",
         "UndirectedActivity",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,hand) & Component-of(c,child) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,hand) & Component-of(c,child) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "898": [
@@ -403,7 +403,7 @@ var events = {
         "Instrument Force",
         "CyclicAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "899": [
@@ -413,7 +413,7 @@ var events = {
         "Instrument Force",
         "CyclicAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,cat) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,cat) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "900": [
@@ -423,7 +423,7 @@ var events = {
         "Instrument Force",
         "CyclicAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,shoulder) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & MNP(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,shoulder) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
   "978": [
@@ -705,6 +705,56 @@ var events = {
         "IllustrationNetwork",
         "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & Component-of(c,record) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10007"
+    ],
+    "743": [
+        "Paul hit the window to pieces with a hammer",
+        "hit-18.1",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "744": [
+        "Paul hit the door open with his foot",
+        "hit-18.1",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,foot) & Component-of(c,door) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "749": [
+        "They spanked him to death with a bat",
+        "spank-18.3",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,They) & Component-of(b,bat) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "750": [
+        "The cat clawed the couch to pieces with her sharp nails",
+        "swat-18.2",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,cat) & Component-of(b,nails) & Component-of(c,couch) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10012"
+    ],
+    "751": [
+        "Paula swatted the fly dead with a dishcloth",
+        "swat-18.2",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10012"
     ],
     "805": [
         "Paul kicked the door open",
@@ -1251,7 +1301,7 @@ var events = {
         "Instrument Force XPR",
         "UndirectedActivity",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,paddle) & Component-of(c,child) & Component-of(d,back) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & UndAct(d,i,m,q4) & VOL(q1) & INTL(q2) & EXIST(q3) & EXIST(q4) & MNP(a,b) & FRC(b,c) & XPR(c,d)",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,paddle) & Component-of(c,child) & Component-of(d,back) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & UndAct(d,i,m,q4) & VOL(q1) & INTL(q2) & EXIST(q3) & EXIST(q4) & FRC(a,b) & FRC(b,c) & XPR(c,d)",
         "10012"
     ],
     "904": [

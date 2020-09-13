@@ -2355,6 +2355,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & Component-of(c,floor) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
+    "1506": [
+        "She squeezed the toothpaste out.",
+        "push-12-1-1",
+        "Sbj V Obj",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,she) & Component-of(b,toothpaste) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10012"
+    ],
     "10001": {"networks": ["RemoveDepriveNetwork"], "name": "Remove/Deprive"},
     "10002": {"networks": ["ProvidePlaceNetwork"], "name": "Provide/Place"},
     "10003": {"networks": ["GeneralMotionNetwork", "ThrowMotionNetwork", "SendMotionNetwork", "CarryMotionNetwork", "PursuitMotionNetwork"], "name": "Motion"},
@@ -2407,6 +2417,7 @@ var events = {
     "11038": ["Instrument COS", "ForceNetwork"],
     "11039": ["Physical COS", "ForceNetwork"],
     "11040": ["Volitional Place", "ForceNetwork"],
+    "11041": ["Volitional Remove", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2438,6 +2449,7 @@ var events = {
     "12031": { "child": "Instrument COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12032": { "child": "Physical COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12033": { "child": "Volitional Place", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12034": { "child": "Volitional Remove", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2584,6 +2596,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Place" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11040";
         var identifierToConstructionURL = "12033";
+    } else if (FDCategory === "Volitional Remove" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11041";
+        var identifierToConstructionURL = "12034";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4580,6 +4595,46 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalRemove = {        
+
+                                "arrow":    [   { "x": -20,  "y": 30}, 
+                                                { "x": 10,  "y": 30} ],
+
+                                "solid2":    [   { "x": 85,  "y": 30}, 
+                                                { "x": 115,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -20,  "y": 85}, 
+                                                { "x": 10,  "y": 85} ],
+
+                                "dottedFarLeft":    [   { "x": -55,  "y": 40}, 
+                                                { "x": -55,  "y": 75} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 10,  "y": 35, "text": "A1"},
+                                        { "x": 105,  "y": 35, "text": "A2"},
+                                        { "x": -95,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 40,  "y": 90, "text": "Theme"},
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 20,  "y": 25, "text": "-MER"},
+                                        { "x": 125,  "y": 25, "text": "EXIST"},
+                                        { "x": -20,  "y": 45, "text": "FRC"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": -20,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetForceVolRemove" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4591,7 +4646,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     }
 
-    else if (FDCategory === 'Volitional Remove') { return NetworkVolitionalRemove; }
+    if (FDCategory === 'Volitional Remove') { 
+
+        if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
+            return NetworkVolitionalRemove;
+        }
+        else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalRemove;
+        }
+
+    }
 
     else if (FDCategory === 'Volitional Place') { 
 
@@ -4944,6 +5008,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Instrument COS", "parent": "ForceNetwork"},
                                        {"network": "Physical COS", "parent": "ForceNetwork"},
                                        {"network": "Volitional Place", "parent": "ForceNetwork"}, 
+                                       {"network": "Volitional Remove", "parent": "ForceNetwork"}, 
                                        {"network": "Volitional Attend", "parent": "ForceNetwork"}, 
                                        {"network": "Instrument Attend", "parent": "ForceNetwork"},
                                        {"network": "Volitional Internal", "parent": "ForceNetwork"},
@@ -6896,8 +6961,10 @@ function makeNetworkPage () {
                 var height = 150;
             } else if (heightMultiplier < 10) {
                 var height = 290;
-            } else {
-                var height = 370;
+            } else if (heightMultiplier < 13) {
+                var height = 320;
+            }else {
+                var height = 390;
             }
 
 

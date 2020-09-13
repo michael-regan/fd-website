@@ -206,6 +206,46 @@ var events = {
     "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,NI) & Component-of(c,Mary) & DirAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10007"
 ],
+    "174": [
+        "Paul hit at the window",
+        "hit-18.1",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,window) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10012"
+    ],
+    "178": [
+        "Allison poked at the cloth",
+        "poke-19",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Allison) & Component-of(b,cloth) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10012"
+    ],
+    "179": [
+        "Paula swatted at the fly",
+        "swat-18.2",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,fly) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10012"
+    ],
+    "1503": [
+        "Nora jerked at the wall.",
+        "push-12-1",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,wall) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10012"
+    ],
   "181": [
     "Brian wiped at the counter",
     "wipe_manner-10.4.1",
@@ -2418,6 +2458,7 @@ var events = {
     "11039": ["Physical COS", "ForceNetwork"],
     "11040": ["Volitional Place", "ForceNetwork"],
     "11041": ["Volitional Remove", "ForceNetwork"],
+    "11042": ["Volitional Attend", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2450,6 +2491,7 @@ var events = {
     "12032": { "child": "Physical COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12033": { "child": "Volitional Place", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12034": { "child": "Volitional Remove", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12035": { "child": "Volitional Attend", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2599,6 +2641,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Remove" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11041";
         var identifierToConstructionURL = "12034";
+    } else if (FDCategory === "Volitional Attend" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11042";
+        var identifierToConstructionURL = "12035";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4635,6 +4680,36 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalAttend = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": 5,  "y": 25, "text": "VOL"},
+                                        { "x": 60,  "y": 45, "text": "ATT"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Target"],
+
+                                "name" : "NetForceVolAttend" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4692,6 +4767,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkVolitionalAttend;
         } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalAttend;
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalAttend;
         }
 
     }

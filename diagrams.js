@@ -276,6 +276,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,stick) & Component-of(c,fence) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10012"
     ],
+    "690": [
+        "Allison poked the needle through the cloth",
+        "poke-19",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Allison) & Component-of(b,needle) & Component-of(c,cloth) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10012"
+    ],
   "726": [
     "The drawer rolled to an open position",
     "roll-51.3.1",
@@ -2396,6 +2406,7 @@ var events = {
     "11037": ["Volitional COS", "ForceNetwork"],
     "11038": ["Instrument COS", "ForceNetwork"],
     "11039": ["Physical COS", "ForceNetwork"],
+    "11040": ["Volitional Place", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2426,6 +2437,7 @@ var events = {
     "12030": { "child": "Volitional COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12031": { "child": "Instrument COS", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12032": { "child": "Physical COS", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12033": { "child": "Volitional Place", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2569,6 +2581,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Physical COS" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11039";
         var identifierToConstructionURL = "12032";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11040";
+        var identifierToConstructionURL = "12033";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4493,6 +4508,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetForceInstCOS" 
                             };
 
+
      var NetworkForcePhysicalCOS = {        
 
                                 "arrow":    [   { "x": 60,  "y": 30}, 
@@ -4524,6 +4540,46 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalPlace = {        
+
+                                "arrow":    [   { "x": -20,  "y": 30}, 
+                                                { "x": 10,  "y": 30} ],
+
+                                "solid2":    [   { "x": 85,  "y": 30}, 
+                                                { "x": 115,  "y": 30} ],
+
+                                "arrow2":    [   { "x": -20,  "y": 85}, 
+                                                { "x": 10,  "y": 85} ],
+
+                                "dottedFarLeft":    [   { "x": -55,  "y": 40}, 
+                                                { "x": -55,  "y": 75} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 10,  "y": 35, "text": "A1"},
+                                        { "x": 105,  "y": 35, "text": "A2"},
+                                        { "x": -95,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 40,  "y": 90, "text": "Theme"},
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 20,  "y": 25, "text": "+MER"},
+                                        { "x": 125,  "y": 25, "text": "EXIST"},
+                                        { "x": -20,  "y": 45, "text": "FRC"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": -20,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetForceVolPlace" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4547,6 +4603,9 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         }
         else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalPlace;
+        }
+        else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalPlace;
         }
 
     }

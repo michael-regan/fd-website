@@ -546,6 +546,16 @@ var events = {
     "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)",
     ""
   ],
+    "991": [
+        "Paula hit the sticks together",
+        "hit-18.1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,sticks) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10012"
+    ],
   "992": [
     "Herman mixed the eggs",
     "mix-22.1-1",
@@ -1283,6 +1293,16 @@ var events = {
         "EmissionNetwork",
         "Theme-of(x,e) & Component-of(a,Paul) & DirAch(a,i,j,q1) & INTL(q1)",
         "10007"
+    ],
+    "935": [
+        "The grocery carts thudded together",
+        "bump-18.4-1",
+        "Sbj V",
+        "Autonomous Internal",
+        "CyclicAchievement",
+        "ForceNetwork",
+        "Theme-of(x,e) & Component-of(a,carts) & CycAch(a,i,j,q1) & INTL(q1)",
+        "10012"
     ],
   "872": [
         "David constructed a house",
@@ -2490,6 +2510,8 @@ var events = {
     "11041": ["Volitional Remove", "ForceNetwork"],
     "11042": ["Volitional Attend", "ForceNetwork"],
     "11043": ["Instrument Attend", "ForceNetwork"],
+    "11044": ["Volitional Internal", "ForceNetwork"],
+    "11045": ["Autonomous Internal", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2524,6 +2546,8 @@ var events = {
     "12034": { "child": "Volitional Remove", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12035": { "child": "Volitional Attend", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12036": { "child": "Instrument Attend", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12037": { "child": "Volitional Internal", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12038": { "child": "Autonomous Internal", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2679,6 +2703,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument Attend" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11043";
         var identifierToConstructionURL = "12036";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11044";
+        var identifierToConstructionURL = "12037";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11045";
+        var identifierToConstructionURL = "12038";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4784,12 +4814,69 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForceVolitionalInternal = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 115,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": 5,  "y": 25, "text": "VOL"},
+                                        { "x": 115,  "y": 25, "text": "INTL"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Theme (together)"],
+
+                                "name" : "NetForceVolInternal" 
+                            };
+
+
+     var NetworkForceAutonomousInternal = {        
+
+                                "dottedLeft":    [   { "x": 45,  "y": 40}, 
+                                                { "x": 5,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 45,  "y": 40}, 
+                                                { "x": 80,  "y": 70} ],
+
+
+                                "arrow2":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 70,  "y": 35, "text": "A0"},
+                                        { "x": -50,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 75,  "y": 90, "text": "Theme"}, 
+                                        { "x": 10,  "y": 25, "text": "INTL"},
+                                        { "x": 30,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Theme (together)"],
+
+                                "name" : "NetForceAutoIntl" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
             return NetworkAutonomousRemove;
-        }
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousRemove;
         }
 
@@ -4799,8 +4886,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
             return NetworkVolitionalRemove;
-        }
-        else if (nameGeneralNetwork === 'ForceNetwork') {
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalRemove;
         }
 
@@ -4810,14 +4896,11 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'MereologicalNetwork') {
             return NetworkMereologicalVolitionalPlace; ; 
-        }
-        else if (nameGeneralNetwork === 'IllustrationNetwork') {
+        } else if (nameGeneralNetwork === 'IllustrationNetwork') {
             return NetworkIllustrationVolitionalPlace;
-        }
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalPlace;
-        }
-        else if (nameGeneralNetwork === 'ForceNetwork') {
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalPlace;
         }
 
@@ -4829,8 +4912,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'ProvidePlaceNetwork') {
             return NetworkVolitionalProvide; 
-        }
-        else if (nameGeneralNetwork === 'IllustrationNetwork') {
+        } else if (nameGeneralNetwork === 'IllustrationNetwork') {
             return NetworkIllustrationVolitionalProvide;
         }
     }
@@ -4859,6 +4941,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCreationAutonomousInternal;
         } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousInternal;
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceAutonomousInternal;
         }
     }
 
@@ -4868,6 +4952,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkVolitionalInternal;
         } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalInternal;
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalInternal;
         }
 
     }
@@ -4878,8 +4964,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
             return NetworkVolitionalDeprive; 
-        }
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalDeprive;
         }
     }
@@ -4893,8 +4978,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'GeneralMotionNetwork') {
             return NetworkAutonomousMotion; 
-        }
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousMotion;
         }
     }
@@ -4905,14 +4989,11 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'GeneralMotionNetwork') {
             return NetworkGeneralVolitionalMotion; 
-        }
-        else if (nameGeneralNetwork === 'SendMotionNetwork') {
+        } else if (nameGeneralNetwork === 'SendMotionNetwork') {
             return NetworkSendVolitionalMotion;
-        }
-        else if (nameGeneralNetwork === 'CarryMotionNetwork') {
+        } else if (nameGeneralNetwork === 'CarryMotionNetwork') {
             return NetworkCarryVolitionalMotion;
-        }
-        else if (nameGeneralNetwork === 'ThrowMotionNetwork') {
+        } else if (nameGeneralNetwork === 'ThrowMotionNetwork') {
             return NetworkThrowVolitionalMotion;
         }
     }
@@ -4929,8 +5010,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalCOS; 
-        }
-        else if (nameGeneralNetwork === 'GeneralMotionNetwork') {
+        } else if (nameGeneralNetwork === 'GeneralMotionNetwork') {
             return NetworkVolitionalCOS;
         }
     }
@@ -4939,12 +5019,9 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'IllustrationNetwork') {
             return NetworkIllustrationVolitionalCreate; 
-        }
-        else if (nameGeneralNetwork === 'CreationNetwork') {
+        } else if (nameGeneralNetwork === 'CreationNetwork') {
             return NetworkCreationVolitionalCreate;
-        }
-
-        else if (nameGeneralNetwork === 'EmissionNetwork') {
+        } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionVolitionalCreate;
         }
 
@@ -4964,8 +5041,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalForce; 
-        }
-        else if (nameGeneralNetwork === 'ConstrainNetwork') {
+        } else if (nameGeneralNetwork === 'ConstrainNetwork') {
             return NetworkConstrainVolForce;
         }
     }

@@ -266,6 +266,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & EXIST(q2) & EXIST(q3) & FRC(a,b) & ATT(b,c)",
         "10012"
     ],
+    "1502": [
+        "Nora heaved the chair.",
+        "push-12",
+        "Sbj V Obj",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,chair) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10012"
+    ],
     "1503": [
         "Nora jerked at the wall.",
         "push-12-1",
@@ -416,6 +426,16 @@ var events = {
     "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)",
     ""
   ],
+    "854": [
+        "That chisel carved the statue",
+        "carve-21.2-2",
+        "Sbj V Obj",
+        "Physical Create",
+        "NonincrementalAccomplishment",
+        "ForceNetwork",
+        "Theme-of(y,e) & Component-of(a,chisel) & Component-of(b,statue) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & INTL(q1) & DES(q2) & FRC(a,b)",
+        "10012"
+    ],
     "892": [
         "Carol crushed the ice with a hammer",
         "carve-21.2-1",
@@ -2512,6 +2532,8 @@ var events = {
     "11043": ["Instrument Attend", "ForceNetwork"],
     "11044": ["Volitional Internal", "ForceNetwork"],
     "11045": ["Autonomous Internal", "ForceNetwork"],
+    "11046": ["Physical Create", "ForceNetwork"],
+    "11047": ["Volitional Motion", "ForceNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2548,6 +2570,8 @@ var events = {
     "12036": { "child": "Instrument Attend", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12037": { "child": "Volitional Internal", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12038": { "child": "Autonomous Internal", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12039": { "child": "Physical Create", "parentNetwork": "10013", "generalNetwork": "10012"},
+    "12040": { "child": "Volitional Motion", "parentNetwork": "10013", "generalNetwork": "10012"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2709,6 +2733,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "ForceNetwork") {
         var identifierToMappingURL = "11045";
         var identifierToConstructionURL = "12038";
+    } else if (FDCategory === "Physical Create" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11046";
+        var identifierToConstructionURL = "12039";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "ForceNetwork") {
+        var identifierToMappingURL = "11047";
+        var identifierToConstructionURL = "12040";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -4872,6 +4902,73 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkForcePhysicalCreate = {        
+
+                                "arrow":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 45,  "y": 35, "text": "A0"},
+                                        { "x": 100,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 120,  "y": 90, "text": "Theme"},
+                                        { "x": -15,  "y": 25, "text": "INTL"},
+                                        { "x": 120,  "y": 25, "text": "DES"},
+                                        { "x": 60,  "y": 45, "text": "FRC"},
+                                        { "x": 60,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity", "Theme"],
+
+                                "name" : "NetForcePhysCreate" 
+                            };
+
+     var NetworkForceVolitionalMotion = {        
+
+                                "arrow":    [   { "x": -20,  "y": 30}, 
+                                                { "x": 10,  "y": 30} ],
+
+                                "solid2":    [   { "x": 85,  "y": 30}, 
+                                                { "x": 115,  "y": 30} ],
+
+                                "arrow2":    [   { "x": 85,  "y": 85}, 
+                                                { "x": 115,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 10,  "y": 35, "text": "A1"},
+                                        { "x": 105,  "y": 35, "text": "A2"},
+                                        { "x": 10,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 125,  "y": 90, "text": "Theme"},
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 25,  "y": 25, "text": "MOT"},
+                                        { "x": 125,  "y": 25, "text": "EXIST"},
+                                        { "x": -20,  "y": 45, "text": "FRC"},
+                                        { "x": 85,  "y": 45, "text": "PTH"},
+                                        { "x": 80,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Figure", "Ground"],
+
+                                "name" : "NetForceVolMotion" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -4995,6 +5092,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCarryVolitionalMotion;
         } else if (nameGeneralNetwork === 'ThrowMotionNetwork') {
             return NetworkThrowVolitionalMotion;
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceVolitionalMotion;
         }
     }
 
@@ -5029,7 +5128,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Volitional Create Affect') { return NetworkCreationVolitionalCreateAffect; }
 
-    else if (FDCategory === 'Physical Create') { return NetworkEmissionPhysicalCreate; }
+    else if (FDCategory === 'Physical Create') { 
+
+        if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionPhysicalCreate; 
+        } else if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForcePhysicalCreate;
+        }
+    }
 
     else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
     
@@ -5242,6 +5348,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Instrument Attend", "parent": "ForceNetwork"},
                                        {"network": "Volitional Internal", "parent": "ForceNetwork"},
                                        {"network": "Autonomous Internal", "parent": "ForceNetwork"},
+                                       {"network": "Physical Create", "parent": "ForceNetwork"},
                                        {"network": "Volitional Motion", "parent": "ForceNetwork"},
                                     ],
 
@@ -7193,7 +7300,7 @@ function makeNetworkPage () {
             } else if (heightMultiplier < 13) {
                 var height = 320;
             }else {
-                var height = 390;
+                var height = 410;
             }
 
 

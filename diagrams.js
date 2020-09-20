@@ -2499,6 +2499,7 @@ var events = {
     "10012": {"networks": ["ForceNetwork", "ConstrainNetwork"], "name": "Force+Constrain"},
     "10013": {"networks": ["ForceNetwork"], "name": "Force"},
     "10014": {"networks": ["ConstrainNetwork"], "name": "Constrain"},
+    "10015": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -2606,6 +2607,10 @@ Steps to add diagrams
 (10) If general network is not created, add abbreviated diagrams to getMultipleNetworkPage
 (11) Add parents to networks in getMultipleNetworkPage
 (12) Check
+
+Steps for new network
+(1) add full network (or partial) in 10000s
+(2) Add individual networks to getMultipleNetworkPage
 
 */
 
@@ -5624,6 +5629,154 @@ function getMultipleNetworkPage (NetworkType) {
                             "name" : "Pursuit network" 
                         };
 
+
+    var COSNetwork = {        
+
+                            'textToAdd' : [
+                                    { "x": 50,  "y": 70, "text": "Patient"}, 
+                                    { "x": 55,  "y": 55, "text": "COS"},
+                                ],
+
+                            "caption": "ASC causal chains used with COS network",
+
+                            "chains": [{"network": "Autonomous COS", "parent": "COSNetwork"},
+                                       {"network": "Cause COS", "parent": "COSNetwork"},
+                                       {"network": "Physical COS", "parent": "COSNetwork"},
+                                       {"network": "Volitional COS", "parent": "COSNetwork"},
+                                       {"network": "Instrument COS", "parent": "COSNetwork"}
+                                    ],
+
+                            "name" : "COS network" 
+                        };
+
+
+    var CausativeCOSNetwork = {        
+
+                                "arrow":    [   { "x": 50,  "y": 65}, 
+                                                { "x": 80,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -30,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 100,  "y": 70, "text": "Theme"}, 
+                                        { "x": 50,  "y": 80, "text": "FRC"},
+                                        { "x": 100,  "y": 55, "text": "COS"},
+                                    ],
+
+                            "caption": "ASC causal chains used with causative COS network",
+
+                            "chains": [{"network": "Autonomous COS", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Physical COS", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Instrument COS", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Volitional COS", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Instrument Remove", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Volitional Remove", "parent": "CausativeCOSNetwork"},
+                                       {"network": "Instrument Attend", "parent": "CausativeCOSNetwork"}
+                                    ],
+
+                            "name" : "Causative COS network" 
+                        };
+
+    var AbsorbNetwork = {        
+
+                                "arrow1":    [   { "x": -75,  "y": 75}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "solid2":    [   { "x": 20,  "y": 75}, 
+                                                { "x": 50,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "rectangle": {
+                                              "x":55, 
+                                              "y":50,
+                                              "width": 140,
+                                              "height": 50
+                                },
+
+
+                                'textToAdd' : [
+                                        { "x": -150,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -75,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Substance"},
+                                        { "x": -35,  "y": 65, "text": "MER"},
+                                        { "x": 20,  "y": 90, "text": "PTH"},
+                                        { "x": 60,  "y": 80, "text": "Source_loc"},
+                                        { "x": 60,  "y": 65, "text": "EXIST"},
+                                        { "x": 120,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 120,  "y": 65, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 250,  "y": 80, "text": "Substance"},
+                                        { "x": 250,  "y": 65, "text": "COS"},
+                                        
+                                    ],
+
+                            "caption": "ASC causal chains used with absorb network",
+
+                            "chains": [
+                                       {"network": "Physical COS", "parent": "AbsorbNetwork"},
+                                       {"network": "Physical Remove", "parent": "AbsorbNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "AbsorbNetwork"},
+                                       {"network": "Volitional COS", "parent": "AbsorbNetwork"}
+                                    ],
+
+                            "name" : "Absorb network" 
+                        };
+
+
+    var IngestionNetwork = {        
+
+                                "arrow":    [   { "x": -120,  "y": 75}, 
+                                                { "x": -90,  "y": 75} ],
+
+                                "solid2":    [   { "x": 60,  "y": 75}, 
+                                                { "x": 90,  "y": 75} ],
+
+                                "arrow1":    [   { "x": -15,  "y": 75}, 
+                                                { "x": 15,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "rectangle": {
+                                              "x":95, 
+                                              "y":50,
+                                              "width": 100,
+                                              "height": 50
+                                },
+
+
+                                'textToAdd' : [
+                                        { "x": -150,  "y": 80, "text": "Eater"},
+                                        { "x": -150,  "y": 65, "text": "VOL"},
+                                        { "x": -120,  "y": 90, "text": "FRC"}, 
+                                        { "x": -75,  "y": 80, "text": "Instrument"},
+                                        { "x": -75,  "y": 65, "text": "INTL"},
+                                        { "x": -15,  "y": 90, "text": "FRC"}, 
+                                        { "x": 30,  "y": 80, "text": "Food"},
+                                        { "x": 30,  "y": 65, "text": "MER"},
+                                        { "x": 60,  "y": 90, "text": "PTH"},
+                                        { "x": 100,  "y": 80, "text": "Source_loc"},
+                                        { "x": 100,  "y": 65, "text": "EXIST"},
+                                        { "x": 160,  "y": 80, "text": "Eater"}, 
+                                        { "x": 160,  "y": 65, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 240,  "y": 80, "text": "Patient"},
+                                        { "x": 240,  "y": 65, "text": "COS"},
+                                        
+                                    ],
+
+                            "caption": "ASC causal chains used with ingestion network",
+
+                            "chains": [
+                                       {"network": "Volitional Remove", "parent": "IngestionNetwork"},
+                                       {"network": "Volitional COS", "parent": "IngestionNetwork"}
+                                    ],
+
+                            "name" : "Ingestion network" 
+                        };
+
     return eval(NetworkType);
 
     // if (NetworkType === "RemoveDepriveNetwork") {
@@ -7341,7 +7494,7 @@ function makeNetworkPage () {
             if (heightMultiplier < 8) {
                 var height = 150;
             } else if (heightMultiplier < 10) {
-                var height = 290;
+                var height = 230;
             } else if (heightMultiplier < 13) {
                 var height = 320;
             }else {

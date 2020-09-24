@@ -2499,7 +2499,7 @@ var events = {
     "10012": {"networks": ["ForceNetwork", "ConstrainNetwork"], "name": "Force+Constrain"},
     "10013": {"networks": ["ForceNetwork"], "name": "Force"},
     "10014": {"networks": ["ConstrainNetwork"], "name": "Constrain"},
-    "10015": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS"},
+    "10015": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork", "FeedingNetwork", "HurtNetwork"], "name": "COS"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -5284,10 +5284,9 @@ function getMultipleNetworkPage (NetworkType) {
                             "name" : "Provide/Place network" 
                         };
 
-
     var IllustrationNetwork = {        
 
-                                "solid2":    [   { "x": 100,  "y": 65}, 
+                                "solid2":    [   { "x": 110,  "y": 65}, 
                                                 { "x": 140,  "y": 65} ],
 
                                 "arrow":    [   { "x": 10,  "y": 65}, 
@@ -5295,9 +5294,9 @@ function getMultipleNetworkPage (NetworkType) {
 
                                 'textToAdd' : [
                                         { "x": -70,  "y": 70, "text": "Physical_entity"}, 
-                                        { "x": 50,  "y": 70, "text": "Creation"}, 
+                                        { "x": 55,  "y": 70, "text": "Creation"}, 
                                         { "x": 150,  "y": 70, "text": "Medium"},
-                                        { "x": 45,  "y": 55, "text": "DES | MER"},
+                                        { "x": 50,  "y": 55, "text": "DES | MER"},
                                         { "x": 150,  "y": 55, "text": "MER"},
                                         { "x": 10,  "y": 80, "text": "FRC"},
                                         { "x": 110,  "y": 80, "text": "PTH"}
@@ -5369,7 +5368,6 @@ function getMultipleNetworkPage (NetworkType) {
 
                             "name" : "Emission network" 
                         };
-
 
     var ForceNetwork = {        
 
@@ -5757,7 +5755,7 @@ function getMultipleNetworkPage (NetworkType) {
                                         { "x": 30,  "y": 80, "text": "Food"},
                                         { "x": 30,  "y": 65, "text": "MER"},
                                         { "x": 60,  "y": 90, "text": "PTH"},
-                                        { "x": 100,  "y": 80, "text": "Source_loc"},
+                                        { "x": 100,  "y": 80, "text": "Source_loc+"},
                                         { "x": 100,  "y": 65, "text": "EXIST"},
                                         { "x": 160,  "y": 80, "text": "Eater"}, 
                                         { "x": 160,  "y": 65, "text": "EXIST"},
@@ -5775,6 +5773,88 @@ function getMultipleNetworkPage (NetworkType) {
                                     ],
 
                             "name" : "Ingestion network" 
+                        };
+
+    var FeedingNetwork = {        
+
+                                "arrow":    [   { "x": -120,  "y": 75}, 
+                                                { "x": -90,  "y": 75} ],
+
+                                "solid2":    [   { "x": 60,  "y": 75}, 
+                                                { "x": 90,  "y": 75} ],
+
+                                "arrow1":    [   { "x": -15,  "y": 75}, 
+                                                { "x": 15,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "rectangle": {
+                                              "x":95, 
+                                              "y":50,
+                                              "width": 100,
+                                              "height": 50
+                                },
+
+
+                                'textToAdd' : [
+                                        { "x": -150,  "y": 80, "text": "Eater"},
+                                        { "x": -150,  "y": 65, "text": "VOL"},
+                                        { "x": -120,  "y": 90, "text": "FRC"}, 
+                                        { "x": -75,  "y": 80, "text": "Instrument"},
+                                        { "x": -75,  "y": 65, "text": "INTL"},
+                                        { "x": -15,  "y": 90, "text": "FRC"}, 
+                                        { "x": 30,  "y": 80, "text": "Food"},
+                                        { "x": 30,  "y": 65, "text": "MOT"},
+                                        { "x": 60,  "y": 90, "text": "PTH"},
+                                        { "x": 100,  "y": 80, "text": "Source_loc"},
+                                        { "x": 100,  "y": 65, "text": "EXIST"},
+                                        { "x": 160,  "y": 80, "text": "Eater"}, 
+                                        { "x": 160,  "y": 65, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 240,  "y": 80, "text": "Patient"},
+                                        { "x": 240,  "y": 65, "text": "COS"},
+                                        
+                                    ],
+
+                            "caption": "ASC causal chains used with feeding network",
+
+                            "chains": [
+                                       // {"network": "Volitional Remove", "parent": "FeedingNetwork"},
+                                       // {"network": "Volitional COS", "parent": "FeedingNetwork"}
+                                    ],
+
+                            "name" : "Feeding network" 
+                        };
+
+    var HurtNetwork = {        
+
+                                "solid2":    [   { "x": 90,  "y": 65}, 
+                                                { "x": 120,  "y": 65} ],
+
+                                "arrow":    [   { "x": -10,  "y": 65}, 
+                                                { "x": 20,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -50,  "y": 70, "text": "Agent"}, 
+                                        { "x": 30,  "y": 70, "text": "Body_part"}, 
+                                        { "x": 130,  "y": 70, "text": "Experiencer"},
+                                        { "x": -50,  "y": 55, "text": "VOL"},
+                                        { "x": 30,  "y": 55, "text": "COS"},
+                                        { "x": 130,  "y": 55, "text": "COS"},
+                                        { "x": -10,  "y": 80, "text": "FRC"},
+                                        { "x": 90,  "y": 80, "text": "AFF"}
+                                    ],
+
+                            "caption": "ASC causal chains used with hurt network",
+
+                            "chains": [
+                                       //  {"network": "Volitional Place", "parent": "HurtNetwork"},
+                                       // {"network": "Volitional Create", "parent": "HurtNetwork"},
+                                       // {"network": "Volitional Provide", "parent": "HurtNetwork"}
+                                    ],
+
+                            "name" : "Hurt network" 
                         };
 
     return eval(NetworkType);

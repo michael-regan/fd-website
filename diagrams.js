@@ -76,7 +76,7 @@ function addSecondDivText (myText, linkToConstructionPage, linkToGeneralNetwork,
 
             var btn = document.createElement("button");
 
-            var generalNetworkName = myText.replace(/([A-Z])/g, ' $1').trim();
+            var generalNetworkName = myText.replace(/([a-z])([A-Z])/g, '$1 $2').trim();
 
             btn.innerHTML = generalNetworkName;
   
@@ -396,16 +396,76 @@ var events = {
     "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
     "10003"
   ],
-  "743": [
-    "Bill broke the window with a ball",
-    "hit-18.1",
-    "Sbj V Obj ResultP with Obl",
-    "Instrument COS",
-    "DirectedAchievement",
-    "",
-    "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,ball) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
-    ""
-  ],
+    "733": [
+        "Tony bent the rod into a U with pliers",
+        "bend-45.2",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "734": [
+        "Tony bent the rod with pliers",
+        "bend-45.2",
+        "Sbj V Obj with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "735": [
+        "Tony broke the glass to pieces with a hammer",
+        "break-45.1",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,glass) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "736": [
+        "Tony broke the piggy bank open with a hammer",
+        "break-45.1",
+        "Sbj V Obj ResultP with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,bank) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "737": [
+        "Tony broke the window with a hammer",
+        "break-45.1",
+        "Sbj V Obj with Obl",
+        "Instrument COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "746": [
+        "Bill dried the clothes with a hairdryer",
+        "other_cos-45.4",
+        "Sbj V Obj with Obl",
+        "Instrument COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,hairdryer) & Component-of(c,clothes) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
+    "748": [
+        "Bill repaired the tractor with duct tape",
+        "remedy-45.7",
+        "Sbj V Obj with Obl",
+        "Instrument COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,tape) & Component-of(c,tractor) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "10015"
+    ],
   "1183": [
     "The dog barked at the cat.",
     "animal_sounds-38",
@@ -826,6 +886,206 @@ var events = {
         "Theme-of(y,e) & Component-of(a,secretary) & Component-of(b,speech) & Component-of(c,record) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10007"
     ],
+    "710": [
+        "The rod bent",
+        "bend-45.2",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,rod) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "711": [
+        "The copper rods bent easily",
+        "bend-45.2",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,rods) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "712": [
+        "The bridge gave way",
+        "break_down-45.8",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,bridge) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "713": [
+        "The window broke",
+        "break-45.1",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,window) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "714": [
+        "The glass broke into a thousand pieces",
+        "break-45.1",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,glass) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "715": [
+        "The crystal vases broke easily",
+        "break-45.1",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,vases) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+   "717": [
+        "The balloon rose slowly",
+        "calibrate_cos-45.6",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,balloon) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+   "718": [
+        "He died",
+        "die-42.4",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "719": [
+        "The roses bloomed",
+        "entity_specific_cos-45.5",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,roses) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "721": [
+        "The dough twirled into a pretzel",
+        "knead-26.5",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,dough) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "722": [
+        "The cotton clothes dried easily",
+        "other_cos-45.4",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "723": [
+        "The clothes dried",
+        "other_cos-45.4",
+        "Sbj V",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "724": [
+        "The clothes dried wrinkled",
+        "other_cos-45.4-1",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "725": [
+        "The new tractors repaired easily",
+        "remedy-45.7-1",
+        "Sbj V",
+        "Autonomous COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,tractors) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "729": [
+        "The sailor drowned",
+        "suffocate-40.7",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,sailor) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "730": [
+        "He choked/suffocated to death",
+        "suffocate-40.7",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,He) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "731": [
+        "He turned from a prince into a frog",
+        "turn-26.6.1",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "732": [
+        "He turned into a frog",
+        "turn-26.6.1",
+        "Sbj V ResultP",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
+    "1239": [
+        "Sharon fainted from hunger.",
+        "change_bodily_state-40.8.4",
+        "Sbj V from/by Obl",
+        "Cause COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,hunger) & Component-of(b,Sharon) & TranStPhPunctInit(a,i,j,q1) & DirAch(b,i,k,q2) & EXIST(q1) & COS(q2) & CAUSE(a,b)",
+        "10015"
+    ],
+    "1240": [
+        "Sharon fainted.",
+        "change_bodily_state-40.8.4",
+        "Sbj V",
+        "Autonomous COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(x,e) & Component-of(a,Sharon) & DirAch(a,i,j,q1) & COS(q1)",
+        "10015"
+    ],
     "743": [
         "Paul hit the window to pieces with a hammer",
         "hit-18.1",
@@ -876,6 +1136,36 @@ var events = {
         "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
+    "753": [
+        "The pliers bent the rod",
+        "bend-45.2",
+        "Sbj V Obj",
+        "Physical COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,pliers) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "754": [
+        "The hammer broke the window",
+        "break-45.1",
+        "Sbj V Obj",
+        "Physical COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "763": [
+        "The hairdryer dried the clothes",
+        "other_cos-45.4",
+        "Sbj V Obj",
+        "Physical COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,hairdryer) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
     "760": [
         "The stick hit the door open",
         "hit-18.1",
@@ -895,6 +1185,146 @@ var events = {
         "ForceNetwork",
         "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
         "10012"
+    ],
+    "773": [
+        "Tony bent the rod",
+        "bend-45.2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "774": [
+        "Tony bent the rod into a U",
+        "bend-45.2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "775": [
+        "Tony folded the flaps open",
+        "bend-45.2",
+        "NP V NP ADJ",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,flaps) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "777": [
+        "Tony broke the window",
+        "break-45.1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "778": [
+        "Tony broke the piggy bank open",
+        "break-45.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,bank) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "779": [
+        "Tony broke the glass to pieces",
+        "break-45.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,glass) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "807": [
+        "I kneaded the dough into a loaf",
+        "knead-26.5",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,dough) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "809": [
+        "Bill dried the clothes",
+        "other_cos-45.4",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "813": [
+        "Bill repaired the tractor",
+        "remedy-45.7",
+        "Sbj V Obj",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,tractor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "822": [
+        "The pirates drowned the sailor",
+        "suffocate-40.7",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,pirates) & Component-of(b,sailor) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "823": [
+        "The pirate choked the sailor to death",
+        "suffocate-40.7",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,pirate) & Component-of(b,sailor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "828": [
+        "The witch turned him from a prince into a frog",
+        "turn-26.6.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "829": [
+        "The witch turned him into a frog",
+        "turn-26.6.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "909": [
+        "I kneaded the dough",
+        "knead-26.5",
+        "Sbj V Obj",
+        "Volitional Force",
+        "UndirectedActivity",
+        "COSNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,dough) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10015"
     ],
     "805": [
         "Paul kicked the door open",
@@ -2500,6 +2930,10 @@ var events = {
     "10013": {"networks": ["ForceNetwork"], "name": "Force"},
     "10014": {"networks": ["ConstrainNetwork"], "name": "Constrain"},
     "10015": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork", "FeedingNetwork", "HurtNetwork"], "name": "COS"},
+    "10016": {"networks": ["COSNetwork", "CausativeCOSNetwork"], "name": "COS+CausativeCOS"},
+    "10017": {"networks": ["COSNetwork"], "name": "COS"},
+    "10018": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork"], "name": "COS+CausativeCOS+Absorb"},
+    "10019": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS+CausativeCOS+Absorb+Ingest"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -2547,6 +2981,11 @@ var events = {
     "11046": ["Physical Create", "ForceNetwork"],
     "11047": ["Volitional Motion", "ForceNetwork"],
     "11048": ["Volitional Force", "ConstrainNetwork"],
+    "11049": ["Autonomous COS", "COSNetwork"],
+    "11050": ["Cause COS", "COSNetwork"],
+    "11051": ["Physical COS", "COSNetwork"],
+    "11052": ["Volitional COS", "COSNetwork"],
+    "11053": ["Instrument COS", "COSNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -2586,6 +3025,11 @@ var events = {
     "12039": { "child": "Physical Create", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12040": { "child": "Volitional Motion", "parentNetwork": "10013", "generalNetwork": "10012"},
     "12041": { "child": "Volitional Force", "parentNetwork": "10014", "generalNetwork": "10012"},
+    "12042": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
+    "12043": { "child": "Cause COS", "parentNetwork": "10017", "generalNetwork": "10015"},
+    "12044": { "child": "Physical COS", "parentNetwork": "10018", "generalNetwork": "10015"},
+    "12045": { "child": "Volitional COS", "parentNetwork": "10019", "generalNetwork": "10015"},
+    "12046": { "child": "Instrument COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -2760,6 +3204,21 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Force" && generalNetworkName == "ConstrainNetwork") {
         var identifierToMappingURL = "11048";
         var identifierToConstructionURL = "12041";
+    } else if (FDCategory === "Autonomous COS" && generalNetworkName == "COSNetwork") {
+        var identifierToMappingURL = "11049";
+        var identifierToConstructionURL = "12042";
+    } else if (FDCategory === "Cause COS" && generalNetworkName == "COSNetwork") {
+        var identifierToMappingURL = "11050";
+        var identifierToConstructionURL = "12043";
+    } else if (FDCategory === "Physical COS" && generalNetworkName == "COSNetwork") {
+        var identifierToMappingURL = "11051";
+        var identifierToConstructionURL = "12044";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "COSNetwork") {
+        var identifierToMappingURL = "11052";
+        var identifierToConstructionURL = "12045";
+    } else if (FDCategory === "Instrument COS" && generalNetworkName == "COSNetwork") {
+        var identifierToMappingURL = "11053";
+        var identifierToConstructionURL = "12046";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -5019,6 +5478,121 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetConstrainVolForce" 
                             };
 
+     var NetworkCOSAutonomousCOS = {        
+
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 65,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 90, "text": "Patient"},  
+                                        { "x": 20,  "y": 25, "text": "PROP"},
+                                        { "x": 20,  "y": 80, "text": "PROP"},
+                                    ],
+
+                                "argTextToAdd": ["Patient"],
+
+                                "name" : "NetCOSAutoCOS" 
+                            };
+
+     var NetworkCOSCauseCOS = {     
+
+                                "arrow":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],   
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                    { "x": 65,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 15,  "y": 35, "text": "A0"},
+                                        { "x": 35,  "y": 35, "text": "A1"},
+                                        { "x": 50,  "y": 90, "text": "Patient"},  
+                                        { "x": -25,  "y": 25, "text": "EXIST"},
+                                        { "x": 50,  "y": 25, "text": "PROP"},
+                                        { "x": 50,  "y": 80, "text": "PROP"},
+                                        { "x": 10,  "y": 45, "text": "CAUSE"}
+                                    ],
+
+                                "argTextToAdd": ["Event", "Patient"],
+
+                                "name" : "NetCOSCauseCOS" 
+                            };
+
+     var NetworkCOSPhysicalCOS = {     
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],   
+
+                                "dottedLeft":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 15,  "y": 35, "text": "A0"},
+                                        { "x": 55,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 90, "text": "Patient"},  
+                                        { "x": 70,  "y": 25, "text": "PROP"},
+                                        { "x": 70,  "y": 80, "text": "PROP"},
+                                        { "x": 30,  "y": 45, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity", "Patient"],
+
+                                "name" : "NetCOSPhysCOS" 
+                            };
+
+
+     var NetworkCOSVolitionalCOS = {     
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],   
+
+                                "dottedLeft":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": 55,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 90, "text": "Patient"}, 
+                                        { "x": -15,  "y": 25, "text": "VOL"}, 
+                                        { "x": 70,  "y": 25, "text": "PROP"},
+                                        { "x": 70,  "y": 80, "text": "PROP"},
+                                        { "x": 30,  "y": 45, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Patient"],
+
+                                "name" : "NetCOSVolCOS" 
+                            };
+
+     var NetworkCOSInstrumentCOS = {     
+
+                                "arrow":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],   
+
+                                "arrow2":    [   { "x": -25,  "y": 30}, 
+                                                { "x": 5,  "y": 30} ],
+
+                                "dottedLeft":    [   { "x": 145,  "y": 40}, 
+                                                    { "x": 145,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": 115,  "y": 35, "text": "A2"},
+                                        { "x": 130,  "y": 90, "text": "Patient"},  
+                                        { "x": 15,  "y": 25, "text": "INTL"},
+                                        { "x": 130,  "y": 25, "text": "PROP"},
+                                        { "x": 130,  "y": 80, "text": "PROP"},
+                                        { "x": -25,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Physical_entity", "Patient"],
+
+                                "name" : "NetCOSInstCOS" 
+                            };
+
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -5154,7 +5728,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Mutual') { return NetworkMutual; }
 
-    else if (FDCategory === 'Autonomous COS') { return NetworkAutonomousCOS; }
+    else if (FDCategory === 'Autonomous COS') { 
+
+        if (nameGeneralNetwork === 'COSNetwork') {
+            return NetworkCOSAutonomousCOS; 
+        } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeAutonomousCOS;
+        }
+    }
 
     else if (FDCategory === 'Volitional COS') { 
 
@@ -5162,8 +5743,30 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkForceVolitionalCOS; 
         } else if (nameGeneralNetwork === 'GeneralMotionNetwork') {
             return NetworkVolitionalCOS;
+        } else if (nameGeneralNetwork === 'COSNetwork') {
+            return NetworkCOSVolitionalCOS;
         }
     }
+
+    else if (FDCategory === 'Instrument COS') { 
+
+        if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceInstrumentCOS; 
+        } else if (nameGeneralNetwork === 'COSNetwork') {
+            return NetworkCOSInstrumentCOS;
+        }
+    }
+
+    else if (FDCategory === 'Physical COS') { 
+
+        if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForcePhysicalCOS; 
+        } else if (nameGeneralNetwork === 'COSNetwork') {
+            return NetworkCOSPhysicalCOS;
+        }
+    }
+
+    else if (FDCategory === 'Cause COS') { return NetworkCOSCauseCOS; }
 
     else if (FDCategory === 'Volitional Create') { 
 
@@ -5212,10 +5815,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Physical Force') { return NetworkForcePhysicalForce; }
 
     else if (FDCategory === 'Manipulate Force') { return NetworkForceManipulateForce; }
-
-    else if (FDCategory === 'Instrument COS') { return NetworkForceInstrumentCOS; }
-
-    else if (FDCategory === 'Physical COS') { return NetworkForcePhysicalCOS; }
 
     else if (FDCategory === 'Instrument Attend') { return NetworkForceInstrumentAttend; }
 
@@ -7398,7 +7997,9 @@ function createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements)
 
     var linkToGeneralNetwork = arrayNetworkElements[0]["link"]; // e.g., 10003
 
-    var parentNetworkTitle = d["parent"].replace(/([A-Z])/g, ' $1').trim();
+    var parentNetworkTitle = d["parent"].replace(/([a-z])([A-Z])/g, '$1 $2').trim();
+
+    //var parentNetworkTitle = d["parent"].replace(/([A-Z])/g, ' $1').trim();
 
     var linkToConstructionPage = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[1];
 
@@ -7769,7 +8370,7 @@ function makeConstructionFDPage () {
 
     for (j=0; j<parentNetworks.length; j++) {
 
-        var parentNetworkTitle = parentNetworks[j].replace(/([A-Z])/g, ' $1').trim();
+        var parentNetworkTitle = parentNetworks[j].replace(/([a-z])([A-Z])/g, '$1 $2').trim();
         var currentLocation = window.location.href;
 
         

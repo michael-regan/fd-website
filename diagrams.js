@@ -596,6 +596,236 @@ var events = {
         "Theme-of(y,e) & Component-of(a,DDT) & Component-of(b,insects) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
         "10015"
     ],
+    "772": [
+        "I flossed",
+        "floss-41.2.1",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "776": [
+        "Celia brushed the baby's hair",
+        "braid-41.2.2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Celia) & Component-of(b,the baby's hair) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "783": [
+        "Claire painted the wall into a splotchy mess",
+        "coloring-24",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "784": [
+        "Claire painted the wall",
+        "coloring-24",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedActivity",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "785": [
+        "Claire painted the wall red",
+        "coloring-24",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedActivity",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "786": [
+        "Carol cut the envelop open",
+        "cut-21.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelop) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "787": [
+        "Carol cut the envelope into pieces",
+        "cut-21.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelope) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "788": [
+        "Carol cut through the bread",
+        "cut-21.1",
+        "Sbj V ResultP Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,y) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "789": [
+        "Carol cut the bread",
+        "cut-21.1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,bread) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "790": [
+        "Carol cut her finger",
+        "cut-21.1-1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,finger) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "791": [
+        "The Romans destroyed the city",
+        "destroy-44",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Romans) & Component-of(b,city) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "792": [
+        "Cynthia devoured the pizza",
+        "devour-39.4",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "797": [
+        "The hygienist flossed my teeth",
+        "floss-41.2.1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,hygienist) & Component-of(b,teeth) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "803": [
+        "Sheila groomed the horse",
+        "groom-41.1.2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Sheila) & Component-of(b,horse) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "808": [
+        "Brutus murdered Julius Caesar",
+        "murder-42.1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Brutus) & Component-of(b,Caesar) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+   "810": [
+        "The witch poisoned Snow White",
+        "poison-42.2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,Snow White) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "811": [
+        "The Boston Strangler strangled his victims to death",
+        "poison-42.2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "812": [
+        "The Boston Strangler strangled his victims dead",
+        "poison-42.2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Boston Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+   "817": [
+        "Herman whipped cream",
+        "shake-22.3-1-1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "818": [
+        "Herman gathered the students into a group",
+        "shake-22.3-2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,students) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1325": [
+        "Jennifer baked the potatoes to a crisp.",
+        "cooking-45.3",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1326": [
+        "Jennifer baked the potatoes.",
+        "cooking-45.3",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1507": [
+        "John took the radio apart.",
+        "render-29.90",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,John) & Component-of(b,radio) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
     "1331": [
         "This oven baked the potatoes.",
         "cooking-45.3",
@@ -735,6 +965,26 @@ var events = {
         "ForceNetwork",
         "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,shoulder) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
+    ],
+    "942": [
+        "This knife cuts well",
+        "cut-21.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "InherentState",
+        "CausativeCOSNetwork",
+        "Theme-of(x,e) & Component-of(a,knife) & InhStPh(a,i,j,q1) & INTL(q1)",
+        "10015"
+    ],
+    "943": [
+        "The bread cut easily",
+        "cut-21.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(x,e) & Component-of(a,bread) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10015"
     ],
   "978": [
     "The child and her mother clung together",
@@ -3045,6 +3295,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & Component-of(c,floor) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
     ],
+    "1135": [
+        "Susan cut the recipes from the magazine with a sharp knife",
+        "cut-21.1",
+        "Sbj V Obj PathP with Obl",
+        "Instrument Remove",
+        "IncrementalAccomplishment",
+        "CausativeCOSNetwork",
+        "Theme-of(z,e) & Component-of(a,Susan) & Component-of(b,knife) & Component-of(c,recipes) & Component-of(d,magazine) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & InhStPh(d,i,m,q4) & VOL(q1) & -MER(q3) & FRC(a,b) & FRC(b,c) & PTH(c,d)",
+        "10015"
+    ],
     "1328": [
         "The potatoes baked to a crisp",
         "cooking-45.3",
@@ -3104,6 +3364,8 @@ var events = {
     "10017": {"networks": ["COSNetwork"], "name": "COS"},
     "10018": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork"], "name": "COS+CausativeCOS+Absorb"},
     "10019": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS+CausativeCOS+Absorb+Ingest"},
+    "10020": {"networks": ["CausativeCOSNetwork", "AbsorbNetwork"], "name": "CausativeCOS+Absorb"},
+    "10021": {"networks": ["CausativeCOSNetwork"], "name": "CausativeCOS"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -3159,6 +3421,9 @@ var events = {
     "11054": ["Autonomous COS", "CausativeCOSNetwork"],
     "11055": ["Physical COS", "CausativeCOSNetwork"],
     "11056": ["Instrument COS", "CausativeCOSNetwork"],
+    "11057": ["Volitional COS", "CausativeCOSNetwork"],
+    "11058": ["Autonomous Internal", "CausativeCOSNetwork"],
+    "11059": ["Instrument Remove", "CausativeCOSNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3203,6 +3468,8 @@ var events = {
     "12044": { "child": "Physical COS", "parentNetwork": "10018", "generalNetwork": "10015"},
     "12045": { "child": "Volitional COS", "parentNetwork": "10019", "generalNetwork": "10015"},
     "12046": { "child": "Instrument COS", "parentNetwork": "10016", "generalNetwork": "10015"},
+    "12047": { "child": "Autonomous Internal", "parentNetwork": "10020", "generalNetwork": "10015"},
+    "12048": { "child": "Instrument Remove", "parentNetwork": "10021", "generalNetwork": "10015"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -3402,6 +3669,15 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument COS" && generalNetworkName == "CausativeCOSNetwork") {
         var identifierToMappingURL = "11056";
         var identifierToConstructionURL = "12046";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "CausativeCOSNetwork") {
+        var identifierToMappingURL = "11057";
+        var identifierToConstructionURL = "12045";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "CausativeCOSNetwork") {
+        var identifierToMappingURL = "11058";
+        var identifierToConstructionURL = "12047";
+    } else if (FDCategory === "Instrument Remove" && generalNetworkName == "CausativeCOSNetwork") {
+        var identifierToMappingURL = "11059";
+        var identifierToConstructionURL = "12048";
     }
 
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -5865,6 +6141,100 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausativeCOSInstCOS" 
                             };
 
+     var NetworkCausativeCOSVolitionalCOS = {     
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],   
+
+                                "arrow2":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],  
+
+                                "dottedLeft":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": 55,  "y": 35, "text": "A1"},
+                                        { "x": -45,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 70,  "y": 90, "text": "Patient"}, 
+                                        { "x": -15,  "y": 25, "text": "VOL"}, 
+                                        { "x": 70,  "y": 25, "text": "PROP"},
+                                        { "x": 70,  "y": 80, "text": "PROP"},
+                                        { "x": 30,  "y": 45, "text": "FRC"},
+                                        { "x": 30,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Patient"],
+
+                                "name" : "NetCausativeCOSVolCOS" 
+                            };
+
+     var NetworkCausativeCOSAutonomousInternal = {        
+ 
+                                "arrow2":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],  
+
+                                "dottedLeft":    [   { "x": -10,  "y": 40}, 
+                                                    { "x": -10,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 15,  "y": 35, "text": "A0"},
+                                        { "x": -45,  "y": 90, "text": "Physical_entity"}, 
+                                        { "x": 70,  "y": 90, "text": "Patient"}, 
+                                        { "x": -45,  "y": 25, "text": "INTL"},
+                                        { "x": 70,  "y": 80, "text": "PROP"},
+                                        { "x": 30,  "y": 100, "text": "FRC"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity"],
+
+                                "name" : "NetCausativeCOSAutoInt" 
+                            };
+
+
+     var NetworkCausativeCOSInstrumentRemove = {     
+
+                                "arrow":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],   
+
+                                "arrow1":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+                                "arrow2":    [   { "x": -25,  "y": 30}, 
+                                                { "x": 5,  "y": 30} ],
+
+                                "solid1":    [   { "x": 170,  "y": 30}, 
+                                                { "x": 200,  "y": 30} ],
+
+                                "dottedLeft":    [   { "x": 145,  "y": 40}, 
+                                                    { "x": 145,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -45,  "y": 40}, 
+                                                    { "x": 45,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": 115,  "y": 35, "text": "A2"},
+                                        { "x": 190,  "y": 35, "text": "A3"},
+                                        { "x": 130,  "y": 90, "text": "Patient"},  
+                                        { "x": 15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 15,  "y": 25, "text": "INTL"},
+                                        { "x": 130,  "y": 25, "text": "-MER"},
+                                        { "x": 210,  "y": 25, "text": "EXIST"},
+                                        { "x": 130,  "y": 80, "text": "PROP"},
+                                        { "x": -25,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "FRC"},
+                                        { "x": 170,  "y": 45, "text": "PTH"},
+                                        { "x": 90,  "y": 100, "text": "FRC"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Physical_entity", "Patient", "Ground"],
+
+                                "name" : "NetCausativeCOSInstRem" 
+                            };
+
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -5873,7 +6243,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousRemove;
         }
-
     }
 
     if (FDCategory === 'Volitional Remove') { 
@@ -5883,7 +6252,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalRemove;
         }
+    }
 
+    if (FDCategory === 'Instrument Remove') { 
+
+        if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeCOSInstrumentRemove;
+        } 
     }
 
     else if (FDCategory === 'Volitional Place') { 
@@ -5937,6 +6312,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionAutonomousInternal;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceAutonomousInternal;
+        } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeCOSAutonomousInternal;
         }
     }
 
@@ -6017,6 +6394,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkVolitionalCOS;
         } else if (nameGeneralNetwork === 'COSNetwork') {
             return NetworkCOSVolitionalCOS;
+        } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeCOSVolitionalCOS;
         }
     }
 

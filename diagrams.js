@@ -236,6 +236,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,fly) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
         "10012"
     ],
+    "182": [
+        "Carol cut at the bread with a knife",
+        "cut-21.1",
+        "Sbj V at/on/about/of/over Obl with Obl",
+        "Instrument Attend",
+        "DirectedAchievement",
+        "CausativeCOSNetwork",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,bread) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & EXIST(q2) & EXIST(q3) & FRC(a,b) & ATT(b,c)",
+        "10015"
+    ],
     "183": [
         "Allison poked at the cloth with the needle",
         "poke-19",
@@ -1112,9 +1122,9 @@ var events = {
     "Sbj V Obj PathP",
     "Volitional Remove",
     "IncrementalAccomplishment",
-    "",
+    "CausativeCOSNetwork",
     "Theme-of(y,e) & Component-of(a,fans) & Component-of(b,copies) & Component-of(c,magazines) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10015"
   ],
   "1138": [
     "I unscrewed the handle",
@@ -3366,6 +3376,7 @@ var events = {
     "10019": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS+CausativeCOS+Absorb+Ingest"},
     "10020": {"networks": ["CausativeCOSNetwork", "AbsorbNetwork"], "name": "CausativeCOS+Absorb"},
     "10021": {"networks": ["CausativeCOSNetwork"], "name": "CausativeCOS"},
+    "10022": {"networks": ["CausativeCOSNetwork", "IngestionNetwork"], "name": "CausativeCOS+Ingest"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -3424,6 +3435,8 @@ var events = {
     "11057": ["Volitional COS", "CausativeCOSNetwork"],
     "11058": ["Autonomous Internal", "CausativeCOSNetwork"],
     "11059": ["Instrument Remove", "CausativeCOSNetwork"],
+    "11060": ["Volitional Remove", "CausativeCOSNetwork"],
+    "11061": ["Instrument Attend", "CausativeCOSNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3470,6 +3483,8 @@ var events = {
     "12046": { "child": "Instrument COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     "12047": { "child": "Autonomous Internal", "parentNetwork": "10020", "generalNetwork": "10015"},
     "12048": { "child": "Instrument Remove", "parentNetwork": "10021", "generalNetwork": "10015"},
+    "12049": { "child": "Volitional Remove", "parentNetwork": "10022", "generalNetwork": "10015"},
+    "12050": { "child": "Instrument Attend", "parentNetwork": "10021", "generalNetwork": "10015"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -3678,7 +3693,14 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument Remove" && generalNetworkName == "CausativeCOSNetwork") {
         var identifierToMappingURL = "11059";
         var identifierToConstructionURL = "12048";
+    } else if (FDCategory === "Volitional Remove" && generalNetworkName == "CausativeCOSNetwork") {
+        var identifierToMappingURL = "11060";
+        var identifierToConstructionURL = "12049";
+    } else if (FDCategory === "Instrument Attend" && generalNetworkName == "CausativeCOSNetwork") {
+        var identifierToMappingURL = "11061";
+        var identifierToConstructionURL = "12050";
     }
+
 
     return [identifierToMappingURL, identifierToConstructionURL]
 
@@ -6236,6 +6258,81 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                             };
 
 
+     var NetworkCausativeCOSVolitionalRemove = {     
+
+                                "arrow1":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+                                "arrow2":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "solid1":    [   { "x": 110,  "y": 30}, 
+                                                { "x": 140,  "y": 30} ],
+
+                                "dottedLeft":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -15,  "y": 40}, 
+                                                    { "x": -15,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},
+                                        { "x": 55,  "y": 35, "text": "A1"},
+                                        { "x": 130,  "y": 35, "text": "A2"},
+                                        { "x": 70,  "y": 90, "text": "Patient"},  
+                                        { "x": -50,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": -30,  "y": 25, "text": "VOL"},
+                                        { "x": 70,  "y": 25, "text": "-MER"},
+                                        { "x": 150,  "y": 25, "text": "EXIST"},
+                                        { "x": 70,  "y": 80, "text": "PROP"},
+                                        { "x": 30,  "y": 45, "text": "FRC"},
+                                        { "x": 110,  "y": 45, "text": "PTH"},
+                                        { "x": 30,  "y": 100, "text": "FRC"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Patient", "Ground"],
+
+                                "name" : "NetCausativeCOSVolRem" 
+                            };
+
+     var NetworkCausativeCOSInstrumentAttend = {     
+
+                                "arrow":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],   
+
+                                "arrow1":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+                                "arrow2":    [   { "x": -25,  "y": 30}, 
+                                                { "x": 5,  "y": 30} ],
+
+                                "dottedLeft":    [   { "x": 55,  "y": 40}, 
+                                                    { "x": 55,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -45,  "y": 40}, 
+                                                    { "x": 45,  "y": 75} ],
+
+                                "dottedRight":    [   { "x": 145,  "y": 40}, 
+                                                { "x": 145,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": -25,  "y": 35, "text": "A0"},
+                                        { "x": 15,  "y": 35, "text": "A1"},
+                                        { "x": 115,  "y": 35, "text": "A2"},
+                                        { "x": 130,  "y": 90, "text": "Patient"},  
+                                        { "x": 15,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": -65,  "y": 25, "text": "VOL"},
+                                        { "x": 130,  "y": 80, "text": "PROP"},
+                                        { "x": -25,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "ATT"},
+                                        { "x": 90,  "y": 100, "text": "FRC"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Physical_entity", "Patient"],
+
+                                "name" : "NetCausativeCOSInstAtt" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -6251,6 +6348,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkVolitionalRemove;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalRemove;
+        } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeCOSVolitionalRemove;
         }
     }
 
@@ -6472,7 +6571,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Manipulate Force') { return NetworkForceManipulateForce; }
 
-    else if (FDCategory === 'Instrument Attend') { return NetworkForceInstrumentAttend; }
+    else if (FDCategory === 'Instrument Attend') { 
+
+        if (nameGeneralNetwork === 'ForceNetwork') {
+            return NetworkForceInstrumentAttend; 
+        } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
+            return NetworkCausativeCOSInstrumentAttend;
+        }
+    }
 
 }
 

@@ -1196,6 +1196,16 @@ var events = {
     "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,walk) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
     ""
   ],
+    "1169": [
+        "The cow took in nutrients from her feed.",
+        "absorb-39.8",
+        "Sbj V Obj PathP",
+        "Physical Remove",
+        "IncrementalAccomplishment",
+        "AbsorbNetwork",
+        "Theme-of(z,e) & Component-of(a,cow) & Component-of(b,nutrients) & Component-of(c,feed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10015"
+    ],
   "755": [
     "The strong winds cleared the sky.",
     "clear-10.3",
@@ -3315,6 +3325,16 @@ var events = {
         "Theme-of(z,e) & Component-of(a,Susan) & Component-of(b,knife) & Component-of(c,recipes) & Component-of(d,magazine) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & InhStPh(d,i,m,q4) & VOL(q1) & -MER(q3) & FRC(a,b) & FRC(b,c) & PTH(c,d)",
         "10015"
     ],
+    "1170": [
+        "The cotton absorbed the water.",
+        "absorb-39.8",
+        "Sbj V Obj",
+        "Physical COS",
+        "IncrementalAccomplishment",
+        "AbsorbNetwork",
+        "Theme-of(y,e) & Component-of(a,cotton) & Component-of(b,water) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
     "1328": [
         "The potatoes baked to a crisp",
         "cooking-45.3",
@@ -3377,6 +3397,7 @@ var events = {
     "10020": {"networks": ["CausativeCOSNetwork", "AbsorbNetwork"], "name": "CausativeCOS+Absorb"},
     "10021": {"networks": ["CausativeCOSNetwork"], "name": "CausativeCOS"},
     "10022": {"networks": ["CausativeCOSNetwork", "IngestionNetwork"], "name": "CausativeCOS+Ingest"},
+    "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -3437,6 +3458,8 @@ var events = {
     "11059": ["Instrument Remove", "CausativeCOSNetwork"],
     "11060": ["Volitional Remove", "CausativeCOSNetwork"],
     "11061": ["Instrument Attend", "CausativeCOSNetwork"],
+    "11062": ["Physical COS", "AbsorbNetwork"],
+    "11063": ["Physical Remove", "AbsorbNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3485,6 +3508,7 @@ var events = {
     "12048": { "child": "Instrument Remove", "parentNetwork": "10021", "generalNetwork": "10015"},
     "12049": { "child": "Volitional Remove", "parentNetwork": "10022", "generalNetwork": "10015"},
     "12050": { "child": "Instrument Attend", "parentNetwork": "10021", "generalNetwork": "10015"},
+    "12051": { "child": "Physical Remove", "parentNetwork": "10023", "generalNetwork": "10015"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -3699,6 +3723,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Instrument Attend" && generalNetworkName == "CausativeCOSNetwork") {
         var identifierToMappingURL = "11061";
         var identifierToConstructionURL = "12050";
+    } else if (FDCategory === "Physical COS" && generalNetworkName == "AbsorbNetwork") {
+        var identifierToMappingURL = "11062";
+        var identifierToConstructionURL = "12044";
+    } else if (FDCategory === "Physical Remove" && generalNetworkName == "AbsorbNetwork") {
+        var identifierToMappingURL = "11063";
+        var identifierToConstructionURL = "12051";
     }
 
 
@@ -6333,6 +6363,120 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausativeCOSInstAtt" 
                             };
 
+     var NetworkAbsorbPhysicalCOS = { 
+
+                                "arrow":    [   { "x": -75,  "y": 30}, 
+                                                { "x": -45,  "y": 30} ],  
+
+                                "arrow1":    [   { "x": -75,  "y": 75}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "solid2":    [   { "x": 20,  "y": 75}, 
+                                                { "x": 50,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -105,  "y": 40}, 
+                                                    { "x": -105,  "y": 70} ],
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 265,  "y": 70} ],
+
+                                "rectangle": {
+                                              "x":55, 
+                                              "y":50,
+                                              "width": 140,
+                                              "height": 50
+                                },
+
+
+                                'textToAdd' : [
+                                        { "x": -90,  "y": 35, "text": "A0"},
+                                        { "x": -50,  "y": 35, "text": "A1"},
+                                        { "x": -150,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -150,  "y": 25, "text": "INTL"},
+                                        { "x": -75,  "y": 45, "text": "FRC"},
+                                        { "x": -75,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Substance"},
+                                        { "x": -35,  "y": 65, "text": "MER"},
+                                        { "x": 20,  "y": 90, "text": "PTH"},
+                                        { "x": 60,  "y": 80, "text": "Source_loc"},
+                                        { "x": 60,  "y": 65, "text": "EXIST"},
+                                        { "x": 120,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 120,  "y": 65, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 250,  "y": 80, "text": "Substance"},
+                                        { "x": 250,  "y": 65, "text": "COS"},
+                                        
+                                    ], 
+
+                                "argTextToAdd": ["Physical_entity", "Patient"],                                  
+
+                                "name" : "NetAbsorbPhysCOS" 
+                            };
+
+     var NetworkAbsorbPhysicalRemove = { 
+
+                                "arrow":    [   { "x": -75,  "y": 30}, 
+                                                { "x": -45,  "y": 30} ],  
+
+                                "arrow1":    [   { "x": -75,  "y": 75}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "solid1":    [   { "x": 20,  "y": 30}, 
+                                                { "x": 50,  "y": 30} ],
+
+                                "solid2":    [   { "x": 20,  "y": 75}, 
+                                                { "x": 50,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -105,  "y": 40}, 
+                                                    { "x": -105,  "y": 70} ],
+
+                                "dottedLeft":    [   { "x": -10,  "y": 40}, 
+                                                    { "x": -10,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 80,  "y": 40}, 
+                                                    { "x": 80,  "y": 65} ],
+                                "rectangle": {
+                                              "x":55, 
+                                              "y":50,
+                                              "width": 140,
+                                              "height": 50
+                                },
+
+
+                                'textToAdd' : [
+                                        { "x": -90,  "y": 35, "text": "A0"},
+                                        { "x": -40,  "y": 35, "text": "A1"},
+                                        { "x": 40,  "y": 35, "text": "A2"},
+                                        { "x": -150,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -150,  "y": 25, "text": "INTL"},
+                                        { "x": -75,  "y": 45, "text": "FRC"},
+                                        { "x": -75,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Substance"},
+                                        { "x": -25,  "y": 25, "text": "-MER"},
+                                        { "x": -35,  "y": 70, "text": "MER"},
+                                        { "x": 20,  "y": 90, "text": "PTH"},
+                                        { "x": 60,  "y": 80, "text": "Source_loc"},
+                                        { "x": 60,  "y": 25, "text": "EXIST"},
+                                        { "x": 60,  "y": 70, "text": "EXIST"},
+                                        { "x": 120,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 120,  "y": 70, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 250,  "y": 80, "text": "Substance"},
+                                        { "x": 250,  "y": 70, "text": "COS"},
+                                        
+                                    ], 
+
+                                "argTextToAdd": ["Physical_entity", "Patient", "Ground"],                                  
+
+                                "name" : "NetAbsorbPhysRemove" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -6357,6 +6501,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
         if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSInstrumentRemove;
+        } 
+    }
+
+    if (FDCategory === 'Physical Remove') { 
+
+        if (nameGeneralNetwork === 'AbsorbNetwork') {
+            return NetworkAbsorbPhysicalRemove;
         } 
     }
 
@@ -6517,8 +6668,9 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCOSPhysicalCOS;
         } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSPhysicalCOS;
+        } else if (nameGeneralNetwork === 'AbsorbNetwork') {
+            return NetworkAbsorbPhysicalCOS;
         }
-
     }
 
     else if (FDCategory === 'Cause COS') { return NetworkCOSCauseCOS; }
@@ -6993,7 +7145,7 @@ function getMultipleNetworkPage (NetworkType) {
 
                             'textToAdd' : [
                                     { "x": 50,  "y": 70, "text": "Patient"}, 
-                                    { "x": 55,  "y": 55, "text": "COS"},
+                                    { "x": 50,  "y": 60, "text": "COS"},
                                 ],
 
                             "caption": "ASC causal chains used with COS network",
@@ -7018,7 +7170,7 @@ function getMultipleNetworkPage (NetworkType) {
                                         { "x": -30,  "y": 70, "text": "Physical_entity"}, 
                                         { "x": 100,  "y": 70, "text": "Theme"}, 
                                         { "x": 50,  "y": 80, "text": "FRC"},
-                                        { "x": 100,  "y": 55, "text": "COS"},
+                                        { "x": 100,  "y": 60, "text": "COS"},
                                     ],
 
                             "caption": "ASC causal chains used with causative COS network",
@@ -7059,15 +7211,15 @@ function getMultipleNetworkPage (NetworkType) {
                                         { "x": -150,  "y": 80, "text": "Physical_entity"},
                                         { "x": -75,  "y": 90, "text": "FRC"}, 
                                         { "x": -35,  "y": 80, "text": "Substance"},
-                                        { "x": -35,  "y": 65, "text": "MER"},
+                                        { "x": -35,  "y": 70, "text": "MER"},
                                         { "x": 20,  "y": 90, "text": "PTH"},
                                         { "x": 60,  "y": 80, "text": "Source_loc"},
-                                        { "x": 60,  "y": 65, "text": "EXIST"},
+                                        { "x": 60,  "y": 70, "text": "EXIST"},
                                         { "x": 120,  "y": 80, "text": "Physical_entity"}, 
-                                        { "x": 120,  "y": 65, "text": "EXIST"},
+                                        { "x": 120,  "y": 70, "text": "EXIST"},
                                         { "x": 200,  "y": 90, "text": "FRC"},
                                         { "x": 250,  "y": 80, "text": "Substance"},
-                                        { "x": 250,  "y": 65, "text": "COS"},
+                                        { "x": 250,  "y": 70, "text": "COS"},
                                         
                                     ],
 
@@ -7086,20 +7238,20 @@ function getMultipleNetworkPage (NetworkType) {
 
     var IngestionNetwork = {        
 
-                                "arrow":    [   { "x": -120,  "y": 75}, 
-                                                { "x": -90,  "y": 75} ],
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
 
-                                "solid2":    [   { "x": 60,  "y": 75}, 
-                                                { "x": 90,  "y": 75} ],
+                                "solid2":    [   { "x": 80,  "y": 75}, 
+                                                { "x": 110,  "y": 75} ],
 
-                                "arrow1":    [   { "x": -15,  "y": 75}, 
-                                                { "x": 15,  "y": 75} ],
+                                "arrow1":    [   { "x": 5,  "y": 75}, 
+                                                { "x": 35,  "y": 75} ],
 
-                                "arrow2":    [   { "x": 200,  "y": 75}, 
-                                                { "x": 230,  "y": 75} ],
+                                "arrow2":    [   { "x": 220,  "y": 75}, 
+                                                { "x": 250,  "y": 75} ],
 
                                 "rectangle": {
-                                              "x":95, 
+                                              "x":115, 
                                               "y":50,
                                               "width": 100,
                                               "height": 50
@@ -7107,22 +7259,22 @@ function getMultipleNetworkPage (NetworkType) {
 
 
                                 'textToAdd' : [
-                                        { "x": -150,  "y": 80, "text": "Eater"},
-                                        { "x": -150,  "y": 65, "text": "VOL"},
-                                        { "x": -120,  "y": 90, "text": "FRC"}, 
-                                        { "x": -75,  "y": 80, "text": "Instrument"},
-                                        { "x": -75,  "y": 65, "text": "INTL"},
-                                        { "x": -15,  "y": 90, "text": "FRC"}, 
-                                        { "x": 30,  "y": 80, "text": "Food"},
-                                        { "x": 30,  "y": 65, "text": "MER"},
-                                        { "x": 60,  "y": 90, "text": "PTH"},
-                                        { "x": 100,  "y": 80, "text": "Source_loc+"},
-                                        { "x": 100,  "y": 65, "text": "EXIST"},
-                                        { "x": 160,  "y": 80, "text": "Eater"}, 
-                                        { "x": 160,  "y": 65, "text": "EXIST"},
-                                        { "x": 200,  "y": 90, "text": "FRC"},
-                                        { "x": 240,  "y": 80, "text": "Patient"},
-                                        { "x": 240,  "y": 65, "text": "COS"},
+                                        { "x": -130,  "y": 80, "text": "Eater"},
+                                        { "x": -130,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -55,  "y": 80, "text": "Instrument"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 5,  "y": 90, "text": "FRC"}, 
+                                        { "x": 50,  "y": 80, "text": "Food"},
+                                        { "x": 50,  "y": 70, "text": "MER"},
+                                        { "x": 80,  "y": 90, "text": "PTH"},
+                                        { "x": 120,  "y": 80, "text": "Source_loc+"},
+                                        { "x": 120,  "y": 70, "text": "EXIST"},
+                                        { "x": 180,  "y": 80, "text": "Eater"}, 
+                                        { "x": 180,  "y": 70, "text": "EXIST"},
+                                        { "x": 220,  "y": 90, "text": "FRC"},
+                                        { "x": 260,  "y": 80, "text": "Patient"},
+                                        { "x": 260,  "y": 70, "text": "COS"},
                                         
                                     ],
 
@@ -7160,21 +7312,21 @@ function getMultipleNetworkPage (NetworkType) {
 
                                 'textToAdd' : [
                                         { "x": -150,  "y": 80, "text": "Eater"},
-                                        { "x": -150,  "y": 65, "text": "VOL"},
+                                        { "x": -150,  "y": 70, "text": "VOL"},
                                         { "x": -120,  "y": 90, "text": "FRC"}, 
                                         { "x": -75,  "y": 80, "text": "Instrument"},
-                                        { "x": -75,  "y": 65, "text": "INTL"},
+                                        { "x": -75,  "y": 70, "text": "INTL"},
                                         { "x": -15,  "y": 90, "text": "FRC"}, 
                                         { "x": 30,  "y": 80, "text": "Food"},
-                                        { "x": 30,  "y": 65, "text": "MOT"},
+                                        { "x": 30,  "y": 70, "text": "MOT"},
                                         { "x": 60,  "y": 90, "text": "PTH"},
                                         { "x": 100,  "y": 80, "text": "Source_loc"},
-                                        { "x": 100,  "y": 65, "text": "EXIST"},
+                                        { "x": 100,  "y": 70, "text": "EXIST"},
                                         { "x": 160,  "y": 80, "text": "Eater"}, 
-                                        { "x": 160,  "y": 65, "text": "EXIST"},
+                                        { "x": 160,  "y": 70, "text": "EXIST"},
                                         { "x": 200,  "y": 90, "text": "FRC"},
                                         { "x": 240,  "y": 80, "text": "Patient"},
-                                        { "x": 240,  "y": 65, "text": "COS"},
+                                        { "x": 240,  "y": 70, "text": "COS"},
                                         
                                     ],
 
@@ -7200,9 +7352,9 @@ function getMultipleNetworkPage (NetworkType) {
                                         { "x": -50,  "y": 70, "text": "Agent"}, 
                                         { "x": 30,  "y": 70, "text": "Body_part"}, 
                                         { "x": 130,  "y": 70, "text": "Experiencer"},
-                                        { "x": -50,  "y": 55, "text": "VOL"},
-                                        { "x": 30,  "y": 55, "text": "COS"},
-                                        { "x": 130,  "y": 55, "text": "COS"},
+                                        { "x": -50,  "y": 60, "text": "VOL"},
+                                        { "x": 30,  "y": 60, "text": "COS"},
+                                        { "x": 130,  "y": 60, "text": "COS"},
                                         { "x": -10,  "y": 80, "text": "FRC"},
                                         { "x": 90,  "y": 80, "text": "AFF"}
                                     ],
@@ -8130,7 +8282,9 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
 
             var value = currentNetwork[key];
 
-            if (key === "textToAdd") {
+            if (key === "rectangle"){
+                void 0;
+            } else if (key === "textToAdd") {
 
                 var newTextToAdd = [];
 
@@ -8815,9 +8969,8 @@ function getArrayNetworkElementsForTablePage (d) {
 
     var arrayNetworkElements = [];
 
-    //console.log(d);
-
     for (var identifier in events) {
+
 
         if ( events[identifier].length>6 ) {
 
@@ -8827,6 +8980,8 @@ function getArrayNetworkElementsForTablePage (d) {
                 var vnclass = events[identifier][1];
                 var asc = events[identifier][2];
                 var generalNetworkLink = events[identifier][7];
+
+                console.log(sentence);
 
                 // var specificNetworkTableLink = getSpecificNetworkTableIdentifierForURL(d["network"], d["parent"])[0];
 

@@ -726,6 +726,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
         "10015"
     ],
+    "796": [
+        "Paul inhaled water",
+        "exhale-40.1.3-2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "AbsorbNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,water) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
     "797": [
         "The hygienist flossed my teeth",
         "floss-41.2.1",
@@ -994,6 +1004,16 @@ var events = {
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
         "Theme-of(x,e) & Component-of(a,bread) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10015"
+    ],
+    "948": [
+        "Paul inhaled",
+        "exhale-40.1.3-2",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "AbsorbNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & DirAch(a,i,j,q1) & INTL(q1)",
         "10015"
     ],
   "978": [
@@ -3460,6 +3480,8 @@ var events = {
     "11061": ["Instrument Attend", "CausativeCOSNetwork"],
     "11062": ["Physical COS", "AbsorbNetwork"],
     "11063": ["Physical Remove", "AbsorbNetwork"],
+    "11064": ["Autonomous Internal", "AbsorbNetwork"],
+    "11065": ["Volitional COS", "AbsorbNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3729,6 +3751,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Physical Remove" && generalNetworkName == "AbsorbNetwork") {
         var identifierToMappingURL = "11063";
         var identifierToConstructionURL = "12051";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "AbsorbNetwork") {
+        var identifierToMappingURL = "11064";
+        var identifierToConstructionURL = "12047";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "AbsorbNetwork") {
+        var identifierToMappingURL = "11065";
+        var identifierToConstructionURL = "12045";
     }
 
 
@@ -6390,7 +6418,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                               "height": 50
                                 },
 
-
                                 'textToAdd' : [
                                         { "x": -90,  "y": 35, "text": "A0"},
                                         { "x": -50,  "y": 35, "text": "A1"},
@@ -6399,15 +6426,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": -75,  "y": 45, "text": "FRC"},
                                         { "x": -75,  "y": 90, "text": "FRC"}, 
                                         { "x": -35,  "y": 80, "text": "Substance"},
-                                        { "x": -35,  "y": 65, "text": "MER"},
+                                        { "x": -35,  "y": 70, "text": "MER"},
                                         { "x": 20,  "y": 90, "text": "PTH"},
                                         { "x": 60,  "y": 80, "text": "Source_loc"},
-                                        { "x": 60,  "y": 65, "text": "EXIST"},
+                                        { "x": 60,  "y": 70, "text": "EXIST"},
                                         { "x": 120,  "y": 80, "text": "Physical_entity"}, 
-                                        { "x": 120,  "y": 65, "text": "EXIST"},
+                                        { "x": 120,  "y": 70, "text": "EXIST"},
                                         { "x": 200,  "y": 90, "text": "FRC"},
                                         { "x": 250,  "y": 80, "text": "Substance"},
-                                        { "x": 250,  "y": 65, "text": "COS"},
+                                        { "x": 250,  "y": 70, "text": "COS"},
                                         
                                     ], 
 
@@ -6448,7 +6475,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                               "height": 50
                                 },
 
-
                                 'textToAdd' : [
                                         { "x": -90,  "y": 35, "text": "A0"},
                                         { "x": -40,  "y": 35, "text": "A1"},
@@ -6475,6 +6501,104 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Physical_entity", "Patient", "Ground"],                                  
 
                                 "name" : "NetAbsorbPhysRemove" 
+                            };
+
+     var NetworkAbsorbAutonomousInternal = { 
+
+
+                                "arrow1":    [   { "x": -75,  "y": 75}, 
+                                                { "x": -45,  "y": 75} ],
+
+                                "solid2":    [   { "x": 20,  "y": 75}, 
+                                                { "x": 50,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 200,  "y": 75}, 
+                                                { "x": 230,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -105,  "y": 40}, 
+                                                    { "x": -105,  "y": 70} ],
+
+                                "rectangle": {
+                                              "x":55, 
+                                              "y":50,
+                                              "width": 140,
+                                              "height": 50
+                                },
+
+                                'textToAdd' : [
+                                        { "x": -90,  "y": 35, "text": "A0"},
+                                        { "x": -150,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -150,  "y": 25, "text": "INTL"},
+                                        { "x": -75,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Substance"},
+                                        { "x": -35,  "y": 70, "text": "MER"},
+                                        { "x": 20,  "y": 90, "text": "PTH"},
+                                        { "x": 60,  "y": 80, "text": "Source_loc"},
+                                        { "x": 60,  "y": 70, "text": "EXIST"},
+                                        { "x": 120,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 120,  "y": 70, "text": "EXIST"},
+                                        { "x": 200,  "y": 90, "text": "FRC"},
+                                        { "x": 250,  "y": 80, "text": "Substance"},
+                                        { "x": 250,  "y": 70, "text": "COS"},
+                                        
+                                    ], 
+
+                                "argTextToAdd": ["Physical_entity"],                                  
+
+                                "name" : "NetAbsorbAutoInt" 
+                            };
+
+     var NetworkAbsorbVolitionalCOS = { 
+
+                                "arrow":    [   { "x": -55,  "y": 30}, 
+                                                { "x": -25,  "y": 30} ],  
+
+                                "arrow1":    [   { "x": -55,  "y": 75}, 
+                                                { "x": -25,  "y": 75} ],
+
+                                "solid2":    [   { "x": 40,  "y": 75}, 
+                                                { "x": 70,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 220,  "y": 75}, 
+                                                { "x": 250,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -85,  "y": 40}, 
+                                                    { "x": -85,  "y": 70} ],
+
+                                "dottedLeft":    [   { "x": 20,  "y": 40}, 
+                                                    { "x": 285,  "y": 70} ],
+
+                                "rectangle": {
+                                              "x":75, 
+                                              "y":50,
+                                              "width": 140,
+                                              "height": 50
+                                },
+
+                                'textToAdd' : [
+                                        { "x": -70,  "y": 35, "text": "A0"},
+                                        { "x": -30,  "y": 35, "text": "A1"},
+                                        { "x": -130,  "y": 80, "text": "Physical_entity"},
+                                        { "x": -130,  "y": 25, "text": "VOL"},
+                                        { "x": -20,  "y": 25, "text": "PROP"},
+                                        { "x": -55,  "y": 45, "text": "FRC"},
+                                        { "x": -55,  "y": 90, "text": "FRC"}, 
+                                        { "x": -15,  "y": 80, "text": "Substance"},
+                                        { "x": -15,  "y": 70, "text": "MER"},
+                                        { "x": 40,  "y": 90, "text": "PTH"},
+                                        { "x": 80,  "y": 80, "text": "Source_loc"},
+                                        { "x": 80,  "y": 70, "text": "EXIST"},
+                                        { "x": 140,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 140,  "y": 70, "text": "EXIST"},
+                                        { "x": 220,  "y": 90, "text": "FRC"},
+                                        { "x": 270,  "y": 80, "text": "Substance"},
+                                        { "x": 270,  "y": 70, "text": "COS"},
+                                        
+                                    ], 
+
+                                "argTextToAdd": ["Physical_entity", "Substance"],                                  
+
+                                "name" : "NetAbsorbVolCOS" 
                             };
 
     if (FDCategory === 'Autonomous Remove') { 
@@ -6564,6 +6688,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkForceAutonomousInternal;
         } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSAutonomousInternal;
+        } else if (nameGeneralNetwork === 'AbsorbNetwork') {
+            return NetworkAbsorbAutonomousInternal;
         }
     }
 
@@ -6646,6 +6772,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCOSVolitionalCOS;
         } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSVolitionalCOS;
+        } else if (nameGeneralNetwork === 'AbsorbNetwork') {
+            return NetworkAbsorbVolitionalCOS;
         }
     }
 

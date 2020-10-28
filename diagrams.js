@@ -316,6 +316,26 @@ var events = {
     "Theme-of(y,e) & Component-of(a,dragon) & Component-of(b,fire) & Component-of(c,Mary) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10007"
 ],
+    "213": [
+        "Tessa hurt herself",
+        "hurt-40.8.3",
+        "Sbj V Refl",
+        "Volitional COS",
+        "DirectedAchievement",
+        "HurtNetwork",
+        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,herself) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "224": [
+        "Tessa hurt/sprained her ankle.",
+        "hurt-40.8.3",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedAchievement",
+        "HurtNetwork",
+        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,ankle) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
   "228": [
         "Jackie chased the thief",
         "chase-51.6",
@@ -356,6 +376,36 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & MOT(q2) & FRC(a,b)",
         "10003"
   ],
+    "650": [
+        "Cynthia sipped from the drink",
+        "chew-39.2",
+        "Sbj V PathP",
+        "Volitional Remove",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & Component-of(c,drink) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10015"
+    ],
+    "651": [
+        "He ate off of the table",
+        "eat-39.1",
+        "Sbj V PathP",
+        "Volitional Remove",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,he) & Component-of(b,NI) & Component-of(c,table) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10015"
+    ],
+    "652": [
+        "He drank out of the goblet",
+        "eat-39.1",
+        "Sbj V PathP",
+        "Volitional Remove",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,he) & Component-of(b,NI) & Component-of(c,goblet) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10015"
+    ],
     "686": [
         "Paula hit the stick against/on the fence",
         "hit-18.1",
@@ -604,6 +654,206 @@ var events = {
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
         "Theme-of(y,e) & Component-of(a,DDT) & Component-of(b,insects) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "767": [
+        "Cynthia nibbled",
+        "chew-39.2-1",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "768": [
+        "Cynthia sipped",
+        "chew-39.2-2",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "769": [
+        "Cynthia ate",
+        "eat-39.1-1",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "770": [
+        "Cynthia drank",
+        "eat-39.1-2",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "771": [
+        "He's using",
+        "eat-39.1-3",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "781": [
+        "Cynthia nibbled the carrot",
+        "chew-39.2-1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "782": [
+        "Cynthia sipped the drink",
+        "chew-39.2-2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,drink) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "792": [
+        "Cynthia devoured the pizza",
+        "devour-39.4",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "793": [
+        "Cynthia ate the peach",
+        "eat-39.1-1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peach) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "794": [
+        "Cynthia drank the wine",
+        "eat-39.1-2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,wine) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "798": [
+        "Cynthia gobbled the pizza",
+        "gobble-39.3-1",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "799": [
+        "Cynthia gobbled the pizza down",
+        "gobble-39.3-1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "800": [
+        "Cynthia gobbled the pizza up",
+        "gobble-39.3-1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "801": [
+        "Cynthia quaffed her mead",
+        "gobble-39.3-2",
+        "Sbj V Obj",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mead) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "802": [
+        "Cynthia quaffed down the mixture",
+        "gobble-39.3-2",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "IncrementalAccomplishment",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mixture) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1371": [
+        "Cynthia breakfasted on peaches.",
+        "dine-39.5",
+        "Sbj V on Obl",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1419": [
+        "Cynthia gorged on peaches.",
+        "gorge-39.6",
+        "Sbj V on Obl",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "162": [
+        "Cynthia nibbled on the carrot",
+        "chew-39.2",
+        "Sbj V on Obl",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "1372": [
+        "Cynthia breakfasted.",
+        "dine-39.5",
+        "Sbj V",
+        "Volitional COS",
+        "UndirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10015"
+    ],
+    "172": [
+        "Cynthia nibbled at the carrot",
+        "chew-39.2",
+        "Sbj V at Obl",
+        "Volitional COS",
+        "DirectedActivity",
+        "IngestionNetwork",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
         "10015"
     ],
     "772": [
@@ -3413,8 +3663,8 @@ var events = {
     "10016": {"networks": ["COSNetwork", "CausativeCOSNetwork"], "name": "COS+CausativeCOS"},
     "10017": {"networks": ["COSNetwork"], "name": "COS"},
     "10018": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork"], "name": "COS+CausativeCOS+Absorb"},
-    "10019": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork"], "name": "COS+CausativeCOS+Absorb+Ingest"},
-    "10020": {"networks": ["CausativeCOSNetwork", "AbsorbNetwork"], "name": "CausativeCOS+Absorb"},
+    "10019": {"networks": ["COSNetwork", "CausativeCOSNetwork", "AbsorbNetwork", "IngestionNetwork", "HurtNetwork"], "name": "COS+CausativeCOS+Absorb+Ingest+Hurt"},
+    "10020": {"networks": ["CausativeCOSNetwork", "AbsorbNetwork", "HurtNetwork"], "name": "CausativeCOS+Absorb+Hurt"},
     "10021": {"networks": ["CausativeCOSNetwork"], "name": "CausativeCOS"},
     "10022": {"networks": ["CausativeCOSNetwork", "IngestionNetwork"], "name": "CausativeCOS+Ingest"},
     "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
@@ -3482,6 +3732,9 @@ var events = {
     "11063": ["Physical Remove", "AbsorbNetwork"],
     "11064": ["Autonomous Internal", "AbsorbNetwork"],
     "11065": ["Volitional COS", "AbsorbNetwork"],
+    "11066": ["Volitional Remove", "IngestionNetwork"],
+    "11067": ["Volitional COS", "IngestionNetwork"],
+    "11068": ["Volitional COS", "HurtNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3756,6 +4009,15 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
         var identifierToConstructionURL = "12047";
     } else if (FDCategory === "Volitional COS" && generalNetworkName == "AbsorbNetwork") {
         var identifierToMappingURL = "11065";
+        var identifierToConstructionURL = "12045";
+    } else if (FDCategory === "Volitional Remove" && generalNetworkName == "IngestionNetwork") {
+        var identifierToMappingURL = "11066";
+        var identifierToConstructionURL = "12049";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "IngestionNetwork") {
+        var identifierToMappingURL = "11067";
+        var identifierToConstructionURL = "12045";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "HurtNetwork") {
+        var identifierToMappingURL = "11068";
         var identifierToConstructionURL = "12045";
     }
 
@@ -6315,7 +6577,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausativeCOSInstRem" 
                             };
 
-
      var NetworkCausativeCOSVolitionalRemove = {     
 
                                 "arrow1":    [   { "x": 30,  "y": 85}, 
@@ -6601,6 +6862,173 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetAbsorbVolCOS" 
                             };
 
+
+     var NetworkIngestionVolitionalRemove = {     
+
+                                "arrow":    [   { "x": -80,  "y": 75}, 
+                                                { "x": -50,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 10,  "y": 75}, 
+                                                { "x": 40,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 230,  "y": 75}, 
+                                                { "x": 260,  "y": 75} ],
+
+                                "arrow3":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],
+
+                                "solid1":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],
+
+                                "solid2":    [   { "x": 90,  "y": 75}, 
+                                                { "x": 120,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -15,  "y": 40}, 
+                                                    { "x": -100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                    { "x": 65,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 140,  "y": 40}, 
+                                                    { "x": 140,  "y": 60} ],
+
+                                "rectangle": {
+                                              "x":125, 
+                                              "y":50,
+                                              "width": 100,
+                                              "height": 50
+                                },
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},
+                                        { "x": 30,  "y": 35, "text": "A1"},
+                                        { "x": 110,  "y": 35, "text": "A2"},
+                                        { "x": -30,  "y": 25, "text": "VOL"},
+                                        { "x": 50,  "y": 25, "text": "-MER"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": 10,  "y": 45, "text": "FRC"},
+                                        { "x": 90,  "y": 45, "text": "PTH"},
+                                        { "x": -110,  "y": 80, "text": "Eater"},
+                                        { "x": -110,  "y": 70, "text": "VOL"},
+                                        { "x": -80,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Utensil"},
+                                        { "x": -35,  "y": 70, "text": "INTL"},
+                                        { "x": 10,  "y": 90, "text": "FRC"}, 
+                                        { "x": 55,  "y": 80, "text": "Food"},
+                                        { "x": 55,  "y": 70, "text": "MER"},
+                                        { "x": 90,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Container"},
+                                        { "x": 130,  "y": 70, "text": "EXIST"},
+                                        { "x": 190,  "y": 80, "text": "Eater"}, 
+                                        { "x": 190,  "y": 70, "text": "EXIST"},
+                                        { "x": 240,  "y": 90, "text": "FRC"},
+                                        { "x": 270,  "y": 80, "text": "Patient"},
+                                        { "x": 270,  "y": 70, "text": "PROP"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Theme", "Ground"],
+
+                                "name" : "NetIngestionVolRem" 
+                            };
+
+     var NetworkIngestionVolitionalCOS = {     
+
+                                "arrow":    [   { "x": -80,  "y": 75}, 
+                                                { "x": -50,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 10,  "y": 75}, 
+                                                { "x": 40,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 230,  "y": 75}, 
+                                                { "x": 260,  "y": 75} ],
+
+                                "arrow3":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],
+
+                                "solid1":    [   { "x": 90,  "y": 75}, 
+                                                { "x": 120,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -15,  "y": 40}, 
+                                                    { "x": -100,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                    { "x": 270,  "y": 60} ],
+
+                                "rectangle": {
+                                              "x":125, 
+                                              "y":50,
+                                              "width": 100,
+                                              "height": 50
+                                },
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},
+                                        { "x": 30,  "y": 35, "text": "A1"},
+                                        { "x": -30,  "y": 25, "text": "VOL"},
+                                        { "x": 50,  "y": 25, "text": "PROP"},
+                                        { "x": 10,  "y": 45, "text": "FRC"},
+                                        { "x": -110,  "y": 80, "text": "Eater"},
+                                        { "x": -110,  "y": 70, "text": "VOL"},
+                                        { "x": -80,  "y": 90, "text": "FRC"}, 
+                                        { "x": -35,  "y": 80, "text": "Utensil"},
+                                        { "x": -35,  "y": 70, "text": "INTL"},
+                                        { "x": 10,  "y": 90, "text": "FRC"}, 
+                                        { "x": 55,  "y": 80, "text": "Food"},
+                                        { "x": 55,  "y": 70, "text": "MER"},
+                                        { "x": 90,  "y": 90, "text": "PTH"},
+                                        { "x": 130,  "y": 80, "text": "Container"},
+                                        { "x": 130,  "y": 70, "text": "EXIST"},
+                                        { "x": 190,  "y": 80, "text": "Eater"}, 
+                                        { "x": 190,  "y": 70, "text": "EXIST"},
+                                        { "x": 240,  "y": 90, "text": "FRC"},
+                                        { "x": 270,  "y": 80, "text": "Patient"},
+                                        { "x": 270,  "y": 70, "text": "PROP"},
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Patient"],
+
+                                "name" : "NetIngestionVolCOS" 
+                            };
+
+     var NetworkHurtVolitionalCOS = {     
+
+                                "arrow1":    [   { "x": 10,  "y": 75}, 
+                                                { "x": 40,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 10,  "y": 30}, 
+                                                { "x": 40,  "y": 30} ],
+
+                                "solid1":    [   { "x": 110,  "y": 75}, 
+                                                { "x": 140,  "y": 75} ],
+
+                                "dottedFarLeft":    [   { "x": -15,  "y": 40}, 
+                                                    { "x": -15,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                    { "x": 150,  "y": 60} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"},
+                                        { "x": 40,  "y": 35, "text": "A1"},
+                                        { "x": -30,  "y": 25, "text": "VOL"},
+                                        { "x": 55,  "y": 25, "text": "PROP"},
+                                        { "x": 10,  "y": 45, "text": "FRC"},
+                                        { "x": -30,  "y": 80, "text": "Agent"},
+                                        { "x": -30,  "y": 70, "text": "VOL"},
+                                        { "x": 10,  "y": 90, "text": "FRC"}, 
+                                        { "x": 55,  "y": 80, "text": "Body_part"},
+                                        { "x": 55,  "y": 70, "text": "PROP"},
+                                        { "x": 110,  "y": 90, "text": "AFF"},
+                                        { "x": 150,  "y": 80, "text": "Experiencer"},
+                                        { "x": 150,  "y": 70, "text": "PROP"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Patient"],
+
+                                "name" : "NetHurtVolCOS" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -6618,6 +7046,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkForceVolitionalRemove;
         } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSVolitionalRemove;
+        } else if (nameGeneralNetwork === 'IngestionNetwork') {
+            return NetworkIngestionVolitionalRemove;
         }
     }
 
@@ -6774,6 +7204,10 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCausativeCOSVolitionalCOS;
         } else if (nameGeneralNetwork === 'AbsorbNetwork') {
             return NetworkAbsorbVolitionalCOS;
+        } else if (nameGeneralNetwork === 'IngestionNetwork') {
+            return NetworkIngestionVolitionalCOS;
+        } else if (nameGeneralNetwork === 'HurtNetwork') {
+            return NetworkHurtVolitionalCOS;
         }
     }
 
@@ -7490,9 +7924,8 @@ function getMultipleNetworkPage (NetworkType) {
                             "caption": "ASC causal chains used with hurt network",
 
                             "chains": [
-                                       //  {"network": "Volitional Place", "parent": "HurtNetwork"},
-                                       // {"network": "Volitional Create", "parent": "HurtNetwork"},
-                                       // {"network": "Volitional Provide", "parent": "HurtNetwork"}
+                                        {"network": "Volitional COS", "parent": "HurtNetwork"},
+                                       {"network": "Autnomous Internal", "parent": "HurtNetwork"}
                                     ],
 
                             "name" : "Hurt network" 
@@ -7500,49 +7933,6 @@ function getMultipleNetworkPage (NetworkType) {
 
     return eval(NetworkType);
 
-    // if (NetworkType === "RemoveDepriveNetwork") {
-    //     return RemoveDepriveNetwork;
-    // }
-
-    // if (NetworkType === "ProvidePlaceNetwork") {
-    //     return ProvidePlaceNetwork;
-    // }
-
-    // if (NetworkType === "GeneralMotionNetwork") {
-    //     return GeneralMotionNetwork;
-    // }
-
-    // if (NetworkType === "ThrowMotionNetwork") {
-    //     return ThrowMotionNetwork;
-    // }
-
-    // if (NetworkType === "SendMotionNetwork") {
-    //     return SendMotionNetwork;
-    // }
-
-    // if (NetworkType === "CarryMotionNetwork") {
-    //     return CarryMotionNetwork;
-    // }
-
-    // if (NetworkType === "PursuitMotionNetwork") {
-    //     return PursuitMotionNetwork;
-    // }
-
-    // if (NetworkType === "IllustrationNetwork") {
-    //     return IllustrationNetwork;
-    // }
-
-    // if (NetworkType === "CreationNetwork") {
-    //     return CreationNetwork;
-    // }
-
-    // if (NetworkType === "EmissionNetwork") {
-    //     return EmissionNetwork;
-    // }
-
-    // if (NetworkType === "FormNetwork") {
-    //     return FormNetwork;
-    // }
 }
 
 
@@ -8467,6 +8857,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
     var dotted1 = currentNetwork["dotted1"];
     var forceArrow1 = currentNetwork["arrow1"];  
     var forceArrow2 = currentNetwork["arrow2"];
+    var forceArrow3 = currentNetwork["arrow3"];
     var rectangle = currentNetwork["rectangle"];
 
     svgContainer.append("svg:defs").append("svg:marker")
@@ -8544,9 +8935,9 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
                                 .attr("fill", "none");
     }
 
-    var arrayArrows = [forceArrowX, forceArrow1, forceArrow2];
+    var arrayArrows = [forceArrowX, forceArrow1, forceArrow2, forceArrow3];
 
-    for (i=0; i<3; i++) {
+    for (i=0; i<4; i++) {
 
         var arrow = arrayArrows[i];
 

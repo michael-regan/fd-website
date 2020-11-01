@@ -186,6 +186,16 @@ function addTableWithLinksToMappingPage (data, n) {
 
 
 var events = {
+    "8": [
+        "My ankle twisted",
+        "hurt-40.8.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "HurtNetwork",
+        "Theme-of(y,e) & Component-of(a,ankle) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10015"
+    ],
   "132": [
     "The children hid",
     "concealment-16",
@@ -3668,6 +3678,7 @@ var events = {
     "10021": {"networks": ["CausativeCOSNetwork"], "name": "CausativeCOS"},
     "10022": {"networks": ["CausativeCOSNetwork", "IngestionNetwork"], "name": "CausativeCOS+Ingest"},
     "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
+    "10024": {"networks": ["InternalNetwork"], "name": "Internal"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -3735,6 +3746,7 @@ var events = {
     "11066": ["Volitional Remove", "IngestionNetwork"],
     "11067": ["Volitional COS", "IngestionNetwork"],
     "11068": ["Volitional COS", "HurtNetwork"],
+    "11069": ["Autonomous Internal", "HurtNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4019,6 +4031,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional COS" && generalNetworkName == "HurtNetwork") {
         var identifierToMappingURL = "11068";
         var identifierToConstructionURL = "12045";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "HurtNetwork") {
+        var identifierToMappingURL = "11069";
+        var identifierToConstructionURL = "12047";
     }
 
 
@@ -7029,6 +7044,36 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetHurtVolCOS" 
                             };
 
+     var NetworkHurtAutonomousInternal = {     
+
+                                "arrow1":    [   { "x": 10,  "y": 75}, 
+                                                { "x": 40,  "y": 75} ],
+
+                                "solid1":    [   { "x": 110,  "y": 75}, 
+                                                { "x": 140,  "y": 75} ],
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                    { "x": 65,  "y": 60} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 95,  "y": 35, "text": "A0"},
+                                        { "x": 55,  "y": 25, "text": "PROP"},
+                                        { "x": -30,  "y": 80, "text": "Agent"},
+                                        { "x": -30,  "y": 70, "text": "VOL"},
+                                        { "x": 10,  "y": 90, "text": "FRC"}, 
+                                        { "x": 55,  "y": 80, "text": "Body_part"},
+                                        { "x": 55,  "y": 70, "text": "PROP"},
+                                        { "x": 110,  "y": 90, "text": "AFF"},
+                                        { "x": 150,  "y": 80, "text": "Experiencer"},
+                                        { "x": 150,  "y": 70, "text": "PROP"}
+                                    ],
+
+                                "argTextToAdd": ["Patient"],
+
+                                "name" : "NetHurtAutoInt" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -7120,6 +7165,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCausativeCOSAutonomousInternal;
         } else if (nameGeneralNetwork === 'AbsorbNetwork') {
             return NetworkAbsorbAutonomousInternal;
+        } else if (nameGeneralNetwork === 'HurtNetwork') {
+            return NetworkHurtAutonomousInternal;
         }
     }
 
@@ -7925,10 +7972,33 @@ function getMultipleNetworkPage (NetworkType) {
 
                             "chains": [
                                         {"network": "Volitional COS", "parent": "HurtNetwork"},
-                                       {"network": "Autnomous Internal", "parent": "HurtNetwork"}
+                                       {"network": "Autonomous Internal", "parent": "HurtNetwork"}
                                     ],
 
                             "name" : "Hurt network" 
+                        };
+
+    var InternalNetwork = {        
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 60, "text": "INTL"}
+                                    ],
+
+                            "caption": "ASC causal chains used with interal network",
+
+                            "chains": [{"network": "Autonomous Internal", "parent": "InternalNetwork"},
+                                        {"network": "Autonomous Location", "parent": "InternalNetwork"},
+                                       {"network": "Autonomous Dynamic Texture", "parent": "InternalNetwork"},
+                                       {"network": "Volitional Place", "parent": "InternalNetwork"},
+                                       {"network": "Volitional Internal", "parent": "InternalNetwork"},
+                                       {"network": "Self-volitional Internal", "parent": "InternalNetwork"}, 
+                                       {"network": "Cause Internal", "parent": "InternalNetwork"}, 
+                                       {"network": "Volitional Attend", "parent": "InternalNetwork"},
+                                       {"network": "Autonomous Experience", "parent": "InternalNetwork"},
+                                    ],
+
+                            "name" : "Internal network" 
                         };
 
     return eval(NetworkType);
@@ -9428,7 +9498,7 @@ function createSpecificFDNetworkWithTable(svgContainer, d, arrayNetworkElements)
 
     console.log(thisSpecificNetwork);
 
-    // console.log(d["network"]); // e.g., Volitional Motion
+    console.log(d["network"]); // e.g., Volitional Motion
 
     var linkToGeneralNetwork = arrayNetworkElements[0]["link"]; // e.g., 10003
 

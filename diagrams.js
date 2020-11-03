@@ -1246,6 +1246,186 @@ var events = {
         "Theme-of(z,e) & Component-of(a,Carrie) & Component-of(b,stick) & Component-of(c,shoulder) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & CycAch(c,i,l,q3) & VOL(q1) & INTL(q2) & EXIST(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
+    "930": [
+        "The dog flopped",
+        "assuming_position-50",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,dog) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "931": [
+        "Sharon shivered",
+        "body_internal_states-40.6",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Sharon) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "934": [
+        "The bag is bulging",
+        "bulge-47.5.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,bag) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "945": [
+        "The beer foamed",
+        "entity_specific_modes_being-47.2",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,beer) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "11": [
+        "My heart is pounding",
+        "tingle-40.8.2",
+        "Sbj V ",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,heart) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "949": [
+        "Elvis lives",
+        "exist-47.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Elvis) & TranStPh(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "951": [
+        "Paul hiccuped",
+        "hiccup-40.1.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "952": [
+        "The river is twisting",
+        "meander-47.7-1",
+        "Sbj V",
+        "Autonomous Internal",
+        "InherentState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,river) & InhStPh(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "963": [
+        "A serious accident happened",
+        "occur-48.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,accident) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "964": [
+        "There happened a serious accident",
+        "occur-48.3",
+        "Sbj V LocP",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,accident) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "969": [
+        "Gloria snoozed",
+        "snooze-40.4",
+        "Sbj V",
+        "Autonomous Internal",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Gloria) & TranStPh(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "970": [
+        "Gloria slept the sleep of the dead",
+        "snooze-40.4-1",
+        "Sbj V CogObj",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Gloria) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "971": [
+        "The voices echoed",
+        "sound_existence-47.4",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,voices) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "142": [
+        "It occurred that they left",
+        "occur-48.3",
+        "Sbj V Comp",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,that they left) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "946": [
+        "There raged a fire",
+        "entity_specific_modes_being-47.2",
+        "Sbj V LocP",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,fire) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "964": [
+        "There happened a serious accident",
+        "occur-48.3",
+        "Sbj V LocP",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,accident) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "961": [
+        "A flag fluttered",
+        "modes_of_being_with_motion-47.3",
+        "Sbj V",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flag) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "962": [
+        "There fluttered a flag (over the fort)",
+        "modes_of_being_with_motion-47.3",
+        "Sbj V LocP",
+        "Autonomous Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flag) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
     "942": [
         "This knife cuts well",
         "cut-21.1",
@@ -1356,6 +1536,216 @@ var events = {
     "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk and white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
     "10005"
   ],
+    "1002": [
+        "The dog flopped in the corner",
+        "assuming_position-50",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,dog) & Component-of(b,corner) & DirAch(a,i,j,q1) & InhStPhPunct(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1004": [
+        "A fire raged in the mountains",
+        "entity_specific_modes_being-47.2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,fire) & Component-of(b,mountains) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1005": [
+        "All through the mountains raged a fire",
+        "entity_specific_modes_being-47.2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,fire) & Component-of(b,mountains) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1006": [
+        "Herbicides persist in the soil",
+        "exist-47.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Herbicides) & Component-of(b,soil) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1010": [
+        "Through the valley meanders the river",
+        "meander-47.7",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "InherentState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,river) & Component-of(b,valley) & InhStPh(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1011": [
+        "There meanders a river through the valley",
+        "meander-47.7",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "InherentState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,river) & Component-of(b,valley) & InhStPh(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1012": [
+        "There meanders through the valley a river",
+        "meander-47.7",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "InherentState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,river) & Component-of(b,valley) & InhStPh(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1013": [
+        "A flag fluttered over the fort",
+        "modes_of_being_with_motion-47.3",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flag) & Component-of(b,fort) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1014": [
+        "Over the fort fluttered a flag",
+        "modes_of_being_with_motion-47.3",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flag) & Component-of(b,fort) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1015": [
+        "A serious accident happened in front of them",
+        "occur-48.3",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,accident) & Component-of(b,them) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1019": [
+        "There echoed voices through the hall",
+        "sound_existence-47.4",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,voices) & Component-of(b,hall) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1020": [
+        "The voices echoed through the hall",
+        "sound_existence-47.4",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,voices) & Component-of(b,hall) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1021": [
+        "Through the hall echoed a loud cry",
+        "sound_existence-47.4",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,cry) & Component-of(b,hall) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1022": [
+        "On the pedestal stood a statue",
+        "spatial_configuration-47.6",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,statue) & Component-of(b,pedestal) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1023": [
+        "The statue stood on the corner",
+        "spatial_configuration-47.6",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,statue) & Component-of(b,corner) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1024": [
+        "There stood on the corner a statue",
+        "spatial_configuration-47.6",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,statue) & Component-of(b,corner) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1027": [
+        "Bees are swarming in the garden",
+        "swarm-47.5.1-1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Bees) & Component-of(b,garden) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1028": [
+        "There swarm bees in the garden",
+        "swarm-47.5.1-1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,bees) & Component-of(b,garden) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1029": [
+        "In the aquarium swam a striped fish",
+        "swarm-47.5.1-1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,fish) & Component-of(b,aquarium) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1030": [
+        "There abound flowers in the garden",
+        "swarm-47.5.1-2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flowers) & Component-of(b,garden) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "1031": [
+        "Flowers abound in the garden",
+        "swarm-47.5.1-2",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Flowers) & Component-of(b,garden) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10024"
+    ],
   "1130": [
     "Clouds cleared from the sky.",
     "clear-10.3-1",
@@ -3747,6 +4137,8 @@ var events = {
     "11067": ["Volitional COS", "IngestionNetwork"],
     "11068": ["Volitional COS", "HurtNetwork"],
     "11069": ["Autonomous Internal", "HurtNetwork"],
+    "11070": ["Autonomous Internal", "InternalNetwork"],
+    "11071": ["Autonomous Location", "InternalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -3796,6 +4188,8 @@ var events = {
     "12049": { "child": "Volitional Remove", "parentNetwork": "10022", "generalNetwork": "10015"},
     "12050": { "child": "Instrument Attend", "parentNetwork": "10021", "generalNetwork": "10015"},
     "12051": { "child": "Physical Remove", "parentNetwork": "10023", "generalNetwork": "10015"},
+    "12052": { "child": "Autonomous Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12053": { "child": "Autonomous Location", "parentNetwork": "10024", "generalNetwork": "10024"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -4034,6 +4428,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "HurtNetwork") {
         var identifierToMappingURL = "11069";
         var identifierToConstructionURL = "12047";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11070";
+        var identifierToConstructionURL = "12052";
+    } else if (FDCategory === "Autonomous Location" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11071";
+        var identifierToConstructionURL = "12053";
     }
 
 
@@ -7074,6 +7474,51 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetHurtAutoInt" 
                             };
 
+     var NetworkInternalAutonomousInternal = {     
+
+
+                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
+                                                    { "x": 15,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": 70,  "y": 35, "text": "A0"}, 
+                                        { "x": 10,  "y": 25, "text": "INTL"},
+                                        { "x": 10,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity"],
+
+                                "name" : "NetInternalAutoInt" 
+                            };
+
+     var NetworkInternalAutonomousLocation = {     
+
+
+                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
+                                                    { "x": 15,  "y": 60} ],
+
+                                "solid1":    [   { "x": 50,  "y": 30}, 
+                                                { "x": 80,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 50,  "y": 35, "text": "A0"}, 
+                                        { "x": 70,  "y": 35, "text": "A1"}, 
+                                        { "x": 10,  "y": 25, "text": "INTL"},
+                                        { "x": 90,  "y": 25, "text": "EXIST"},
+                                        { "x": 50,  "y": 45, "text": "PTH"}, 
+                                        { "x": 10,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Figure", "Ground"],
+
+                                "name" : "NetInternalAutoLoc" 
+                            };
+
+
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -7167,6 +7612,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkAbsorbAutonomousInternal;
         } else if (nameGeneralNetwork === 'HurtNetwork') {
             return NetworkHurtAutonomousInternal;
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalAutonomousInternal;
         }
     }
 
@@ -7309,7 +7756,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
     
-    else if (FDCategory === 'Autonomous Location') { return NetworkEmissionAutonomousLocation; }
+    else if (FDCategory === 'Autonomous Location') { 
+
+        if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionAutonomousLocation; 
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalAutonomousLocation;
+        }
+    }
 
     else if (FDCategory === 'Physical Place') { return NetworkEmissionPhysicalPlace; }
 

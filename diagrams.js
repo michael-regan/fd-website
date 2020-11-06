@@ -436,6 +436,16 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Allison) & Component-of(b,needle) & Component-of(c,cloth) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10012"
     ],
+    "702": [
+        "They stood the statue on the pedestal",
+        "spatial_configuration-47.6",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,statue) & Component-of(c,pedestal) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10024"
+    ],
     "709": [
         "She wore the purple dress",
         "simple_dressing-41.3.1",
@@ -1156,6 +1166,56 @@ var events = {
         "Theme-of(y,e) & Component-of(a,chisel) & Component-of(b,statue) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & INTL(q1) & DES(q2) & FRC(a,b)",
         "10012"
     ],
+    "882": [
+        "The bag is bulging with groceries",
+        "bulge-47.5.3",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,groceries) & Component-of(b,bag) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "883": [
+        "The garden flowered with roses",
+        "entity_specific_modes_being-47.2",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,roses) & Component-of(b,garden) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "887": [
+        "The hall echoed with voices",
+        "sound_existence-47.4",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,voices) & Component-of(b,hall) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "889": [
+        "The garden is swarming with bees",
+        "swarm-47.5.1-1",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,bees) & Component-of(b,garden) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10024"
+    ],
+    "890": [
+        "The garden abounds with flowers",
+        "swarm-47.5.1-2-1",
+        "Sbj V with/of Obl",
+        "Autonomous Dynamic Texture",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,flowers) & Component-of(b,garden) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & INTL(q1) & INTL(q2) & PTH(a,b)",
+        "10024"
+    ],
     "892": [
         "Carol crushed the ice with a hammer",
         "carve-21.2-1",
@@ -1374,6 +1434,96 @@ var events = {
         "UndirectedActivity",
         "InternalNetwork",
         "Theme-of(x,e) & Component-of(a,voices) & UndAct(a,i,j,q1) & INTL(q1)",
+        "10024"
+    ],
+    "977": [
+        "Sylvia fidgeted",
+        "body_internal_motion-49.1",
+        "Sbj V",
+        "Self-volitional Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Sylvia) & UndAct(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "980": [
+        "She spruced herself up before the job interview",
+        "dressing_well-41.3.2",
+        "Sbj V Refl",
+        "Self-volitional Internal",
+        "IncrementalAccomplishment",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,She) & IncrAcc(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "981": [
+        "She spruced up herself before the job interview",
+        "dressing_well-41.3.2",
+        "Sbj V Refl",
+        "Self-volitional Internal",
+        "IncrementalAccomplishment",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,She) & IncrAcc(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "983": [
+        "Paul laughed",
+        "nonverbal_expression-40.2",
+        "Sbj V",
+        "Self-volitional Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & UndAct(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "984": [
+        "Paul laughed a cheerful laugh",
+        "nonverbal_expression-40.2",
+        "Sbj V CogObj",
+        "Self-volitional Internal",
+        "CyclicAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Paul) & CycAch(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "985": [
+        "John slouched",
+        "spatial_configuration-47.6",
+        "Sbj V",
+        "Self-volitional Internal",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,John) & DirAch(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "986": [
+        "Linda winked",
+        "wink-40.3.1",
+        "Sbj V",
+        "Self-volitional Internal",
+        "CyclicAchievement",
+        "InternalNetwork",
+        "Theme-of(x,e) & Component-of(a,Linda) & CycAch(a,i,j,q1) & VOL/INTL(q1)",
+        "10024"
+    ],
+    "988": [
+        "Jennifer craned her neck",
+        "crane-40.3.2",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "CyclicAchievement",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,neck) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10024"
+    ],
+    "996": [
+        "The patriots waved the flag",
+        "modes_of_being_with_motion-47.3",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,patriots) & Component-of(b,flag) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
         "10024"
     ],
     "142": [
@@ -4139,6 +4289,10 @@ var events = {
     "11069": ["Autonomous Internal", "HurtNetwork"],
     "11070": ["Autonomous Internal", "InternalNetwork"],
     "11071": ["Autonomous Location", "InternalNetwork"],
+    "11072": ["Autonomous Dynamic Texture", "InternalNetwork"],
+    "11073": ["Volitional Place", "InternalNetwork"],
+    "11074": ["Volitional Internal", "InternalNetwork"],
+    "11075": ["Self-volitional Internal", "InternalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4190,6 +4344,10 @@ var events = {
     "12051": { "child": "Physical Remove", "parentNetwork": "10023", "generalNetwork": "10015"},
     "12052": { "child": "Autonomous Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12053": { "child": "Autonomous Location", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12054": { "child": "Autonomous Dynamic Texture", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12055": { "child": "Volitional Place", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12056": { "child": "Volitional Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12057": { "child": "Self-volitional Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -4434,6 +4592,18 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Location" && generalNetworkName == "InternalNetwork") {
         var identifierToMappingURL = "11071";
         var identifierToConstructionURL = "12053";
+    } else if (FDCategory === "Autonomous Dynamic Texture" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11072";
+        var identifierToConstructionURL = "12054";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11073";
+        var identifierToConstructionURL = "12055";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11074";
+        var identifierToConstructionURL = "12056";
+    } else if (FDCategory === "Self-volitional Internal" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11075";
+        var identifierToConstructionURL = "12057";
     }
 
 
@@ -7494,7 +7664,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkInternalAutonomousLocation = {     
 
-
                                 "dottedLeft":    [   { "x": 15,  "y": 40}, 
                                                     { "x": 15,  "y": 60} ],
 
@@ -7516,8 +7685,98 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetInternalAutoLoc" 
                             };
 
+     var NetworkInternalAutonomousDynamicTexture = {     
+
+                                "dottedLeft":    [   { "x": 105,  "y": 40}, 
+                                                    { "x": 105,  "y": 60} ],
+
+                                "solid1":    [   { "x": 50,  "y": 30}, 
+                                                { "x": 80,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 50,  "y": 35, "text": "A0"}, 
+                                        { "x": 70,  "y": 35, "text": "A1"}, 
+                                        { "x": 10,  "y": 25, "text": "INTL"},
+                                        { "x": 90,  "y": 25, "text": "INTL"},
+                                        { "x": 50,  "y": 45, "text": "PTH"}, 
+                                        { "x": 90,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 90,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Figure", "Ground"],
+
+                                "name" : "NetInternalAutoDynTex" 
+                            };
+
+     var NetworkInternalVolitionalPlace = {     
+
+                                "dottedLeft":    [   { "x": 40,  "y": 40}, 
+                                                    { "x": 40,  "y": 60} ],
+
+                                "arrow1":    [   { "x": -20,  "y": 30}, 
+                                                { "x": 10,  "y": 30} ],
+
+                                "solid2":    [   { "x": 90,  "y": 30}, 
+                                                { "x": 120,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": -20,  "y": 35, "text": "A0"}, 
+                                        { "x": 10,  "y": 35, "text": "A1"}, 
+                                        { "x": 110,  "y": 35, "text": "A2"}, 
+                                        { "x": -60,  "y": 25, "text": "VOL"},
+                                        { "x": 15,  "y": 25, "text": "+MER|EXIST"},
+                                        { "x": 130,  "y": 25, "text": "EXIST"},
+                                        { "x": -20,  "y": 45, "text": "FRC"}, 
+                                        { "x": 90,  "y": 45, "text": "PTH"}, 
+                                        { "x": 20,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 20,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetInternalVolPlace" 
+                            };
+
+     var NetworkInternalVolitionalInternal = {     
+
+                                "dottedLeft":    [   { "x": 80,  "y": 40}, 
+                                                    { "x": 80,  "y": 60} ],
+
+                                "arrow1":    [   { "x": 20,  "y": 30}, 
+                                                { "x": 50,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 20,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -20,  "y": 25, "text": "VOL"},
+                                        { "x": 70,  "y": 25, "text": "INTL"},
+                                        { "x": 20,  "y": 45, "text": "FRC"}, 
+                                        { "x": 70,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 70,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Theme"],
+
+                                "name" : "NetInternalVolInt" 
+                            };
+
+     var NetworkInternalSelfVolitionalInternal = {     
 
 
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                    { "x": 35,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": 70,  "y": 35, "text": "A0"}, 
+                                        { "x": 10,  "y": 25, "text": "VOL/INTL"},
+                                        { "x": 10,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Physical_entity"],
+
+                                "name" : "NetInternalSelfVolInt" 
+                            };
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -7565,8 +7824,9 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionVolitionalPlace;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalPlace;
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalVolitionalPlace;
         }
-
     }
 
     else if (FDCategory === 'Self-Volitional Place') { return NetworkSelfVolitionalPlace; }
@@ -7625,8 +7885,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionVolitionalInternal;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalInternal;
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalVolitionalInternal;
         }
+    }
 
+    else if (FDCategory === 'Self-volitional Internal') {
+
+        if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalSelfVolitionalInternal;
+        } 
     }
 
     else if (FDCategory === 'Autonomous Deprive') { return NetworkAutonomousDeprive; }
@@ -7754,8 +8022,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         }
     }
 
-    else if (FDCategory === 'Autonomous Dynamic Texture') { return NetworkEmissionAutonomousDynamicTexture; }
-    
+    else if (FDCategory === 'Autonomous Dynamic Texture') { 
+
+        if (nameGeneralNetwork === 'EmissionNetwork') {
+            return NetworkEmissionAutonomousDynamicTexture; 
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalAutonomousDynamicTexture;
+        }
+    }
+
     else if (FDCategory === 'Autonomous Location') { 
 
         if (nameGeneralNetwork === 'EmissionNetwork') {

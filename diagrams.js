@@ -186,6 +186,26 @@ function addTableWithLinksToMappingPage (data, n) {
 
 
 var events = {
+    "2": [
+        "Sharon shivered from fear",
+        "body_internal_states-40.6",
+        "Sbj V from Obj",
+        "Cause Internal",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,fear) & Component-of(b,Sharon) & InhStPhExt(a,i,j,q1) & UndAct(b,i,k,q2) & EXIST(q1) & INTL(q2) & CAUSE(a,b)",
+        "10024"
+    ],
+    "3": [
+        "My heart is pounding from fear",
+        "tingle-40.8.2",
+        "Sbj V from Obl",
+        "Cause Internal",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,fear) & Component-of(b,heart) & InhStPhExt(a,i,j,q1) & UndAct(b,i,k,q2) & EXIST(q1) & INTL(q2) & CAUSE(a,b)",
+        "10024"
+    ],
     "8": [
         "My ankle twisted",
         "hurt-40.8.3",
@@ -195,6 +215,16 @@ var events = {
         "HurtNetwork",
         "Theme-of(y,e) & Component-of(a,ankle) & DirAch(a,i,j,q1) & INTL(q1)",
         "10015"
+    ],
+    "36": [
+        "I endured the routine heavy traffic",
+        "exist-47.1",
+        "Sbj V ObjE",
+        "Autonomous Experience",
+        "TransitoryState",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,traffic) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & MPROP(q1) & EXIST(q2) & EXP(a,b)",
+        "10024"
     ],
   "132": [
     "The children hid",
@@ -225,6 +255,26 @@ var events = {
         "ForceNetwork",
         "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,window) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
         "10012"
+    ],
+    "176": [
+        "Paul laughed at Mary",
+        "nonverbal_expression-40.2",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "UndirectedActivity",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,Mary) & UndAct(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10024"
+    ],
+    "180": [
+        "Linda winked at the audience",
+        "wink-40.3.1",
+        "Sbj V at/on/about/of/over Obl",
+        "Volitional Attend",
+        "DirectedAchievement",
+        "InternalNetwork",
+        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,audience) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & ATT(a,b)",
+        "10024"
     ],
     "178": [
         "Allison poked at the cloth",
@@ -4293,6 +4343,9 @@ var events = {
     "11073": ["Volitional Place", "InternalNetwork"],
     "11074": ["Volitional Internal", "InternalNetwork"],
     "11075": ["Self-volitional Internal", "InternalNetwork"],
+    "11076": ["Cause Internal", "InternalNetwork"],
+    "11077": ["Volitional Attend", "InternalNetwork"],
+    "11078": ["Autonomous Experience", "InternalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4348,6 +4401,9 @@ var events = {
     "12055": { "child": "Volitional Place", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12056": { "child": "Volitional Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12057": { "child": "Self-volitional Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12058": { "child": "Cause Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12059": { "child": "Volitional Attend", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12060": { "child": "Autonomous Experience", "parentNetwork": "10024", "generalNetwork": "10024"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -4604,6 +4660,15 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Self-volitional Internal" && generalNetworkName == "InternalNetwork") {
         var identifierToMappingURL = "11075";
         var identifierToConstructionURL = "12057";
+    } else if (FDCategory === "Cause Internal" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11076";
+        var identifierToConstructionURL = "12058";
+    } else if (FDCategory === "Volitional Attend" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11077";
+        var identifierToConstructionURL = "12059";
+    } else if (FDCategory === "Autonomous Experience" && generalNetworkName == "InternalNetwork") {
+        var identifierToMappingURL = "11078";
+        var identifierToConstructionURL = "12060";
     }
 
 
@@ -7647,8 +7712,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
      var NetworkInternalAutonomousInternal = {     
 
 
-                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
-                                                    { "x": 15,  "y": 60} ],
+                                "dottedLeft":    [   { "x": 20,  "y": 40}, 
+                                                    { "x": 20,  "y": 60} ],
 
                                 'textToAdd' : [
                                         { "x": 70,  "y": 35, "text": "A0"}, 
@@ -7664,8 +7729,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
      var NetworkInternalAutonomousLocation = {     
 
-                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
-                                                    { "x": 15,  "y": 60} ],
+                                "dottedLeft":    [   { "x": 20,  "y": 40}, 
+                                                    { "x": 20,  "y": 60} ],
 
                                 "solid1":    [   { "x": 50,  "y": 30}, 
                                                 { "x": 80,  "y": 30} ],
@@ -7778,6 +7843,75 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetInternalSelfVolInt" 
                             };
 
+     var NetworkInternalCauseInternal = {     
+
+                                "dottedLeft":    [   { "x": 80,  "y": 40}, 
+                                                    { "x": 80,  "y": 60} ],
+
+                                "arrow1":    [   { "x": 20,  "y": 30}, 
+                                                { "x": 50,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 20,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -20,  "y": 25, "text": "EXIST"},
+                                        { "x": 70,  "y": 25, "text": "INTL"},
+                                        { "x": 20,  "y": 45, "text": "CAUSE"}, 
+                                        { "x": 70,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 70,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Cause", "Theme"],
+
+                                "name" : "NetInternalCauseInt" 
+                            };
+
+     var NetworkInternalVolitionalAttend = {     
+
+                                "dottedLeft":    [   { "x": 20,  "y": 40}, 
+                                                    { "x": 20,  "y": 60} ],
+
+                                "arrow":    [   { "x": 50,  "y": 30}, 
+                                                { "x": 80,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 50,  "y": 35, "text": "A0"}, 
+                                        { "x": 70,  "y": 35, "text": "A1"}, 
+                                        { "x": 10,  "y": 25, "text": "VOL"},
+                                        { "x": 90,  "y": 25, "text": "EXIST"},
+                                        { "x": 50,  "y": 45, "text": "ATT"}, 
+                                        { "x": 10,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Target"],
+
+                                "name" : "NetInternalVolAtt" 
+                            };
+
+     var NetworkInternalAutonomousExperience = {     
+
+                                "dottedLeft":    [   { "x": 20,  "y": 40}, 
+                                                    { "x": 20,  "y": 60} ],
+
+                                "arrow":    [   { "x": 50,  "y": 30}, 
+                                                { "x": 80,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": 50,  "y": 35, "text": "A0"}, 
+                                        { "x": 80,  "y": 35, "text": "A1"}, 
+                                        { "x": 10,  "y": 25, "text": "PROP"},
+                                        { "x": 90,  "y": 25, "text": "EXIST"},
+                                        { "x": 50,  "y": 45, "text": "EXP"}, 
+                                        { "x": 10,  "y": 80, "text": "Physical_entity"}, 
+                                        { "x": 10,  "y": 70, "text": "INTL"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Phenomenon"],
+
+                                "name" : "NetInternalAutoExp" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -7848,6 +7982,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionVolitionalAttend;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalAttend;
+        } else if (nameGeneralNetwork === 'InternalNetwork') {
+            return NetworkInternalVolitionalAttend;
         }
 
     }
@@ -7875,6 +8011,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         } else if (nameGeneralNetwork === 'InternalNetwork') {
             return NetworkInternalAutonomousInternal;
         }
+    }
+
+    else if (FDCategory === 'Cause Internal') {
+
+        if (nameGeneralNetwork === 'InternalNetwork'){
+            return NetworkInternalCauseInternal;
+        }    
     }
 
     else if (FDCategory === 'Volitional Internal') {
@@ -7909,6 +8052,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     }
 
     else if (FDCategory === 'Physical Deprive') { return NetworkPhysicalDeprive; }
+
+    else if (FDCategory === 'Autonomous Experience') { return NetworkInternalAutonomousExperience; }
 
     else if (FDCategory === 'Autonomous Provide') { return NetworkAutonomousProvide; }
 
@@ -9638,7 +9783,7 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
         var addThisText = svgContainer.append("text")
                                     .attr("x", obj["x"])
                                     .attr("y", obj["y"])
-                                    .attr("fill", function (d) { if (['PTH', 'FRC', 'AFF', 'Mutual', 'ATT'].includes(obj["text"]) && obj["y"] < 46) {return "red"} 
+                                    .attr("fill", function (d) { if (['PTH', 'FRC', 'AFF', 'Mutual', 'ATT', 'CAUSE', 'EXP'].includes(obj["text"]) && obj["y"] < 46) {return "red"} 
                                                                 else if (obj["y"] < 46) {return "black"} 
                                                                 else {return "green"}; })
                                     .text(obj["text"]);

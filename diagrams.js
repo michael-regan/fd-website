@@ -426,6 +426,66 @@ var events = {
     "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
     ""
   ],
+    "250": [
+        "A ship appeared",
+        "appear-48.1.1",
+        "Sbj V",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,ship) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPhPunct(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1003": [
+        "Italy borders France",
+        "contiguous_location-47.8",
+        "Sbj V Obj",
+        "Autonomous Location",
+        "InherentState",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,Italy) & Component-of(b,France) & InhStPhExt(a,i,j,q1) & InhStPhExt(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1186": [
+        "A ship appeared on the horizon.",
+        "appear-48.1.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,ship) & Component-of(b,horizon) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1187": [
+        "It appeared there.",
+        "appear-48.1.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,it) & Component-of(b,there) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1188": [
+        "On the horizon appeared a large ship.",
+        "appear-48.1.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,ship) & Component-of(b,horizon) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1189": [
+        "There appeared a ship on the horizon.",
+        "appear-48.1.1",
+        "Sbj V LocP",
+        "Autonomous Location",
+        "DirectedAchievement",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,ship) & Component-of(b,horizon) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
   "633": [
         "Jackie accompanied Rose",
         "accompany-51.7",
@@ -4269,6 +4329,7 @@ var events = {
     "10022": {"networks": ["CausativeCOSNetwork", "IngestionNetwork"], "name": "CausativeCOS+Ingest"},
     "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
     "10024": {"networks": ["InternalNetwork"], "name": "Internal"},
+    "10025": {"networks": ["LocationNetwork"], "name": "Location"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -4346,6 +4407,7 @@ var events = {
     "11076": ["Cause Internal", "InternalNetwork"],
     "11077": ["Volitional Attend", "InternalNetwork"],
     "11078": ["Autonomous Experience", "InternalNetwork"],
+    "11079": ["Autonomous Location", "LocationNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4404,6 +4466,7 @@ var events = {
     "12058": { "child": "Cause Internal", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12059": { "child": "Volitional Attend", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12060": { "child": "Autonomous Experience", "parentNetwork": "10024", "generalNetwork": "10024"},
+    "12061": { "child": "Autonomous Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
@@ -4669,6 +4732,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Experience" && generalNetworkName == "InternalNetwork") {
         var identifierToMappingURL = "11078";
         var identifierToConstructionURL = "12060";
+    } else if (FDCategory === "Autonomous Location" && generalNetworkName == "LocationNetwork") {
+        var identifierToMappingURL = "11079";
+        var identifierToConstructionURL = "12061";
     }
 
 
@@ -7912,6 +7978,37 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetInternalAutoExp" 
                             };
 
+     var NetworkLocationAutonomousLocation = {     
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 0,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 60} ],
+
+                                "solid1":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "solid2":    [   { "x": 30,  "y": 75}, 
+                                                { "x": 60,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 30,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -10,  "y": 25, "text": "INTL"},
+                                        { "x": 70,  "y": 25, "text": "EXIST"},
+                                        { "x": 30,  "y": 45, "text": "PTH"}, 
+                                        { "x": -10,  "y": 80, "text": "Figure"}, 
+                                        { "x": 70,  "y": 80, "text": "Ground"}, 
+                                        { "x": 70,  "y": 70, "text": "EXIST"},
+                                        { "x": 30,  "y": 90, "text": "PTH"}, 
+                                    ],
+
+                                "argTextToAdd": ["Figure", "Ground"],
+
+                                "name" : "NetLocationAutoLoc" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -8182,6 +8279,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionAutonomousLocation; 
         } else if (nameGeneralNetwork === 'InternalNetwork') {
             return NetworkInternalAutonomousLocation;
+        } else if (nameGeneralNetwork === 'LocationNetwork') {
+            return NetworkLocationAutonomousLocation;
         }
     }
 
@@ -8873,6 +8972,30 @@ function getMultipleNetworkPage (NetworkType) {
                                     ],
 
                             "name" : "Internal network" 
+                        };
+
+    var LocationNetwork = {        
+
+                                "solid2":    [   { "x": 40,  "y": 65}, 
+                                                { "x": 70,  "y": 65} ],
+
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 70, "text": "Figure"}, 
+                                        { "x": 80,  "y": 70, "text": "Ground"}, 
+                                        { "x": 80,  "y": 60, "text": "EXIST"},
+                                        { "x": 40,  "y": 80, "text": "PTH"}
+                                    ],
+
+                            "caption": "ASC causal chains used with location network",
+
+                            "chains": [
+                                        {"network": "Autonomous Location", "parent": "LocationNetwork"},
+                                       {"network": "Self-volitional Location", "parent": "LocationNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "LocationNetwork"}
+                                    ],
+
+                            "name" : "Location network" 
                         };
 
     return eval(NetworkType);

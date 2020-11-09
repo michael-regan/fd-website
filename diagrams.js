@@ -3104,6 +3104,16 @@ var events = {
         "Theme-of(x,e) & Component-of(a,carts) & CycAch(a,i,j,q1) & INTL(q1)",
         "10012"
     ],
+    "941": [
+        "Italy and France touch",
+        "contiguous_location-47.8-1",
+        "Sbj V",
+        "Autonomous Internal",
+        "InherentState",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,Italy and France) & InhStPh(a,i,j,q1) & INTL(q1)",
+        "10025"
+    ],
   "872": [
         "David constructed a house",
         "create-26.4",
@@ -3494,6 +3504,26 @@ var events = {
         "EmissionNetwork",
         "Theme-of(x,e) & Component-of(a,stew) & Component-of(b,fire) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
         "10007"
+    ],
+    "1032": [
+        "We camped there",
+        "lodge-46",
+        "Sbj V LocP",
+        "Self-volitional Location",
+        "UndirectedActivity",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,We) & Component-of(b,there) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
+    ],
+    "1033": [
+        "Cornelia lodged with the Stevensons",
+        "lodge-46",
+        "Sbj V with Obl",
+        "Self-volitional Location",
+        "UndirectedActivity",
+        "LocationNetwork",
+        "Theme-of(x,e) & Component-of(a,Cornelia) & Component-of(b,Stevensons) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & EXIST(q2) & PTH(a,b)",
+        "10025"
     ],
   "1156": [
     "The secretary transcribed the speech",
@@ -4408,6 +4438,8 @@ var events = {
     "11077": ["Volitional Attend", "InternalNetwork"],
     "11078": ["Autonomous Experience", "InternalNetwork"],
     "11079": ["Autonomous Location", "LocationNetwork"],
+    "11080": ["Self-volitional Location", "LocationNetwork"],
+    "11081": ["Autonomous Internal", "LocationNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4467,7 +4499,10 @@ var events = {
     "12059": { "child": "Volitional Attend", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12060": { "child": "Autonomous Experience", "parentNetwork": "10024", "generalNetwork": "10024"},
     "12061": { "child": "Autonomous Location", "parentNetwork": "10025", "generalNetwork": "10025"},
+    "12062": { "child": "Self-volitional Location", "parentNetwork": "10025", "generalNetwork": "10025"},
+    "12063": { "child": "Autonomous Internal", "parentNetwork": "10025", "generalNetwork": "10025"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
+
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
     //"12007": { "child": "Volitional COS", "parent": "10004"},
     //"12008": { "child": "Volitional Internal", "parentNetwork": "10003", "generalNetwork": "10003"}
@@ -4735,6 +4770,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Location" && generalNetworkName == "LocationNetwork") {
         var identifierToMappingURL = "11079";
         var identifierToConstructionURL = "12061";
+    } else if (FDCategory === "Self-volitional Location" && generalNetworkName == "LocationNetwork") {
+        var identifierToMappingURL = "11080";
+        var identifierToConstructionURL = "12062";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "LocationNetwork") {
+        var identifierToMappingURL = "11081";
+        var identifierToConstructionURL = "12063";
     }
 
 
@@ -8009,6 +8050,62 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetLocationAutoLoc" 
                             };
 
+     var NetworkLocationSelfVolitionalLocation = {     
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 0,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 60} ],
+
+                                "solid1":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "solid2":    [   { "x": 30,  "y": 75}, 
+                                                { "x": 60,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 30,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -15,  "y": 25, "text": "VOL/INTL"},
+                                        { "x": 70,  "y": 25, "text": "EXIST"},
+                                        { "x": 30,  "y": 45, "text": "PTH"}, 
+                                        { "x": -10,  "y": 80, "text": "Figure"}, 
+                                        { "x": 70,  "y": 80, "text": "Ground"}, 
+                                        { "x": 70,  "y": 70, "text": "EXIST"},
+                                        { "x": 30,  "y": 90, "text": "PTH"}, 
+                                    ],
+
+                                "argTextToAdd": ["Figure", "Ground"],
+
+                                "name" : "NetLocationSelfVolLoc" 
+                            };
+
+     var NetworkLocationAutonomousInternal = {     
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 0,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 85,  "y": 60} ],
+
+                                "solid2":    [   { "x": 30,  "y": 75}, 
+                                                { "x": 60,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 30,  "y": 35, "text": "A0"}, 
+                                        { "x": -10,  "y": 25, "text": "INTL"},
+                                        { "x": -10,  "y": 80, "text": "Figure"}, 
+                                        { "x": 70,  "y": 80, "text": "Ground"}, 
+                                        { "x": 70,  "y": 70, "text": "EXIST"},
+                                        { "x": 30,  "y": 90, "text": "PTH"}, 
+                                    ],
+
+                                "argTextToAdd": ["Figure"],
+
+                                "name" : "NetLocationAutoInt" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -8107,6 +8204,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkHurtAutonomousInternal;
         } else if (nameGeneralNetwork === 'InternalNetwork') {
             return NetworkInternalAutonomousInternal;
+        } else if (nameGeneralNetwork === 'LocationNetwork') {
+            return NetworkLocationAutonomousInternal;
         }
     }
 
@@ -8283,6 +8382,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkLocationAutonomousLocation;
         }
     }
+
+    else if (FDCategory === 'Self-volitional Location') { return NetworkLocationSelfVolitionalLocation; }
 
     else if (FDCategory === 'Physical Place') { return NetworkEmissionPhysicalPlace; }
 

@@ -4360,6 +4360,8 @@ var events = {
     "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
     "10024": {"networks": ["InternalNetwork"], "name": "Internal"},
     "10025": {"networks": ["LocationNetwork"], "name": "Location"},
+    "10026": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork"], "name": "Mereological+Causative Mereological"},
+    "10027": {"networks": ["MereologicalNetwork"], "name": "Mereological"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -9099,6 +9101,78 @@ function getMultipleNetworkPage (NetworkType) {
                             "name" : "Location network" 
                         };
 
+    var MereologicalNetwork = {        
+
+                                "solid2":    [   { "x": 60,  "y": 65}, 
+                                                { "x": 90,  "y": 65} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -10,  "y": 70, "text": "MovedEntity"}, 
+                                        { "x": 100,  "y": 70, "text": "Ground"}, 
+                                        { "x": -10,  "y": 60, "text": "MER"},
+                                        { "x": 100,  "y": 60, "text": "MER"},
+                                        { "x": 60,  "y": 80, "text": "PTH"}
+                                    ],
+
+                            "caption": "ASC causal chains used with mereological network",
+
+                            "chains": [
+                                        {"network": "Autonomous Remove", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Remove", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Deprive", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Deprive", "parent": "MereologicalNetwork"},
+                                       {"network": "Physical Deprive", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Place", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Place", "parent": "MereologicalNetwork"},
+                                       {"network": "Self-volitional Place", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Provide", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Provide", "parent": "MereologicalNetwork"},
+                                       {"network": "Self-volitional Provide", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Self-volitional Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Motion", "parent": "MereologicalNetwork"},
+                                       {"network": "Self-volitional Motion", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional COS", "parent": "MereologicalNetwork"}
+                                    ],
+
+                            "name" : "Mereological network" 
+                        };
+
+    var CausativeMereologicalNetwork = {        
+
+                                "solid2":    [   { "x": 120,  "y": 65}, 
+                                                { "x": 150,  "y": 65} ],
+
+                                "arrow":    [   { "x": 10,  "y": 65}, 
+                                                { "x": 40,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -70,  "y": 70, "text": "Physical_entity"}, 
+                                        { "x": 50,  "y": 70, "text": "MovedEntity"}, 
+                                        { "x": 160,  "y": 70, "text": "Ground"}, 
+                                        { "x": 50,  "y": 60, "text": "MER"},
+                                        { "x": 160,  "y": 60, "text": "MER"},
+                                        { "x": 10,  "y": 80, "text": "FRC"},
+                                        { "x": 120,  "y": 80, "text": "PTH"}
+                                    ],
+
+                            "caption": "ASC causal chains used with causative mereological network",
+
+                            "chains": [
+                                        {"network": "Volitional Remove", "parent": "CausativeMereologicalNetwork"},
+                                       {"network": "Volitional Attend", "parent": "CausativeMereologicalNetwork"},
+                                       {"network": "Volitional Deprive", "parent": "CausativeMereologicalNetwork"},
+                                       {"network": "Volitional Place", "parent": "CausativeMereologicalNetwork"},
+                                       {"network": "Volitional Provide", "parent": "CausativeMereologicalNetwork"},
+                                    ],
+
+                            "name" : "Causative mereological network" 
+                        };
+
     return eval(NetworkType);
 
 }
@@ -10782,8 +10856,10 @@ function makeNetworkPage () {
                 var height = 230;
             } else if (heightMultiplier < 13) {
                 var height = 320;
-            }else {
-                var height = 410;
+            } else if (heightMultiplier < 18) {
+                var height = 420;
+            } else {
+                var height = 450;
             }
 
 

@@ -2006,25 +2006,55 @@ var events = {
         "Theme-of(x,e) & Component-of(a,Flowers) & Component-of(b,garden) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & EXIST(q2) & PTH(a,b)",
         "10024"
     ],
+    "944": [
+        "That new handle unscrewed easily",
+        "disassemble-23.3",
+        "Sbj V",
+        "Autonomous Remove",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,handle) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+        "10026"
+    ],
   "1130": [
     "Clouds cleared from the sky.",
     "clear-10.3-1",
     "Sbj V PathP",
     "Autonomous Remove",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,Clouds) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
+    "10026"
   ],
+    "1131": [
+        "The cream separated easily from (the) milk",
+        "separate-23.1",
+        "Sbj V PathP",
+        "Autonomous Remove",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,cream) & Component-of(b,milk) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+        "10026"
+    ],
+    "1132": [
+        "The yolk separated from the white",
+        "separate-23.1-1",
+        "Sbj V PathP",
+        "Autonomous Remove",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,yolk) & Component-of(b,white) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
+        "10026"
+    ],
   "1133": [
     "The twig broke off the branch",
     "split-23.2",
     "Sbj V PathP",
     "Autonomous Remove",
     "DirectedAchievement",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,twig) & Component-of(b,branch) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
+    "10026"
   ],
   "1134": [
     "The twigs broke off of those branches easily",
@@ -2032,9 +2062,9 @@ var events = {
     "Sbj V PathP",
     "Autonomous Remove",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,twigs) & Component-of(b,branches) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & -MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
+    "10026"
   ],
   "1136": [
     "Doug cleaned the dishes from the table",
@@ -4442,6 +4472,7 @@ var events = {
     "11079": ["Autonomous Location", "LocationNetwork"],
     "11080": ["Self-volitional Location", "LocationNetwork"],
     "11081": ["Autonomous Internal", "LocationNetwork"],
+    "11082": ["Autonomous Remove", "MereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4503,6 +4534,7 @@ var events = {
     "12061": { "child": "Autonomous Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12062": { "child": "Self-volitional Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12063": { "child": "Autonomous Internal", "parentNetwork": "10025", "generalNetwork": "10025"},
+    "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10027"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -4778,6 +4810,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "LocationNetwork") {
         var identifierToMappingURL = "11081";
         var identifierToConstructionURL = "12063";
+    } else if (FDCategory === "Autonomous Remove" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11082";
+        var identifierToConstructionURL = "12064";
     }
 
 
@@ -8108,12 +8143,47 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetLocationAutoInt" 
                             };
 
+
+     var NetworkMereologicalAutonomousRemove = {     
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 0,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 60} ],
+
+                                "solid1":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "solid2":    [   { "x": 30,  "y": 75}, 
+                                                { "x": 60,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -40,  "y": 25, "text": "-MER"},
+                                        { "x": 70,  "y": 25, "text": "EXIST"},
+                                        { "x": 30,  "y": 45, "text": "PTH"}, 
+                                        { "x": -40,  "y": 80, "text": "MovedEntity"}, 
+                                        { "x": 70,  "y": 80, "text": "Ground"}, 
+                                        { "x": -40,  "y": 70, "text": "MER"},
+                                        { "x": 70,  "y": 70, "text": "MER"},   
+                                        { "x": 30,  "y": 90, "text": "PTH"}, 
+                                    ],
+
+                                "argTextToAdd": ["MovedEntity", "Ground"],
+
+                                "name" : "NetMereologicalAutoRem" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
             return NetworkAutonomousRemove;
         } else if (nameGeneralNetwork === 'EmissionNetwork') {
             return NetworkEmissionAutonomousRemove;
+        } else if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalAutonomousRemove;
         }
     }
 

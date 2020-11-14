@@ -1752,10 +1752,40 @@ var events = {
     "Sbj V",
     "Autonomous Internal",
     "DirectedAchievement",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)",
-    ""
+    "10026"
   ],
+    "966": [
+        "The egg yolks and egg whites separated easily",
+        "separate-23.1",
+        "Sbj V",
+        "Autonomous Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,yolks and whites) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "972": [
+        "Those twigs and branches broke apart easily",
+        "split-23.2",
+        "Sbj V",
+        "Autonomous Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,twigs and branches) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "728": [
+        "The twig and the branch broke apart",
+        "split-23.2",
+        "Sbj V ResultP",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,twig and the branch) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
     "991": [
         "Paula hit the sticks together",
         "hit-18.1",
@@ -2072,10 +2102,50 @@ var events = {
     "Sbj V Obj PathP",
     "Volitional Remove",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Doug) & Component-of(b,dishes) & Component-of(c,table) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
+  "1138": [
+    "I unscrewed the handle",
+    "disassemble-23.3",
+    "Sbj V Obj",
+    "Volitional Remove",
+    "IncrementalAccomplishment",
+    "MereologicalNetwork",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10026"
+  ],
+    "1139": [
+        "I unscrewed the handle from the box",
+        "disassemble-23.3",
+        "Sbj V Obj PathP",
+        "Volitional Remove",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,box) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "1144": [
+        "I separated the yolk from the white",
+        "separate-23.1",
+        "Sbj V Obj PathP",
+        "Volitional Remove",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,yolk) & Component-of(c,white) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "1145": [
+        "I broke the twig off the branch",
+        "split-23.2",
+        "Sbj V Obj PathP",
+        "Volitional Remove",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,twig) & Component-of(c,branch) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
   "1137": [
     "Sympathetic fans clipped copies of Ms. Shere's recipes from magazines",
     "cut-21.1",
@@ -2085,16 +2155,6 @@ var events = {
     "CausativeCOSNetwork",
     "Theme-of(y,e) & Component-of(a,fans) & Component-of(b,copies) & Component-of(c,magazines) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     "10015"
-  ],
-  "1138": [
-    "I unscrewed the handle",
-    "disassemble-23.3",
-    "Sbj V Obj",
-    "Volitional Remove",
-    "IncrementalAccomplishment",
-    "",
-    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & Component-of(c,NI) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & -MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
   ],
   "1148": [
     "Brian wiped the fingerprints from the counter",
@@ -4473,6 +4533,8 @@ var events = {
     "11080": ["Self-volitional Location", "LocationNetwork"],
     "11081": ["Autonomous Internal", "LocationNetwork"],
     "11082": ["Autonomous Remove", "MereologicalNetwork"],
+    "11083": ["Volitional Remove", "MereologicalNetwork"],
+    "11084": ["Autonomous Internal", "MereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4534,7 +4596,9 @@ var events = {
     "12061": { "child": "Autonomous Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12062": { "child": "Self-volitional Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12063": { "child": "Autonomous Internal", "parentNetwork": "10025", "generalNetwork": "10025"},
-    "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10027"},
+    "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10026"},
+    "12065": { "child": "Volitional Remove", "parentNetwork": "10026", "generalNetwork": "10026"},
+    "12066": { "child": "Autonomous Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -4813,8 +4877,14 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Remove" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11082";
         var identifierToConstructionURL = "12064";
+    } else if (FDCategory === "Volitional Remove" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11083";
+        var identifierToConstructionURL = "12065";
+    } else if (FDCategory === "Autonomous Internal" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11084";
+        var identifierToConstructionURL = "12066";
     }
-
+ 
 
     return [identifierToMappingURL, identifierToConstructionURL]
 
@@ -4888,42 +4958,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                     ],
 
                                 "name" : "NetVolRem" 
-                            };
-
-     var NetworkMereologicalVolitionalPlace = {        
-
-                                "solid1":    [   { "x": 50,  "y": 30}, 
-                                                { "x": 100,  "y": 30} ],
-
-                                "solid2":    [   { "x": 50,  "y": 90}, 
-                                                { "x": 100,  "y": 90} ],
-
-                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
-                                                { "x": 25,  "y": 70} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 40}, 
-                                                { "x": 125,  "y": 70} ],
-
-                                "arrow":    [   { "x": -50,  "y": 30}, 
-                                                { "x": -20,  "y": 30} ],
-
-                                'textToAdd' : [
-                                        { "x": -40,  "y": 35, "text": "A0"},
-                                        { "x": -10,  "y": 35, "text": "A1"},
-                                        { "x": -15,  "y": 90, "text": "MovedEntity"},  
-                                        { "x": 90,  "y": 35, "text": "A2"},
-                                        { "x": 105,  "y": 90, "text": "Ground"},
-                                        { "x": -80,  "y": 25, "text": "VOL"},
-                                        { "x": -45,  "y": 45, "text": "FRC"},
-                                        { "x": -15,  "y": 25, "text": "EXIST | +MER"},
-                                        { "x": 0,  "y": 80, "text": "+MER"},
-                                        { "x": 105,  "y": 25, "text": "EXIST"},
-                                        { "x": 105,  "y": 80, "text": "EXIST"},
-                                        { "x": 65,  "y": 45, "text": "PTH"},
-                                        { "x": 65,  "y": 105, "text": "PTH"}
-                                    ],
-
-                                "name" : "NetMerVolPlace" 
                             };
 
 
@@ -8176,6 +8210,109 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetMereologicalAutoRem" 
                             };
 
+     var NetworkMereologicalVolitionalRemove = {        
+
+                                "solid1":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "solid2":    [   { "x": 60,  "y": 90}, 
+                                                { "x": 90,  "y": 90} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 40}, 
+                                                { "x": 125,  "y": 70} ],
+
+                                "arrow":    [   { "x": -50,  "y": 30}, 
+                                                { "x": -20,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -20,  "y": 35, "text": "A1"},
+                                        { "x": 85,  "y": 35, "text": "A2"},
+                                        { "x": -10,  "y": 90, "text": "MovedEntity"},  
+                                        { "x": 105,  "y": 90, "text": "Ground"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -45,  "y": 45, "text": "FRC"},
+                                        { "x": -10,  "y": 25, "text": "-MER"},
+                                        { "x": -10,  "y": 80, "text": "-MER"},
+                                        { "x": 105,  "y": 25, "text": "EXIST"},
+                                        { "x": 105,  "y": 80, "text": "EXIST"},
+                                        { "x": 65,  "y": 45, "text": "PTH"},
+                                        { "x": 65,  "y": 105, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetMerVolRemove" 
+                            };
+
+     var NetworkMereologicalVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "solid2":    [   { "x": 60,  "y": 90}, 
+                                                { "x": 90,  "y": 90} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 40}, 
+                                                { "x": 125,  "y": 70} ],
+
+                                "arrow":    [   { "x": -50,  "y": 30}, 
+                                                { "x": -20,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},
+                                        { "x": -15,  "y": 90, "text": "MovedEntity"},  
+                                        { "x": 90,  "y": 35, "text": "A2"},
+                                        { "x": 105,  "y": 90, "text": "Ground"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -45,  "y": 45, "text": "FRC"},
+                                        { "x": -15,  "y": 25, "text": "EXIST | +MER"},
+                                        { "x": 0,  "y": 80, "text": "+MER"},
+                                        { "x": 105,  "y": 25, "text": "EXIST"},
+                                        { "x": 105,  "y": 80, "text": "EXIST"},
+                                        { "x": 65,  "y": 45, "text": "PTH"},
+                                        { "x": 65,  "y": 105, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetMerVolPlace" 
+                            };
+
+     var NetworkMereologicalAutonomousInternal = {        
+
+                                "solid1":    [   { "x": 60,  "y": 85}, 
+                                                { "x": 90,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 65}, 
+                                                { "x": 70,  "y": 40} ],
+
+                                "dottedRight":    [   { "x": 115,  "y": 65},
+                                                      { "x": 70,  "y": 40}
+                                                ],
+
+                                'textToAdd' : [
+                                        { "x": 100,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 90, "text": "MovedEntity"},  
+                                        { "x": 100,  "y": 90, "text": "Ground"},
+                                        { "x": 55,  "y": 25, "text": "INTL"},
+                                        { "x": 10,  "y": 80, "text": "MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 60,  "y": 95, "text": "PTH"}
+                                    ],
+
+                                 "argTextToAdd": ["MovedEntity"],
+
+                                "name" : "NetMerAutoIntl" 
+                            };
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -8197,6 +8334,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCausativeCOSVolitionalRemove;
         } else if (nameGeneralNetwork === 'IngestionNetwork') {
             return NetworkIngestionVolitionalRemove;
+        } else if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalVolitionalRemove;
         }
     }
 
@@ -8278,8 +8417,12 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkInternalAutonomousInternal;
         } else if (nameGeneralNetwork === 'LocationNetwork') {
             return NetworkLocationAutonomousInternal;
+        } else if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalAutonomousInternal;
         }
     }
+
+
 
     else if (FDCategory === 'Cause Internal') {
 

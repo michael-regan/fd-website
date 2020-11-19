@@ -2330,10 +2330,10 @@ var events = {
     "The sky cleared",
     "clear-10.3-1",
     "Sbj V",
-    "Autonomous Deprive",
+    "Autonomous COS",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,NI) & Component-of(b,sky) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & -MER(q2) & PTH(a,b)",
+    "Theme-of(y,e) & Component-of(a,sky) & IncrAcc(a,i,j,q1) & COS(q1)",
     "10026"
   ],
   "1158": [
@@ -2546,6 +2546,15 @@ var events = {
         "Theme-of(x,e) & Component-of(a,It) & Component-of(b,ankle) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & +MER(q1) & EXIST(q2) & PTH(a,b)",
         "10026"
     ],
+    "681": [
+        "Diabetics incorporated sugar into their desserts",
+        "amalgamate-22.2-1",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Diabetics) & Component-of(b,sugar) & Component-of(c,desserts) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
   "682": [
     "Cora coiled the rope around the post",
     "coil-9.6",
@@ -2554,18 +2563,158 @@ var events = {
     "IncrementalAccomplishment",
     "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Cora) & Component-of(b,rope) & Component-of(c,post) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
+  "683": [
+    "I spooned the sauce there",
+    "funnel-9.3",
+    "Sbj V Obj PathP",
+    "Volitional Place",
+    "IncrementalAccomplishment",
+    "MereologicalNetwork",
+    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10026"
+  ],
+    "684": [
+        "I funneled the mixture into the bottle",
+        "funnel-9.3",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,mixture) & Component-of(c,bottle) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "685": [
+        "He wedged the diamond between shifting dunes",
+        "funnel-9.3-1",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,diamond) & Component-of(c,dunes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "688": [
+        "Herman added a computer to the network",
+        "mix-22.1-2",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,computer) & Component-of(c,network) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "700": [
+        "They put upon me a brilliant, red helm",
+        "put-9.1-2",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,helm) & Component-of(c,me) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "708": [
+        "I stashed the book",
+        "put-9.1-1",
+        "Sbj V Obj",
+        "Volitional Place",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "691": [
+        "Maria poured water from the bowl into the cup",
+        "pour-9.5",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Maria) & Component-of(b,water) & Component-of(c,cup) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "692": [
+        "Tamara poured water here",
+        "pour-9.5",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Tamara) & Component-of(b,water) & Component-of(c,here) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "693": [
+        "Tamara poured water into the bowl",
+        "pour-9.5",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Tamara) & Component-of(b,water) & Component-of(c,bowl) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "696": [
+        "Cheryl stood the books on the shelf",
+        "put_spatial-9.2",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Cheryl) & Component-of(b,books) & Component-of(c,shelf) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "697": [
+        "Cheryl stood the books there",
+        "put_spatial-9.2",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Cheryl) & Component-of(b,books) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
   "187": [
     "Jessica squirted water at me",
     "spray-9.7",
     "Sbj V Obj PathP",
     "Volitional Place",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,me) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
+    "704": [
+        "Linda taped the picture to the wall",
+        "tape-22.4",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,picture) & Component-of(c,wall) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "1121": [
+        "Jessica squirted water",
+        "spray-9.7",
+        "Sbj V Obj",
+        "Volitional Motion",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "689": [
+        "Lydia pocketed the change in her left pocket",
+        "pocket-9.10",
+        "Sbj V Obj PathP",
+        "Volitional Place",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Lydia) & Component-of(b,change) & Component-of(c,pocket) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
   "247": [
     "Frances hid the presents behind the books in the drawer",
     "concealment-16",
@@ -2584,16 +2733,6 @@ var events = {
     "TransitoryState",
     "",
     "Theme-of(x,e) & Component-of(a,child) & Component-of(b,mother) & TranStPh(a,i,j,q1) & InhStPhExtShort(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
-  ],
-  "683": [
-    "I spooned the sauce there",
-    "funnel-9.3",
-    "Sbj V Obj PathP",
-    "Volitional Place",
-    "IncrementalAccomplishment",
-    "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,I) & Component-of(b,sauce) & Component-of(c,there) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
     ""
   ],
     "687": [
@@ -4862,6 +5001,8 @@ var events = {
     "11089": ["Volitional COS", "MereologicalNetwork"],
     "11090": ["Self-volitional Internal", "MereologicalNetwork"],
     "11091": ["Autonomous Place", "MereologicalNetwork"],
+    "11092": ["Volitional Place", "MereologicalNetwork"],
+    "11093": ["Autonomous COS", "MereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -4933,6 +5074,8 @@ var events = {
     "12071": { "child": "Volitional COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12072": { "child": "Self-volitional Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12073": { "child": "Autonomous Place", "parentNetwork": "10027", "generalNetwork": "10026"},
+    "12074": { "child": "Volitional Place", "parentNetwork": "10026", "generalNetwork": "10026"},
+    "12075": { "child": "Autonomous COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5238,6 +5381,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous Place" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11091";
         var identifierToConstructionURL = "12073";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11092";
+        var identifierToConstructionURL = "12074";
+    } else if (FDCategory === "Autonomous COS" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11093";
+        var identifierToConstructionURL = "12075";
     }
  
 
@@ -8589,16 +8738,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 'textToAdd' : [
                                         { "x": -40,  "y": 35, "text": "A0"},
-                                        { "x": -10,  "y": 35, "text": "A1"},
+                                        { "x": -20,  "y": 35, "text": "A1"},
                                         { "x": -15,  "y": 90, "text": "MovedEntity"},  
-                                        { "x": 90,  "y": 35, "text": "A2"},
+                                        { "x": 85,  "y": 35, "text": "A2"},
                                         { "x": 105,  "y": 90, "text": "Ground"},
                                         { "x": -80,  "y": 25, "text": "VOL"},
                                         { "x": -45,  "y": 45, "text": "FRC"},
-                                        { "x": -15,  "y": 25, "text": "EXIST | +MER"},
-                                        { "x": 0,  "y": 80, "text": "+MER"},
+                                        { "x": -15,  "y": 25, "text": "+MER"},
+                                        { "x": -15,  "y": 80, "text": "MER"},
                                         { "x": 105,  "y": 25, "text": "EXIST"},
-                                        { "x": 105,  "y": 80, "text": "EXIST"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
                                         { "x": 65,  "y": 45, "text": "PTH"},
                                         { "x": 65,  "y": 105, "text": "PTH"}
                                     ],
@@ -8765,6 +8914,29 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Physical_entity", "Ground"],
 
                                 "name" : "NetMerPhysCOS" 
+                            };
+
+     var NetworkMereologicalAutonomousCOS = {    
+ 
+                                "solid2":    [   { "x": 25,  "y": 90}, 
+                                                { "x": 55,  "y": 90} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                { "x": 85,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 110,  "y": 35, "text": "A0"},
+                                        { "x": -45,  "y": 90, "text": "MovedEntity"}, 
+                                        { "x": 70,  "y": 90, "text": "Ground"},
+                                        { "x": -40,  "y": 80, "text": "MER"},
+                                        { "x": 70,  "y": 25, "text": "PROP"},
+                                        { "x": 70,  "y": 80, "text": "MER"},
+                                        { "x": 25,  "y": 105, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Ground"],
+
+                                "name" : "NetMerAutoCOS" 
                             };
 
      var NetworkMereologicalVolitionalCOS = {    
@@ -9063,6 +9235,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCOSAutonomousCOS; 
         } else if (nameGeneralNetwork === 'CausativeCOSNetwork') {
             return NetworkCausativeCOSAutonomousCOS;
+        } else if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalAutonomousCOS;
         }
     }
 
@@ -9897,6 +10071,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Autonomous Deprive", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Deprive", "parent": "MereologicalNetwork"},
                                        {"network": "Physical COS", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous COS", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional COS", "parent": "MereologicalNetwork"},
                                        {"network": "Autonomous Place", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Place", "parent": "MereologicalNetwork"},

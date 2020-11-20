@@ -1740,7 +1740,7 @@ var events = {
     "The eggs mixed well",
     "mix-22.1-1",
     "Sbj V",
-    "Autonomous Internal",
+    "Autonomous Collective Internal",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,eggs) & IncrAcc(a,i,j,q1) & INTL(q1)",
@@ -1750,7 +1750,7 @@ var events = {
         "The labels taped easily",
         "tape-22.4",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,labels) & IncrAcc(a,i,j,q1) & INTL(q1)",
@@ -1760,7 +1760,7 @@ var events = {
         "The pieces interconnected easily",
         "amalgamate-22.2",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,pieces) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1770,7 +1770,7 @@ var events = {
         "The yolks and the whites intermingled",
         "amalgamate-22.2-1-1",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,yolks and the whites) & IncrAcc(a,i,j,q1) & INTL(q1)",
@@ -1780,7 +1780,7 @@ var events = {
         "These computers connected well",
         "mix-22.1-2",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,computers) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1790,7 +1790,7 @@ var events = {
         "These computers connected well together",
         "mix-22.1-2",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,computers) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1800,7 +1800,7 @@ var events = {
         "Our computers connected",
         "mix-22.1-2-1",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,computers) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1810,7 +1810,7 @@ var events = {
         "Our computers connected together",
         "mix-22.1-2-1",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,computers) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1820,17 +1820,77 @@ var events = {
     "The eggs and cream mixed well together",
     "mix-22.1-1",
     "Sbj V",
-    "Autonomous Internal",
+    "Autonomous Collective Internal",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,eggs and cream) & IncrAcc(a,i,j,q1) & INTL(q1)",
-    ""
+    "10026"
   ],
+    "973": [
+        "The labels and covers taped together easily",
+        "tape-22.4",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,labels and covers) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "974": [
+        "The labels and covers taped easily together",
+        "tape-22.4",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,labels and covers) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "967": [
+        "The eggs whisked easily",
+        "shake-22.3",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,eggs) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "968": [
+        "The sugar and cream whipped together easily",
+        "shake-22.3",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,sugar and cream) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "955": [
+        "The eggs and the cream mixed together",
+        "mix-22.1-1-1",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,eggs and the cream) & DirAch(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
+    "956": [
+        "The eggs and the cream mixed",
+        "mix-22.1-1-1",
+        "Sbj V",
+        "Autonomous Collective Internal",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,x) & IncrAcc(a,i,j,q1) & INTL(q1)",
+        "10026"
+    ],
   "965": [
     "The yolk and the white separated",
     "separate-23.1",
     "Sbj V",
-    "Autonomous Internal",
+    "Autonomous Collective Internal",
     "DirectedAchievement",
     "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,yolk and white) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1840,7 +1900,7 @@ var events = {
         "The egg yolks and egg whites separated easily",
         "separate-23.1",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,yolks and whites) & IncrAcc(a,i,j,q1) & INTL(q1)",
@@ -1850,7 +1910,7 @@ var events = {
         "Those twigs and branches broke apart easily",
         "split-23.2",
         "Sbj V",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,twigs and branches) & IncrAcc(a,i,j,q1) & INTL(q1)",
@@ -1860,7 +1920,7 @@ var events = {
         "The twig and the branch broke apart",
         "split-23.2",
         "Sbj V ResultP",
-        "Autonomous Internal",
+        "Autonomous Collective Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(x,e) & Component-of(a,twig and the branch) & DirAch(a,i,j,q1) & INTL(q1)",
@@ -1869,7 +1929,7 @@ var events = {
     "991": [
         "Paula hit the sticks together",
         "hit-18.1",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "CyclicAchievement",
         "ForceNetwork",
@@ -1879,17 +1939,17 @@ var events = {
   "992": [
     "Herman mixed the eggs",
     "mix-22.1-1",
-    "Sbj V Obj",
+    "Sbj V Obj.PL",
     "Volitional Internal",
     "DirectedAchievement",
-    "CarryMotionNetwork",
+    "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,eggs) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
     "10005"
   ],
   "993": [
     "Herman mixed the eggs and the cream together",
     "mix-22.1-1",
-    "Sbj V Obj",
+    "Sbj V Obj.PL",
     "Volitional Internal",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
@@ -1899,7 +1959,7 @@ var events = {
     "1001": [
         "Linda taped the label and the cover together",
         "tape-22.4",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
@@ -1909,7 +1969,7 @@ var events = {
     "989": [
         "The teacher gathered the kids together",
         "herd-47.5.2",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
@@ -1919,17 +1979,37 @@ var events = {
     "990": [
         "The teacher gathered the kids",
         "herd-47.5.2",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
         "Theme-of(y,e) & Component-of(a,teacher) & Component-of(b,kids) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
         "10026"
     ],
+    "994": [
+        "Herman connected the computers",
+        "mix-22.1-2",
+        "Sbj V Obj.PL",
+        "Volitional Internal",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,computers) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "995": [
+        "Herman connected the computers together",
+        "mix-22.1-2",
+        "Sbj V Obj.PL",
+        "Volitional Internal",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,computers) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
     "998": [
         "Herman whipped sugar and the cream together",
         "shake-22.3-1",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
@@ -1939,7 +2019,7 @@ var events = {
     "999": [
         "Herman gathered the students together",
         "shake-22.3-2",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
@@ -1949,7 +2029,7 @@ var events = {
     "1000": [
         "Herman spliced ropes",
         "shake-22.3-2-1",
-        "Sbj V Obj",
+        "Sbj V Obj.PL",
         "Volitional Internal",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
@@ -1959,7 +2039,7 @@ var events = {
     "821": [
         "I broke the twig and the branch apart",
         "split-23.2",
-        "Sbj V Obj ResultP",
+        "Sbj V Obj.PL ResultP",
         "Volitional Internal",
         "DirectedAchievement",
         "MereologicalNetwork",
@@ -1969,7 +2049,7 @@ var events = {
   "997": [
     "I separated the yolk and the white",
     "separate-23.1",
-    "Sbj V Obj",
+    "Sbj V Obj.PL",
     "Volitional Internal",
     "DirectedAchievement",
     "MereologicalNetwork",
@@ -2196,6 +2276,16 @@ var events = {
         "Theme-of(x,e) & Component-of(a,handle) & IncrAcc(a,i,j,q1) & INTL(q1)",
         "10026"
     ],
+    "1034": [
+        "The plane landed",
+        "pocket-9.10-1",
+        "Sbj V",
+        "Autonomous Internal",
+        "DirectedAchievement",
+        "MereologicalNetwork",
+        "Theme-of(x,e) & Component-of(a,plane) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10026"
+    ],
   "1130": [
     "Clouds cleared from the sky.",
     "clear-10.3-1",
@@ -2260,7 +2350,7 @@ var events = {
         "Lydia pocketed the change",
         "pocket-9.10",
         "Sbj V Obj",
-        "Volitional Internal",
+        "Volitional Internal Singular",
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(y,e) & Component-of(a,Lydia) & Component-of(b,change) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
@@ -2270,7 +2360,7 @@ var events = {
     "I unscrewed the handle",
     "disassemble-23.3",
     "Sbj V Obj",
-    "Volitional Internal",
+    "Volitional Internal Singular",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,I) & Component-of(b,handle) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
@@ -4909,8 +4999,9 @@ var events = {
     "10023": {"networks": ["AbsorbNetwork"], "name": "Absorb"},
     "10024": {"networks": ["InternalNetwork"], "name": "Internal"},
     "10025": {"networks": ["LocationNetwork"], "name": "Location"},
-    "10026": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork"], "name": "Mereological+Causative Mereological"},
+    "10026": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork", "ConcealmentNetwork"], "name": "Mereological+Causative+Concealment Mereological"},
     "10027": {"networks": ["MereologicalNetwork"], "name": "Mereological"},
+    "10028": {"networks": ["MereologicalNetwork", "ConcealmentNetwork"], "name": "Mereological+Concealment"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -4995,7 +5086,7 @@ var events = {
     "11083": ["Volitional Remove", "MereologicalNetwork"],
     "11084": ["Autonomous Internal", "MereologicalNetwork"],
     "11085": ["Volitional Internal", "MereologicalNetwork"],
-    "11086": ["Autonomous Deprive", "MereologicalNetwork"],
+    "11086": ["Volitional Internal Singular", "MereologicalNetwork"],
     "11087": ["Volitional Deprive", "MereologicalNetwork"],
     "11088": ["Physical COS", "MereologicalNetwork"],
     "11089": ["Volitional COS", "MereologicalNetwork"],
@@ -5003,6 +5094,7 @@ var events = {
     "11091": ["Autonomous Place", "MereologicalNetwork"],
     "11092": ["Volitional Place", "MereologicalNetwork"],
     "11093": ["Autonomous COS", "MereologicalNetwork"],
+    "11094": ["Autonomous Collective Internal", "MereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -5067,15 +5159,16 @@ var events = {
     "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12065": { "child": "Volitional Remove", "parentNetwork": "10026", "generalNetwork": "10026"},
     "12066": { "child": "Autonomous Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12067": { "child": "Volitional Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12068": { "child": "Autonomous Deprive", "parentNetwork": "10027", "generalNetwork": "10026"},
+    "12067": { "child": "Volitional Internal", "parentNetwork": "10028", "generalNetwork": "10026"},
+    "12068": { "child": "Volitional Internal Singular", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12069": { "child": "Volitional Deprive", "parentNetwork": "10026", "generalNetwork": "10026"},
     "12070": { "child": "Physical COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12071": { "child": "Volitional COS", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12072": { "child": "Self-volitional Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
+    "12072": { "child": "Self-volitional Internal", "parentNetwork": "10028", "generalNetwork": "10026"},
     "12073": { "child": "Autonomous Place", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12074": { "child": "Volitional Place", "parentNetwork": "10026", "generalNetwork": "10026"},
     "12075": { "child": "Autonomous COS", "parentNetwork": "10027", "generalNetwork": "10026"},
+    "12076": { "child": "Autonomous Collective Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5363,7 +5456,7 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Internal" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11085";
         var identifierToConstructionURL = "12067";
-    } else if (FDCategory === "Autonomous Deprive" && generalNetworkName == "MereologicalNetwork") {
+    } else if (FDCategory === "Volitional Internal Singular" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11086";
         var identifierToConstructionURL = "12068";
     } else if (FDCategory === "Volitional Deprive" && generalNetworkName == "MereologicalNetwork") {
@@ -5387,6 +5480,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Autonomous COS" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11093";
         var identifierToConstructionURL = "12075";
+    } else if (FDCategory === "Autonomous Collective Internal" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11094";
+        var identifierToConstructionURL = "12076";
     }
  
 
@@ -8757,7 +8853,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetMerVolPlace" 
                             };
 
-     var NetworkMereologicalAutonomousInternal = {        
+     var NetworkMereologicalAutonomousCollectiveInternal = {        
 
                                 "solid1":    [   { "x": 60,  "y": 85}, 
                                                 { "x": 90,  "y": 85} ],
@@ -8781,7 +8877,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                  "argTextToAdd": ["MovedEntity"],
 
-                                "name" : "NetMerAutoIntl" 
+                                "name" : "NetMerAutoCollIntl" 
                             };
 
      var NetworkMereologicalVolitionalInternal = {        
@@ -8817,38 +8913,58 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetMerVolIntl" 
                             };
 
+     var NetworkMereologicalAutonomousInternal = {        
 
-     var NetworkMereologicalAutonomousDeprive = {        
-
-                                "solid1":    [   { "x": 60,  "y": 30}, 
-                                                { "x": 90,  "y": 30} ],
-
-                                "solid2":    [   { "x": 60,  "y": 90}, 
+                                "solid1":    [   { "x": 60,  "y": 90}, 
                                                 { "x": 90,  "y": 90}],
 
                                 "dottedLeft":    [   { "x": 25,  "y": 40}, 
                                                 { "x": 25,  "y": 70} ],
 
-                                "dottedRight":    [   { "x": 125,  "y": 40}, 
-                                                { "x": 125,  "y": 70} ],
-
                                 'textToAdd' : [
                                         { "x": 40,  "y": 35, "text": "A0"},
                                         { "x": -10,  "y": 90, "text": "MovedEntity"},  
-                                        { "x": 90,  "y": 35, "text": "A1"},
                                         { "x": 105,  "y": 90, "text": "Ground"},
                                         { "x": -5,  "y": 25, "text": "INTL"},
-                                        { "x": -5,  "y": 80, "text": "INTL"},
-                                        { "x": 105,  "y": 25, "text": "-MER"},
+                                        { "x": -5,  "y": 80, "text": "MER"},
                                         { "x": 105,  "y": 80, "text": "MER"},
-                                        { "x": 65,  "y": 45, "text": "PTH"},
                                         { "x": 65,  "y": 105, "text": "PTH"}
                                     ],
 
-                                "argTextToAdd": ["MovedEntity", "Ground"],
+                                "argTextToAdd": ["MovedEntity"],
 
                                 "name" : "NetMerAutoDep" 
                             };
+
+     var NetworkMereologicalVolitionalInternalSingular = {    
+
+                                "arrow":    [   { "x": -5,  "y": 30}, 
+                                                { "x": 25,  "y": 30} ],    
+
+                                "solid1":    [   { "x": 105,  "y": 85}, 
+                                                { "x": 135,  "y": 85}],
+
+                                "dottedLeft":    [   { "x": 65,  "y": 40}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 35, "text": "A0"},
+                                        { "x": 25,  "y": 35, "text": "A1"},
+                                        { "x": 35,  "y": 90, "text": "MovedEntity"},  
+                                        { "x": 145,  "y": 90, "text": "Ground"},
+                                        { "x": -40,  "y": 25, "text": "VOL"},
+                                        { "x": 35,  "y": 25, "text": "INTL"},
+                                        { "x": 35,  "y": 80, "text": "MER"},
+                                        { "x": 145,  "y": 80, "text": "MER"},
+                                        { "x": -5,  "y": 45, "text": "FRC"},
+                                        { "x": 105,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity"],
+
+                                "name" : "NetMerVolIntSing" 
+                            };
+
 
      var NetworkMereologicalVolitionalDeprive = {        
 
@@ -9146,6 +9262,15 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         }
     }
 
+    else if (FDCategory === 'Volitional Internal Singular') { return NetworkMereologicalVolitionalInternalSingular; }
+
+    else if (FDCategory === 'Autonomous Collective Internal') {
+
+        if (nameGeneralNetwork === 'MereologicalNetwork'){
+            return NetworkMereologicalAutonomousCollectiveInternal;
+        }    
+    }
+
     else if (FDCategory === 'Cause Internal') {
 
         if (nameGeneralNetwork === 'InternalNetwork'){
@@ -9177,7 +9302,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
         }
     }
 
-    else if (FDCategory === 'Autonomous Deprive') { return NetworkMereologicalAutonomousDeprive; }
+    // else if (FDCategory === 'Autonomous Deprive') { return NetworkMereologicalAutonomousDeprive; }
 
     else if (FDCategory === 'Volitional Deprive') { 
 
@@ -10066,9 +10191,11 @@ function getMultipleNetworkPage (NetworkType) {
                                         {"network": "Autonomous Remove", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Remove", "parent": "MereologicalNetwork"},
                                        {"network": "Autonomous Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Autonomous Collective Internal", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Internal", "parent": "MereologicalNetwork"},
+                                       {"network": "Volitional Internal Singular", "parent": "MereologicalNetwork"},
                                        {"network": "Self-volitional Internal", "parent": "MereologicalNetwork"},
-                                       {"network": "Autonomous Deprive", "parent": "MereologicalNetwork"},
+                                       //{"network": "Autonomous Deprive", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Deprive", "parent": "MereologicalNetwork"},
                                        {"network": "Physical COS", "parent": "MereologicalNetwork"},
                                        {"network": "Autonomous COS", "parent": "MereologicalNetwork"},
@@ -10115,6 +10242,39 @@ function getMultipleNetworkPage (NetworkType) {
                                     ],
 
                             "name" : "Causative mereological network" 
+                        };
+
+    var ConcealmentNetwork = {        
+
+                                "solid1":    [   { "x": 10,  "y": 65}, 
+                                                { "x": 40,  "y": 65} ],
+
+                                "solid2":    [   { "x": 110,  "y": 65}, 
+                                                { "x": 140,  "y": 65} ],
+
+                                'textToAdd' : [
+                                        { "x": -70,  "y": 70, "text": "MovedEntity"}, 
+                                        { "x": 60,  "y": 70, "text": "Ground"}, 
+                                        { "x": 160,  "y": 70, "text": "Perceiver"}, 
+                                        { "x": -70,  "y": 60, "text": "MER"},
+                                        { "x": 60,  "y": 60, "text": "MER"},
+                                        { "x": 160,  "y": 60, "text": "PROP"},
+                                        { "x": 10,  "y": 80, "text": "PTH"},
+                                        { "x": 110,  "y": 80, "text": "AFF"}
+                                    ],
+
+                            "caption": "ASC causal chains used with concealment network",
+
+                            "chains": [
+                                        {"network": "Volitional Place", "parent": "ConcealmentNetwork"},
+                                        {"network": "Self-volitional Place", "parent": "ConcealmentNetwork"},
+                                        {"network": "Volitional Internal", "parent": "ConcealmentNetwork"},
+                                       {"network": "Self-volitional Internal", "parent": "ConcealmentNetwork"},  
+                                       {"network": "Self-volitional Place Affect", "parent": "ConcealmentNetwork"},
+                                       {"network": "Volitional Place Affect", "parent": "ConcealmentNetwork"},          
+                                    ],
+
+                            "name" : "Concealment network" 
                         };
 
     return eval(NetworkType);

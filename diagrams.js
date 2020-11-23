@@ -1262,9 +1262,9 @@ var events = {
     "Sbj V with Obl",
     "Autonomous Provide",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(x,e) & Component-of(a,eggs) & Component-of(b,cream) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & INTL(q1) & +MER(q2) & PTH(a,b)",
-    ""
+    "10026"
   ],
     "854": [
         "That chisel carved the statue",
@@ -3521,10 +3521,70 @@ var events = {
     "Sbj V Obj in/with Obl",
     "Volitional Provide",
     "IncrementalAccomplishment",
-    "",
+    "MereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,butter) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
+    "846": [
+        "Leslie covered the bed with blankets.",
+        "fill-9.8",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,blankets) & Component-of(c,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "847": [
+        "Leigh swaddled the baby in blankets",
+        "fill-9.8-1",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Leigh) & Component-of(b,blankets) & Component-of(c,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "848": [
+        "The jeweler decorated the ring with the name",
+        "illustrate-25.3",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,name) & Component-of(c,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "850": [
+        "Herman mixed the eggs with the cream",
+        "mix-22.1-1",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,cream) & Component-of(c,eggs) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "851": [
+        "Herman whipped sugar with the cream",
+        "shake-22.3-1",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,cream) & Component-of(c,sugar) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
+    "852": [
+        "Jessica loaded the wagon with boxes",
+        "spray-9.7",
+        "Sbj V Obj in/with Obl",
+        "Volitional Provide",
+        "IncrementalAccomplishment",
+        "MereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,boxes) & Component-of(c,wagon) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
   "853": [
         "The fountain gushed",
         "substance_emission-43.4-1",
@@ -5012,6 +5072,7 @@ var events = {
     "10026": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork", "ConcealmentNetwork"], "name": "Mereological+Causative+Concealment Mereological"},
     "10027": {"networks": ["MereologicalNetwork"], "name": "Mereological"},
     "10028": {"networks": ["MereologicalNetwork", "ConcealmentNetwork"], "name": "Mereological+Concealment"},
+    "10029": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork"], "name": "Mereological+Causative"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -5106,6 +5167,8 @@ var events = {
     "11093": ["Autonomous COS", "MereologicalNetwork"],
     "11094": ["Autonomous Collective Internal", "MereologicalNetwork"],
     "11095": ["Self-volitional Place", "MereologicalNetwork"],
+    "11096": ["Autonomous Provide", "MereologicalNetwork"],
+    "11097": ["Volitional Provide", "MereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -5168,11 +5231,11 @@ var events = {
     "12062": { "child": "Self-volitional Location", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12063": { "child": "Autonomous Internal", "parentNetwork": "10025", "generalNetwork": "10025"},
     "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12065": { "child": "Volitional Remove", "parentNetwork": "10026", "generalNetwork": "10026"},
+    "12065": { "child": "Volitional Remove", "parentNetwork": "10029", "generalNetwork": "10026"},
     "12066": { "child": "Autonomous Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12067": { "child": "Volitional Internal", "parentNetwork": "10028", "generalNetwork": "10026"},
     "12068": { "child": "Volitional Singular Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12069": { "child": "Volitional Deprive", "parentNetwork": "10026", "generalNetwork": "10026"},
+    "12069": { "child": "Volitional Deprive", "parentNetwork": "10029", "generalNetwork": "10026"},
     "12070": { "child": "Physical COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12071": { "child": "Volitional COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12072": { "child": "Self-volitional Collective Internal", "parentNetwork": "10028", "generalNetwork": "10026"},
@@ -5181,6 +5244,8 @@ var events = {
     "12075": { "child": "Autonomous COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12076": { "child": "Autonomous Collective Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12077": { "child": "Self-volitional Place", "parentNetwork": "10028", "generalNetwork": "10026"},
+    "12078": { "child": "Autonomous Provide", "parentNetwork": "10028", "generalNetwork": "10026"},
+    "12079": { "child": "Volitional Provide", "parentNetwork": "10029", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5498,6 +5563,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Self-volitional Place" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11095";
         var identifierToConstructionURL = "12077";
+    } else if (FDCategory === "Autonomous Provide" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11096";
+        var identifierToConstructionURL = "12078";
+    } else if (FDCategory === "Volitional Provide" && generalNetworkName == "MereologicalNetwork") {
+        var identifierToMappingURL = "11097";
+        var identifierToConstructionURL = "12079";
     }
  
 
@@ -6467,36 +6538,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetAutoUnc" 
                             };
 
-
-     var NetworkAutonomousProvide = {        
-
-                                "solid1":    [   { "x": 50,  "y": 30}, 
-                                                { "x": 100,  "y": 30} ],
-
-                                "solid2":    [   { "x": 50,  "y": 90}, 
-                                                { "x": 100,  "y": 90} ],
-
-                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
-                                                { "x": 25,  "y": 70} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 40}, 
-                                                { "x": 125,  "y": 70} ],
-
-                                'textToAdd' : [
-                                        { "x": 40,  "y": 35, "text": "A0"},
-                                        { "x": -15,  "y": 90, "text": "MovedEntity"},  
-                                        { "x": 90,  "y": 35, "text": "A1"},
-                                        { "x": 105,  "y": 90, "text": "Ground"},
-                                        { "x": 5,  "y": 25, "text": "INTL"},
-                                        { "x": 5,  "y": 80, "text": "INTL"},
-                                        { "x": 105,  "y": 25, "text": "+MER"},
-                                        { "x": 105,  "y": 80, "text": "+MER"},
-                                        { "x": 65,  "y": 45, "text": "PTH"},
-                                        { "x": 65,  "y": 105, "text": "PTH"}
-                                    ],
-
-                                "name" : "NetAutoProv" 
-                            };
 
 
      var NetworkVolitionalProvide = {        
@@ -9160,6 +9201,79 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetMerSelfVolPlace" 
                             };
 
+
+     var NetworkMereologicalAutonomousProvide = {     
+
+                                "dottedLeft":    [   { "x": 0,  "y": 40}, 
+                                                    { "x": 0,  "y": 65} ],
+
+                                "dottedRight":    [   { "x": 85,  "y": 40}, 
+                                                    { "x": 85,  "y": 60} ],
+
+                                "solid1":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "solid2":    [   { "x": 30,  "y": 75}, 
+                                                { "x": 60,  "y": 75} ],
+
+                                'textToAdd' : [
+                                        { "x": 10,  "y": 35, "text": "A0"}, 
+                                        { "x": 50,  "y": 35, "text": "A1"}, 
+                                        { "x": -40,  "y": 25, "text": "INTL"},
+                                        { "x": 70,  "y": 25, "text": "+MER"},
+                                        { "x": 30,  "y": 45, "text": "PTH"}, 
+                                        { "x": -40,  "y": 80, "text": "MovedEntity"}, 
+                                        { "x": 70,  "y": 80, "text": "Ground"}, 
+                                        { "x": -40,  "y": 70, "text": "MER"},
+                                        { "x": 70,  "y": 70, "text": "MER"},   
+                                        { "x": 30,  "y": 90, "text": "PTH"}, 
+                                    ],
+
+                                "argTextToAdd": ["MovedEntity", "Ground"],
+
+                                "name" : "NetMereologicalAutoProvide" 
+                            };
+
+     var NetworkMereologicalVolitionalProvide = {        
+
+                                "solid1":    [   { "x": 60,  "y": 30}, 
+                                                { "x": 90,  "y": 30} ],
+
+                                "solid2":    [   { "x": 60,  "y": 90}, 
+                                                { "x": 90,  "y": 90} ],
+
+                                "dottedLeft":    [   { "x": 25,  "y": 40}, 
+                                                { "x": 25,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 125,  "y": 40}, 
+                                                { "x": 125,  "y": 70} ],
+
+                                "arrow":    [   { "x": -60,  "y": 30}, 
+                                                { "x": -30,  "y": 30} ],
+
+                                'textToAdd' : [
+                                        { "x": -60,  "y": 35, "text": "A0"},
+                                        { "x": -20,  "y": 35, "text": "A1"},
+                                        { "x": 90,  "y": 35, "text": "A2"},
+                                        { "x": -10,  "y": 90, "text": "MovedEntity"},  
+                                        { "x": 105,  "y": 90, "text": "Ground"},
+                                        { "x": -100,  "y": 25, "text": "VOL"},
+                                        { "x": -60,  "y": 45, "text": "FRC"},
+                                        { "x": -10,  "y": 25, "text": "INTL"},
+                                        { "x": -10,  "y": 80, "text": "MER"},
+                                        { "x": 105,  "y": 25, "text": "+MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 60,  "y": 45, "text": "PTH"},
+                                        { "x": 60,  "y": 105, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "MovedEntity", "Ground"],
+
+                                "name" : "NetMerVolProvide" 
+                            };
+
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -9232,6 +9346,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkVolitionalProvide; 
         } else if (nameGeneralNetwork === 'IllustrationNetwork') {
             return NetworkIllustrationVolitionalProvide;
+        } else if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalVolitionalProvide;
         }
     }
 
@@ -9336,8 +9452,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Autonomous Experience') { return NetworkInternalAutonomousExperience; }
 
-    else if (FDCategory === 'Autonomous Provide') { return NetworkAutonomousProvide; }
-
+    else if (FDCategory === 'Autonomous Provide') { return NetworkMereologicalAutonomousProvide; }
 
     else if (FDCategory === 'Autonomous Motion') { 
 

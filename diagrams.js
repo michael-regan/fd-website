@@ -2506,6 +2506,16 @@ var events = {
     "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,walk) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q3) & VOL(q1) & COS(q2) & FRC(a,b)",
     "10026"
   ],
+    "1164": [
+        "Carla shoveled the walk clean",
+        "wipe_instr-10.4.2",
+        "Sbj V Obj ResultP",
+        "Volitional Deprive",
+        "IncrementalAccomplishment",
+        "CausativeMereologicalNetwork",
+        "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,NI) & Component-of(c,walk) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & -MER(q3) & FRC(a,b) & PTH(b,c)",
+        "10026"
+    ],
     "1160": [
         "The cook deboned the fish",
         "debone-10.8",
@@ -2563,7 +2573,7 @@ var events = {
     "Physical COS",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,sky) & UndAct(a,i,j,q1) & IncrAcc(b,i,j,q2) & INTL(q1) & INTL(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,sky) & UndAct(a,i,j,q1) & IncrAcc(b,i,j,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
     "10026"
   ],
      "665": [
@@ -2779,10 +2789,60 @@ var events = {
         "I stashed the book",
         "put-9.1-1",
         "Sbj V Obj",
-        "Volitional Place",
+        "Volitional Internal",
         "DirectedAchievement",
-        "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,book) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,book) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "1107": [
+        "I lifted the books",
+        "put_direction-9.4",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "1121": [
+        "Jessica squirted water",
+        "spray-9.7",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "DirectedAchievement",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "1140": [
+        "The men mined the gold",
+        "mine-10.9",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,men) & Component-of(b,gold) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "1142": [
+        "Doug removed the smudges",
+        "remove-10.1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Doug) & Component-of(b,smudges) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10026"
+    ],
+    "1147": [
+        "Barry Cryer erased the writing",
+        "wipe_manner-10.4.1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "CausativeMereologicalNetwork",
+        "Theme-of(y,e) & Component-of(a,Barry Cryer) & Component-of(b,writing) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
         "10026"
     ],
     "691": [
@@ -2853,16 +2913,6 @@ var events = {
         "DirectedAchievement",
         "MereologicalNetwork",
         "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,picture) & Component-of(c,wall) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-        "10026"
-    ],
-    "1121": [
-        "Jessica squirted water",
-        "spray-9.7",
-        "Sbj V Obj",
-        "Volitional Motion",
-        "DirectedAchievement",
-        "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,water) & Component-of(c,NI) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10026"
     ],
     "689": [
@@ -3589,11 +3639,11 @@ var events = {
     "Lora buttered the toast",
     "butter-9.9",
     "Sbj V Obj",
-    "Volitional Provide",
+    "Volitional COS-5",
     "IncrementalAccomplishment",
-    "",
+    "CausativeMereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,NI) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
   "843": [
     "Smith was inscribing the rings",
@@ -5287,6 +5337,9 @@ var events = {
     "11102": ["Volitional Remove", "CausativeMereologicalNetwork"],
     "11103": ["Volitional Attend", "CausativeMereologicalNetwork"],
     "11104": ["Volitional COS-4", "CausativeMereologicalNetwork"],
+    "11105": ["Volitional COS-5", "CausativeMereologicalNetwork"],
+    "11106": ["Volitional Deprive", "CausativeMereologicalNetwork"],
+    "11107": ["Volitional Internal", "CausativeMereologicalNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -5351,7 +5404,7 @@ var events = {
     "12064": { "child": "Autonomous Remove", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12065": { "child": "Volitional Remove", "parentNetwork": "10029", "generalNetwork": "10026"},
     "12066": { "child": "Autonomous Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12067": { "child": "Volitional Internal", "parentNetwork": "10029", "generalNetwork": "10026"},
+    "12067": { "child": "Volitional Internal", "parentNetwork": "10026", "generalNetwork": "10026"},
     "12068": { "child": "Volitional Singular Internal", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12069": { "child": "Volitional Deprive", "parentNetwork": "10029", "generalNetwork": "10026"},
     "12070": { "child": "Physical COS", "parentNetwork": "10027", "generalNetwork": "10026"},
@@ -5370,6 +5423,7 @@ var events = {
     "12083": { "child": "Autonomous Motion", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12084": { "child": "Volitional Attend", "parentNetwork": "10030", "generalNetwork": "10026"},
     "12085": { "child": "Volitional COS-4", "parentNetwork": "10030", "generalNetwork": "10026"},
+    "12086": { "child": "Volitional COS-5", "parentNetwork": "10030", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5714,6 +5768,15 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional COS-4" && generalNetworkName == "CausativeMereologicalNetwork") {
         var identifierToMappingURL = "11104";
         var identifierToConstructionURL = "12085";
+    } else if (FDCategory === "Volitional COS-5" && generalNetworkName == "CausativeMereologicalNetwork") {
+        var identifierToMappingURL = "11105";
+        var identifierToConstructionURL = "12086";
+    } else if (FDCategory === "Volitional Deprive" && generalNetworkName == "CausativeMereologicalNetwork") {
+        var identifierToMappingURL = "11106";
+        var identifierToConstructionURL = "12069";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "CausativeMereologicalNetwork") {
+        var identifierToMappingURL = "11107";
+        var identifierToConstructionURL = "12067";
     }
  
 
@@ -9626,6 +9689,125 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausMerVolCOS4" 
                             };
 
+     var NetworkCausativeMereologicalVolitionalCOS5 = {        
+
+                                "solid1":    [   { "x": 145,  "y": 85}, 
+                                                { "x": 175,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 5,  "y": 40}, 
+                                                { "x": 5,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 95,  "y": 40}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 25, "text": "VOL"},
+                                        { "x": 55,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 25, "text": "PROP"},
+                                        { "x": -50,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 70,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 70,  "y": 80, "text": "MER"},
+                                        { "x": 185,  "y": 90, "text": "Ground"},
+                                        { "x": 185,  "y": 80, "text": "MER"},
+                                        { "x": 30,  "y": 45, "text": "FRC"},
+                                        { "x": 30,  "y": 100, "text": "FRC"},
+                                        { "x": 145,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Ground"],
+
+                                "name" : "NetCausMerVolCOS5" 
+                            };
+
+     var NetworkCausativeMereologicalVolitionalDeprive = {        
+
+                                "solid1":    [   { "x": 145,  "y": 85}, 
+                                                { "x": 175,  "y": 85} ],
+
+                                "solid2":    [   { "x": 145,  "y": 30}, 
+                                                { "x": 175,  "y": 30} ],
+
+                                "dottedFarLeft":    [   { "x": 5,  "y": 40}, 
+                                                { "x": 5,  "y": 70} ],
+
+                                "dottedLeft":    [   { "x": 95,  "y": 40}, 
+                                                { "x": 95,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 195,  "y": 40}, 
+                                                { "x": 195,  "y": 70} ],
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 25, "text": "VOL"},
+                                        { "x": 60,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 25, "text": "INTL"},
+                                        { "x": 165,  "y": 35, "text": "A2"},
+                                        { "x": 180,  "y": 25, "text": "-MER"},             
+                                        { "x": -50,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 70,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 70,  "y": 80, "text": "MER"},
+                                        { "x": 185,  "y": 90, "text": "Ground"},
+                                        { "x": 185,  "y": 80, "text": "MER"},
+                                        { "x": 30,  "y": 45, "text": "FRC"},
+                                        { "x": 30,  "y": 100, "text": "FRC"},
+                                        { "x": 145,  "y": 45, "text": "PTH"},
+                                        { "x": 145,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Moved_entity", "Ground"],
+
+                                "name" : "NetCausMerVolDep" 
+                            };
+
+     var NetworkCausativeMereologicalVolitionalInternal = {        
+
+                                "solid1":    [   { "x": 145,  "y": 85}, 
+                                                { "x": 175,  "y": 85} ],
+
+                                "dottedFarLeft":    [   { "x": 5,  "y": 40}, 
+                                                { "x": 5,  "y": 70} ],
+
+                                "dottedLeft":    [   { "x": 95,  "y": 40}, 
+                                                { "x": 95,  "y": 70} ],
+
+                                "arrow":    [   { "x": 30,  "y": 30}, 
+                                                { "x": 60,  "y": 30} ],
+
+                                "arrow1":    [   { "x": 30,  "y": 85}, 
+                                                { "x": 60,  "y": 85} ],
+
+                                'textToAdd' : [
+                                        { "x": 25,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 25, "text": "VOL"},
+                                        { "x": 60,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 25, "text": "INTL"},                                        
+                                        { "x": -50,  "y": 90, "text": "Physical_entity"},  
+                                        { "x": 70,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 70,  "y": 80, "text": "MER"},
+                                        { "x": 185,  "y": 90, "text": "Ground"},
+                                        { "x": 185,  "y": 80, "text": "MER"},
+                                        { "x": 30,  "y": 45, "text": "FRC"},
+                                        { "x": 30,  "y": 100, "text": "FRC"},
+                                        { "x": 145,  "y": 100, "text": "PTH"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Moved_entity"],
+
+                                "name" : "NetCausMerVolInt" 
+                            };
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -9784,6 +9966,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkInternalVolitionalInternal;
         } else if (nameGeneralNetwork === 'MereologicalNetwork') {
             return NetworkMereologicalVolitionalInternal;
+        } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
+            return NetworkCausativeMereologicalVolitionalInternal;
         }
     }
 
@@ -9807,6 +9991,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionVolitionalDeprive;
         } else if (nameGeneralNetwork === 'MereologicalNetwork') {
             return NetworkMereologicalVolitionalDeprive;
+        } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
+            return NetworkCausativeMereologicalVolitionalDeprive;
         }
     }
 
@@ -9885,6 +10071,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
     else if (FDCategory === 'Volitional COS-3') { return NetworkMereologicalVolitionalCOS3; }
 
     else if (FDCategory === 'Volitional COS-4') { return NetworkCausativeMereologicalVolitionalCOS4; }
+
+    else if (FDCategory === 'Volitional COS-5') { return NetworkCausativeMereologicalVolitionalCOS5; }
 
     else if (FDCategory === 'Instrument COS') { 
 

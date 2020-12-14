@@ -230,11 +230,11 @@ var events = {
     "The children hid",
     "concealment-16",
     "Sbj V",
-    "Self-Volitional Place",
+    "Self-volitional Internal",
     "IncrementalAccomplishment",
-    "",
-    "Theme-of(x,e) & Component-of(a,children) & Component-of(b,NI) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
+    "ConcealmentNetwork",
+    "Theme-of(x,e) & Component-of(a,children) & IncrAcc(a,i,j,q1) & VOL/INTL(q1)",
+    "10026"
   ],
   "161": [
     "Paul breathed on Mary",
@@ -420,11 +420,11 @@ var events = {
     "The children hid in the chimney",
     "concealment-16",
     "Sbj V PathP",
-    "Self-Volitional Place",
+    "Self-volitional Place",
     "IncrementalAccomplishment",
-    "",
+    "ConcealmentNetwork",
     "Theme-of(x,e) & Component-of(a,children) & Component-of(b,chimney) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/+MER(q1) & EXIST(q2) & PTH(a,b)",
-    ""
+    "10026"
   ],
     "250": [
         "A ship appeared",
@@ -2975,16 +2975,46 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Lydia) & Component-of(b,change) & Component-of(c,pocket) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10026"
     ],
+    "245": [
+        "The children hid from Sally",
+        "concealment-16",
+        "Sbj V from Obl",
+        "Self-volitional Internal Affect",
+        "IncrementalAccomplishment",
+        "ConcealmentNetwork",
+        "Theme-of(x,e) & Component-of(a,children) & Component-of(b,Sally) & IncrAcc(a,i,j,q1) & InhStPhExt(b,i,k,q2) & VOL/INTL(q1) & MPROP(q2) & AFF(a,b)",
+        "10026"
+    ],
+    "246": [
+        "Frances hid the presents from Sally",
+        "concealment-16",
+        "Sbj V Obj from Obl",
+        "Volitional Internal Affect",
+        "IncrementalAccomplishment",
+        "ConcealmentNetwork",
+        "Theme-of(x,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,Sally) & IncrAcc(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPhExt(c,i,l,q3) & VOL(q1) & INTL(q2) & MPROP(q3) & FRC(a,b) & AFF(b,c)",
+        "10026"
+    ],
   "247": [
     "Frances hid the presents behind the books in the drawer",
     "concealment-16",
     "Sbj V Obj PathP",
     "Volitional Place",
     "IncrementalAccomplishment",
-    "",
+    "ConcealmentNetwork",
     "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & Component-of(c,books) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & +MER(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-    ""
+    "10026"
   ],
+    "249": [
+        "Frances hid the presents",
+        "concealment-16",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "IncrementalAccomplishment",
+        "ConcealmentNetwork",
+        "Theme-of(y,e) & Component-of(a,Frances) & Component-of(b,presents) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & +MER(q2) & FRC(a,b)",
+        "10026"
+    ],
   "679": [
     "The child clung to her mother",
     "cling-22.5",
@@ -5285,6 +5315,7 @@ var events = {
     "10029": {"networks": ["MereologicalNetwork", "CausativeMereologicalNetwork"], "name": "Mereological+Causative"},
     "10030": {"networks": ["CausativeMereologicalNetwork"], "name": "CausativeMereological"},
     "10031": {"networks": ["CausativeMereologicalNetwork", "ConcealmentNetwork"], "name": "CausativeMereological+Causative"},
+    "10032": {"networks": ["ConcealmentNetwork"], "name": "Concealment"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -5394,6 +5425,12 @@ var events = {
     "11108": ["Self-volitional Internal", "CausativeMereologicalNetwork"],
     "11109": ["Volitional Place", "CausativeMereologicalNetwork"],
     "11110": ["Volitional Provide", "CausativeMereologicalNetwork"],
+    "11111": ["Volitional Place", "ConcealmentNetwork"],
+    "11112": ["Self-volitional Place", "ConcealmentNetwork"],
+    "11113": ["Volitional Internal", "ConcealmentNetwork"],
+    "11114": ["Self-volitional Internal", "ConcealmentNetwork"],
+    "11115": ["Self-volitional Internal Affect", "ConcealmentNetwork"],
+    "11116": ["Volitional Internal Affect", "ConcealmentNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -5479,6 +5516,8 @@ var events = {
     "12085": { "child": "Volitional COS-4", "parentNetwork": "10030", "generalNetwork": "10026"},
     "12086": { "child": "Volitional COS-5", "parentNetwork": "10030", "generalNetwork": "10026"},
     "12087": { "child": "Self-volitional Internal", "parentNetwork": "10031", "generalNetwork": "10026"},
+    "12088": { "child": "Self-volitional Internal Affect", "parentNetwork": "10032", "generalNetwork": "10026"},
+    "12089": { "child": "Volitional Internal Affect", "parentNetwork": "10032", "generalNetwork": "10026"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5841,9 +5880,26 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Provide" && generalNetworkName == "CausativeMereologicalNetwork") {
         var identifierToMappingURL = "11110";
         var identifierToConstructionURL = "12081";
+    } else if (FDCategory === "Volitional Place" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11111";
+        var identifierToConstructionURL = "12076";
+    } else if (FDCategory === "Self-volitional Place" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11112";
+        var identifierToConstructionURL = "12079";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11113";
+        var identifierToConstructionURL = "12067";
+    } else if (FDCategory === "Self-volitional Internal" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11114";
+        var identifierToConstructionURL = "12087";
+    } else if (FDCategory === "Self-volitional Internal Affect" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11115";
+        var identifierToConstructionURL = "12088";
+    } else if (FDCategory === "Volitional Internal Affect" && generalNetworkName == "ConcealmentNetwork") {
+        var identifierToMappingURL = "11116";
+        var identifierToConstructionURL = "12089";
     }
- 
-
+  
     return [identifierToMappingURL, identifierToConstructionURL]
 
 }
@@ -9990,6 +10046,241 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausMerVolProvide" 
                             };
 
+     var NetworkConcealmentVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 70,  "y": 30}, 
+                                                { "x": 100,  "y": 30} ],
+
+                                "solid2":    [   { "x": 70,  "y": 85}, 
+                                                { "x": 100,  "y": 85} ],
+
+                                "solid3":    [   { "x": 160,  "y": 85}, 
+                                                { "x": 190,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 135,  "y": 70} ],
+
+                                "arrow":    [   { "x": -50,  "y": 30}, 
+                                                { "x": -20,  "y": 30} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -50,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},
+                                        { "x": 95,  "y": 35, "text": "A2"},
+                                        { "x": 0,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 115,  "y": 90, "text": "Ground"},
+                                        { "x": 195,  "y": 90, "text": "Perceiver"},
+                                        { "x": -90,  "y": 25, "text": "VOL"},
+                                        { "x": -50,  "y": 45, "text": "FRC"},
+                                        { "x": 0,  "y": 25, "text": "+MER"},
+                                        { "x": 0,  "y": 80, "text": "MER"},
+                                        { "x": 115,  "y": 25, "text": "EXIST"},
+                                        { "x": 115,  "y": 80, "text": "MER"},
+                                        { "x": 195,  "y": 80, "text": "PROP"},
+                                        { "x": 70,  "y": 45, "text": "PTH"},
+                                        { "x": 70,  "y": 100, "text": "PTH"},
+                                        { "x": 160,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Moved_entity", "Ground"],
+
+                                "name" : "NetConcVolPlace" 
+                            };
+
+     var NetworkConcealmentSelfVolitionalPlace = {        
+
+                                "solid1":    [   { "x": 50,  "y": 30}, 
+                                                { "x": 80,  "y": 30} ],
+
+                                "solid2":    [   { "x": 50,  "y": 85}, 
+                                                { "x": 80,  "y": 85} ],
+
+                                "solid3":    [   { "x": 140,  "y": 85}, 
+                                                { "x": 170,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
+                                                { "x": 15,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 115,  "y": 40}, 
+                                                { "x": 115,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 35,  "y": 35, "text": "A0"},
+                                        { "x": 75,  "y": 35, "text": "A1"},
+                                        { "x": -20,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 95,  "y": 90, "text": "Ground"},
+                                        { "x": 175,  "y": 90, "text": "Perceiver"},
+                                        { "x": -20,  "y": 25, "text": "VOL/+MER"},
+                                        { "x": -20,  "y": 80, "text": "MER"},
+                                        { "x": 95,  "y": 25, "text": "EXIST"},
+                                        { "x": 95,  "y": 80, "text": "MER"},
+                                        { "x": 175,  "y": 80, "text": "PROP"},
+                                        { "x": 50,  "y": 45, "text": "PTH"},
+                                        { "x": 50,  "y": 100, "text": "PTH"},
+                                        { "x": 140,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Moved_entity", "Ground"],
+
+                                "name" : "NetConcSelfVolPlace" 
+                            };
+
+     var NetworkConcealmentVolitionalInternal = {        
+
+                                "solid1":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+                                "solid2":    [   { "x": 180,  "y": 85}, 
+                                                { "x": 210,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 55,  "y": 40}, 
+                                                { "x": 55,  "y": 70} ],
+
+                                "arrow":    [   { "x": -30,  "y": 30}, 
+                                                { "x": 0,  "y": 30} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -30,  "y": 35, "text": "A0"},
+                                        { "x": 10,  "y": 35, "text": "A1"},
+                                        { "x": 20,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 135,  "y": 90, "text": "Ground"},
+                                        { "x": 215,  "y": 90, "text": "Perceiver"},
+                                        { "x": -70,  "y": 25, "text": "VOL"},
+                                        { "x": -30,  "y": 45, "text": "FRC"},
+                                        { "x": 20,  "y": 25, "text": "INTL"},
+                                        { "x": 20,  "y": 80, "text": "MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 215,  "y": 80, "text": "PROP"},
+                                        { "x": 90,  "y": 100, "text": "PTH"},
+                                        { "x": 180,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Moved_entity"],
+
+                                "name" : "NetConcVolInt" 
+                            };
+
+     var NetworkConcealmentSelfVolitionalInternal = {        
+
+                                "solid1":    [   { "x": 90,  "y": 85}, 
+                                                { "x": 120,  "y": 85} ],
+
+                                "solid2":    [   { "x": 180,  "y": 85}, 
+                                                { "x": 210,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 55,  "y": 40}, 
+                                                { "x": 55,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 75,  "y": 35, "text": "A0"},
+                                        { "x": 20,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 135,  "y": 90, "text": "Ground"},
+                                        { "x": 215,  "y": 90, "text": "Perceiver"},
+                                        { "x": 20,  "y": 25, "text": "VOL/INTL"},
+                                        { "x": 20,  "y": 80, "text": "MER"},
+                                        { "x": 135,  "y": 80, "text": "MER"},
+                                        { "x": 215,  "y": 80, "text": "PROP"},
+                                        { "x": 90,  "y": 100, "text": "PTH"},
+                                        { "x": 180,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Moved_entity"],
+
+                                "name" : "NetConcSelfVolInt" 
+                            };
+
+     var NetworkConcealmentSelfVolitionalInternalAffect = {   
+
+
+                                "solid1":    [   { "x": 70,  "y": 30}, 
+                                                { "x": 100,  "y": 30} ],
+
+                                "solid2":    [   { "x": 70,  "y": 85}, 
+                                                { "x": 100,  "y": 85} ],
+
+                                "solid3":    [   { "x": 150,  "y": 85}, 
+                                                { "x": 180,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 195,  "y": 70} ],
+
+                                'textToAdd' : [
+                                        { "x": 50,  "y": 35, "text": "A0"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
+                                        { "x": 0,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 105,  "y": 90, "text": "Ground"},  
+                                        { "x": 195,  "y": 90, "text": "Perceiver"},
+                                        { "x": -5,  "y": 25, "text": "VOL/+MER"},
+                                        { "x": 70,  "y": 45, "text": "AFF"},
+                                        { "x": 105,  "y": 25, "text": "PROP"},
+                                        { "x": 0,  "y": 80, "text": "MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 195,  "y": 80, "text": "PROP"},
+                                        { "x": 70,  "y": 100, "text": "PTH"},
+                                        { "x": 150,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Moved_entity", "Perceiver"],
+
+                                "name" : "NetConcSelfVolIntAff" 
+                            };
+
+     var NetworkConcealmentVolitionalInternalAffect = {   
+
+
+                                "solid1":    [   { "x": 70,  "y": 30}, 
+                                                { "x": 100,  "y": 30} ],
+
+                                "solid2":    [   { "x": 70,  "y": 85}, 
+                                                { "x": 100,  "y": 85} ],
+
+                                "solid3":    [   { "x": 150,  "y": 85}, 
+                                                { "x": 180,  "y": 85} ],
+
+                                "dottedLeft":    [   { "x": 35,  "y": 40}, 
+                                                { "x": 35,  "y": 70} ],
+
+                                "dottedRight":    [   { "x": 135,  "y": 40}, 
+                                                { "x": 195,  "y": 70} ],
+
+
+                                "arrow1":    [   { "x": -50,  "y": 30}, 
+                                                { "x": -20,  "y": 30} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -40,  "y": 35, "text": "A0"},
+                                        { "x": -10,  "y": 35, "text": "A1"},
+                                        { "x": 90,  "y": 35, "text": "A2"},
+                                        { "x": 0,  "y": 90, "text": "Moved_entity"},  
+                                        { "x": 105,  "y": 90, "text": "Ground"},  
+                                        { "x": 195,  "y": 90, "text": "Perceiver"},
+                                        { "x": -80,  "y": 25, "text": "VOL"},
+                                        { "x": -5,  "y": 25, "text": "INTL"},
+                                        { "x": 70,  "y": 45, "text": "AFF"},
+                                        { "x": -50,  "y": 45, "text": "FRC"},
+                                        { "x": 105,  "y": 25, "text": "PROP"},
+                                        { "x": 0,  "y": 80, "text": "MER"},
+                                        { "x": 105,  "y": 80, "text": "MER"},
+                                        { "x": 195,  "y": 80, "text": "PROP"},
+                                        { "x": 70,  "y": 100, "text": "PTH"},
+                                        { "x": 150,  "y": 100, "text": "AFF"}
+                                    ],
+
+                                "argTextToAdd": ["Agent", "Moved_entity", "Perceiver"],
+
+                                "name" : "NetConcVolIntAff" 
+                            };
+
+
     if (FDCategory === 'Autonomous Remove') { 
 
         if (nameGeneralNetwork === 'RemoveDepriveNetwork') {
@@ -10046,7 +10337,10 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkInternalVolitionalPlace;
         } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
             return NetworkCausativeMereologicalVolitionalPlace;
+        } else if (nameGeneralNetwork === 'ConcealmentNetwork') {
+            return NetworkConcealmentVolitionalPlace;
         }
+
     }
 
     else if (FDCategory === 'Autonomous Place') { 
@@ -10058,7 +10352,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
     else if (FDCategory === 'Physical Place') { return NetworkEmissionPhysicalPlace; }
 
-    else if (FDCategory === 'Self-volitional Place') { return NetworkMereologicalSelfVolitionalPlace; }
+    else if (FDCategory === 'Self-volitional Place') { 
+
+        if (nameGeneralNetwork === 'MereologicalNetwork') {
+            return NetworkMereologicalSelfVolitionalPlace; 
+        } else if (nameGeneralNetwork === 'ConcealmentNetwork') {
+            return NetworkConcealmentSelfVolitionalPlace;
+        }
+    }
 
     else if (FDCategory === 'Autonomous Provide') { return NetworkMereologicalAutonomousProvide; }
 
@@ -10153,7 +10454,10 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkMereologicalVolitionalInternal;
         } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
             return NetworkCausativeMereologicalVolitionalInternal;
+        } else if (nameGeneralNetwork === 'ConcealmentNetwork') {
+            return NetworkConcealmentVolitionalInternal;
         }
+
     }
 
 
@@ -10165,8 +10469,14 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkInternalSelfVolitionalInternal;
         } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
             return NetworkCausativeMereologicalSelfVolitionalInternal;
+        } else if (nameGeneralNetwork === 'ConcealmentNetwork') {
+            return NetworkConcealmentSelfVolitionalInternal;
         } 
     }
+
+    else if (FDCategory === 'Self-volitional Internal Affect') { return   NetworkConcealmentSelfVolitionalInternalAffect; }
+
+    else if (FDCategory === 'Volitional Internal Affect') { return   NetworkConcealmentVolitionalInternalAffect; }
 
     // else if (FDCategory === 'Autonomous Deprive') { return NetworkMereologicalAutonomousDeprive; }
 
@@ -11151,8 +11461,8 @@ function getMultipleNetworkPage (NetworkType) {
                                         {"network": "Self-volitional Place", "parent": "ConcealmentNetwork"},
                                         {"network": "Volitional Internal", "parent": "ConcealmentNetwork"},
                                        {"network": "Self-volitional Internal", "parent": "ConcealmentNetwork"},  
-                                       {"network": "Self-volitional Place Affect", "parent": "ConcealmentNetwork"},
-                                       {"network": "Volitional Place Affect", "parent": "ConcealmentNetwork"},          
+                                       {"network": "Self-volitional Internal Affect", "parent": "ConcealmentNetwork"},
+                                       {"network": "Volitional Internal Affect", "parent": "ConcealmentNetwork"},          
                                     ],
 
                             "name" : "Concealment network" 
@@ -12991,6 +13301,10 @@ function makeConstructionFDPage () {
     var parentNetworks = events[parentNetworksLink]["networks"];
 
     console.log(parentNetworks);
+
+    console.log(parentNetworks[0]);
+
+    console.log(FDCategory);
 
     var currentNetwork = getNetwork(FDCategory, parentNetworks[0]);
 

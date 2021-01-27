@@ -383,7 +383,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "HurtNetwork",
-        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,herself) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,herself) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "224": [
@@ -393,7 +393,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "HurtNetwork",
-        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,ankle) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tessa) & Component-of(b,ankle) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
   "228": [
@@ -573,7 +573,7 @@ var events = {
     "Autonomous COS",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
+    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & PROP(q1)",
     "10003"
   ],
   "727": [
@@ -583,7 +583,7 @@ var events = {
     "Autonomous COS",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & COS(q1)",
+    "Theme-of(x,e) & Component-of(a,drawer) & IncrAcc(a,i,j,q1) & PROP(q1)",
     "10003"
   ],
     "733": [
@@ -593,7 +593,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "734": [
@@ -603,7 +603,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,pliers) & Component-of(c,rod) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "735": [
@@ -613,7 +613,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,glass) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,glass) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "736": [
@@ -623,7 +623,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,bank) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,bank) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "737": [
@@ -633,7 +633,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Tony) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "738": [
@@ -643,7 +643,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,envelope) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,envelope) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "739": [
@@ -653,7 +653,7 @@ var events = {
         "Instrument COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,envelope) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,envelope) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "740": [
@@ -663,7 +663,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,bread) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Carol) & Component-of(b,knife) & Component-of(c,bread) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "741": [
@@ -673,7 +673,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,builders) & Component-of(b,explosives) & Component-of(c,warehouse) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,builders) & Component-of(b,explosives) & Component-of(c,warehouse) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "742": [
@@ -683,7 +683,7 @@ var events = {
         "Instrument COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,She) & Component-of(b,teeth) & Component-of(c,floss) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,She) & Component-of(b,teeth) & Component-of(c,floss) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "745": [
@@ -693,7 +693,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,Caesar) & Component-of(b,knife) & Component-of(c,Brutus) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Caesar) & Component-of(b,knife) & Component-of(c,Brutus) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "747": [
@@ -703,7 +703,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,queen) & Component-of(b,apple) & Component-of(c,Snow White) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,queen) & Component-of(b,apple) & Component-of(c,Snow White) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "752": [
@@ -713,7 +713,7 @@ var events = {
         "Instrument COS",
         "UndirectedActivity",
         "CausativeCOSNetwork",
-        "Theme-of(z,e) & Component-of(a,She) & Component-of(b,toothbrush) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,She) & Component-of(b,toothbrush) & Component-of(c,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & UndAct(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "746": [
@@ -723,7 +723,7 @@ var events = {
         "Instrument COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,hairdryer) & Component-of(c,clothes) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,hairdryer) & Component-of(c,clothes) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "748": [
@@ -733,7 +733,7 @@ var events = {
         "Instrument COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,tape) & Component-of(c,tractor) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Bill) & Component-of(b,tape) & Component-of(c,tractor) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10015"
     ],
     "756": [
@@ -743,7 +743,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,envelope) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,envelope) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "757": [
@@ -753,7 +753,7 @@ var events = {
         "Physical COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,envelope) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,envelope) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "758": [
@@ -763,7 +763,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,bread) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,knife) & Component-of(b,bread) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "759": [
@@ -773,7 +773,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,explosives) & Component-of(b,warehouse) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,explosives) & Component-of(b,warehouse) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "762": [
@@ -783,7 +783,7 @@ var events = {
         "Physical COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,DDT) & Component-of(b,insects) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,DDT) & Component-of(b,insects) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "767": [
@@ -793,7 +793,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "768": [
@@ -803,7 +803,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "769": [
@@ -813,7 +813,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "770": [
@@ -823,7 +823,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "771": [
@@ -833,7 +833,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "781": [
@@ -843,7 +843,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "782": [
@@ -853,7 +853,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,drink) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,drink) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "792": [
@@ -863,7 +863,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "793": [
@@ -873,7 +873,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peach) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peach) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "794": [
@@ -883,7 +883,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,wine) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,wine) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "798": [
@@ -893,7 +893,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "799": [
@@ -903,7 +903,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "800": [
@@ -913,7 +913,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "801": [
@@ -923,7 +923,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mead) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mead) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "802": [
@@ -933,7 +933,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mixture) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,mixture) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1371": [
@@ -943,7 +943,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1419": [
@@ -953,7 +953,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,peaches) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "162": [
@@ -963,7 +963,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1372": [
@@ -973,7 +973,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,NI) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "172": [
@@ -983,7 +983,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "IngestionNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,carrot) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "772": [
@@ -993,7 +993,7 @@ var events = {
         "Volitional COS",
         "UndirectedActivity",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,NI) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "776": [
@@ -1003,7 +1003,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Celia) & Component-of(b,the baby's hair) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Celia) & Component-of(b,the baby's hair) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "783": [
@@ -1013,7 +1013,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "784": [
@@ -1023,7 +1023,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "785": [
@@ -1033,7 +1033,7 @@ var events = {
         "Volitional COS",
         "DirectedActivity",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Claire) & Component-of(b,wall) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "786": [
@@ -1043,7 +1043,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelop) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelop) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "787": [
@@ -1053,7 +1053,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelope) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,envelope) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "788": [
@@ -1063,7 +1063,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,y) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,y) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "789": [
@@ -1073,7 +1073,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,bread) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,bread) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "790": [
@@ -1083,7 +1083,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,finger) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Carol) & Component-of(b,finger) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "791": [
@@ -1093,7 +1093,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Romans) & Component-of(b,city) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Romans) & Component-of(b,city) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "792": [
@@ -1103,7 +1103,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Cynthia) & Component-of(b,pizza) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "796": [
@@ -1113,7 +1113,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "AbsorbNetwork",
-        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,water) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,water) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "797": [
@@ -1123,7 +1123,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,hygienist) & Component-of(b,teeth) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,hygienist) & Component-of(b,teeth) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "803": [
@@ -1133,7 +1133,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Sheila) & Component-of(b,horse) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Sheila) & Component-of(b,horse) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "808": [
@@ -1143,7 +1143,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Brutus) & Component-of(b,Caesar) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Brutus) & Component-of(b,Caesar) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
    "810": [
@@ -1153,7 +1153,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,Snow White) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,Snow White) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "811": [
@@ -1163,7 +1163,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "812": [
@@ -1173,37 +1173,37 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Boston Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Boston Strangler) & Component-of(b,victims) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
    "817": [
         "Herman whipped cream",
         "shake-22.3-1-1",
         "Sbj V Obj",
-        "Volitional COS-3",
+        "Volitional COS-1",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,cream) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
     "818": [
         "Herman gathered the students into a group",
         "shake-22.3-2",
         "Sbj V Obj ResultP",
-        "Volitional COS-3",
+        "Volitional COS-1",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,students) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Herman) & Component-of(b,students) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
     "827": [
         "Linda taped the box shut",
         "tape-22.4",
         "Sbj V Obj ResultP",
-        "Volitional COS-3",
+        "Volitional COS-1",
         "DirectedAchievement",
         "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,box) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,box) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
     "1325": [
@@ -1213,7 +1213,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1326": [
@@ -1223,7 +1223,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Jennifer) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1507": [
@@ -1233,7 +1233,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,John) & Component-of(b,radio) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,John) & Component-of(b,radio) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1331": [
@@ -1243,7 +1243,7 @@ var events = {
         "Physical COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,oven) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,oven) & Component-of(b,potatoes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
   "1183": [
@@ -2306,6 +2306,36 @@ var events = {
         "Theme-of(x,e) & Component-of(a,plane) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
         "10026"
     ],
+    "1038": [
+        "The boat sailed across the lake",
+        "nonvehicle-51.4.2-1",
+        "Sbj V PathP",
+        "Autonomous Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(x,e) & Component-of(a,boat) & Component-of(b,lake) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10033"
+    ],
+    "910": [
+        "He drove the car",
+        "nonvehicle-51.4.2",
+        "Sbj V Obj",
+        "Manipulate",
+        "UndirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,car) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & FRC(a,b)",
+        "10033"
+    ],
+    "1168": [
+        "Jill took a cab",
+        "vehicle_path-51.4.3",
+        "Sbj V Obj",
+        "Manipulate",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(z,e) & Component-of(a,Jill) & Component-of(b,cab) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & MOT(q2) & FRC(a,b)",
+        "10033"
+    ],
   "1130": [
     "Clouds cleared from the sky.",
     "clear-10.3-1",
@@ -2473,7 +2503,7 @@ var events = {
     "Autonomous COS",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,sky) & IncrAcc(a,i,j,q1) & COS(q1)",
+    "Theme-of(y,e) & Component-of(a,sky) & IncrAcc(a,i,j,q1) & PROP(q1)",
     "10026"
   ],
   "1158": [
@@ -2500,10 +2530,10 @@ var events = {
     "Carla shoveled the walk",
     "wipe_instr-10.4.2",
     "Sbj V Obj",
-    "Volitional COS-4",
+    "Volitional COS",
     "IncrementalAccomplishment",
     "CausativeMereologicalNetwork",
-    "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,walk) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q3) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(z,e) & Component-of(a,Carla) & Component-of(b,walk) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
     "1164": [
@@ -2520,30 +2550,30 @@ var events = {
         "The cook deboned the fish",
         "debone-10.8",
         "Sbj V Obj",
-        "Volitional COS-4",
+        "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeMereologicalNetwork",
-        "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,fish) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q3) & VOL(q1) & COS(q3) & FRC(a,b)",
+        "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,fish) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
   "1161": [
     "The cook boned the fish",
     "pit-10.7",
     "Sbj V Obj",
-    "Volitional COS-4",
+    "Volitional COS",
     "IncrementalAccomplishment",
     "CausativeMereologicalNetwork",
-    "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,fish) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q3) & VOL(q1) & COS(q3) & FRC(a,b)",
+    "Theme-of(z,e) & Component-of(a,cook) & Component-of(b,fish) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
     "1165": [
         "Brian wiped the counter",
         "wipe_manner-10.4.1",
         "Sbj V Obj",
-        "Volitional COS-4",
+        "Volitional COS",
         "IncrementalAccomplishment",
         "CausativeMereologicalNetwork",
-        "Theme-of(z,e) & Component-of(a,Brian) & Component-of(b,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q3) & VOL(q1) & COS(q3) & FRC(a,b)",
+        "Theme-of(z,e) & Component-of(a,Brian) & Component-of(b,counter) & UndAct(a,i,j,q1) & IncrAcc(b,i,l,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
     "1167": [
@@ -2573,7 +2603,7 @@ var events = {
     "Physical COS",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,sky) & UndAct(a,i,j,q1) & IncrAcc(b,i,j,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,winds) & Component-of(b,sky) & UndAct(a,i,j,q1) & IncrAcc(b,i,j,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
      "665": [
@@ -3092,7 +3122,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,rod) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,rod) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "711": [
@@ -3102,7 +3132,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,rods) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,rods) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "712": [
@@ -3112,7 +3142,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,bridge) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,bridge) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "713": [
@@ -3122,7 +3152,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,window) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,window) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "714": [
@@ -3132,7 +3162,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,glass) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,glass) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "715": [
@@ -3142,7 +3172,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,vases) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,vases) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
    "717": [
@@ -3152,7 +3182,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,balloon) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,balloon) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
    "718": [
@@ -3162,7 +3192,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "719": [
@@ -3172,7 +3202,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,roses) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,roses) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "721": [
@@ -3182,7 +3212,7 @@ var events = {
         "Autonomous COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,dough) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,dough) & NonIncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "722": [
@@ -3192,7 +3222,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "723": [
@@ -3202,7 +3232,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "724": [
@@ -3212,7 +3242,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,clothes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "725": [
@@ -3222,7 +3252,7 @@ var events = {
         "Autonomous COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,tractors) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,tractors) & NonIncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "729": [
@@ -3232,7 +3262,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,sailor) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,sailor) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "730": [
@@ -3242,7 +3272,7 @@ var events = {
         "Autonomous COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,He) & NonIncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,He) & NonIncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "731": [
@@ -3252,7 +3282,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "732": [
@@ -3262,7 +3292,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,He) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "1239": [
@@ -3272,7 +3302,7 @@ var events = {
         "Cause COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,hunger) & Component-of(b,Sharon) & TranStPhPunctInit(a,i,j,q1) & DirAch(b,i,k,q2) & EXIST(q1) & COS(q2) & CAUSE(a,b)",
+        "Theme-of(y,e) & Component-of(a,hunger) & Component-of(b,Sharon) & TranStPhPunctInit(a,i,j,q1) & DirAch(b,i,k,q2) & EXIST(q1) & PROP(q2) & CAUSE(a,b)",
         "10015"
     ],
     "1240": [
@@ -3282,7 +3312,7 @@ var events = {
         "Autonomous COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(x,e) & Component-of(a,Sharon) & DirAch(a,i,j,q1) & COS(q1)",
+        "Theme-of(x,e) & Component-of(a,Sharon) & DirAch(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "743": [
@@ -3292,7 +3322,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,hammer) & Component-of(c,window) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "744": [
@@ -3302,7 +3332,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,foot) & Component-of(c,door) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paul) & Component-of(b,foot) & Component-of(c,door) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "749": [
@@ -3312,7 +3342,7 @@ var events = {
         "Instrument COS",
         "NonincrementalAccomplishment",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,They) & Component-of(b,bat) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,They) & Component-of(b,bat) & Component-of(c,him) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "750": [
@@ -3322,7 +3352,7 @@ var events = {
         "Instrument COS",
         "NonincrementalAccomplishment",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,cat) & Component-of(b,nails) & Component-of(c,couch) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,cat) & Component-of(b,nails) & Component-of(c,couch) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & NonIncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "751": [
@@ -3332,7 +3362,7 @@ var events = {
         "Instrument COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & COS(q3) & FRC(a,b) & FRC(b,c)",
+        "Theme-of(z,e) & Component-of(a,Paula) & Component-of(b,dishcloth) & Component-of(c,fly) & CycAch(a,i,j,q1) & CycAch(b,i,k,q2) & DirAch(c,i,l,q3) & VOL(q1) & INTL(q2) & PROP(q3) & FRC(a,b) & FRC(b,c)",
         "10012"
     ],
     "753": [
@@ -3342,7 +3372,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,pliers) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,pliers) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "754": [
@@ -3352,7 +3382,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "763": [
@@ -3362,7 +3392,7 @@ var events = {
         "Physical COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,hairdryer) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,hairdryer) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "760": [
@@ -3372,7 +3402,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,stick) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,stick) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "761": [
@@ -3382,7 +3412,7 @@ var events = {
         "Physical COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,hammer) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "773": [
@@ -3392,7 +3422,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "774": [
@@ -3402,7 +3432,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,rod) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "775": [
@@ -3412,7 +3442,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,flaps) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,flaps) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "777": [
@@ -3422,7 +3452,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "778": [
@@ -3432,7 +3462,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,bank) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,bank) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "779": [
@@ -3442,7 +3472,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,glass) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Tony) & Component-of(b,glass) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "807": [
@@ -3452,7 +3482,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,dough) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,I) & Component-of(b,dough) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "809": [
@@ -3462,7 +3492,7 @@ var events = {
         "Volitional COS",
         "IncrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,clothes) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "813": [
@@ -3472,7 +3502,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,tractor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,tractor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "822": [
@@ -3482,7 +3512,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,pirates) & Component-of(b,sailor) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,pirates) & Component-of(b,sailor) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "823": [
@@ -3492,7 +3522,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,pirate) & Component-of(b,sailor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,pirate) & Component-of(b,sailor) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "828": [
@@ -3502,7 +3532,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "829": [
@@ -3512,7 +3542,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "COSNetwork",
-        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,witch) & Component-of(b,him) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "909": [
@@ -3532,7 +3562,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,door) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "806": [
@@ -3542,7 +3572,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Paul) & Component-of(b,window) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "819": [
@@ -3552,7 +3582,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "820": [
@@ -3562,7 +3592,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,They) & Component-of(b,him) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "824": [
@@ -3572,7 +3602,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,bag) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Paula) & Component-of(b,bag) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "825": [
@@ -3582,7 +3612,7 @@ var events = {
         "Volitional COS",
         "NonincrementalAccomplishment",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,cat) & Component-of(b,couch) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,cat) & Component-of(b,couch) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
     "1504": [
@@ -3592,7 +3622,7 @@ var events = {
         "Volitional COS",
         "DirectedAchievement",
         "ForceNetwork",
-        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,button) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Nora) & Component-of(b,button) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10012"
     ],
   "814": [
@@ -3602,7 +3632,7 @@ var events = {
     "Volitional COS",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10003"
   ],
   "815": [
@@ -3612,7 +3642,7 @@ var events = {
     "Volitional COS",
     "IncrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,Bill) & Component-of(b,drawer) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10003"
   ],
   "816": [
@@ -3622,7 +3652,7 @@ var events = {
     "Volitional COS",
     "NonincrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,dog) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,Tom) & Component-of(b,dog) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10003"
   ],
   "832": [
@@ -3632,7 +3662,7 @@ var events = {
     "Volitional COS",
     "NonincrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10003"
   ],
   "833": [
@@ -3642,7 +3672,7 @@ var events = {
     "Volitional COS",
     "NonincrementalAccomplishment",
     "GeneralMotionNetwork",
-    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,He) & Component-of(b,her) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10003"
   ],
     "838": [
@@ -3652,7 +3682,7 @@ var events = {
         "Volitional COS-1",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
-        "Theme-of(x,e) & Component-of(a,Marlene) & Component-of(b,herself) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & COS(q2) & PTH(a,b)",
+        "Theme-of(x,e) & Component-of(a,Marlene) & Component-of(b,herself) & IncrAcc(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL(q1) & PROP(q2) & PTH(a,b)",
         "10026"
     ],
     "837": [
@@ -3662,7 +3692,7 @@ var events = {
         "Volitional COS-2",
         "UndirectedActivity",
         "MereologicalNetwork",
-        "Theme-of(x,e) & Component-of(a,Marlene) & IncrAcc(a,i,j,q1) & VOL/COS(q1)",
+        "Theme-of(x,e) & Component-of(a,Marlene) & IncrAcc(a,i,j,q1) & VOL/PROP(q1)",
         "10026"
     ],
   "840": [
@@ -3672,7 +3702,7 @@ var events = {
     "Volitional COS-1",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,Marlene) & Component-of(b,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,Marlene) & Component-of(b,baby) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
   "841": [
@@ -3682,7 +3712,7 @@ var events = {
     "Volitional COS-1",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,Leslie) & Component-of(b,bed) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
   "842": [
@@ -3692,7 +3722,7 @@ var events = {
     "Volitional COS-1",
     "IncrementalAccomplishment",
     "MereologicalNetwork",
-    "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+    "Theme-of(y,e) & Component-of(a,jeweler) & Component-of(b,ring) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
     "10026"
   ],
     "844": [
@@ -3702,7 +3732,7 @@ var events = {
         "Volitional COS-1",
         "IncrementalAccomplishment",
         "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,wall) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Jessica) & Component-of(b,wall) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
     "826": [
@@ -3712,14 +3742,14 @@ var events = {
         "Volitional COS-1",
         "DirectedAchievement",
         "MereologicalNetwork",
-        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,picture) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,Linda) & Component-of(b,picture) & CycAch(a,i,j,q1) & DirAch(b,i,k,q2) & VOL(q1) & PROP(q2) & FRC(a,b)",
         "10026"
     ],
   "839": [
     "Lora buttered the toast",
     "butter-9.9",
     "Sbj V Obj",
-    "Volitional COS-5",
+    "Volitional COS",
     "IncrementalAccomplishment",
     "CausativeMereologicalNetwork",
     "Theme-of(y,e) & Component-of(a,Lora) & Component-of(b,NI) & Component-of(c,toast) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & IncrAcc(c,i,l,q3) & VOL(q1) & INTL(q2) & +MER(q3) & FRC(a,b) & PTH(b,c)",
@@ -4704,16 +4734,6 @@ var events = {
     "Theme-of(x,e) & Component-of(a,crowd) & Component-of(b,NI) & DirAch(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
-  "1063": [
-    "They rowed the canals of Venice",
-    "nonvehicle-51.4.2",
-    "Sbj V Obj",
-    "Self-volitional Motion",
-    "UndirectedActivity",
-    "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-    "10003"
-  ],
   "1064": [
     "They rowed along the canal",
     "nonvehicle-51.4.2",
@@ -4800,9 +4820,9 @@ var events = {
     "Sbj V PathP",
     "Self-volitional Motion",
     "DirectedActivity",
-    "GeneralMotionNetwork",
+    "VehicularMotionNetwork",
     "Theme-of(x,e) & Component-of(a,Gordo) & Component-of(b,Topeka) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-    "10003"
+    "10033"
   ],
   "1075": [
     "Martha took the back way to Nederland",
@@ -4810,9 +4830,9 @@ var events = {
     "Sbj V PathP",
     "Self-volitional Motion",
     "DirectedActivity",
-    "GeneralMotionNetwork",
+    "VehicularMotionNetwork",
     "Theme-of(x,e) & Component-of(a,Martha) & Component-of(b,Nederland) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-    "10003"
+    "10033"
   ],
   "1076": [
     "Kevin took the freeway",
@@ -4820,9 +4840,39 @@ var events = {
     "Sbj V PathP",
     "Self-volitional Motion",
     "DirectedActivity",
-    "GeneralMotionNetwork",
+    "VehicularMotionNetwork",
     "Theme-of(x,e) & Component-of(a,Kevin) & Component-of(b,freeway) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-    "10003"
+    "10033"
+  ],
+    "1077": [
+        "Claire rickshawed along the creek path",
+        "vehicle-51.4.1",
+        "Sbj V PathP",
+        "Self-volitional Motion",
+        "UndirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,path) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+        "10033"
+    ],
+  "1078": [
+    "Claire skated the canals",
+    "vehicle-51.4.1-1",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "UndirectedActivity",
+    "VehicularMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10033"
+  ],
+  "1063": [
+    "They rowed the canals of Venice",
+    "nonvehicle-51.4.2",
+    "Sbj V Obj",
+    "Self-volitional Motion",
+    "UndirectedActivity",
+    "VehicularMotionNetwork",
+    "Theme-of(x,e) & Component-of(a,They) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
+    "10033"
   ],
   "1077": [
     "Claire skated along the canal",
@@ -4832,16 +4882,6 @@ var events = {
     "DirectedActivity",
     "GeneralMotionNetwork",
     "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canal) & DirAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
-    "10003"
-  ],
-  "1078": [
-    "Claire skated the canals",
-    "vehicle-51.4.1-1",
-    "Sbj V Obj",
-    "Self-volitional Motion",
-    "UndirectedActivity",
-    "GeneralMotionNetwork",
-    "Theme-of(x,e) & Component-of(a,Claire) & Component-of(b,canals) & UndAct(a,i,j,q1) & InhStPh(b,i,k,q2) & VOL/MOT(q1) & EXIST(q2) & PTH(a,b)",
     "10003"
   ],
   "1079": [
@@ -5004,46 +5044,176 @@ var events = {
         "Theme-of(y,e) & Component-of(a,Jackie) & Component-of(b,Rose) & Component-of(c,store) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
         "10003"
   ],
-  // "1099": [
-  //   "Amanda drove Penny to New York from home",
-  //   "drive-11.5",
-  //   "Sbj V Obj PathP",
-  //   "Volitional Motion",
-  //   "IncrementalAccomplishment",
-  //   "VehicularMotionNetwork",
-  //   "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,Penny) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-  //   "10003"
-  //  ],
-  // "1100": [
-  //   "Amanda drove the package from home to New York",
-  //   "drive-11.5",
-  //   "Sbj V Obj PathP",
-  //   "Volitional Motion",
-  //   "IncrementalAccomplishment",
-  //   "VehicularMotionNetwork",
-  //   "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-  //   "10003"
-  //  ],
-  //  "1104": [
-  //       "Amanda trucked the package from Philadelphia to her mother's house",
-  //       "drive-11.5-1",
-  //       "Sbj V Obj PathP",
-  //       "Volitional Motion",
-  //       "IncrementalAccomplishment",
-  //       "VehicularMotionNetwork",
-  //       "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-  //       "10003"
-  //  ],
-  //  "1105": [
-  //       "Amanda trucked the package to her mother's house from Philadelphia",
-  //       "drive-11.5-1",
-  //       "Sbj V Obj PathP",
-  //       "Volitional Motion",
-  //       "IncrementalAccomplishment",
-  //       "VehicularMotionNetwork",
-  //       "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
-  //       "10003"
-  //  ],
+    "830": [
+        "He skated Penny to exhaustion",
+        "vehicle-51.4.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,Penny) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10033"
+    ],
+    "831": [
+        "He skated Penny exhausted",
+        "vehicle-51.4.1",
+        "Sbj V Obj ResultP",
+        "Volitional COS",
+        "NonincrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,Penny) & UndAct(a,i,j,q1) & NonIncrAcc(b,i,k,q2) & VOL(q1) & COS(q2) & FRC(a,b)",
+        "10033"
+    ],
+    "1096": [
+        "Amanda drove the package",
+        "drive-11.5",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "UndirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10033"
+    ],
+    "1097": [
+        "Amanda drove the package to New York",
+        "drive-11.5",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+    "1098": [
+        "Amanda drove the package from home",
+        "drive-11.5",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+  "1099": [
+    "Amanda drove Penny to New York from home",
+    "drive-11.5",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "VehicularMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,Penny) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10033"
+   ],
+  "1100": [
+    "Amanda drove the package from home to New York",
+    "drive-11.5",
+    "Sbj V Obj PathP",
+    "Volitional Motion",
+    "IncrementalAccomplishment",
+    "VehicularMotionNetwork",
+    "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,home+New York) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+    "10033"
+   ],
+    "1101": [
+        "Amanda shuttled her children",
+        "drive-11.5-1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "UndirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,children) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10033"
+    ],
+    "1102": [
+        "Amanda shuttled her children from Philadelphia",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,children) & Component-of(c,Philadelphia) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+    "1103": [
+        "Amanda shuttled the children to school",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,children) & Component-of(c,school) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+   "1104": [
+        "Amanda trucked the package from Philadelphia to her mother's house",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+   ],
+   "1105": [
+        "Amanda trucked the package to her mother's house from Philadelphia",
+        "drive-11.5-1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,Amanda) & Component-of(b,package) & Component-of(c,Philadelphia+house) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+   ],
+    "1127": [
+        "He skated Penny",
+        "vehicle-51.4.1",
+        "Sbj V Obj",
+        "Volitional Internal",
+        "UndirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,Penny) & UndAct(a,i,j,q1) & UndAct(b,i,k,q2) & VOL(q1) & INTL(q2) & FRC(a,b)",
+        "10033"
+    ],
+    "1128": [
+        "He skated Penny around the rink",
+        "vehicle-51.4.1",
+        "Sbj V Obj PathP",
+        "Volitional Motion",
+        "DirectedActivity",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,Penny) & Component-of(c,rink) & UndAct(a,i,j,q1) & DirAct(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+    "1106": [
+        "He rowed the boat across the lake",
+        "nonvehicle-51.4.2",
+        "Sbj V Obj PathP",
+        "Manipulate Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(y,e) & Component-of(a,He) & Component-of(b,boat) & Component-of(c,lake) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+    "1046": [
+        "Claire took a train from Reno",
+        "vehicle_path-51.4.3",
+        "Sbj V Obj PathP",
+        "Manipulate Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(z,e) & Component-of(a,Claire) & Component-of(b,train) & Component-of(c,Reno) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
+    "1047": [
+        "Jack took a flight to Tuscon",
+        "vehicle_path-51.4.3",
+        "Sbj V Obj PathP",
+        "Manipulate Motion",
+        "IncrementalAccomplishment",
+        "VehicularMotionNetwork",
+        "Theme-of(z,e) & Component-of(a,Jack) & Component-of(b,flight) & Component-of(c,Tuscon) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & InhStPh(c,i,l,q3) & VOL(q1) & MOT(q2) & EXIST(q3) & FRC(a,b) & PTH(b,c)",
+        "10033"
+    ],
   "1108": [
     "Bill rolled the ball down the hill",
     "roll-51.3.1",
@@ -5241,7 +5411,7 @@ var events = {
         "Physical COS",
         "IncrementalAccomplishment",
         "AbsorbNetwork",
-        "Theme-of(y,e) & Component-of(a,cotton) & Component-of(b,water) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & COS(q2) & FRC(a,b)",
+        "Theme-of(y,e) & Component-of(a,cotton) & Component-of(b,water) & UndAct(a,i,j,q1) & IncrAcc(b,i,k,q2) & INTL(q1) & PROP(q2) & FRC(a,b)",
         "10015"
     ],
     "1328": [
@@ -5251,7 +5421,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "1329": [
@@ -5261,7 +5431,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "1330": [
@@ -5271,7 +5441,7 @@ var events = {
         "Autonomous COS",
         "IncrementalAccomplishment",
         "CausativeCOSNetwork",
-        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & COS(q1)",
+        "Theme-of(y,e) & Component-of(a,potatoes) & IncrAcc(a,i,j,q1) & PROP(q1)",
         "10015"
     ],
     "1506": [
@@ -5316,6 +5486,7 @@ var events = {
     "10030": {"networks": ["CausativeMereologicalNetwork"], "name": "CausativeMereological"},
     "10031": {"networks": ["CausativeMereologicalNetwork", "ConcealmentNetwork"], "name": "CausativeMereological+Causative"},
     "10032": {"networks": ["ConcealmentNetwork"], "name": "Concealment"},
+    "10033": {"networks": ["VehicularMotionNetwork"], "name": "VehicularMotion"},
     "11001": ["Autonomous Motion", "GeneralMotionNetwork"],
     "11002": ["Self-volitional Motion", "GeneralMotionNetwork"],
     "11003": ["Volitional Motion", "GeneralMotionNetwork"],
@@ -5405,7 +5576,7 @@ var events = {
     "11088": ["Physical COS", "MereologicalNetwork"],
     "11089": ["Volitional COS-1", "MereologicalNetwork"],
     "11090": ["Volitional COS-2", "MereologicalNetwork"],
-    "11091": ["Volitional COS-3", "MereologicalNetwork"],
+    //"11091": ["Volitional COS-3", "MereologicalNetwork"],
     "11092": ["Self-volitional Collective Internal", "MereologicalNetwork"],
     "11093": ["Autonomous Place", "MereologicalNetwork"],
     "11094": ["Volitional Place", "MereologicalNetwork"],
@@ -5418,8 +5589,8 @@ var events = {
     "11101": ["Autonomous Motion", "MereologicalNetwork"],
     "11102": ["Volitional Remove", "CausativeMereologicalNetwork"],
     "11103": ["Volitional Attend", "CausativeMereologicalNetwork"],
-    "11104": ["Volitional COS-4", "CausativeMereologicalNetwork"],
-    "11105": ["Volitional COS-5", "CausativeMereologicalNetwork"],
+    "11104": ["Volitional COS", "CausativeMereologicalNetwork"],
+    //"11105": ["Volitional COS-5", "CausativeMereologicalNetwork"],
     "11106": ["Volitional Deprive", "CausativeMereologicalNetwork"],
     "11107": ["Volitional Internal", "CausativeMereologicalNetwork"],
     "11108": ["Self-volitional Internal", "CausativeMereologicalNetwork"],
@@ -5431,6 +5602,13 @@ var events = {
     "11114": ["Self-volitional Internal", "ConcealmentNetwork"],
     "11115": ["Self-volitional Internal Affect", "ConcealmentNetwork"],
     "11116": ["Volitional Internal Affect", "ConcealmentNetwork"],
+    "11117": ["Volitional Motion", "VehicularMotionNetwork"],
+    "11118": ["Volitional Internal", "VehicularMotionNetwork"],
+    "11119": ["Self-volitional Motion", "VehicularMotionNetwork"],
+    "11120": ["Autonomous Motion", "VehicularMotionNetwork"],
+    "11121": ["Volitional COS", "VehicularMotionNetwork"],
+    "11122": ["Manipulate", "VehicularMotionNetwork"],
+    "11123": ["Manipulate Motion", "VehicularMotionNetwork"],
     "12003": { "child": "Volitional Motion", "parentNetwork": "10003", "generalNetwork": "10003"},
     "12004": { "child": "Autonomous Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
     "12005": { "child": "Self-volitional Motion", "parentNetwork": "10004", "generalNetwork": "10003"},
@@ -5501,7 +5679,7 @@ var events = {
     "12070": { "child": "Physical COS", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12071": { "child": "Volitional COS-1", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12072": { "child": "Volitional COS-2", "parentNetwork": "10027", "generalNetwork": "10026"},
-    "12073": { "child": "Volitional COS-3", "parentNetwork": "10027", "generalNetwork": "10026"},
+    //"12073": { "child": "Volitional COS-3", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12074": { "child": "Self-volitional Collective Internal", "parentNetwork": "10028", "generalNetwork": "10026"},
     "12075": { "child": "Autonomous Place", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12076": { "child": "Volitional Place", "parentNetwork": "10026", "generalNetwork": "10026"},
@@ -5513,11 +5691,18 @@ var events = {
     "12082": { "child": "Self-volitional Provide", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12083": { "child": "Autonomous Motion", "parentNetwork": "10027", "generalNetwork": "10026"},
     "12084": { "child": "Volitional Attend", "parentNetwork": "10030", "generalNetwork": "10026"},
-    "12085": { "child": "Volitional COS-4", "parentNetwork": "10030", "generalNetwork": "10026"},
-    "12086": { "child": "Volitional COS-5", "parentNetwork": "10030", "generalNetwork": "10026"},
+    "12085": { "child": "Volitional COS", "parentNetwork": "10030", "generalNetwork": "10026"},
+    //"12086": { "child": "Volitional COS-5", "parentNetwork": "10030", "generalNetwork": "10026"},
     "12087": { "child": "Self-volitional Internal", "parentNetwork": "10031", "generalNetwork": "10026"},
     "12088": { "child": "Self-volitional Internal Affect", "parentNetwork": "10032", "generalNetwork": "10026"},
     "12089": { "child": "Volitional Internal Affect", "parentNetwork": "10032", "generalNetwork": "10026"},
+    "12090": { "child": "Volitional Motion", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12091": { "child": "Volitional Internal", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12092": { "child": "Self-volitional Motion", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12093": { "child": "Autonomous Motion", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12094": { "child": "Volitional COS", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12095": { "child": "Manipulate", "parentNetwork": "10033", "generalNetwork": "10033"},
+    "12096": { "child": "Manipulate Motion", "parentNetwork": "10033", "generalNetwork": "10033"},
     //"12047": { "child": "Autonomous COS", "parentNetwork": "10016", "generalNetwork": "10015"},
 
     //"12006": { "child": "Autonomous COS", "parent": "10004"},
@@ -5820,9 +6005,9 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional COS-2" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11090";
         var identifierToConstructionURL = "12072";
-    } else if (FDCategory === "Volitional COS-3" && generalNetworkName == "MereologicalNetwork") {
-        var identifierToMappingURL = "11091";
-        var identifierToConstructionURL = "12073";
+    // } else if (FDCategory === "Volitional COS-3" && generalNetworkName == "MereologicalNetwork") {
+    //     var identifierToMappingURL = "11091";
+    //     var identifierToConstructionURL = "12073";
     } else if (FDCategory === "Self-volitional Collective Internal" && generalNetworkName == "MereologicalNetwork") {
         var identifierToMappingURL = "11092";
         var identifierToConstructionURL = "12074";
@@ -5859,12 +6044,12 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Attend" && generalNetworkName == "CausativeMereologicalNetwork") {
         var identifierToMappingURL = "11103";
         var identifierToConstructionURL = "12084";
-    } else if (FDCategory === "Volitional COS-4" && generalNetworkName == "CausativeMereologicalNetwork") {
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "CausativeMereologicalNetwork") {
         var identifierToMappingURL = "11104";
         var identifierToConstructionURL = "12085";
-    } else if (FDCategory === "Volitional COS-5" && generalNetworkName == "CausativeMereologicalNetwork") {
-        var identifierToMappingURL = "11105";
-        var identifierToConstructionURL = "12086";
+    // } else if (FDCategory === "Volitional COS-5" && generalNetworkName == "CausativeMereologicalNetwork") {
+    //     var identifierToMappingURL = "11105";
+    //     var identifierToConstructionURL = "12086";
     } else if (FDCategory === "Volitional Deprive" && generalNetworkName == "CausativeMereologicalNetwork") {
         var identifierToMappingURL = "11106";
         var identifierToConstructionURL = "12069";
@@ -5898,6 +6083,27 @@ function getSpecificNetworkTableIdentifierForURL (FDCategory, generalNetworkName
     } else if (FDCategory === "Volitional Internal Affect" && generalNetworkName == "ConcealmentNetwork") {
         var identifierToMappingURL = "11116";
         var identifierToConstructionURL = "12089";
+    } else if (FDCategory === "Volitional Motion" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11117";
+        var identifierToConstructionURL = "12090";
+    } else if (FDCategory === "Volitional Internal" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11118";
+        var identifierToConstructionURL = "12091";
+    } else if (FDCategory === "Self-volitional Motion" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11119";
+        var identifierToConstructionURL = "12092";
+    } else if (FDCategory === "Autonomous Motion" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11120";
+        var identifierToConstructionURL = "12093";
+    } else if (FDCategory === "Volitional COS" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11121";
+        var identifierToConstructionURL = "12094";
+    } else if (FDCategory === "Manipulate" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11122";
+        var identifierToConstructionURL = "12095";
+    } else if (FDCategory === "Manipulate Motion" && generalNetworkName == "VehicularMotionNetwork") {
+        var identifierToMappingURL = "11123";
+        var identifierToConstructionURL = "12096";
     }
   
     return [identifierToMappingURL, identifierToConstructionURL]
@@ -6938,6 +7144,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Theme", "Ground"],
 
                                 "name" : "NetSelfVolMotion" 
+
+                                // delete?
                             };
 
 
@@ -9393,7 +9601,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 'textToAdd' : [
                                         { "x": 60,  "y": 35, "text": "A0"},
-                                        { "x": 90,  "y": 35, "text": "A1"},
+                                        { "x": 95,  "y": 35, "text": "A1"},
                                         { "x": -5,  "y": 90, "text": "Moved_entity"}, 
                                         { "x": 110,  "y": 90, "text": "Ground"},
                                         { "x": 0,  "y": 80, "text": "MER"},
@@ -9404,7 +9612,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                         { "x": 65,  "y": 105, "text": "PTH"}
                                     ],
 
-                                "argTextToAdd": ["Agent", "Ground"],
+                                "argTextToAdd": ["Agent", "Patient"],
 
                                 "name" : "NetMerVolCOS" 
                             };
@@ -9432,37 +9640,6 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "argTextToAdd": ["Ground"],
 
                                 "name" : "NetMerVolCOS2" 
-                            };
-
-     var NetworkMereologicalVolitionalCOS3 = {    
-
-                                "arrow":    [   { "x": 65,  "y": 30}, 
-                                                { "x": 95,  "y": 30} ],    
-
-                                "solid2":    [   { "x": 65,  "y": 90}, 
-                                                { "x": 95,  "y": 90} ],
-
-                                "dottedRight":    [   { "x": 125,  "y": 40}, 
-                                                { "x": 125,  "y": 70} ],
-
-
-
-                                'textToAdd' : [
-                                        { "x": 60,  "y": 35, "text": "A0"},
-                                        { "x": 95,  "y": 35, "text": "A1"},
-                                        { "x": -5,  "y": 90, "text": "Moved_entity"}, 
-                                        { "x": 110,  "y": 90, "text": "Ground"},
-                                        { "x": 0,  "y": 80, "text": "MER"},
-                                        { "x": 20,  "y": 25, "text": "VOL"},
-                                        { "x": 110,  "y": 25, "text": "PROP"},
-                                        { "x": 110,  "y": 80, "text": "MER"},
-                                        { "x": 65,  "y": 45, "text": "FRC"},
-                                        { "x": 65,  "y": 105, "text": "PTH"}
-                                    ],
-
-                                "argTextToAdd": ["Agent", "Patient"],
-
-                                "name" : "NetMerVolCOS3" 
                             };
 
      var NetworkMereologicalSelfVolitionalCollectiveInternal = {        
@@ -9772,7 +9949,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetCausMerVolAtt" 
                             };
 
-     var NetworkCausativeMereologicalVolitionalCOS4 = {        
+     var NetworkCausativeMereologicalVolitionalCOS = {        
 
                                 "solid1":    [   { "x": 145,  "y": 85}, 
                                                 { "x": 175,  "y": 85} ],
@@ -9806,44 +9983,7 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
 
                                 "argTextToAdd": ["Agent", "Patient"],
 
-                                "name" : "NetCausMerVolCOS4" 
-                            };
-
-     var NetworkCausativeMereologicalVolitionalCOS5 = {        
-
-                                "solid1":    [   { "x": 145,  "y": 85}, 
-                                                { "x": 175,  "y": 85} ],
-
-                                "dottedLeft":    [   { "x": 5,  "y": 40}, 
-                                                { "x": 5,  "y": 70} ],
-
-                                "dottedRight":    [   { "x": 95,  "y": 40}, 
-                                                { "x": 185,  "y": 70} ],
-
-                                "arrow":    [   { "x": 30,  "y": 30}, 
-                                                { "x": 60,  "y": 30} ],
-
-                                "arrow1":    [   { "x": 30,  "y": 85}, 
-                                                { "x": 60,  "y": 85} ],
-
-                                'textToAdd' : [
-                                        { "x": 25,  "y": 35, "text": "A0"},
-                                        { "x": -10,  "y": 25, "text": "VOL"},
-                                        { "x": 55,  "y": 35, "text": "A1"},
-                                        { "x": 70,  "y": 25, "text": "PROP"},
-                                        { "x": -50,  "y": 90, "text": "Physical_entity"},  
-                                        { "x": 70,  "y": 90, "text": "Moved_entity"},  
-                                        { "x": 70,  "y": 80, "text": "MER"},
-                                        { "x": 185,  "y": 90, "text": "Ground"},
-                                        { "x": 185,  "y": 80, "text": "MER"},
-                                        { "x": 30,  "y": 45, "text": "FRC"},
-                                        { "x": 30,  "y": 100, "text": "FRC"},
-                                        { "x": 145,  "y": 100, "text": "PTH"}
-                                    ],
-
-                                "argTextToAdd": ["Agent", "Ground"],
-
-                                "name" : "NetCausMerVolCOS5" 
+                                "name" : "NetCausMerVolCOS" 
                             };
 
      var NetworkCausativeMereologicalVolitionalDeprive = {        
@@ -10280,6 +10420,464 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
                                 "name" : "NetConcVolIntAff" 
                             };
 
+        var NetworkVehicularMotionVolitionalMotion = {        
+
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                "arrow2":    [   { "x": -80,  "y": 30}, 
+                                                { "x": -50,  "y": 30} ],
+
+                                "solid1":    [   { "x": 35,  "y": 30}, 
+                                                { "x": 65,  "y": 30} ],
+
+                                "solid2":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid3":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -130,  "y": 40}, 
+                                                { "x": -130,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": -5,  "y": 40}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 130,  "y": 40}, 
+                                                { "x": 325,  "y": 60} ],
+
+                                // "rectangle": {
+                                //               "x":95, 
+                                //               "y":50,
+                                //               "width": 100,
+                                //               "height": 50
+                                // },
+
+
+                                'textToAdd' : [
+                                        { "x": -100,  "y": 35, "text": "A0"},
+                                        { "x": -40,  "y": 35, "text": "A1"},
+                                        { "x": 70,  "y": 35, "text": "A2"},
+                                        { "x": -140,  "y": 25, "text": "VOL"},
+                                        { "x": -20,  "y": 25, "text": "INTL"},
+                                        { "x": -80,  "y": 45, "text": "FRC"},
+                                        { "x": 35,  "y": 45, "text": "PTH"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Theme", "Ground"],
+
+                                "name" : "NetVehMotVolMot" 
+                            };
+
+        var NetworkVehicularMotionVolitionalInternal = {        
+
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                "arrow2":    [   { "x": -80,  "y": 30}, 
+                                                { "x": -50,  "y": 30} ],
+
+                                "solid1":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid2":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -130,  "y": 40}, 
+                                                { "x": -130,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": -5,  "y": 40}, 
+                                                { "x": 100,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -100,  "y": 35, "text": "A0"},
+                                        { "x": -40,  "y": 35, "text": "A1"},
+                                        { "x": -140,  "y": 25, "text": "VOL"},
+                                        { "x": -20,  "y": 25, "text": "INTL"},
+                                        { "x": -80,  "y": 45, "text": "FRC"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Theme"],
+
+                                "name" : "NetVehMotVolInt" 
+                            };
+
+        var NetworkVehicularMotionSelfVolitionalMotion = {        
+
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                "solid1":    [   { "x": -80,  "y": 30}, 
+                                                { "x": -50,  "y": 30} ],
+
+                                "solid2":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid3":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -130,  "y": 40}, 
+                                                { "x": -130,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": -5,  "y": 40}, 
+                                                { "x": 330,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -100,  "y": 35, "text": "A0"},
+                                        { "x": -40,  "y": 35, "text": "A1"},
+                                        { "x": -140,  "y": 25, "text": "VOL/MOT"},
+                                        { "x": -80,  "y": 45, "text": "PTH"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Ground"],
+
+                                "name" : "NetVehMotSelfVolMot" 
+                            };
+
+        var NetworkVehicularMotionAutonomousMotion = {        
+
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                "solid1":    [   { "x": 35,  "y": 30}, 
+                                                { "x": 65,  "y": 30} ],
+
+                                "solid2":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid3":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -20,  "y": 40}, 
+                                                { "x": -20,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 90,  "y": 40}, 
+                                                { "x": 330,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": 0,  "y": 35, "text": "A0"},
+                                        { "x": 60,  "y": 35, "text": "A1"},
+                                        { "x": -60,  "y": 25, "text": "MOT"},
+                                        { "x": 35,  "y": 45, "text": "PTH"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Transport_means", "Ground"],
+
+                                "name" : "NetVehMotAutoMot" 
+                            };
+
+        var NetworkVehicularMotionVolitionalCOS = {        
+
+                                "arrow":    [   { "x": -80,  "y": 30}, 
+                                                { "x": -50,  "y": 30} ],
+
+                                "arrow1":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+
+                                "solid1":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid2":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -130,  "y": 40}, 
+                                                { "x": -130,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": -5,  "y": 40}, 
+                                                { "x": 330,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -100,  "y": 35, "text": "A0"},
+                                        { "x": -40,  "y": 35, "text": "A1"},
+                                        { "x": -140,  "y": 25, "text": "VOL"},
+                                        { "x": -80,  "y": 45, "text": "FRC"},
+                                        { "x": -20,  "y": 25, "text": "PROP"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Theme"],
+
+                                "name" : "NetVehMotVolCOS" 
+                            };
+
+       var NetworkVehicularMotionManipulate = {        
+
+                                "arrow":    [   { "x": -80,  "y": 30}, 
+                                                { "x": -50,  "y": 30} ],
+
+                                "arrow1":    [   { "x": -80,  "y": 75}, 
+                                                { "x": -50,  "y": 75} ],
+
+                                "arrow2":    [   { "x": 55,  "y": 75}, 
+                                                { "x": 85,  "y": 75} ],
+
+
+                                "solid1":    [   { "x": 175,  "y": 75}, 
+                                                { "x": 205,  "y": 75} ],
+
+                                "solid2":    [   { "x": 305,  "y": 75}, 
+                                                { "x": 335,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -80,  "y": 70}, 
+                                                { "x": -50,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 55,  "y": 70}, 
+                                                { "x": 85,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 175,  "y": 70}, 
+                                                { "x": 205,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -110,  "y": 40}, 
+                                                { "x": -110,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": 15,  "y": 40}, 
+                                                { "x": 15,  "y": 60} ],
+
+                                'textToAdd' : [
+                                        { "x": -80,  "y": 35, "text": "A0"},
+                                        { "x": -35,  "y": 35, "text": "A1"},
+                                        { "x": -120,  "y": 25, "text": "VOL"},
+                                        { "x": -80,  "y": 45, "text": "FRC"},
+                                        { "x": -35,  "y": 25, "text": "INTL"},
+                                        { "x": -120,  "y": 80, "text": "Agent"},
+                                        { "x": -120,  "y": 70, "text": "VOL"},
+                                        { "x": -80,  "y": 90, "text": "FRC"}, 
+                                        { "x": -95,  "y": 65, "text": "Co-location"},
+                                        { "x": -35,  "y": 80, "text": "Transport_means"},
+                                        { "x": -35,  "y": 70, "text": "INTL"},
+                                        { "x": 55,  "y": 90, "text": "FRC"}, 
+                                        { "x": 45,  "y": 65, "text": "Co-location"},
+                                        { "x": 105,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 105,  "y": 70, "text": "MOT"},
+                                        { "x": 175,  "y": 90, "text": "PTH"},
+                                        { "x": 165,  "y": 65, "text": "Co-location"},
+                                        { "x": 215,  "y": 80, "text": "Transport_means"},
+                                        { "x": 305,  "y": 90, "text": "PTH"},
+                                        { "x": 340,  "y": 80, "text": "Ground"}, 
+                                        { "x": 340,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Transport_means"],
+
+                                "name" : "NetVehMotMan" 
+                            };
+
+        var NetworkVehicularMotionManipulateMotion = {        
+
+                                "arrow":    [   { "x": -100,  "y": 75}, 
+                                                { "x": -70,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 35,  "y": 75}, 
+                                                { "x": 65,  "y": 75} ],
+
+                                "arrow2":    [   { "x": -100,  "y": 30}, 
+                                                { "x": -70,  "y": 30} ],
+
+                                "solid1":    [   { "x": 35,  "y": 30}, 
+                                                { "x": 65,  "y": 30} ],
+
+                                "solid2":    [   { "x": 155,  "y": 75}, 
+                                                { "x": 185,  "y": 75} ],
+
+                                "solid3":    [   { "x": 285,  "y": 75}, 
+                                                { "x": 315,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -100,  "y": 70}, 
+                                                { "x": -70,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 35,  "y": 70}, 
+                                                { "x": 65,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 155,  "y": 70}, 
+                                                { "x": 185,  "y": 70} ],
+
+                                "dottedFarLeft":    [   { "x": -130,  "y": 40}, 
+                                                { "x": -130,  "y": 60} ],
+
+                                "dottedLeft":    [   { "x": -5,  "y": 40}, 
+                                                { "x": -5,  "y": 60} ],
+
+                                "dottedRight":    [   { "x": 110,  "y": 40}, 
+                                                { "x": 325,  "y": 60} ],
+
+
+                                'textToAdd' : [
+                                        { "x": -100,  "y": 35, "text": "A0"},
+                                        { "x": -60,  "y": 35, "text": "A1"},
+                                        { "x": 60,  "y": 35, "text": "A2"},
+                                        { "x": -140,  "y": 25, "text": "VOL/MOT"},
+                                        { "x": -60,  "y": 25, "text": "MOT"},
+                                        { "x": -100,  "y": 45, "text": "FRC"},
+                                        { "x": 35,  "y": 45, "text": "PTH"},
+                                        { "x": -140,  "y": 80, "text": "Agent"},
+                                        { "x": -140,  "y": 70, "text": "VOL"},
+                                        { "x": -100,  "y": 90, "text": "FRC"}, 
+                                        { "x": -115,  "y": 65, "text": "Co-location"},
+                                        { "x": -55,  "y": 80, "text": "Transport_means"},
+                                        { "x": -55,  "y": 70, "text": "INTL"},
+                                        { "x": 35,  "y": 90, "text": "FRC"}, 
+                                        { "x": 25,  "y": 65, "text": "Co-location"},
+                                        { "x": 85,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 85,  "y": 70, "text": "MOT"},
+                                        { "x": 155,  "y": 90, "text": "PTH"},
+                                        { "x": 145,  "y": 65, "text": "Co-location"},
+                                        { "x": 195,  "y": 80, "text": "Transport_means"},
+                                        { "x": 285,  "y": 90, "text": "PTH"},
+                                        { "x": 320,  "y": 80, "text": "Ground"}, 
+                                        { "x": 320,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+
+                                "argTextToAdd": ["Agent", "Transport_means", "Ground"],
+
+                                "name" : "NetVehMotManMot" 
+                            };
 
     if (FDCategory === 'Autonomous Remove') { 
 
@@ -10456,6 +11054,8 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkCausativeMereologicalVolitionalInternal;
         } else if (nameGeneralNetwork === 'ConcealmentNetwork') {
             return NetworkConcealmentVolitionalInternal;
+        } else if (nameGeneralNetwork === 'VehicularMotionNetwork') {
+            return NetworkVehicularMotionVolitionalInternal;
         }
 
     }
@@ -10505,10 +11105,13 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkEmissionAutonomousMotion;
         } else if (nameGeneralNetwork === 'MereologicalNetwork') {
             return NetworkMereologicalAutonomousMotion;
+        } else if (nameGeneralNetwork === 'VehicularMotionNetwork') {
+            return NetworkVehicularMotionAutonomousMotion;
         }
     }
 
-    else if (FDCategory === 'Self-volitional Motion') { return NetworkSelfVolitionalMotion; }
+    else if (FDCategory === 'Self-volitional Motion') { return NetworkVehicularMotionSelfVolitionalMotion; }
+
 
     else if (FDCategory === 'Volitional Motion') { 
 
@@ -10522,10 +11125,16 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkThrowVolitionalMotion;
         } else if (nameGeneralNetwork === 'ForceNetwork') {
             return NetworkForceVolitionalMotion;
+        } else if (nameGeneralNetwork === 'VehicularMotionNetwork') {
+            return NetworkVehicularMotionVolitionalMotion;
         }
     }
 
     else if (FDCategory === 'Physical Motion') { return NetworkCarryPhysicalMotion; }
+
+    else if (FDCategory === 'Manipulate') { return NetworkVehicularMotionManipulate; }
+
+    else if (FDCategory === 'Manipulate Motion') { return NetworkVehicularMotionManipulateMotion; }
 
     else if (FDCategory === 'Mutual Motion') { return NetworkMutualMotion; }
 
@@ -10558,18 +11167,21 @@ function getNetwork (FDCategory, nameGeneralNetwork) {
             return NetworkIngestionVolitionalCOS;
         } else if (nameGeneralNetwork === 'HurtNetwork') {
             return NetworkHurtVolitionalCOS;
+        } else if (nameGeneralNetwork === 'CausativeMereologicalNetwork') {
+            return NetworkCausativeMereologicalVolitionalCOS;
+        } else if (nameGeneralNetwork === 'VehicularMotionNetwork') {
+            return NetworkVehicularMotionVolitionalCOS;
         } 
+
     }
 
     else if (FDCategory === 'Volitional COS-1') { return NetworkMereologicalVolitionalCOS; }
 
     else if (FDCategory === 'Volitional COS-2') { return NetworkMereologicalVolitionalCOS2; }
 
-    else if (FDCategory === 'Volitional COS-3') { return NetworkMereologicalVolitionalCOS3; }
+    //else if (FDCategory === 'Volitional COS-3') { return NetworkMereologicalVolitionalCOS3; }
 
-    else if (FDCategory === 'Volitional COS-4') { return NetworkCausativeMereologicalVolitionalCOS4; }
-
-    else if (FDCategory === 'Volitional COS-5') { return NetworkCausativeMereologicalVolitionalCOS5; }
+    //else if (FDCategory === 'Volitional COS-5') { return NetworkCausativeMereologicalVolitionalCOS5; }
 
     else if (FDCategory === 'Instrument COS') { 
 
@@ -11386,7 +11998,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Autonomous COS", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional COS-1", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional COS-2", "parent": "MereologicalNetwork"},
-                                       {"network": "Volitional COS-3", "parent": "MereologicalNetwork"},
+                                       //{"network": "Volitional COS-3", "parent": "MereologicalNetwork"},
                                        {"network": "Autonomous Place", "parent": "MereologicalNetwork"},
                                        {"network": "Volitional Place", "parent": "MereologicalNetwork"},
                                        {"network": "Self-volitional Place", "parent": "MereologicalNetwork"},
@@ -11422,8 +12034,8 @@ function getMultipleNetworkPage (NetworkType) {
 
                             "chains": [
                                        {"network": "Volitional Attend", "parent": "CausativeMereologicalNetwork"},
-                                       {"network": "Volitional COS-4", "parent": "CausativeMereologicalNetwork"},
-                                       {"network": "Volitional COS-5", "parent": "CausativeMereologicalNetwork"},
+                                       {"network": "Volitional COS", "parent": "CausativeMereologicalNetwork"},
+                                       //{"network": "Volitional COS-5", "parent": "CausativeMereologicalNetwork"},
                                        {"network": "Volitional Deprive", "parent": "CausativeMereologicalNetwork"},
                                        {"network": "Volitional Internal", "parent": "CausativeMereologicalNetwork"},
                                        {"network": "Self-volitional Internal", "parent": "CausativeMereologicalNetwork"},
@@ -11466,6 +12078,72 @@ function getMultipleNetworkPage (NetworkType) {
                                     ],
 
                             "name" : "Concealment network" 
+                        };
+
+    var VehicularMotionNetwork = {        
+
+                                "arrow":    [   { "x": -120,  "y": 75}, 
+                                                { "x": -90,  "y": 75} ],
+
+                                "arrow1":    [   { "x": 15,  "y": 75}, 
+                                                { "x": 45,  "y": 75} ],
+
+                                "solid1":    [   { "x": 135,  "y": 75}, 
+                                                { "x": 165,  "y": 75} ],
+
+                                "solid2":    [   { "x": 265,  "y": 75}, 
+                                                { "x": 295,  "y": 75} ],
+
+                                "dotted1":    [   { "x": -120,  "y": 70}, 
+                                                { "x": -90,  "y": 70} ],
+
+                                "dotted2":    [   { "x": 15,  "y": 70}, 
+                                                { "x": 45,  "y": 70} ],
+
+                                "dotted3":    [   { "x": 135,  "y": 70}, 
+                                                { "x": 165,  "y": 70} ],
+
+                                // "rectangle": {
+                                //               "x":95, 
+                                //               "y":50,
+                                //               "width": 100,
+                                //               "height": 50
+                                // },
+
+
+                                'textToAdd' : [
+                                        { "x": -160,  "y": 80, "text": "Agent"},
+                                        { "x": -160,  "y": 70, "text": "VOL"},
+                                        { "x": -120,  "y": 90, "text": "FRC"}, 
+                                        { "x": -135,  "y": 65, "text": "Co-location"},
+                                        { "x": -75,  "y": 80, "text": "Transport_means"},
+                                        { "x": -75,  "y": 70, "text": "INTL"},
+                                        { "x": 15,  "y": 90, "text": "FRC"}, 
+                                        { "x": 5,  "y": 65, "text": "Co-location"},
+                                        { "x": 65,  "y": 80, "text": "Moved_entity"},
+                                        { "x": 65,  "y": 70, "text": "MOT"},
+                                        { "x": 135,  "y": 90, "text": "PTH"},
+                                        { "x": 125,  "y": 65, "text": "Co-location"},
+                                        { "x": 175,  "y": 80, "text": "Transport_means"},
+                                        { "x": 265,  "y": 90, "text": "PTH"},
+                                        { "x": 300,  "y": 80, "text": "Ground"}, 
+                                        { "x": 300,  "y": 70, "text": "EXIST"}                                        
+                                    ],
+
+                            "caption": "ASC causal chains used with vehicular motion network",
+
+                            "chains": [
+                                       {"network": "Volitional Motion", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Self-volitional Motion", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Autonomous Motion", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Volitional COS", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Manipulate", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Manipulate Motion", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Volitional Internal", "parent": "VehicularMotionNetwork"},
+                                       {"network": "Self-volitional Internal", "parent": "VehicularMotionNetwork"}
+                                    ],
+
+                            "name" : "Vehicular motion network" 
                         };
 
     return eval(NetworkType);
@@ -12392,6 +13070,8 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
     var dottedRight = currentNetwork["dottedRight"];
     var forceArrowX = currentNetwork["arrow"];
     var dotted1 = currentNetwork["dotted1"];
+    var dotted2 = currentNetwork["dotted2"];
+    var dotted3 = currentNetwork["dotted3"];
     var forceArrow1 = currentNetwork["arrow1"];  
     var forceArrow2 = currentNetwork["arrow2"];
     var forceArrow3 = currentNetwork["arrow3"];
@@ -12440,12 +13120,19 @@ function createNetworkDiagram(svgContainer, currentNetwork, argTextToAdd, exampl
         }
     }
 
-    if (dotted1) {
+    var dottedLines = [dotted1, dotted2, dotted3];
+
+    for (i=0; i<3; i++) {
+
+        var dLine = dottedLines[i];
+
+        if (dLine) {
         var dottedLine = svgContainer.append("path")
-                                    .attr("d", lineFunction(dotted1))
+                                    .attr("d", lineFunction(dLine))
                                     .attr("stroke", "green")
                                     .attr("stroke-dasharray", ("2, 2"))
                                     .attr("fill", "none");
+        }
     }
 
     if (dottedLeft) {

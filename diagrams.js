@@ -11466,7 +11466,7 @@ function getMultipleNetworkPage (NetworkType) {
                                        {"network": "Volitional Motion", "parent": "ForceNetwork"},
                                     ],
 
-                            "name" : "Emission network" 
+                            "name" : "Force network" 
                         };
 
 
